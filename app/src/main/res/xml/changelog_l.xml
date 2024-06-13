@@ -1,0 +1,1523 @@
+<changelog>
+
+    <version name="7.10.0">
+        <text>Don't turn off the screen when a video is playing</text>
+    </version>
+
+    <version name="7.10.0">
+        <text>Support Android 13 features: themed icons and system level locale configuration</text>
+    </version>
+
+    <version name="7.9.4">
+        <text>Support Android SDK 32</text>
+    </version>
+
+    <version name="7.9.2">
+        <text>Continue to improve video/GIF player</text>
+    </version>
+
+    <version name="7.9.2">
+        <text>Improve and fix the video/GIF player</text>
+    </version>
+
+    <version name="7.9.1">
+        <text>Fix background refreshes not working for some users.</text>
+    </version>
+
+    <version name="7.9.0">
+        <text>When adding a user to a list, if that user already exists in the list, Talon will prompt you to remove that user</text>
+    </version>
+
+    <version name="7.8.5">
+        <text>Remove in app billing (it hasn't been used for 2 years)</text>
+    </version>
+
+    <version name="7.8.4">
+        <text>Fix adding GIFs to tweets on Android 11</text>
+    </version>
+
+    <version name="7.8.3">
+        <text>Scoped storage for downloading images on Android 11</text>
+    </version>
+
+    <version name="7.8.2">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.8.0">
+        <text>In the "app style" settings, there is now an option to disable the "drag to dismiss" on the tweet/profile viewers</text>
+    </version>
+
+    <version name="7.7.11">
+        <text>Bug fixes</text>
+        <text>Translation improvements</text>
+    </version>
+
+    <version name="7.7.10">
+        <text>Bug fixes</text>
+        <text>Translation updates</text>
+    </version>
+
+    <version name="7.7.9">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.7.8">
+        <text>Dependency updates</text>
+    </version>
+
+    <version name="7.7.7">
+        <text>Well, would you look at that... I found a work around. You can now view who "likes" a tweet, again.</text>
+    </version>
+
+    <version name="7.7.6">
+        <text>Seeing the users that liked a tweet was never something that Twitter officially supported for third party apps. Recently, they have disabled the workaround that I used to obtain this information.</text>
+        <text>Until I can find an alternative solution, seeing who "liked" a tweet has been disabled.</text>
+    </version>
+
+    <version name="7.7.5">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.7.4">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.7.3">
+        <text>Dependency updates</text>
+    </version>
+
+    <version name="7.7.2">
+        <text>Colorize the like and retweet buttons, when using the always active tweet action buttons</text>
+    </version>
+
+    <version name="7.7.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.7.0">
+        <text>With App Style settings, there is now a preference to force the app to always show the tweet actions (like, retweet, ect), below the tweets on your timeline</text>
+        <text>Updates to the default theme</text>
+    </version>
+
+    <version name="7.6.5">
+        <text>Improvements for Android Q</text>
+    </version>
+
+    <version name="7.6.4">
+        <text>Improvement to video playback quality</text>
+        <text>Fixes for Android 4.4</text>
+    </version>
+
+    <version name="7.6.3">
+        <text>Tweetmarker is unfortunately being shut down. It has been removed from Talon. For more information: https://www.manton.org/2019/05/15/saying-goodbye-to.html</text>
+        <text>Fix the overflow menu coloring, on dark or black themes</text>
+    </version>
+
+    <version name="7.6.2">
+        <text>Continued improvements for Android Q</text>
+    </version>
+
+    <version name="7.6.1">
+        <text>Android Q: manually specify light vs dark theme, separate from the system theme.</text>
+    </version>
+
+    <version name="7.6.0">
+        <text>Android Q: Theme support improvements. Talon will now follow your system default theme for light/dark support.</text>
+        <text>Dark theme color improvements</text>
+    </version>
+
+    <version name="7.5.11">
+        <text>UI improvements</text> <!-- specifically for Android Q, around the article/drag dismiss library adjusting for edge to edge content -->
+    </version>
+
+    <version name="7.5.10">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.5.8">
+        <text>UI improvements</text>
+    </version>
+
+    <version name="7.5.7">
+        <text>Improvements to loading videos</text>
+    </version>
+
+    <version name="7.5.6">
+        <text>Fix Google Translate support</text>
+    </version>
+
+    <version name="7.5.5">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.5.4">
+        <text>Translation updates</text>
+    </version>
+
+    <version name="7.5.3">
+        <text>Improve load times of the article previews on the timeline</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.5.2">
+        <text>Bug fixes and build process improvements</text>
+    </version>
+
+    <version name="7.5.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.5.0">
+        <text>Open tweet details when looking through a users list of images on their profiles.</text>
+        <text>Improvements to handling tweets with multiple images</text>
+        <text>Dependency updates and bug fixes</text>
+    </version>
+
+    <version name="7.4.1">
+        <text>Twitter is shutting down their streaming services. I have removed Talon Pull from the app, as it will no longer work.</text>
+        <text>Other updates to work with the latest Twitter APIs.</text>
+    </version>
+
+    <version name="7.4.0">
+        <text>Crop images with a custom aspect ratio, instead of the pre-defined ratios</text>
+        <text>Save images on Android P beta</text>
+    </version>
+
+    <version name="7.3.1">
+        <text>Improvements around scheduled tweets</text>
+    </version>
+
+    <version name="7.3.0">
+        <text>The app is now open source! It will continue to be distributed from Google Play, but any developers can take a look if they want! https://github.com/klinker24/talon-for-twitter-android</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.2.6">
+        <text>Bug fixes for Android P</text>
+    </version>
+
+    <version name="7.2.5">
+        <text>Update to build for Android P</text>
+        <text>Bug fixes and dependency updates</text>
+    </version>
+
+    <version name="7.2.4">
+        <text>You can now disable the hashtag auto complete, by going to Other Options, in settings</text>
+    </version>
+
+    <version name="7.2.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.2.0">
+        <text>Add a new "data saver" mode that overrides your settings configuration to prevent mobile data usage in the background and limit it in the foreground</text>
+        <text>Added an option to only auto-play GIFs on the timeline, rather than both GIFs and Twitter videos</text>
+        <text>Display Twitter video durations, on the timeline</text>
+    </version>
+
+    <version name="7.1.4">
+        <text>Bug fixes and performance improvements</text>
+    </version>
+
+    <version name="7.1.3">
+        <text>Bug fixes and dependency updates</text>
+        <text>Translation updates</text>
+    </version>
+
+    <version name="7.1.2">
+        <text>Put back the cross account options, just don't allow the user to do both accounts at the same time</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.1.1">
+        <text>Twitter has a new policy that all apps using their service should stop allowing for tweeting, liking, and retweeting using multiple accounts at once: https://blog.twitter.com/developer/en_us/topics/tips/2019/automation-and-the-use-of-multiple-accounts.html. I have unfortunately had to remove this functionality from Talon.</text>
+        <text>Translation updates</text>
+    </version>
+
+    <version name="7.1.0">
+        <text>Save tweets for later from the three dot overflow menu on any tweet</text>
+        <text>View those saved tweets by adding the "Saved Tweets" swipe-able page in settings</text>
+    </version>
+
+    <version name="7.0.5">
+        <text>Android Oreo: Don't use emoji compat, it is breaking flag emojis</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.0.4">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.0.3">
+        <text>Bug fixes around threads/discussion</text>
+        <text>Enable the 2019 supporter option in settings</text>
+    </version>
+
+    <version name="7.0.2">
+        <text>Bug fixes</text>
+        <text>Dependency updates</text>
+    </version>
+
+    <version name="7.0.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="7.0.0">
+        <text>A new tweet layout option for the timeline: https://blog.klinkerapps.com/upgrading-your-twitter-timeline</text>
+        <text>Revamp of the "App Style" settings page to highlight how the tweets will look with the different layout options</text>
+    </version>
+
+    <version name="6.9.8">
+        <text>Fixes for scheduled tweets</text>
+    </version>
+
+    <version name="6.9.7">
+        <text>Improvements to the widget: scrolling, performance, Oreo compatibility</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.9.6">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.9.5">
+        <text>Talon's tweetstorms now take advantage of the 280 characters</text>
+        <text>Fix issue with direct messages displaying a blank box in some cases</text>
+    </version>
+
+    <version name="6.9.4">
+        <text>Post tweets that are 280 characters</text>
+        <text>Confirmation before marking a tweet as spam</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.9.3">
+        <text>Improvements to the image viewer</text>
+        <text>Built against Android 8.1</text>
+    </version>
+
+    <version name="6.9.2">
+        <text>Crash fixes</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.9.1">
+        <text>Fix some character encoding issues with the article previews</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.9.0">
+        <text>Preview web links on the timeline (Turn it off from App Style settings)</text>
+        <text>New image viewer with improved drag-to-close and animations</text>
+        <text>Saved searches are opened to the full search screen (with user, timeline, and Twitter searches)</text>
+        <text>Fix text coloring when peeking into profiles</text>
+        <text>Fixes for the black theme</text>
+    </version>
+
+    <version name="6.8.2">
+        <text>Improvements around the pre-cache service</text>
+        <text>Start improvements for the Essential Phone</text>
+        <text>Reorder the button in the three dot overflow menu on tweets</text>
+        <text>Bug fixes for composing tweets from websites</text>
+        <text>Bug fixes for the activity section giving notifications for items that are disabled in settings</text>
+        <text>Smaller, one-off, bug fixes</text>
+    </version>
+
+    <version name="6.8.1">
+        <text>Add an "Update Tweet" button to the three dot overflow menu when viewing a tweet</text>
+        <text>Share tweets without a data connection</text>
+        <text>Theme tweaks</text>
+    </version>
+
+    <version name="6.8.0">
+        <text>Option to switch to the Android Oreo style emojis under "App Style" settings</text>
+        <text>Fixes for KitKat devices</text>
+    </version>
+
+    <version name="6.7.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.7.2">
+        <text>Improve the touch target size on the tweet actions</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.7.1">
+        <text>Crash fix</text>
+    </version>
+
+    <version name="6.7.0">
+        <text>Add night mode toggle to the navigation drawer</text>
+        <text>Improvements to the compact tweet layout</text>
+        <text>Bug fixes for reading lists</text>
+        <text>Bug fixes for popular searches not showing many results</text>
+        <text>Bug fixes for attaching images to direct messages</text>
+    </version>
+
+    <version name="6.6.2">
+        <text>Improvements and fixes to the video and GIF players</text>
+    </version>
+
+    <version name="6.6.1">
+        <text>Fix saving images</text>
+        <text>Smaller bug fixes</text>
+    </version>
+
+    <version name="6.6.0">
+        <text>New option to use "White" as the Material Design color</text>
+        <text>Default transparent system bars to "on"</text>
+        <text>Add a fully transparent widget option</text>
+        <text>Add an option to advanced app style settings to stop cropping images on the timeline</text>
+        <text>Update available local trends to latest cities that Twitter tracks</text>
+        <text>Improvements to saving images</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.5.2">
+        <text>Fix issue with ringtone playing, when it is disabled</text>
+        <text>Update translations</text>
+        <text>Fix force closes</text>
+    </version>
+
+    <version name="6.5.1">
+        <text>Improvements to icon sizing</text>
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="6.5.0">
+        <text>Android O: Adaptive icon</text>
+        <text>Android O: Notification channels</text>
+        <text>NEW: Attach media to direct messages</text>
+        <text>NEW: Dynamic shortcuts to your logged in profiles (Android 7.1+)</text>
+        <text>NEW: Quick settings tile to compose a new tweet (Android 7.0+)</text>
+        <text>NEW: Play GIFs and videos within a direct message</text>
+        <text>Android O: PIP support, app category support</text>
+        <text>Bug fixes</text>
+        <text>Performance optimizations</text>
+    </version>
+
+    <version name="6.4.3">
+        <text>Improvements and fixes for custom ringtone support</text>
+    </version>
+
+    <version name="6.4.2">
+        <text>Improvements for user auto complete</text>
+        <text>Some workarounds for Android O BETA issues</text>
+    </version>
+
+    <version name="6.4.0">
+        <text>New option for notifications: receive push notifications from the Twitter app, if it's installed!</text>
+        <text>Improvements around the ease-of-use of the notification settings section</text>
+        <text>Improvements around tweeting images</text>
+    </version>
+
+    <version name="6.3.3">
+        <text>Fixes for Galaxy S8</text>
+    </version>
+
+    <version name="6.3.2">
+        <text>Settings UI improvements</text>
+        <text>Crash and bug fixes</text>
+    </version>
+
+    <version name="6.3.1">
+        <text>Some fixes for sharing through Talon</text>
+    </version>
+
+    <version name="6.3.0">
+        <text>New option for tweets that are too long to post: "Tweetstorms"! This will split tweets using a counter (1/x), and post them directly to Twitter.</text>
+        <text>Preparations for Android O!</text>
+        <text>Tons of improvements around the background service scheduling, data usage, and battery usage</text>
+        <text>Improvements around the widget loading/updating</text>
+        <text>Fix queued tweets never being sent</text>
+    </version>
+
+    <version name="6.2.0">
+        <text>Option to use Twitter's new reply style! It is on by default. If you want to turn it off and see all the Twitter handles in a reply, like Twitter has always done, it is under "Advanced App Style" settings.</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="6.1.0">
+        <text>New "Material Design Color" option that matches the dark theme background!</text>
+        <text>New option in advanced "App Style" settings to disable showing profile pictures</text>
+        <text>Enable "peeking" on the new profile and tweet viewers</text>
+        <text>New option to use larger images on the widget</text>
+        <text>UI consistency improvements</text>
+        <text>Fixes for links being eaten when shared with an image</text>
+    </version>
+
+    <version name="6.0.3">
+        <text>Some force close fixes</text>
+        <text>Share tweets with the link first</text>
+    </version>
+
+    <version name="6.0.2">
+        <text>Fix echo in videos</text>
+        <text>Lists as swipable pages can now hold up to 1200 tweets</text>
+        <text>Fix the auto-insert hashtags option</text>
+    </version>
+
+    <version name="6.0.1">
+        <text>Fix some mute issues</text>
+        <text>Fix some reported force closes</text>
+    </version>
+
+    <version name="6.0.0">
+        <text>Woah - speed. Everything is faster. Talon 6.0 is Twitter like you have never used it before.</text>
+        <text>Sweet style. I iterated and improved on all the main pieces of the app, along with adding some awesome new features to each.</text>
+        <text>New: Tweet viewer UI revamp</text>
+        <text>New: Profiles UI revamp</text>
+        <text>New: View threads as well as replies to any tweet</text>
+        <text>New: Advanced filtering options on a users profile, to see all their interactions and tweets</text>
+        <text>New: View a user's lists on their profile</text>
+        <text>New: Image viewer revamp (animations, improved drag to dismiss)</text>
+        <text>New: View tweet counts and actions with a long click on the timeline</text>
+        <text>New: Option to only show people you are following when auto-completing a mention (Other Options)</text>
+        <text>Improve: Article viewer (quotes, images, theme-ing, and content loading)</text>
+        <text>Improve: UI for quoting tweets</text>
+        <text>Improve: Image loading (speed, consistency, data usage)</text>
+        <text>Improve: Long clicking a chip on a user profile will de-select all the others</text>
+        <text>Improve: Auto-complete for mentions</text>
+        <text>Improve: Tablet support</text>
+        <text>Improve: Moments links will always open to the Twitter website</text>
+    </version>
+
+    <version name="5.10.2">
+        <text>Fixes for double mention notifications</text>
+        <text>More auto complete fixes</text>
+    </version>
+
+    <version name="5.10.1">
+	    <text>Bug fixes for auto complete</text>
+    </version>
+
+    <version name="5.10.0">
+        <text>Option to enable fingerprint authentication for composing a tweet (Open the compose menu and hit the three dot overflow)</text>
+        <text>Peeking into a profile (by long clicking their picture) will show you whether or not they follow you</text>
+        <text>Option to only show the people you follow, when auto-completing a mention (Settings -> Other Options)</text>
+        <text>Fixes for the user auto complete</text>
+    </version>
+
+    <version name="5.9.2">
+        <text>Some fixes for selecting individual user pages</text>
+    </version>
+
+    <version name="5.9.1">
+        <text>Fix some issues with auto-completing mentions</text>
+    </version>
+
+    <version name="5.9.0">
+        <text>New swipe-able page to display all of a user's tweets</text>
+    </version>
+
+    <version name="5.8.4">
+        <text>Update translations</text>
+        <text>Update dependencies</text>
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="5.8.3">
+        <text>Fix list swipable pages being limited to 400 tweets</text>
+    </version>
+
+    <version name="5.8.2">
+        <text>Performance improvements for in-line video playback</text>
+    </version>
+
+    <version name="5.8.1">
+        <text>Improvements to the detailed style of quoted tweet on the timeline</text>
+        <text>Improvements for the article viewer, on some websites</text>
+        <text>Improvements/fixes for the LED on notifications</text>
+    </version>
+
+    <version name="5.8.0">
+        <text>If you love my work, become a 2019 supporter from the settings menu!</text>
+        <text>Search all the users on Twitter when auto-completing a mention in a tweet</text>
+        <text>Option to change the widget's text size separate from the app's text size</text>
+        <text>Absolute date formats can now be used on the compact tweet layout</text>
+        <text>Improve the format of absolute dates on the timeline</text>
+    </version>
+
+    <version name="5.7.0">
+        <text>New Layout: Compact tweet layout without pictures</text>
+        <text>Improvements to searches</text>
+        <text>More improvements on Twitter's new expanded tweet counts</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.6.3">
+        <text>Fix GIFs displaying as videos for some people</text>
+    </version>
+
+    <version name="5.6.2">
+        <text>Fix some issues with quoting tweets, not using Twitter's quote style</text>
+    </version>
+
+    <version name="5.6.1">
+        <text>Browser now applies text size preference</text>
+        <text>Browser allows you to copy and paste paragraphs</text>
+        <text>Bug/crash fixes</text>
+    </version>
+
+    <version name="5.6.0">
+        <text>Save time and data using the brand new, readability style, web browser with beautiful layouts and quick load times! (Settings -> Other Options)</text>
+    </version>
+
+    <version name="5.5.6">
+        <text>Option to open a tweet in the browser, from the three dot overflow</text>
+    </version>
+
+    <version name="5.5.5">
+        <text>Edit search results</text>
+        <text>Improvements to notifying for second account mentions</text>
+        <text>"Retweet" and "Like" improvements on notification buttons</text>
+        <text>Fixes for opening profiles in different languages, from a google search</text>
+    </version>
+
+    <version name="5.5.4">
+        <text>Option to use the older, more detailed, quoted tweet style</text>
+    </version>
+
+    <version name="5.5.3">
+        <text>Launcher shortcut for "Compose DM"</text>
+        <text>Improve font size of quoted tweets</text>
+    </version>
+
+    <version name="5.5.2">
+        <text>Bug fixes</text>
+        <text>Lots of performance improvements</text>
+    </version>
+
+    <version name="5.5.1">
+        <text>Improve sharing tweets</text>
+        <text>Improve Android 7.1 launcher shortcut support</text>
+    </version>
+
+    <version name="5.5.0">
+        <text>Built for Android 7.1!</text>
+        <text>Round icon to use on launchers that support them</text>
+        <text>Add launcher shortcuts to compose a tweet and view your profile</text>
+        <text>Add support for the image keyboard introduced in Android 7.1</text>
+    </version>
+
+    <version name="5.4.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.4.0">
+        <text>Upload videos to Twitter</text>
+        <text>Capture videos to upload when attaching a tweet</text>
+    </version>
+
+    <version name="5.3.13">
+        <text>Support for launcher shortcuts (Action Launcher's Quickcut)</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.3.12">
+        <text>Sometimes with twitters new expanded tweet counts, they would remove spaces from your tweets</text>
+    </version>
+
+    <version name="5.3.11">
+        <text>Fixes for mentioning yourself</text>
+    </version>
+
+    <version name="5.3.10">
+        <text>Improvements to support for new character counts</text>
+    </version>
+
+    <version name="5.3.9">
+        <text>Implement Twitter's new character counts for pictures!</text>
+    </version>
+
+    <version name="5.3.8">
+        <text>Fixes for sharing and taking pictures in Nougat</text>
+    </version>
+
+    <version name="5.3.7">
+        <text>Fix playing GIFs and videos from widget items</text>
+        <text>Some fixes for favorite user notifications</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.3.6">
+        <text>Bug fixes</text>
+        <text>Translation updates</text>
+    </version>
+
+    <version name="5.3.5">
+        <text>Get a notification when your favorite users retweet something too</text>
+        <text>Keep better track of running background services</text>
+        <text>Fix some issues tweeting pictures from multiple or the second account</text>
+        <text>Bug fixes</text>
+        <text>Some visual improvements</text>
+    </version>
+
+    <version name="5.3.3">
+        <text>Fix some force closes</text>
+    </version>
+
+    <version name="5.3.2">
+        <text>Stop data spikes</text>
+        <text>Improvements to cleaning up the database for much better performance for some users</text>
+    </version>
+
+    <version name="5.3.1.1">
+        <text>Hotfix for night mode</text>
+    </version>
+
+    <version name="5.3.1">
+        <text>Black theme on night mode wouldn't always get applied</text>
+        <text>The compact layout has some UI bugs with small font sizes</text>
+        <text>Some data saving things</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.3.0">
+        <text>Line spacing option (App Style -> Advanced Options)</text>
+        <text>Option to use dual (side-by-side) swipable pages on the timeline, in landscape mode, for phones and tablets (App Style -> Advanced Options)</text>
+        <text>Select between dark or black theme for night mode</text>
+        <text>Select which account to follow from if you enable Other Options -> Cross Account Actions for multiple accounts.</text>
+        <text>Re-enable the swipe to close GIFs/videos</text>
+        <text>Improve compact layout for quoted tweets</text>
+        <text>Change some of the background sync and notification settings to support some code changes</text>
+        <text>Improve some coloring for the pitch black theme</text>
+        <text>Disable the retweet button on protected accounts</text>
+        <text>Various UI improvements and bug fixes</text>
+        <text>Translation updates</text>
+    </version>
+
+	<version name="5.2.4">
+        <text>The peek background is blurred instead of just dimmed</text>
+        <text>Peeking is available on profiles and the tweet viewer</text>
+        <text>Bug fixes</text>
+        <text>Various UI improvements</text>
+        <text>Translation updates</text>
+		<text>Add a link to the privacy policy (http://privacy.klinker.xyz)</text>
+	</version>
+
+    <version name="5.2.2">
+        <text>Share profile link from the overflow menu when viewing profiles</text>
+        <text>Various UI tweaks</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.2.1">
+        <text>Make the "Peeking" optional from "Other Options"</text>
+        <text>Make the icon just a little bit bigger</text>
+        <text>Performance improvements</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.2.0">
+        <text>NEW ICON</text>
+        <text>Peek into profiles, images, GIFs, and videos from the timeline with a long click (similar to 3D Touch)</text>
+        <text>Fixes for saving videos</text>
+        <text>Update translations</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.1.3">
+        <text>Higher quality GIF uploads</text>
+        <text>Improve in-line Twitter GIF and video playback</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.1.2">
+        <text>Widget Improvements</text>
+        <text>Various UI improvements</text>
+        <text>Bug/crash fixes</text>
+    </version>
+
+    <version name="5.1.1">
+        <text>Fix uploading GIFs to Twitter</text>
+        <text>Improve upload quality of all media</text>
+    </version>
+
+    <version name="5.1.0">
+        <text>[New] Added a pitch black "Material Design Color" option</text>
+        <text>[New] Support for ShortcutBadger to display notification counts on some launchers (https://goo.gl/cPD6MW)</text>
+        <text>[New] Option to not dismiss notifications when the app is started (advanced notification settings)</text>
+        <text>[New] View "Retweeted by @screenname" on the homescreen widget</text>
+        <text>[New] Prepare for Twitter's new tweet character counting method</text>
+        <text>[Improve] Multi-window in Android N</text>
+        <text>[Improve] "Media" section on user profiles</text>
+        <text>[Improve] Viewing GIFs</text>
+        <text>[Improve] Dark theme colors</text>
+        <text>[Improve][Fix] Searching and trends</text>
+        <text>[Fix] Close the drawers correctly when the back button is pressed</text>
+        <text>[Fix] Fixes for some video providers</text>
+    </version>
+
+    <version name="5.0.4">
+        <text>Improve video viewer and add playback controls</text>
+    </version>
+
+    <version name="5.0.3">
+        <text>Fix issue with the widget being blank for some people</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="5.0.2">
+        <text>Bug fixes</text>
+        <text>Attempt to make the app compatible with Chrome OS</text>
+    </version>
+
+    <version name="5.0.1">
+        <text>Option to enable/disable images on the widget</text>
+        <text>Always enable quick actions, regardless of your timeline expansion setting</text>
+        <text>Show absolute timestamps on the widget if enabled</text>
+        <text>Force close fixes</text>
+        <text>Bug fixes</text>
+        <text>Slight UI improvements</text>
+    </version>
+
+    <version name="5.0.0">
+        <text>[New] Built for Android N!</text>
+        <text>[New] Way better conversation linking when a tweet is a reply to another</text>
+        <text>[New] Expand tweets directly on the timeline by default</text>
+        <text>[New] Two new Material Design widget themes to choose from</text>
+        <text>[New] Pick the account you want to use for the widget</text>
+        <text>[New] Choose between viewing mentions or the home timeline on the widget</text>
+        <text>[New] Tweet images are shown on the widget</text>
+        <text>[New] Links are highlighted on the widget</text>
+        <text>[New] Settings overhauled and simplified</text>
+        <text>[Improve] SUPER smooth list scrolling</text>
+        <text>[Improve] In-line tweet expansions</text>
+        <text>[Improve] Tablet and landscape layouts</text>
+        <text>[Improve] Layout tweaks</text>
+        <text>[Fix] Lots of bugs</text>
+    </version>
+
+    <version name="4.10.3">
+        <text>Apply the image editor to profile picture and banner picture uploads</text>
+        <text>Auto fill the current profile info when you try to update it from within Talon</text>
+        <text>Fix issue where favorite user notification didn't use a ringtone, for some users</text>
+        <text>Fix default user banner not displaying in the drawer, if user doesn't have a custom one</text>
+        <text>Translation updates</text>
+        <text>Other bug fixes</text>
+    </version>
+
+    <version name="4.10.2">
+        <text>Manually select the language you want to use the app in</text>
+    </version>
+
+    <version name="4.10.1">
+        <text>Fixes for reported bugs</text>
+    </version>
+
+    <version name="4.10.0">
+        <text>New "compact" layout for the timeline, for those who just want everything on the screen. (UI Settings, Tweet Style)</text>
+        <text>Fixes for duplicate favorite user notifications</text>
+        <text>Other various reported bug fixes</text>
+    </version>
+
+    <version name="4.9.1">
+        <text>Improvements for in-line expansion of tweets</text>
+    </version>
+
+    <version name="4.9.0">
+        <text>View quotes of any tweet (open up the tweet viewer and hit the button that looks like a person)</text>
+        <text>Improvements to landscape UI</text>
+        <text>Easier access to the retweets and likes for a tweet</text>
+        <text>View other people's quotes, of your tweets, in the activity page</text>
+        <text>Fix issues with going to the profile/tweet viewer from the activity section</text>
+        <text>Other various bug fixes</text>
+    </version>
+
+    <version name="4.8.2">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.8.1">
+        <text>Copy links to your own tweets</text>
+        <text>Favorite users are no longer unique to each account in Talon</text>
+        <text>Internal changes for when you delete tweets</text>
+        <text>Fix for pictures sometimes being the wrong size</text>
+        <text>Fix blank compose screen after trying to retry the failed tweet</text>
+        <text>Fixes for favorite user notifications</text>
+        <text>Fix Giphy downloads sometimes failing</text>
+    </version>
+
+    <version name="4.8.0.1">
+        <text>Fixes for KitKat</text>
+    </version>
+
+    <version name="4.8.0">
+        <text>Crop, zoom, and rotate pictures before posting them</text>
+        <text>Improvements for favorite user notifications getting duplicated</text>
+        <text>Change the number of tweets to store for lists that are swipable pages, from memory management settings</text>
+    </version>
+
+    <version name="4.7.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.7.2">
+        <text>UI tweaks across the board, because the little details matter</text>
+        <text>Clicking profile picture on profiles opens it full screen</text>
+        <text>Improve removal of retweets</text>
+        <text>Copy a link to the profile from the three-dot overflow on profiles</text>
+        <text>Changes for RTL languages</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.7.1">
+        <text>Fix settings on KitKat</text>
+    </version>
+
+    <version name="4.7.0">
+        <text>Improve profile UI</text>
+        <text>Translating tweets now translates to the language set on your Twitter profile</text>
+        <text>UI tweaks</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.6.6">
+        <text>Option to use higher quality downloaded images</text>
+        <text>Always download full quality images from the image viewer</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.6.5">
+        <text>Apply mutes outside of the swipable pages</text>
+        <text>Update the FAQ section of the app</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.6.4.1">
+        <text>Fix night mode</text>
+    </version>
+
+    <version name="4.6.4">
+        <text>Add share to Chrome Custom Tabs</text>
+        <text>CTRL+Enter on a physical keyboard will send tweets in the compose screen</text>
+        <text>Bug fixes</text>
+        <text>Update translations</text>
+    </version>
+
+    <version name="4.6.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.6.2">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.6.0">
+        <text>Like and retweet a status from mention and favorite user notification buttons</text>
+        <text>Bundled notification support for mentions on Android N and Android Wear</text>
+        <text>Bundled notification support for favorite user tweets on Android N and Android Wear</text>
+        <text>Bundled notification support for activity on Android N and Android Wear</text>
+        <text>Add tweets pictures to mention notifications</text>
+        <text>UI Improvements</text>
+    </version>
+
+    <version name="4.5.3">
+        <text>Wooosh. Buttery smoothness update across a ton of screens.</text>
+        <text>Image loading takes less data (significantly less in some cases)</text>
+        <text>Faster, smoother image loading</text>
+    </version>
+
+    <version name="4.5.2">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.5.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.5.0">
+        <text>Play Twitter videos and GIFs directly on the timeline</text>
+        <text>Search Giphy for GIFs when composing a tweet</text>
+        <text>UI updates, bug/crash fixes</text>
+    </version>
+
+    <version name="4.1.3">
+        <text>Improvements to viewing GIFs and videos</text>
+        <text>UI Updates</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.1.2">
+        <text>Force close fixes</text>
+    </version>
+
+    <version name="4.1.1">
+        <text>Some UI updates</text>
+    </version>
+
+    <version name="4.1.0">
+        <text>Materialize the Search UI</text>
+        <text>Put "VIDEO" and "GIF" badges on media</text>
+        <text>Improve orientation changes</text>
+        <text>Only save unique drafts</text>
+        <text>UI improvements</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.0.10">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.0.9">
+        <text>Changes to support better screen rotation</text>
+        <text>Fix some list issues</text>
+        <text>Fix sharing YouTube videos</text>
+    </version>
+
+    <version name="4.0.8">
+        <text>Force close fixes</text>
+    </version>
+
+    <version name="4.0.7">
+        <text>Bug Fixes</text>
+    </version>
+
+    <version name="4.0.6">
+        <text>Update translations</text>
+        <text>Save images from direct messages</text>
+        <text>UI updates</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.0.5">
+        <text>Various UI improvements, updates, and fixes</text>
+        <text>Some fixes for searching tweets/profiles from emails</text>
+    </version>
+
+    <version name="4.0.4">
+        <text>Fix GIFs not playing due to a Twitter change</text>
+    </version>
+
+    <version name="4.0.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.0.2">
+        <text>Improve colors on dark theme</text>
+        <text>Add quote button to the quick actions</text>
+        <text>Settings backups will successfully backup and restore muffled users</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="4.0.1">
+        <text>Improve popup boxes styling</text>
+        <text>Use black navigation bar in landscape mode</text>
+        <text>Clarified a few things about the supporter options</text>
+    </version>
+
+    <version name="4.0.0">
+        <text>[New] Become a 2016 SUPPORTER from settings (does not provide app enhancements)</text>
+        <text>[New] Dual panel main screen to view 2 timelines at once (tablets in landscape)</text>
+        <text>[New] Access quick actions (like, retweet, reply) on a tweet by pressing the date</text>
+        <text>[New] Better tablet layouts</text>
+        <text>[New] Quicker account switching</text>
+        <text>[New] A few more activity transitions on Android Lollipop+</text>
+        <text>[Improve] Favorite user notifications no longer require timeline notifications to be turned on</text>
+        <text>[Improve] Removing a liked tweet will also remove it from the "Liked Tweets" section of the app</text>
+        <text>[Improve] Drawer styling</text>
+        <text>[Improve] Phone rotation when viewing lists from the list section on the drawer</text>
+        <text>[Fix] Image viewer when battery saver mode is on</text>
+        <text>[Fix] Other various bug fixes</text>
+    </version>
+
+    <version name="3.5.5">
+        <text>Improve conversations on tweet viewer</text>
+        <text>Update the default theme for the app</text>
+    </version>
+
+     <version name="3.5.4">
+        <text>Add a shadow to the bottom of the app bar</text>
+    </version>
+
+    <version name="3.5.3">
+        <text>Fix crash on new toast and "To Top" methods</text>
+    </version>
+
+    <version name="3.5.2">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.5.1">
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="3.5.0">
+        <text>Improve sharing</text>
+        <text>Tapping the app bar tells you how far from the top of the timeline you are</text>
+        <text>Long pressing the app bar brings you to the top of your timeline</text>
+        <text>Performance improvements for the snackbar</text>
+        <text>Updates to the FAQ section of the app</text>
+    </version>
+
+    <version name="3.4.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.4.2">
+        <text>Swipe to close videos</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.4.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.4.0">
+        <text>New full screen viewer for video content</text>
+        <text>Added tweet details to the image viewer</text>
+        <text>Easier sharing and downloading of photos and videos</text>
+        <text>Remove photos when composing a tweet</text>
+        <text>Option to use smaller pictures on the timeline</text>
+        <text>New option to not move the FAB, app bar, and snackbar on/off the screen when scrolling</text>
+        <text>Set a background refresh interval on lists from "Sync Settings"</text>
+        <text>Improvements to compose window</text>
+        <text>Videos no longer automatically play on the tweet viewer</text>
+        <text>Memory and performance improvements</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.3.0">
+        <text>Download Twitter and Vine videos</text>
+        <text>Download Twitter Gifs (as mp4 videos)</text>
+        <text>Updated the YouTube Player</text>
+        <text>Removed the popup for viewing multiple pictures</text>
+        <text>Copy tweet links from the overflow menu</text>
+        <text>Fix some permission issues</text>
+    </version>
+
+    <version name="3.2.9">
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="3.2.8">
+        <text>Update Translations</text>
+    </version>
+
+    <version name="3.2.7">
+        <text>Twitter loves us. Instead of 'favoriting' statuses, you now 'like' them!</text>
+    </version>
+
+    <version name="3.2.6">
+        <text>Bug fixes</text>
+        <text>Update translations</text>
+    </version>
+
+    <version name="3.2.5">
+        <text>Chrome Custom Tabs no longer need Google Chrome to be your default browser for devices where it is possible.</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.2.4">
+        <text>Support for Chrome Custom Tabs</text>
+    </version>
+
+    <version name="3.2.3">
+        <text>Bug fixes when looking for replies to a tweet</text>
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="3.2.2">
+        <text>Smoother animations for opening tweets and profiles</text>
+        <text>Bug fixes on image viewer</text>
+    </version>
+
+    <version name="3.2.1">
+        <text>Bug fix</text>
+    </version>
+
+    <version name="3.2.0">
+        <text>Revamp and improve tweet and profile viewer's styles, animations, layout, and flow</text>
+        <text>Swipe down to close tweets and profiles</text>
+        <text>Improve tablet support, dimensions, and animations</text>
+        <text>Improve timeline animations and styles</text>
+        <text>Compose window follows text size from settings</text>
+        <text>Add user's profile picture and banner to the pictures gallery on their profiles</text>
+        <text>Fix some issues with the tweets below pictures option</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.1.0" >
+        <text>Built for Android Marshmallow</text>
+        <text>Revamp of Android Wear app layout</text>
+        <text>Support for favoriting and retweeting statuses from Android Wear</text>
+        <text>Support for composing tweets on Android Wear</text>
+        <text>Support for replying to tweets on Android Wear</text>
+        <text>Show images on quoted tweets</text>
+        <text>Handle links to compose tweets</text>
+        <text>Direct Messages no longer have a character limit</text>
+        <text>Show images on user profile pages</text>
+        <text>Apply Android Marshmallow's new runtime permission model</text>
+        <text>Don't stream blocked users with Talon Pull</text>
+        <text>Don't redirect to the external browser for translations</text>
+        <text>Show embedded tweets rather than links in more places</text>
+        <text>Some performance improvements</text>
+        <text>Some bug fixes for direct messages</text>
+        <text>Fix duplicate tweets occurring for some</text>
+        <text>Various Bug fixes</text>
+        <text>Update application dependencies</text>
+    </version>
+
+    <version name="3.0.4">
+        <text>Greatly improve speed of finding replies on tweets</text>
+        <text>More bug fixes</text>
+    </version>
+
+    <version name="3.0.3">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="3.0.2">
+        <text>More reported bugs</text>
+    </version>
+
+    <version name="3.0.1">
+        <text>Reported bug fixes</text>
+    </version>
+
+    <version name="3.0.0">
+        <text>NEW: User profile layout</text>
+        <text>NEW: Transition animations from timeline to tweet viewer (Android 5.0+)</text>
+        <text>NEW: Material Design login/setup layout</text>
+        <text>NEW: Select font type from UI settings</text>
+        <text>NEW: Swipe horizontally to close tweet and profile viewers</text>
+        <text>NEW: Don't display twitter image or quoted tweet links anymore</text>
+        <text>NEW: Notification of quoted tweets when using talon pull</text>
+        <text>NEW: Option to disable Talon Pull notification. Read disclaimer on setting. Use extreme caution.</text>
+        <text>NEW: Mute options on your own profile</text>
+        <text>IMPROVE: Popup sizes</text>
+        <text>IMPROVE: Popup layout animations</text>
+        <text>IMPROVE: Search bar simplicity</text>
+        <text>IMPROVE: Settings style</text>
+        <text>IMPROVE: Settings options</text>
+        <text>IMPROVE: Quoting tweets</text>
+        <text>IMPROVE: Expansion height</text>
+        <text>IMPROVE: Animations</text>
+        <text>IMPROVE: Some tablet layouts</text>
+        <text>IMPROVE: Fluidity of some transitions</text>
+        <text>IMPROVE: Now officially "Designed for Tablets" on Play Store</text>
+        <text>IMRPOVE: Now officially "Designed for Android Wear" on Play Store</text>
+        <text>IMPROVE: Play store listing</text>
+        <text>IMPROVE: Added a few more helpful tips throughout the app</text>
+        <text>FIX: Issue with both video and thumbnail showing on tweet viewer</text>
+        <text>FIX: Mixed up profile pictures when replying from second account</text>
+        <text>FIX: Compose screen bugs</text>
+        <text>FIX: Drawer allowing you to interact with the list behind it in some cases</text>
+        <text>FIX: Crash reports</text>
+    </version>
+
+    <version name="2.6.5">
+        <text>Links that finish a line of text could be clicked from the empty space on that line, which was bad.</text>
+    </version>
+
+    <version name="2.6.4">
+        <text>Improve smoothness and fluidity on timeline</text>
+        <text>Improve efficiency of loading quoted tweets</text>
+        <text>Get real followers, friends, and tweets counts on profile by long clicking the buttons</text>
+        <text>Fix some instances of overlapping text on expansion</text>
+        <text>Fix bad dates on the tweet viewer</text>
+        <text>Added tip dialog when opening pictures on a user's profile</text>
+    </version>
+
+    <version name="2.6.3">
+        <text>Fix issue for refreshing the widget</text>
+        <text>Fix 24 hour clock on the tweet viewer</text>
+        <text>Fix weirdness when rotating YouTube video</text>
+        <text>Fix links when using the older quote styles</text>
+        <text>Other various bug fixes</text>
+    </version>
+
+    <version name="2.6.2">
+        <text>Never open Meerkat and Periscope links to the internal browser.</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.6.1">
+        <text>Bug fixes</text>
+        <text>Improvements</text>
+        <text>Translation updates</text>
+    </version>
+
+    <version name="2.6.0">
+        <text>Return of the Android Wear app to view your timeline</text>
+    </version>
+
+    <version name="2.5.5">
+        <text>Improvements for embedded tweets</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.5.4">
+        <text>Various improvements</text>
+    </version>
+
+    <version name="2.5.3">
+        <text>Option to manually specify whether you use a navigation bar (advanced settings)</text>
+    </version>
+
+    <version name="2.5.2">
+        <text>Bug fixes for tweet viewer</text>
+        <text>Fix app bar not hiding correctly in some cases</text>
+    </version>
+
+    <version name="2.5.1">
+        <text>Fix issue with some timestamps</text>
+    </version>
+
+    <version name="2.5.0">
+        <text>New tweet viewer</text>
+        <text>Pick the accent color separate from the main color</text>
+        <text>Black theme option</text>
+        <text>Option for transparent system bars under UI settings</text>
+        <text>Improvements for tweet expansion</text>
+        <text>Improvements for user profiles</text>
+        <text>Fix issue with muting clients</text>
+        <text>Fix some layout issues</text>
+    </version>
+
+    <version name="2.4.0.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.4.0">
+        <text>Support for new Twitter "quote" method</text>
+        <text>Support for viewing embedded tweets</text>
+        <text>Layout improvements</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.3.1">
+        <text>Layout fixes</text>
+        <text>Bug fixes</text>
+        <text>Translation updates</text>
+    </version>
+
+    <version name="2.3.0">
+        <text>Twitter video support</text>
+    </version>
+
+    <version name="2.2.4">
+        <text>Bug fixes and force closes</text>
+    </version>
+
+    <version name="2.2.3.1">
+        <text>Force close on some tablets</text>
+    </version>
+
+    <version name="2.2.3">
+        <text>More KitKat bug fixes</text>
+    </version>
+
+    <version name="2.2.2">
+        <text>Bug fixes for KitKat</text>
+    </version>
+
+    <version name="2.2.1">
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="2.2.0">
+        <text>Support for Android 4.4 (KitKat)</text>
+        <text>Improve layouts</text>
+        <text>Improve theming</text>
+        <text>Improve swipe to close pictures</text>
+        <text>Improve GIF viewing on tablets</text>
+        <text>Fix GIFs not looping on some devices</text>
+    </version>
+
+    <version name="2.1.2">
+        <text>Improvements for viewing multiple pictures</text>
+        <text>FAQ updates</text>
+    </version>
+
+    <version name="2.1.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.1.0">
+        <text>View favoriters on a status</text>
+        <text>View who favorited your status from 'Activity' page</text>
+        <text>Improve handling of GIFs</text>
+        <text>Info button on the activity page to tell you about it</text>
+        <text>Bug fixes</text>
+        <text>Login changes</text>
+    </version>
+
+    <version name="2.0.4">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.0.3">
+        <text>Animated GIF preview images</text>
+    </version>
+
+    <version name="2.0.2">
+        <text>Improve login</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="2.0.1">
+        <text>Update translations</text>
+        <text>Bug fixes from 4.0.0</text>
+    </version>
+
+    <version name="2.0.0">
+        <text>[New] Activity/Interactions swipe-able page</text>
+        <text>[New] Muffle users tweets ("Minimize")</text>
+        <text>[New] Cross account retweets and favorites</text>
+        <text>[New] Native Vine support</text>
+        <text>[New] In-app YouTube player working on Lollipop</text>
+        <text>[New] Hold up to 8 swipe-able pages</text>
+        <text>[New] Favorite Tweets swipe-able page</text>
+        <text>[New] Saved searches swipe-able page</text>
+        <text>[New] World trends swipe-able page</text>
+        <text>[New] Local trends swipe-able page</text>
+        <text>[New] Indicator on tweets part of a conversation</text>
+        <text>[New] Ripple feedback when touching tweets</text>
+        <text>[New] Swipe up or down to close the photo viewer</text>
+        <text>[New] Send direct messages from profile</text>
+        <text>[New] Update direct messages conversation automatically</text>
+        <text>[New] Un-follow public lists</text>
+        <text>[New] Remove retweets from searches by default</text>
+        <text>[New] App Promotion</text>
+        <text>[New] Activity refresh notifications</text>
+        <text>[New] Sync the second account activity in the background</text>
+        <text>[New] Background refresh of activity</text>
+        <text>[New] Option for activity background sync frequency</text>
+        <text>[Improve] Default pages on timeline</text>
+        <text>[Improve] Scrolling performance</text>
+        <text>[Improve] Much better auto-complete</text>
+        <text>[Improve] Selection of swipe-able pages</text>
+        <text>[Improve] Saving of search queries</text>
+        <text>[Improve] User searches not always working</text>
+        <text>[Improve] Full screen YouTube</text>
+        <text>[Improve] Login</text>
+        <text>[Improve] Popup Size</text>
+        <text>[Improve] Interfacing with Blur Launcher page</text>
+        <text>[Improve] System UI visibility in photo viewer</text>
+        <text>[Improve] Format when saving a search</text>
+        <text>[Improve] Snackbar on dark theme</text>
+        <text>[Improve] Rate limiting on list timelines</text>
+        <text>[Improve] Expansion of tweets</text>
+        <text>[Improve] Snackbar animations in some cases</text>
+        <text>[Improve] Always show images on direct messages</text>
+        <text>[Fix] Replacing some links</text>
+        <text>[Fix] Truncated links when copying tweet</text>
+        <text>[Fix] Up navigation on in app browser</text>
+        <text>[Fix] Search UI in landscape</text>
+        <text>[Fix] Saved searches not displaying results</text>
+        <text>[Fix] Notification when sending Direct Message</text>
+        <text>[Fix] Some ow.ly links appearing as images</text>
+        <text>[Fix] Compose button disappearing</text>
+        <text>[Fix] Google Chrome intent filters</text>
+    </version>
+
+    <version name="1.4.2">
+        <text>Better user notification for long or failed TweetMarker responses</text>
+    </version>
+
+    <version name="1.4.1">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="1.4.0">
+        <text>View Twitter GIFs</text>
+        <text>Swipe between a users pictures from their profile</text>
+        <text>View user banners on profiles</text>
+        <text>Improve image quality from some sources</text>
+        <text>Lots of bug fixes</text>
+    </version>
+
+    <version name="1.3.2">
+        <text>Login backend changes.</text>
+        <text>Few more touches of Material Design</text>
+    </version>
+
+    <version name="1.3.1">
+        <text>Fix force close on paging between pictures</text>
+    </version>
+
+    <version name="1.3.0">
+        <text>Swipe between multiple pictures</text>
+        <text>Allow for different color schemes between accounts</text>
+        <text>Fix transparent action bars on the widget</text>
+        <text>Improve location services</text>
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="1.2.4">
+        <text>Bug fixes</text>
+    </version>
+
+    <version name="1.2.2">
+        <text>In app browser fixes</text>
+        <text>Some tweet expansion fixes</text>
+    </version>
+
+    <version name="1.2.1">
+        <text>More material</text>
+        <text>Updated translations</text>
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="1.2.0">
+        <text>Improved expansion of tweets and conversations</text>
+        <text>Added a swipable page for your second account's mentions</text>
+        <text>Improved the accuracy of timestamp to seconds</text>
+        <text>Reduced the application size</text>
+        <text>Slight update to the icon</text>
+        <text>UI fixes when selecting swipable pages</text>
+        <text>Fixed custom ringtones</text>
+        <text>Better managing of TweetMarker refreshes</text>
+        <text>Other bug fixes</text>
+    </version>
+
+    <version name="1.1.1">
+        <text>Open to internal or external browser when long clicking a link</text>
+        <text>img.ly support</text>
+        <text>Fix for interaction clicks</text>
+        <text>Bug/force close fixes</text>
+        <text>Updated translations</text>
+    </version>
+
+    <version name="1.1.0">
+        <text>More Material... again :)</text>
+        <text>Completely customize the swipe-able pages on your timeline</text>
+        <text>Hold up to 6 pages on your timeline</text>
+        <text>Edit what elements show up in the main navigation drawer</text>
+        <text>Some bug and style fixes</text>
+    </version>
+
+    <version name="1.0.5">
+        <text>Few fixes for Nexus 9</text>
+    </version>
+
+    <version name="1.0.4">
+        <text>Slight style fixes</text>
+        <text>Force close fixes</text>
+    </version>
+
+    <version name="1.0.3">
+        <text>Material Design styled pull to refresh</text>
+        <text>New UI options under "UI Settings"</text>
+        <text>Crash fixes</text>
+    </version>
+
+    <version name="1.0.2">
+        <text>Mooooar Material.</text>
+        <text>Better photo viewing</text>
+        <text>Updated some icons</text>
+    </version>
+
+    <version name="1.0.1">
+        <text>Disclaimer about YouTube Player not working yet</text>
+    </version>
+
+    <version name = "1.0.0">
+        <text>Initial Release of Talon for Twitter (Plus)</text>
+    </version>
+
+</changelog>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:key="other_options"
+        android:title="@string/sync_options" >
+
+        <SwitchPreference
+            android:key="sync_second_mentions"
+            android:title="@string/sync_second_mentions"
+            android:summary="@string/sync_second_mentions_summary"
+            android:defaultValue="true" />
+
+
+        <ListPreference
+            android:key="max_tweets"
+            android:title="@string/max_number_on_refresh"
+            android:summary="@string/max_number_summary"
+            android:defaultValue="1"
+            android:entries="@array/max_number"
+            android:entryValues="@array/max_number_inserted" />
+        
+        <Preference
+            android:key="sync_friends"
+            android:title="@string/sync_friends"
+            android:summary="@string/sync_friends_summary2" />
+
+        <Preference
+            android:key="fill_gaps"
+            android:title="@string/fill_gaps"
+            android:summary="@string/fill_gaps_summary" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/convo_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:background="?windowBackground">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="?tweet_activity_background" >
+
+            <View
+                android:alpha=".15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bottom_shadow" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tweets_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?tweet_activity_background">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/show_all_tweets_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground" >
+
+                <View
+                    android:layout_gravity="top"
+                    android:alpha=".30"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/top_shadow" />
+
+                <TextView
+                    android:id="@+id/replies_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text="@string/show_all"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

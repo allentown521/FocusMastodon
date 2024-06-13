@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:title="@string/swipable_pages">
+
+        <Preference
+            android:key="pages"
+            android:title="@string/configure_pages" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:title="@string/app_drawer">
+
+        <Preference
+            android:key="drawer_elements"
+            android:title="@string/drawer_elements"
+            android:summary="@string/drawer_elements_summary" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+</PreferenceScreen>

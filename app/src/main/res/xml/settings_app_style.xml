@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2014 Luke Klinker
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.klinker.android.twitter_l.views.preference.TweetStylePreviewPreference
+        android:key="tweet_style_preview" />
+
+    <ListPreference
+        android:key="timeline_pictures"
+        android:title="@string/tweet_style"
+        android:summary="@string/tweet_style_description"
+        android:defaultValue="0"
+        android:entries="@array/timeline_pictures"
+        android:entryValues="@array/timeline_pictures_inserted"/>
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:key="color_options_ground"
+        android:title="@string/color_options" >
+
+        <ListPreference
+            android:key="main_theme_string"
+            android:title="@string/base_theme"
+            android:defaultValue="1"
+            android:entries="@array/choose_theme"
+            android:entryValues="@array/choose_theme_inserted" />
+
+        <Preference
+            android:key="material_theme"
+            android:title="@string/material_color" />
+
+        <Preference
+            android:key="accent_color"
+            android:title="@string/accent_color" />
+
+        <SwitchPreference
+            android:key="night_mode"
+            android:title="@string/night_mode"
+            android:defaultValue="false" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:title="@string/font_options" >
+
+        <ListPreference
+            android:key="emoji_style"
+            android:title="@string/emoji_style"
+            android:defaultValue="android_o"
+            android:entries="@array/emoji_style"
+            android:entryValues="@array/emoji_style_values"/>
+
+        <ListPreference
+            android:key="font_type"
+            android:title="@string/font_type"
+            android:defaultValue="1"
+            android:entries="@array/font_type"
+            android:entryValues="@array/font_type_inserted" />
+
+        <ListPreference
+            android:key="text_size"
+            android:title="@string/timeline_text_size"
+            android:defaultValue="14"
+            android:entries="@array/text_size"
+            android:entryValues="@array/text_size" />
+
+        <SwitchPreference
+            android:key="military_time"
+            android:title="@string/timestamp"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="absolute_date"
+            android:title="@string/absolute_date"
+            android:defaultValue="false" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:title="@string/advanced" >
+
+        <SwitchPreference
+            android:key="always_show_tweet_buttons"
+            android:title="@string/alway_show_tweet_buttons"
+            android:summary="@string/alway_show_tweet_buttons_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="detailed_quotes"
+            android:title="@string/detailed_quotes"
+            android:summary="@string/detailed_quotes_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="drag_dismiss"
+            android:title="@string/enable_drag_dismiss"
+            android:summary="@string/enable_drag_dismiss_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="web_previews_timeline"
+            android:title="@string/preview_web_links"
+            android:defaultValue="true" />
+
+        <Preference
+            android:key="advanced"
+            android:title="@string/advanced_options"/>
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+</PreferenceScreen>

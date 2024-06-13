@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_compose"
+        android:enabled="true"
+        android:shortcutId="manifest-shortcut-compose_tweet"
+        android:shortcutShortLabel="@string/shortcut_compose_short"
+        android:shortcutLongLabel="@string/shortcut_compose_short">
+
+        <intent
+            android:targetPackage="com.klinker.android.twitter_l"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.klinker.android.twitter_l.activities.compose.LauncherCompose" />
+
+    </shortcut>
+
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_compose"
+        android:enabled="true"
+        android:shortcutId="manifest-shortcut-compose_dm"
+        android:shortcutShortLabel="@string/shortcut_compose_dm"
+        android:shortcutLongLabel="@string/shortcut_compose_dm">
+
+        <intent
+            android:targetPackage="com.klinker.android.twitter_l"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.klinker.android.twitter_l.activities.compose.ComposeDMActivity" />
+
+    </shortcut>
+
+</shortcuts>

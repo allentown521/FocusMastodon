@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2014 Luke Klinker
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:talon="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_share"
+        android:orderInCategory="1"
+        android:title="@string/menu_share"
+        android:icon="@drawable/ic_action_share_dark"
+        talon:showAsAction="always"
+        talon:actionProviderClass="com.klinker.android.twitter_l.manipulations.widgets.AlwaysLightShareActionProvider"/>
+
+    <item android:id="@+id/menu_delete_tweet"
+          android:orderInCategory="2"
+          android:title="@string/menu_delete_tweet"
+          talon:showAsAction="never"  />
+
+    <item android:id="@+id/menu_quote"
+          android:orderInCategory="3"
+          android:title="@string/menu_quote"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_copy_text"
+          android:orderInCategory="4"
+          android:title="@string/menu_copy_text"
+          talon:showAsAction="never"  />
+
+    <item android:id="@+id/menu_save_image"
+          android:orderInCategory="5"
+          android:title="@string/menu_save_image"
+          talon:showAsAction="never"  />
+
+    <item android:id="@+id/menu_spam"
+          android:title="@string/menu_spam"
+          android:orderInCategory="6"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_translate"
+        android:title="@string/menu_translate"
+        android:orderInCategory="7"
+        talon:showAsAction="never" />
+
+</menu>

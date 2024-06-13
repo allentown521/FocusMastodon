@@ -1,0 +1,403 @@
+package com.klinker.android.twitter_l.data.sq_lite;
+/*
+ * Copyright 2014 Luke Klinker
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.klinker.android.twitter_l.settings.AppSettings;
+import com.klinker.android.twitter_l.utils.TweetLinkUtils;
+
+import java.util.List;
+
+import twitter4j.DirectMessage;
+import twitter4j.DirectMessageEvent;
+import twitter4j.MediaEntity;
+import twitter4j.URLEntity;
+import twitter4j.User;
+
+public class DMDataSource {
+
+    // provides access to the database
+    public static DMDataSource dataSource = null;
+
+    /*
+
+    This is used so that we don't have to open and close the database on different threads or fragments
+    every time. This will facilitate it between all of them to avoid Illegal State Exceptions.
+
+     */
+    public static DMDataSource getInstance(Context context) {
+
+        // if the datasource isn't open or it the object is null
+        if (dataSource == null ||
+                dataSource.getDatabase() == null ||
+                !dataSource.getDatabase().isOpen()) {
+
+            dataSource = new DMDataSource(context); // create the database
+            dataSource.open(); // open the database
+        }
+
+        return dataSource;
+    }
+
+    // Database fields
+    private SQLiteDatabase database;
+    private DMSQLiteHelper dbHelper;
+    public String[] allColumns = {DMSQLiteHelper.COLUMN_ID, DMSQLiteHelper.COLUMN_TWEET_ID, DMSQLiteHelper.COLUMN_ACCOUNT, DMSQLiteHelper.COLUMN_TYPE,
+            DMSQLiteHelper.COLUMN_TEXT, DMSQLiteHelper.COLUMN_NAME, DMSQLiteHelper.COLUMN_PRO_PIC,
+            DMSQLiteHelper.COLUMN_SCREEN_NAME, DMSQLiteHelper.COLUMN_TIME, DMSQLiteHelper.COLUMN_PIC_URL, DMSQLiteHelper.COLUMN_RETWEETER,
+            DMSQLiteHelper.COLUMN_URL, HomeSQLiteHelper.COLUMN_USERS, HomeSQLiteHelper.COLUMN_HASHTAGS, DMSQLiteHelper.COLUMN_EXTRA_ONE,
+            DMSQLiteHelper.COLUMN_EXTRA_TWO, DMSQLiteHelper.COLUMN_EXTRA_THREE, DMSQLiteHelper.COLUMN_MEDIA_LENGTH };
+
+    public DMDataSource(Context context) {
+        dbHelper = new DMSQLiteHelper(context);
+    }
+
+    public void open() throws SQLException {
+        try {
+            database = dbHelper.getWritableDatabase();
+        } catch (Exception e) {
+            close();
+        }
+    }
+
+    public void close() {
+        try {
+            dbHelper.close();
+        } catch (Exception e) {
+
+        }
+        database = null;
+        dataSource = null;
+    }
+
+    public SQLiteDatabase getDatabase() {
+        return database;
+    }
+
+    public DMSQLiteHelper getHelper() {
+        return dbHelper;
+    }
+
+    public synchronized void createDirectMessage(DirectMessage status, int account) {
+        ContentValues values = new ContentValues();
+        long time = status.getCreatedAt().getTime();
+
+        String[] html = TweetLinkUtils.getLinksInStatus(status);
+        String text = html[0];
+        String media = html[1];
+        String url = html[2];
+        String hashtags = html[3];
+        String users = html[4];
+
+        values.put(DMSQLiteHelper.COLUMN_ACCOUNT, account);
+        values.put(DMSQLiteHelper.COLUMN_TEXT, text);
+        values.put(DMSQLiteHelper.COLUMN_TWEET_ID, status.getId());
+        values.put(DMSQLiteHelper.COLUMN_NAME, status.getSender().getName());
+        values.put(DMSQLiteHelper.COLUMN_PRO_PIC, status.getSender().getOriginalProfileImageURL());
+        values.put(DMSQLiteHelper.COLUMN_SCREEN_NAME, status.getSender().getScreenName());
+        values.put(DMSQLiteHelper.COLUMN_TIME, time);
+        values.put(DMSQLiteHelper.COLUMN_RETWEETER, status.getRecipientScreenName());
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_ONE, status.getRecipient().getOriginalProfileImageURL());
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_TWO, status.getRecipient().getName());
+        values.put(HomeSQLiteHelper.COLUMN_PIC_URL, media);
+
+        TweetLinkUtils.TweetMediaInformation info = TweetLinkUtils.getGIFUrl(status.getMediaEntities(), url);
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_THREE, info.url);
+        values.put(DMSQLiteHelper.COLUMN_MEDIA_LENGTH, info.duration);
+
+        MediaEntity[] entities = status.getMediaEntities();
+
+        if (entities.length > 0) {
+            values.put(DMSQLiteHelper.COLUMN_PIC_URL, entities[0].getMediaURL());
+        }
+
+        URLEntity[] urls = status.getURLEntities();
+        for (URLEntity u : urls) {
+            Log.v("inserting_dm", "url here: " + u.getExpandedURL());
+            values.put(DMSQLiteHelper.COLUMN_URL, u.getExpandedURL());
+        }
+
+        try {
+            database.insert(DMSQLiteHelper.TABLE_DM, null, values);
+        } catch (Exception e) {
+            open();
+            database.insert(DMSQLiteHelper.TABLE_DM, null, values);
+        }
+
+    }
+
+    public synchronized void createDirectMessage(DirectMessageEvent status, List<User> possibleUsers, int account) {
+        ContentValues values = new ContentValues();
+        long time = status.getCreatedTimestamp().getTime();
+
+        String[] html = TweetLinkUtils.getLinksInStatus(status);
+        String text = html[0];
+        String media = html[1];
+        String url = html[2];
+        String hashtags = html[3];
+        String users = html[4];
+
+        User sender = null;
+        User receiver = null;
+
+        for (int i = 0; i < possibleUsers.size(); i++) {
+            if (possibleUsers.get(i).getId() == status.getSenderId()) {
+                sender = possibleUsers.get(i);
+            } else if (possibleUsers.get(i).getId() == status.getRecipientId()) {
+                receiver = possibleUsers.get(i);
+            }
+        }
+
+        if (sender == null || receiver == null) {
+            return;
+        }
+
+        values.put(DMSQLiteHelper.COLUMN_ACCOUNT, account);
+        values.put(DMSQLiteHelper.COLUMN_TEXT, text);
+        values.put(DMSQLiteHelper.COLUMN_TWEET_ID, status.getId());
+        values.put(DMSQLiteHelper.COLUMN_NAME, sender.getName());
+        values.put(DMSQLiteHelper.COLUMN_PRO_PIC, sender.getOriginalProfileImageURL());
+        values.put(DMSQLiteHelper.COLUMN_SCREEN_NAME, sender.getScreenName());
+        values.put(DMSQLiteHelper.COLUMN_TIME, time);
+        values.put(DMSQLiteHelper.COLUMN_RETWEETER, receiver.getScreenName());
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_ONE, receiver.getOriginalProfileImageURL());
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_TWO, receiver.getName());
+        values.put(HomeSQLiteHelper.COLUMN_PIC_URL, media);
+
+        TweetLinkUtils.TweetMediaInformation info = TweetLinkUtils.getGIFUrl(status.getMediaEntities(), url);
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_THREE, info.url);
+        values.put(DMSQLiteHelper.COLUMN_MEDIA_LENGTH, info.duration);
+
+        MediaEntity[] entities = status.getMediaEntities();
+
+        if (entities.length > 0) {
+            values.put(DMSQLiteHelper.COLUMN_PIC_URL, entities[0].getMediaURL());
+        }
+
+        URLEntity[] urls = status.getUrlEntities();
+        for (URLEntity u : urls) {
+            Log.v("inserting_dm", "url here: " + u.getExpandedURL());
+            values.put(DMSQLiteHelper.COLUMN_URL, u.getExpandedURL());
+        }
+
+        try {
+            database.insert(DMSQLiteHelper.TABLE_DM, null, values);
+        } catch (Exception e) {
+            open();
+            database.insert(DMSQLiteHelper.TABLE_DM, null, values);
+        }
+    }
+
+    public synchronized void createSentDirectMessage(DirectMessageEvent status, User recipient, AppSettings settings, int account) {
+        ContentValues values = new ContentValues();
+        long time = status.getCreatedTimestamp().getTime();
+
+        String[] html = TweetLinkUtils.getLinksInStatus(status);
+        String text = html[0];
+        String media = html[1];
+        String url = html[2];
+        String hashtags = html[3];
+        String users = html[4];
+
+        values.put(DMSQLiteHelper.COLUMN_ACCOUNT, account);
+        values.put(DMSQLiteHelper.COLUMN_TEXT, text);
+        values.put(DMSQLiteHelper.COLUMN_TWEET_ID, status.getId());
+        values.put(DMSQLiteHelper.COLUMN_NAME, settings.myName);
+        values.put(DMSQLiteHelper.COLUMN_PRO_PIC, settings.myProfilePicUrl);
+        values.put(DMSQLiteHelper.COLUMN_SCREEN_NAME, settings.myScreenName);
+        values.put(DMSQLiteHelper.COLUMN_TIME, time);
+        values.put(DMSQLiteHelper.COLUMN_RETWEETER, recipient.getScreenName());
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_ONE, recipient.getOriginalProfileImageURL());
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_TWO, recipient.getName());
+        values.put(HomeSQLiteHelper.COLUMN_PIC_URL, media);
+
+        TweetLinkUtils.TweetMediaInformation info = TweetLinkUtils.getGIFUrl(status.getMediaEntities(), url);
+        values.put(DMSQLiteHelper.COLUMN_EXTRA_THREE, info.url);
+        values.put(DMSQLiteHelper.COLUMN_MEDIA_LENGTH, info.duration);
+
+        MediaEntity[] entities = status.getMediaEntities();
+
+        if (entities.length > 0) {
+            values.put(DMSQLiteHelper.COLUMN_PIC_URL, entities[0].getMediaURL());
+        }
+
+        URLEntity[] urls = status.getUrlEntities();
+        for (URLEntity u : urls) {
+            Log.v("inserting_dm", "url here: " + u.getExpandedURL());
+            values.put(DMSQLiteHelper.COLUMN_URL, u.getExpandedURL());
+        }
+
+        try {
+            database.insert(DMSQLiteHelper.TABLE_DM, null, values);
+        } catch (Exception e) {
+            open();
+            database.insert(DMSQLiteHelper.TABLE_DM, null, values);
+        }
+
+    }
+
+    public synchronized void deleteTweet(long tweetId) {
+        long id = tweetId;
+
+        try {
+            database.delete(DMSQLiteHelper.TABLE_DM, DMSQLiteHelper.COLUMN_TWEET_ID
+                    + " = " + id, null);
+        } catch (Exception e) {
+            open();
+            database.delete(DMSQLiteHelper.TABLE_DM, DMSQLiteHelper.COLUMN_TWEET_ID
+                    + " = " + id, null);
+        }
+    }
+
+    public synchronized void deleteAllTweets(int account) {
+
+        try {
+            database.delete(DMSQLiteHelper.TABLE_DM, DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account, null);
+        } catch (Exception e) {
+            open();
+            database.delete(DMSQLiteHelper.TABLE_DM, DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account, null);
+        }
+    }
+
+    public synchronized Cursor getCursor(int account) {
+
+        Cursor cursor;
+        try {
+            cursor = database.query(true, DMSQLiteHelper.TABLE_DM,
+                    allColumns, DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account, null, DMSQLiteHelper.COLUMN_TWEET_ID, null, HomeSQLiteHelper.COLUMN_TWEET_ID + " ASC", null);
+        } catch (Exception e) {
+            open();
+            cursor = database.query(true, DMSQLiteHelper.TABLE_DM,
+                    allColumns, DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account, null, DMSQLiteHelper.COLUMN_TWEET_ID, null, HomeSQLiteHelper.COLUMN_TWEET_ID + " ASC", null);
+        }
+        
+        return cursor;
+    }
+
+    public synchronized Cursor getConvCursor(String name, int account) {
+
+        Cursor cursor;
+        try {
+            cursor = database.query(true, DMSQLiteHelper.TABLE_DM,
+                    allColumns, DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account + " AND (" + DMSQLiteHelper.COLUMN_SCREEN_NAME + " = ? OR " + DMSQLiteHelper.COLUMN_RETWEETER + " = ?)", new String[] {name, name}, DMSQLiteHelper.COLUMN_TWEET_ID, null, HomeSQLiteHelper.COLUMN_TWEET_ID + " DESC", null);
+        } catch (Exception e) {
+            open();
+            cursor = database.query(true, DMSQLiteHelper.TABLE_DM,
+                    allColumns, DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account + " AND (" + DMSQLiteHelper.COLUMN_SCREEN_NAME + " = ? OR " + DMSQLiteHelper.COLUMN_RETWEETER + " = ?)", new String[] {name, name}, DMSQLiteHelper.COLUMN_TWEET_ID, null, HomeSQLiteHelper.COLUMN_TWEET_ID + " DESC", null);
+        }
+
+        return cursor;
+    }
+
+    public synchronized String getNewestName(int account, String currentAccountName) {
+
+        Cursor cursor = getCursor(account);
+        String name = "";
+
+        try {
+            if (cursor.moveToLast()) {
+                do {
+                    name = cursor.getString(cursor.getColumnIndex(DMSQLiteHelper.COLUMN_SCREEN_NAME));
+                } while (name != null && name.equals(currentAccountName) && cursor.moveToPrevious());
+            }
+        } catch (Exception e) {
+
+        }
+
+        cursor.close();
+
+        return name;
+    }
+
+    public synchronized String getNewestMessage(int account, String currentAccountName) {
+
+        Cursor cursor = getCursor(account);
+        String message = "";
+        String name = "";
+
+        try {
+            if (cursor.moveToLast()) {
+                do {
+                    message = cursor.getString(cursor.getColumnIndex(DMSQLiteHelper.COLUMN_TEXT));
+                    name = cursor.getString(cursor.getColumnIndex(DMSQLiteHelper.COLUMN_SCREEN_NAME));
+                } while (name != null && name.equals(currentAccountName) && cursor.moveToPrevious());
+            }
+        } catch (Exception e) {
+
+        }
+
+        cursor.close();
+
+        return message;
+    }
+
+    public synchronized void deleteDups(int account) {
+
+        try {
+            database.execSQL("DELETE FROM " + DMSQLiteHelper.TABLE_DM + " WHERE _id NOT IN (SELECT MIN(_id) FROM " + DMSQLiteHelper.TABLE_DM + " GROUP BY " + DMSQLiteHelper.COLUMN_TWEET_ID + ") AND " + DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account);
+        } catch (Exception e) {
+            open();
+            database.execSQL("DELETE FROM " + DMSQLiteHelper.TABLE_DM + " WHERE _id NOT IN (SELECT MIN(_id) FROM " + DMSQLiteHelper.TABLE_DM + " GROUP BY " + DMSQLiteHelper.COLUMN_TWEET_ID + ") AND " + DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account);
+        }
+
+    }
+
+    public synchronized void removeHTML(long tweetId, String text) {
+        ContentValues cv = new ContentValues();
+        cv.put(DMSQLiteHelper.COLUMN_TEXT, text);
+
+        if (database == null || !database.isOpen()) {
+            open();
+        }
+
+        database.update(DMSQLiteHelper.TABLE_DM, cv, DMSQLiteHelper.COLUMN_TWEET_ID + " = ?", new String[] {tweetId + ""});
+
+    }
+
+    public synchronized void trimDatabase(int account, int trimSize) {
+        Cursor cursor = getCursor(account);
+        if (cursor.getCount() > trimSize) {
+            if (cursor.moveToPosition(cursor.getCount() - trimSize)) {
+                try {
+                    database.delete(
+                            DMSQLiteHelper.TABLE_DM,
+                                    DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account + " AND " +
+                                    DMSQLiteHelper.COLUMN_ID + " < " + cursor.getLong(cursor.getColumnIndex(DMSQLiteHelper.COLUMN_ID)),
+                            null);
+                } catch (Exception e) {
+                    open();
+                    database.delete(
+                            DMSQLiteHelper.TABLE_DM,
+                                    DMSQLiteHelper.COLUMN_ACCOUNT + " = " + account + " AND " +
+                                    DMSQLiteHelper.COLUMN_ID + " < " + cursor.getLong(cursor.getColumnIndex(DMSQLiteHelper.COLUMN_ID)),
+                            null);
+                }
+            }
+        }
+
+        try {
+            cursor.close();
+        } catch (Exception e) {
+
+        }
+    }
+}

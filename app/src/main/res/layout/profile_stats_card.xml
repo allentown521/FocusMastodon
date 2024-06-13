@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <xyz.klinker.android.article.view.CutLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="?tweet_activity_background"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"/>
+
+        </xyz.klinker.android.article.view.CutLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="-112dp" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="?tweet_activity_background" />
+
+            <ImageView
+                android:id="@+id/verified"
+                android:src="@drawable/ic_profile_verified"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:tint="?textColor"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/lower_card" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/followers_button"
+                        android:visibility="invisible"
+                        android:background="?selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                            android:id="@+id/followers_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?textColor"/>
+
+                        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                            android:id="@+id/followers_text"
+                            android:text="@string/followers"
+                            android:textStyle="bold"
+                            android:layout_marginStart="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?textColor"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/following_button"
+                        android:visibility="invisible"
+                        android:background="?selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                            android:id="@+id/following_number"
+                            android:layout_marginStart="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?textColor" />
+
+                        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                            android:id="@+id/following_text"
+                            android:text="@string/following"
+                            android:textStyle="bold"
+                            android:layout_marginStart="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?textColor"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.klinker.android.twitter_l.views.widgets.text.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/follow_status"
+                    android:textColor="?textColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_buttons"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/media_button"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:padding="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitXY"
+                    android:tint="?textColor"
+                    android:src="@drawable/ic_media"/>
+
+                <ImageView
+                    android:id="@+id/lists_button"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:scaleType="fitXY"
+                    android:tint="?textColor"
+                    android:src="@drawable/ic_profile_list"/>
+
+                <ImageView
+                    android:id="@+id/follow_button"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="fitXY"
+                    android:tint="?textColor"
+                    android:src="@drawable/ic_follow" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.klinker.android.twitter_l.views.widgets.text.MaterialTextView
+            android:paddingTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/user_description"
+            android:textColor="?textColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <com.klinker.android.twitter_l.views.widgets.text.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_profile_places"
+                android:drawableTint="?textColor"
+                android:id="@+id/user_location"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:textColor="?textColor"
+                android:layout_marginEnd="16dp"
+                android:visibility="invisible"/>
+
+            <com.klinker.android.twitter_l.views.widgets.text.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_profile_link"
+                android:drawableTint="?textColor"
+                android:drawablePadding="8dp"
+                android:id="@+id/user_webpage"
+                android:gravity="start|center_vertical"
+                android:textColor="?textColor"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+
+</LinearLayout>

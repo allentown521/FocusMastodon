@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2014 Luke Klinker
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:talon="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <item android:id="@+id/menu_favorite"
+        android:title="@string/favorite_user"
+        android:icon="@drawable/ic_heart_outline"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/menu_block"
+          android:orderInCategory="1"
+          android:title="@string/menu_block"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_unblock"
+          android:orderInCategory="2"
+          android:title="@string/menu_unblock"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_add_to_list"
+          android:orderInCategory="3"
+          android:title="@string/menu_add_to_list"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_dm"
+          android:orderInCategory="4"
+          android:title="@string/menu_dm"
+          talon:showAsAction="never"  />
+
+    <item android:id="@+id/menu_change_picture"
+          android:orderInCategory="5"
+          android:title="@string/menu_change_picture"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_change_banner"
+          android:orderInCategory="6"
+          android:title="@string/menu_change_banner"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_change_bio"
+          android:orderInCategory="7"
+          android:title="@string/menu_change_bio"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_mute"
+          android:orderInCategory="8"
+          android:title="@string/mute"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_unmute"
+        android:orderInCategory="9"
+        android:title="@string/unmute"
+        talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_mute_rt"
+        android:orderInCategory="10"
+        android:title="@string/mute_rt"
+        talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_unmute_rt"
+        android:orderInCategory="11"
+        android:title="@string/unmute_rt"
+        talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_muffle_user"
+          android:orderInCategory="12"
+          android:title="@string/muffle_user"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_unmuffle_user"
+          android:orderInCategory="13"
+          android:title="@string/unmuffle_user"
+          talon:showAsAction="never" />
+
+    <item android:id="@+id/menu_share_link"
+        android:orderInCategory="14"
+        android:title="@string/share_link"
+        talon:showAsAction="never" />
+</menu>

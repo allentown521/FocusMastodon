@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="new_twitter_replies"
+        android:title="@string/compress_reply_handles"
+        android:summary="@string/compress_reply_handles_summary"
+        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:key="show_profile_pictures"
+        android:title="@string/show_profile_pictures"
+        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:key="crop_images_timeline"
+        android:title="@string/crop_images"
+        android:defaultValue="true"/>
+
+    <SwitchPreference
+        android:key="transparent_system_bars"
+        android:title="@string/transparent_system_bars"
+        android:defaultValue="true" />
+
+    <ListPreference
+        android:key="line_spacing"
+        android:title="@string/line_spacing"
+        android:summary="@string/line_spacing_summary"
+        android:defaultValue="5"
+        android:entries="@array/line_spacing"
+        android:entryValues="@array/line_spacing_scalar" />
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:title="@string/tweet_look_options" >
+
+        <SwitchPreference
+            android:key="dual_panel"
+            android:title="@string/dual_panels"
+            android:summary="@string/dual_panels_summary"
+            android:defaultValue="@bool/dual_panels" />
+
+        <ListPreference
+            android:key="nav_bar_option"
+            android:title="@string/nav_bar_option"
+            android:summary="@string/nav_bar_option_summary"
+            android:defaultValue="0"
+            android:entries="@array/nav_bar"
+            android:entryValues="@array/nav_bar_inserted" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        android:title="@string/scroll_options" >
+
+        <SwitchPreference
+            android:key="use_snackbar"
+            android:title="@string/use_snackbar"
+            android:summary="@string/use_snackbar_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="static_ui"
+            android:title="@string/static_ui_title"
+            android:summary="@string/static_ui_summary"
+            android:defaultValue="false" />
+
+    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+
+</PreferenceScreen>

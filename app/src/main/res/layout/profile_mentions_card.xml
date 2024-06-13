@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mentions_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?tweet_activity_background"
+        android:layout_marginTop="2dp" >
+
+        <View
+            android:alpha=".30"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/top_shadow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/mentions_title_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/mentions"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textColor="?textColor"/>
+
+            <Button
+                android:id="@+id/show_all_mentions_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_all"
+                android:textSize="12sp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif-light"
+                android:textAllCaps="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="?textColor"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:alpha=".15"
+            android:background="@drawable/bottom_shadow"
+            android:layout_gravity="bottom" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mentions_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>

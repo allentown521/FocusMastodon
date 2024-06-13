@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Holds all the content that can be scrolled -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-24dp"
+        android:background="?windowBackground" >
+
+    <include layout="@layout/profile_stats_card" />
+
+    <include layout="@layout/profile_tweets_card" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?tweet_activity_background" >
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/show_all"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:background="?selectableItemBackground" >
+
+            <View
+                android:alpha=".30"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/top_shadow" />
+
+            <TextView
+                android:id="@+id/show_all_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="?colorPrimary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:text="@string/show_all"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

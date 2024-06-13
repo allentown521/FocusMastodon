@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:layout_marginTop="16dp" >
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/embedded_tweet_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/quoted_tweet_height"
+        android:maxWidth="300dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:elevation="2dp"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardBackgroundColor="?drawerBackground"
+        android:visibility="gone" />
+
+    <include layout="@layout/tweet_expansion_counts" />
+    <include layout="@layout/tweet_expansion_buttons" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="?tweet_activity_background"
+        android:layout_marginTop="16dp" >
+
+        <View
+            android:alpha=".30"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/top_shadow" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/convo_area"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="56dp"
+            android:paddingBottom="56dp"
+            android:background="?tweet_activity_background">
+
+            <ProgressBar
+                android:id="@+id/convo_spinner"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:indeterminateOnly="true"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+        </LinearLayout>
+
+        <include layout="@layout/expansion_conversation" />
+
+    </RelativeLayout>
+
+</LinearLayout>

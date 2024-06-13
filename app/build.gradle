@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+
+    defaultConfig {
+        applicationId buildInfo.id
+
+        File secretsFile = rootProject.file('secrets.properties')
+        if (secretsFile.exists()) {
+            def secrets = new Properties()
+            secrets.load(new FileInputStream(secretsFile))
+
+            buildConfigField "String", "CONSUMER_KEY", secrets['CONSUMER_KEY']
+            buildConfigField "String", "CONSUMER_SECRET", secrets['CONSUMER_SECRET']
+            buildConfigField "String", "YOUTUBE_API_KEY", secrets['YOUTUBE_API_KEY']
+            buildConfigField "String", "TWEETMARKER_KEY", secrets['TWEETMARKER_KEY']
+            buildConfigField "String", "TWITLONGER_KEY", secrets['TWITLONGER_KEY']
+            buildConfigField "String", "GIPHY_API_KEY", secrets['GIPHY_KEY']
+            buildConfigField "String", "ARTICLE_API_KEY", secrets['ARTICLE_KEY']
+            buildConfigField "String", "MERCURY_API_KEY", secrets['MERCURY_KEY']
+            buildConfigField "String", "LVL_KEY", secrets['LVL_KEY'] != null ? secrets['LVL_KEY'] : "\"none\""
+
+            buildConfigField "String", "CONSUMER_KEY_OLD_1", secrets['CONSUMER_KEY_OLD_1'] != null ? secrets['CONSUMER_KEY_OLD_1'] : "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_SECRET_OLD_1", secrets['CONSUMER_SECRET_OLD_1'] != null ? secrets['CONSUMER_SECRET_OLD_1'] : "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_KEY_OLD_2", secrets['CONSUMER_KEY_OLD_2'] != null ? secrets['CONSUMER_KEY_OLD_2'] : "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_SECRET_OLD_2", secrets['CONSUMER_SECRET_OLD_2'] != null ? secrets['CONSUMER_SECRET_OLD_2'] : "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_KEY_OLD_3", secrets['CONSUMER_KEY_OLD_3'] != null ? secrets['CONSUMER_KEY_OLD_3'] : "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_SECRET_OLD_3", secrets['CONSUMER_SECRET_OLD_3'] != null ? secrets['CONSUMER_SECRET_OLD_3'] : "\"This is optional.\""
+        } else {
+            buildConfigField "String", "CONSUMER_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "CONSUMER_SECRET", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "YOUTUBE_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "TWEETMARKER_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "TWITLONGER_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "GIPHY_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "ARTICLE_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "MERCURY_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
+            buildConfigField "String", "LVL_KEY", "\"none\""
+
+            buildConfigField "String", "CONSUMER_KEY_OLD_1", "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_SECRET_OLD_1", "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_KEY_OLD_2", "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_SECRET_OLD_2", "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_KEY_OLD_3", "\"This is optional.\""
+            buildConfigField "String", "CONSUMER_SECRET_OLD_3", "\"This is optional.\""
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+        }
+    }
+    
+}
+
+dependencies {
+
+    wearApp project(':wear')
+    
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.emoji:emoji:1.1.0"
+    implementation "com.google.android.material:material:1.1.0"
+    implementation "androidx.browser:browser:1.2.0"
+    implementation "androidx.preference:preference:1.1.1"
+    implementation "androidx.legacy:legacy-preference-v14:${versions.androidX}"
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation "com.google.android.play:core:1.8.0"
+    implementation "com.google.android.play:core-ktx:1.8.0"
+    implementation "androidx.work:work-runtime:2.7.0"
+
+    implementation 'com.klinkerapps:link_builder:2.0.5'
+    implementation 'com.klinkerapps:peekview:1.2.3'
+    implementation 'com.klinkerapps:simple_videoview:1.2.4'
+    implementation 'com.klinkerapps:launcher-apis:1.1.0'
+    implementation 'com.klinkerapps:android-transcoder:1.0.1'
+    implementation 'com.klinkerapps:article_viewer-glide3:0.26.0'
+    implementation 'com.klinkerapps:drag-dismiss-activity:1.7.0'
+    implementation 'com.klinkerapps:floating-tutorial:1.1.0'
+
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.halilozercan:BetterVideoPlayer:kotlin-SNAPSHOT'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.github.apl-devs:appintro:v4.2.0'
+    implementation 'de.timroes.android:EnhancedListView:0.3.2@aar'
+    implementation 'com.google.android.apps.dashclock:dashclock-api:2.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.flipboard:bottomsheet-core:1.5.0'
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    implementation 'me.leolin:ShortcutBadger:1.1.19@aar'
+    implementation 'com.github.ajalt.reprint:core:3.2.1@aar'
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
+    implementation 'com.github.HamidrezaAmz:MagicalExoPlayer:2.0.7'
+    implementation files('lib/YouTubeAndroidPlayerApi.jar')
+    // version 1.2.2
+    implementation files('lib/twitter4j-fork.jar')
+    implementation files('lib/twitter4j-http2-fork.jar')
+    implementation(name: 'ChipCloud-3.0.3', ext: 'aar')
+    implementation(name: 'datetimepicker', ext: 'aar')
+    implementation(name: 'sectioned-recyclerview', ext: 'aar')
+    implementation(name: 'material-camera', ext: 'aar')
+    implementation(name: 'rating-prompt-lib', ext: 'aar')
+    implementation(name: 'event-emitter-lib', ext: 'aar')
+    implementation(name: 'easyvideoplayer-0.3.0', ext: 'aar')
+
+    implementation project(':searchview')
+    implementation project(':shared_assets')
+}
+
+apply plugin: 'com.google.gms.google-services'

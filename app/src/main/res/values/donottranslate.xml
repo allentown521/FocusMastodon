@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2014 Luke Klinker
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <!-- Dev account and other apps names -->
+    <string name="dev_name" translatable="false">Klinker Apps</string>
+    <string name="dev_name_open_source" translatable="false">Klinker Apps (Open-Source)</string>
+    <string name="sliding_messaging" translatable="false">Sliding Messaging Pro</string>
+    <string name="sliding_theme_engine" translatable="false">Sliding Messaging Theme Engine</string>
+    <string name="evolvesms" translatable="false">EvolveSMS</string>
+    <string name="emoji_keyboard" translatable="false">Sliding Emoji Keyboard</string>
+    <string name="emoji_keyboard_ios" translatable="false">Sliding Emoji Keyboard - iOS</string>
+    <string name="emoji_keyboard_unlock" translatable="false">Sliding Emoji Keyboard Unlocker</string>
+    <string name="halopop" translatable="false">HaloPop</string>
+    <string name="floating_windows" translatable="false">Floating Windows Guide</string>
+    <string name="slideover_messaging" translatable="false">SlideOver Messaging</string>
+    <string name="blur" translatable="false">Blur - A Launcher Replacement</string>
+    <string name="theme_spotlight" translatable="false">Theme Spotlight</string>
+</resources>

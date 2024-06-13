@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+
+    defaultConfig {
+        applicationId "com.klinker.android.twitter_l"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+        }
+    }
+}
+
+dependencies {
+    implementation project(':shared_assets')
+    implementation(name: 'wearable-1.0.0', ext: 'aar')
+}

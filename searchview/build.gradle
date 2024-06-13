@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    sourceSets {
+        main.res.srcDirs 'res', 'res-public'
+    }
+
+}
+
+dependencies {
+    implementation "androidx.cardview:cardview:${versions.androidX}"
+    implementation "androidx.recyclerview:recyclerview:${versions.androidX}"
+}
