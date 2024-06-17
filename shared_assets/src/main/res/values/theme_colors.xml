@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -130,5 +130,5 @@
     <color name="blue_grey_primary_color_light">#b0bec5</color>
     <color name="blue_grey_accent_color">#ff9800</color>
     <color name="blue_grey_accent_color_light">#ffcc80</color>
-
+    <color name="launcher_bg">#ff7e21</color>
 </resources>

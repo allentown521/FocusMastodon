@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,50 +17,50 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:talon="http://schemas.android.com/apk/res-auto">
+      xmlns:Focus_for_Mastodon="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/menu_dismiss"
         android:orderInCategory="1"
         android:title="@string/dismiss_all"
-        talon:showAsAction="always"
-        android:icon="@drawable/ic_cancel_dark"/>
+        Focus_for_Mastodon:showAsAction="always"
+        android:icon="@drawable/ic_close"/>
 
     <item android:id="@+id/menu_search"
         android:orderInCategory="2"
         android:title="@string/search"
-        talon:showAsAction="always"
-        android:icon="@drawable/action_bar_search" />
+        Focus_for_Mastodon:showAsAction="always"
+        android:icon="@drawable/ic_round_search_24" />
 
     <item android:id="@+id/menu_compose"
           android:orderInCategory="3"
           android:title="@string/menu_compose"
-          talon:showAsAction="never"
-          android:icon="@drawable/ic_send_dark" />
+          Focus_for_Mastodon:showAsAction="never"
+          android:icon="@drawable/ic_round_send_24" />
 
     <item android:id="@+id/menu_notifications"
         android:orderInCategory="4"
         android:title="@string/notifications"
-        talon:showAsAction="always"
-        android:icon="@drawable/ic_action_notification_none_dark" />
+        Focus_for_Mastodon:showAsAction="always"
+        android:icon="@drawable/ic_round_notifications_none_24" />
 
     <item android:id="@+id/menu_direct_message"
           android:orderInCategory="5"
           android:title="@string/menu_direct_message"
-          talon:showAsAction="never" />
+          Focus_for_Mastodon:showAsAction="never" />
 
     <item android:id="@+id/menu_settings"
           android:orderInCategory="6"
           android:title="@string/menu_settings"
-          talon:showAsAction="never" />
+          Focus_for_Mastodon:showAsAction="never" />
 
     <item android:id="@+id/menu_to_first"
         android:orderInCategory="7"
         android:title="@string/jump_to_top"
-        talon:showAsAction="never" />
+        Focus_for_Mastodon:showAsAction="never" />
 
     <item android:id="@+id/menu_tweetmarker"
           android:orderInCategory="8"
           android:title="@string/fetch_tweetmarker"
-          talon:showAsAction="never" />
+          Focus_for_Mastodon:showAsAction="never" />
 
 </menu>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
     android:id="@+id/youtube"
     android:layout_height="match_parent">
 
-    <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
         android:id="@+id/error"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

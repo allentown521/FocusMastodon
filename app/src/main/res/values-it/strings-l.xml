@@ -7,7 +7,7 @@
     <string name="show_all">Mostra tutto</string>
     <string name="stats">Stat</string>
     <string name="list_count">In %s liste.</string>
-    <string name="joined_twitter">Iscritto a Twitter:</string>
+    <string name="joined_twitter">Iscritto a Mastodon:</string>
     <string name="top_down_summary">La Timeline non salverà la tua posizione. Partità dall\'inizio.</string>
     <string name="timeline_text_size">Dimensione Testo</string>
     <string name="manage_mutes">Impostazioni silenziati</string>
@@ -15,13 +15,12 @@
     <string name="twitpic_summary_l">Tutti gli upload delle immagini passeranno per TwitPic.</string>
     <string name="interactions_only">Solo interazioni</string>
     <string name="inter_stream">Interazioni e Streaming</string>
-    <string name="dont_use_pull">Non utilizzare Talon Pull</string>
+    <string name="dont_use_pull">Non utilizzare Focus_for_Mastodon Pull</string>
     <string name="always">Sempre</string>
     <string name="never">Mai</string>
     <string name="only_on_wifi">Solo su WiFi</string>
     <string name="only_on_data">Solo su dati cellullare</string>
     <string name="contact_me">Contattami</string>
-    <string name="my_google_plus">Il mio Google+</string>
     <string name="follow_progress">Premi per seguire i nostri progressi:</string>
     <string name="general">Generale</string>
     <string name="no_interactions">Nessuna interazione</string>
@@ -30,8 +29,7 @@
     <string name="web">Web</string>
     <string name="heads_up">Heads Up</string>
     <string name="use_snackbar">Utilizza snackbar</string>
-    <string name="use_snackbar_summary">Visualizza il numero di tweet che ti separano dalla cima della timeline.</string>
-    <string name="bottom_pictures">Immagini sotto ai tweet</string>
+    <string name="bottom_pictures">Immagini sotto ai post</string>
     <string name="bottom_pictures_summary">I tweet non si espanderanno nella Timeline con questa opzione.</string>
     <string name="preparing_signin">Preparazione accesso</string>
     <string name="verifying_login">Verifica Login</string>
@@ -41,16 +39,12 @@
     <string name="click_to_remove_muffle">Premi un utente per eliminare l\'attenuazione.</string>
     <string name="muffle_user">Attenua utente</string>
     <string name="unmuffle_user">Rimuovi attenuazione utente</string>
-    <string name="enjoying_talon">Ti piace Talon?</string>
+    <string name="enjoying_FocusforMastodon">Ti piace Focus_for_Mastodon?</string>
     <string name="give_a_rating">Considera di valutarlo o condividerlo con i tuoi amici!\n\nLa tua recensione da 5 stelle mi riscalda il cuore :)</string>
     <string name="rate_on_rating_dialog">Valuta</string>
     <string name="share_on_rating_dialog">Condividi</string>
     <string name="ignore">Ignora</string>
-    <string name="when_talon_pull_on">Applicato quando Talon Pull è attivo.</string>
-    <string name="transparent_system_bars">Usa barre di sistema trasparenti</string>
     <string name="accent_color">Colore secondario</string>
-    <string name="nav_bar_option">Ignora la barra di navigazione</string>
-    <string name="nav_bar_option_summary">Le applicazioni non sono in grado di trovare con precisione se alcuni dispositivi hanno una barra di navigazione o meno. Dal momento che Talon si basa fortemente su questo per i layout, questa opzione consente di specificarlo manualmente.</string>
     <string name="nav_bar_automatic">Rileva automaticamente</string>
     <string name="nav_bar_present">Usando una Barra di Navigazione</string>
     <string name="nav_bar_gone">Non usando una Barra di Navigazione</string>
@@ -60,16 +54,8 @@
     <string name="sync_options">Opzioni di sincronizzazione</string>
     <string name="manual_syncs">Sincronizzazione manuale</string>
     <string name="timeline_notifications_summary">Deve essere attivato un intervallo di aggiornamento in background affinchè queste notifiche si verifichino.</string>
-    <string name="favorite_user_notifications_summary">Deve essere attivato un intervallo di aggiornamento in background per la timeline, o lo streaming dal vivo, per le notifiche degli utenti preferiti.</string>
     <string name="alert_methods_summary">Come desideri essere avvisato: vibra, suona, LED, ecc.</string>
     <string name="windowed_helper_message">Per chiudere una finestra sul tablet, semplicemente premi sull\'area scura fuori dalla finestra.\n\nQuesto garantisce alla timeline di non essere mai troppo lontana!</string>
-    <string name="permission_check_title">Permessi di Talon:</string>
-    <string name="permission_check_message">Talon sta per richiedere l\'autorizzazione per due permessi: Posizione e archiviazione.\n\n
-
-- La posizione viene utilizzata per accedere alle tendenze locali, nonché contrassegnare la tua posizione nei tuoi tweets (se lo richiedi). Non conservo mai la tua posizione.\n
-- L\'archiviazione viene utilizzata per salvare le immagini dei tweet nell\'archiviazione esterna (quando richiesto) e viene utilizzato quando si caricano le immagini su Twitter.\n\n
-
-Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualmente dalle impostazioni app del sistema.</string>
     <string name="tell_about_swipe_down">Suggerimento: scorri verso il basso per chiudere questa schermata.</string>
     <string name="download_video">Scarica video</string>
     <string name="download_gif">Scarica GIF</string>
@@ -78,7 +64,6 @@ Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualm
     <string name="saved_video">Salvataggio completato</string>
     <string name="encoding_gif">Codifica GIF...</string>
     <string name="scroll_options">Opzioni scorrimento</string>
-    <string name="static_ui_title">UI statica</string>
     <string name="static_ui_summary">Questo farà in modo che l\'App Bar, il FAB, e la SnackBar non scompaiano durante lo scorrimento.</string>
     <string name="list_sync_interval">Frequenza aggiornamento lista</string>
     <string name="list_sync_summary">Questo esegue una sincronizzazione in background per le liste che utilizzi come pagine extra sulla timeline principale.</string>
@@ -100,12 +85,12 @@ Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualm
     <string name="high_quality_images">Usa immagini ad alta qualità</string>
     <string name="high_quality_images_summary">Viene applicato all\'intera app.</string>
     <string name="view_likes">Guarda Mi piace</string>
-    <string name="view_retweets">Guarda retweet</string>
+    <string name="view_retweets">Guarda boost</string>
     <string name="list_size">Lunghezza lista</string>
     <string name="list_size_summary">Numero massimo di tweet per ogni lista da memorizzare nel database.</string>
     <string name="quotes">Citazioni</string>
     <string name="no_quotes">Nessuna citazione</string>
-    <string name="tweet_style">Stile tweet</string>
+    <string name="tweet_style">Stile post</string>
     <string name="tweet_style_description">Come mostrare i tweet nella timeline.</string>
     <string name="condensed_tweet_style">Layout compatto</string>
     <string name="locale">Selezione lingua per traduzioni</string>
@@ -121,19 +106,15 @@ Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualm
     <string name="location">Posizione</string>
     <string name="color_options">Opzioni colore</string>
     <string name="advanced_options">Opzioni avanzate</string>
-    <string name="material_color">Colore Material Design</string>
     <string name="base_theme">Tema base</string>
     <string name="functionality_options">Opzioni funzionalità</string>
     <string name="account_to_display">Account da visualizzare</string>
     <string name="timeline_to_display">Timeline da visualizzare</string>
     <string name="swipable_pages">Pagine scorrevoli</string>
     <string name="app_drawer">App drawer</string>
-    <string name="notifications_for_background_refreshes">Le notifiche possono essere attivate alla fine di questi aggiornamenti in background.</string>
     <string name="tweetmarker_text">TweetMarker può essere usato per sincronizzare la tua posizione sulla timeline tra i dispositivi.</string>
     <string name="precache_text">Questo scaricherà le immagini dopo l\'aggiornamento in background, così saranno subito disponibili.</string>
     <string name="timeline_notifications_text">Queste notifiche scompariranno alla fine della sincronizzazione in background.</string>
-    <string name="tweetmarker_always_refreshes">TweetMarker si aggiornerà all\'avvio.</string>
-    <string name="background_refreshes_disclaimer">Tutte le impostazioni di sincronizzazione consumeranno dati e batteria.</string>
     <string name="discover_section_options">Opzioni sezione Scopri</string>
     <string name="clear_memory">Pulisci memoria</string>
     <string name="manage_mutes_options">Gestisci silenziati</string>
@@ -142,10 +123,7 @@ Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualm
     <string name="widget_material_dark">Material Design Dark</string>
     <string name="widget_material_transparent">Completamente trasparente</string>
     <string name="in_app_browser_summary">Disabilitando il browser integrato i link saranno aperti nel browser predefinito.</string>
-    <string name="chrome_custom_tabs_summary">Un\'alternativa al browser integrato di Talon. Usa servizi forniti da Google Chrome.</string>
     <string name="show_images_on_widget">Mostra immagini nel widget</string>
-    <string name="auto_dismiss">Auto-rimuovi notifiche</string>
-    <string name="auto_dismiss_summary">Rimuovi automaticamente le notifiche di Talon quando è aperto. Attivato di default.</string>
     <string name="media">Media utente</string>
     <string name="ignored_on_compact">Questa opzione non funziona con il layout compatto.</string>
     <string name="use_peek">Usa \"Peeking\"</string>
@@ -181,30 +159,21 @@ Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualm
     <string name="enable_fingerprint_lock">Attiva il blocco tramite impronta</string>
     <string name="disable_fingerprint_lock">Disattiva il blocco tramite impronta</string>
     <string name="followers_only_auto_complete">Completamento automatico follower</string>
-    <string name="followers_only_auto_complete_summary">Non cercare nell\'intero Twitter quando auto-completi una menzione.</string>
+    <string name="followers_only_auto_complete_summary">Non cercare nell\'intero Mastodon quando auto-completi una menzione.</string>
     <string name="quoting">Citando</string>
     <string name="profile_timeline">Timeline</string>
-    <string name="show_all_tweets">Mostra tutti i tweet</string>
+    <string name="show_all_tweets">Mostra tutti i post</string>
     <string name="are_you_sure_unfollow">Sei sicuro di non voler più seguire questo utente?</string>
     <string name="are_you_sure_follow">Sei sicuro di voler seguire questo utente?</string>
     <string name="are_you_sure_spam">Sei sicuro di segnare come spam questo tweet?</string>
     <string name="larger_images">Usa immagini più grandi</string>
-    <string name="show_profile_pictures">Mostra immagini del profilo</string>
     <string name="reply_to">Rispondi a</string>
     <string name="others">altri</string>
     <string name="compress_reply_handles">Comprimi gestione risposte</string>
-    <string name="compress_reply_handles_summary">Questo migliora la gestione di lunghe catene di risposte su Twitter.</string>
+    <string name="compress_reply_handles_summary">Questo migliora la gestione di lunghe catene di risposte su Mastodon.</string>
     <string name="interaction_notifications">Notifiche interazioni</string>
-    <string name="interaction_notifications_summary">Questi richiedono un aggiornamento in background per la pagina attività, l\'intercettore di Twitter Push o Talon Pull per essere abilitati.</string>
-    <string name="swipable_page_notifications">Notifiche pagine scorrevoli</string>
-    <string name="swipable_page_notifications_summary">Saranno visualizzati ogni volta che la pagina scorrevole viene aggiornata in background.</string>
     <string name="never_show_notifications">Non mostrare mai le notifiche</string>
-    <string name="after_background_refresh_talon_pull">\nDopo un aggiornamento in background o un evento Talon Pull (streaming)\n</string>
-    <string name="intercept_twitter_push_notifications">\nIntercetta le notifiche push dall\'app di Twitter\n</string>
-    <string name="intercept_twitter_push_description">Devi avere l\'app di Twitter installata e connessa per utilizzare questa funzione.\n\n
-        Devi impostare le notifiche attraverso quell\'app, come faresti di solito.
-        Per qualsiasi cosa tu decida di ricevere una notifica, essa sarà visualizzata come una notifica di Talon.
-        Per utilizzare questa funzione, devi abilitare Talon nella prossima schermata. Questo permette all\'app di ricevere le notifiche dall\'app di Twitter.</string>
+    <string name="intercept_twitter_push_notifications">\nIntercetta le notifiche push dall\'app di Mastodon\n</string>
     <string name="widget_refresh_channel">Notifiche aggiornamento widget</string>
     <string name="media_downloads_channel">Notifiche download media</string>
     <string name="tweeting_notifications_channel">Notifiche su chi sta twittando</string>
@@ -213,17 +182,12 @@ Sentititi libero di rifiutare entrambe le autorizzazioni. Puoi cambiarle manualm
     <string name="interactions_channel">Notifiche interazioni</string>
     <string name="scheduled_messages_channel">Notifiche invio Tweet pianificati</string>
     <string name="favorite_user_channel">Notifiche utenti preferiti</string>
-    <string name="talon_pull_channel">Notifiche Talon Pull</string>
     <string name="mentions_channel">Notifiche menzioni</string>
     <string name="direct_messages_channel">Notifiche messaggi diretti</string>
     <string name="notification_channels">Canali notifiche</string>
-    <string name="notification_channels_summary">I canali controllano i tipi di avvisi che ricevi e ti permettono di personalizzare le notifiche.</string>
-    <string name="crop_images">Ritaglia le immagini sulla Timeline</string>
-    <string name="update_tweet">Aggiorna tweet</string>
+    <string name="update_tweet">Aggiorna post</string>
     <string name="rate_it_button">Valutalo!</string>
     <string name="rate_it_title">Le migliori valutazioni fanno molta strada</string>
-    <string name="rate_it_summary"><b>Le valutazioni a 5 stelle</b> sono estremamente utili per la crescita dell\'app
-e la visibilità sul Play Store. Se vuoi vedere l\'app <i>continuare a salire</i>, aiutami!</string>
     <string name="rate_it_not_ready">Non sei pronto per valutarlo? Nessun problema. Chiudi questa finestra e non lo chiederò più.</string>
     <string name="preview_web_links">Anteprima link web</string>
     <string name="seconds_ago">%1$d secondi fa</string>
@@ -237,7 +201,7 @@ e la visibilità sul Play Store. Se vuoi vedere l\'app <i>continuare a salire</i
     <string name="widget_display_screenname">Mostra nome utente</string>
     <string name="saved_tweet_description">Per accedere ai tweet salvati, vai alla sezione pagine scorrevoli delle impostazioni e imposta la pagina <i>Tweet salvati</i>.</string>
     <string name="top_down">Parti da capo</string>
-    <string name="reverse_click_actions_default">Predefitnito (Azioni non invertite)::\n- Tocco breve per espandere il tweet\n- Tocco prolungato per aprire il tweet</string>
+    <string name="reverse_click_actions_default">Predefitnito (Azioni non invertite)::\n- Tocco breve per espandere il tweet\n- Tocco prolungato per aprire il post</string>
     <string name="data_saver_mode_summary">Questo sovrascriverà alcune delle tue impostazioni correnti per darti il minor consumo di dati in background.</string>
     <string name="auto_complete_hashtags_summary">Durante il componimento di un tweet mostra gli hashtag cercati o visti di recenti.</string>
 

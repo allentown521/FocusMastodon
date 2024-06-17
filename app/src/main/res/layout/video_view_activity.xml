@@ -1,5 +1,5 @@
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,31 +16,47 @@
 
 <com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottomsheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
     <FrameLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
         android:id="@+id/background"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/black"
         android:gravity="center"
-        android:background="@android:color/black" >
+        android:orientation="vertical">
 
-        <FrameLayout android:id="@+id/fragment"
-            android:paddingTop="24dp"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:visibility="gone"
+                android:background="@android:color/black"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent"
+                app:autoPlay="false" />
+        </RelativeLayout>
 
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
+            style="@style/Toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent"
-            app:popupTheme="@style/ThemeOverlay.AppCompat" />
+            android:background="@android:color/transparent" />
 
     </FrameLayout>
 </com.flipboard.bottomsheet.BottomSheetLayout>

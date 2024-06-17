@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -29,10 +29,10 @@
         android:layout_weight="1"
         android:gravity="center" >
 
-        <ProgressBar
+        <allen.town.focus_common.views.AccentProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.ProgressBar"
+
             android:indeterminateOnly="true" />
     </LinearLayout>
 
@@ -44,13 +44,13 @@
         android:gravity="center"
         android:visibility="gone">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:id="@+id/no_content_message"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/no_retweets" />
+            android:text="@string/no_tweets" />
 
     </LinearLayout>
 

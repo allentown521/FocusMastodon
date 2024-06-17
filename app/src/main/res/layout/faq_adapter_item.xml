@@ -22,14 +22,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:descendantFocusability="blocksDescendants"
-    android:background="?android:selectableItemBackground"  >
+    android:background="?rectSelector"  >
 
     <TextView
         android:id="@+id/faq_title"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="?textColor"
+        android:textColor="?android:textColorPrimary"
         android:padding="12dp"
         android:layout_marginStart="12dp"
         android:textSize="14sp"
@@ -48,10 +48,10 @@
             android:background="@android:color/white"/>
 
 
-        <ProgressBar
+        <allen.town.focus_common.views.AccentProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.ProgressBar"
+
             android:indeterminateOnly="true"
             android:layout_gravity="center"/>
 

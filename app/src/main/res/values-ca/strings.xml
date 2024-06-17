@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,9 +15,7 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon per Twitter</string>
-    <string name="extension_description">Mostra el número de tweets sense llegir, mencions i missatges directes conforme s\'actualitzen.</string>
+    <string name="extension_description">Mostra el número de posts sense llegir, mencions i missatges directes conforme s\'actualitzen.</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Actualitza la pàgina principal</string>
     <string name="menu_compose">Nou Tweet</string>
@@ -59,7 +57,7 @@
     <string name="timeline">Principal</string>
     <string name="mentions">Mencions</string>
     <string name="direct_messages">Missatges directes</string>
-    <string name="retweets">Retweets</string>
+    <string name="retweets">Boosts</string>
     <string name="favorite_tweets">Tweets que m\'agraden</string>
     <string name="favorite_users">Usuaris favorits</string>
     <string name="favorite_users_tweets">Tweets favorits de l\'usuari</string>
@@ -69,16 +67,15 @@
     <string name="search">Buscar</string>
     <string name="lists">Llistes</string>
     <string name="search_hint">Buscar...</string>
-    <string name="new_tweet">nou tweet</string>
-    <string name="new_tweets">nous tweets</string>
-    <string name="no_new_tweets">No hi ha nous tweets</string>
+    <string name="new_tweet">nou post</string>
+    <string name="new_tweets">nous posts</string>
+    <string name="no_new_tweets">No hi ha nous posts</string>
     <string name="new_mention">nova menció</string>
     <string name="new_mentions">noves mencions</string>
     <string name="no_new_mentions">No hi ha mencions noves</string>
     <string name="new_direct_message">nou missatge</string>
     <string name="new_direct_messages">nous missatges</string>
     <string name="no_new_direct_messages">No hi ha missatges nous</string>
-    <string name="tap_to_setup">Prem per configurar</string>
     <string name="new_account">Nou compte</string>
     <string name="from_top">des de dalt</string>
     <string name="jump_to_top">Al primer</string>
@@ -87,7 +84,7 @@
     <string name="old_interactions">Totes les interaccions</string>
     <!-- Notifications -->
     <string name="tweet">Tweet</string>
-    <string name="tweets">Tweets</string>
+    <string name="tweets">Posts</string>
     <string name="mention">Menció</string>
     <string name="message">Missatge</string>
     <string name="messages">Missatges</string>
@@ -98,10 +95,8 @@
     <string name="mark_read">Llegit</string>
     <string name="noti_reply">Respondre</string>
     <string name="popup">Finestra emergent</string>
-    <string name="fav_user_tweets">nous tweets d\'un usuari favorit</string>
+    <string name="fav_user_tweets">nous posts d\'un usuari favorit</string>
     <string name="sec_acc">Segon compte</string>
-    <string name="talon_pull">Talon Pull</string>
-    <string name="talon_pull_summary">"PRECAUCIÓ: Activar aquesta opció pot causar una descàrrega significativa de la bateria a Android Lollipop. "</string>
     <string name="listening">Escoltant</string>
     <string name="listening_for_mentions">Escoltant interaccions</string>
     <string name="refreshing">Actualitzant</string>
@@ -114,31 +109,28 @@
     <string name="favorited">ha fet \"M\'agrada\" al teu estat</string>
     <string name="quoted">ha citat el teu estat</string>
     <string name="followed">t\'està seguint</string>
-    <string name="new_retweets">retweets</string>
+    <string name="new_retweets">boosts</string>
     <string name="new_favorites">ha fet \"M\'agrada\"</string>
     <string name="new_quotes">cites</string>
-    <string name="new_tweets_upper">Nous Tweets</string>
     <!-- Login Screen -->
-    <string name="setup_talon">Configurar Talon</string>
-    <string name="login_to_twitter">Entrar a Twitter</string>
-    <string name="first_welcome">Benvingut a Talon!</string>
+    <string name="setup_Focus_for_Mastodon">Configurar Focus for Mastodon</string>
+    <string name="login_to_twitter">Entrar a Mastodon</string>
+    <string name="first_welcome">Benvingut a Focus for Mastodon!</string>
     <string name="second_welcome">Sincronitzant dades</string>
     <string name="third_welcome">"Tot llest, a disfrutar! "</string>
     <string name="back_to_timeline">Porta\'m a la portada!</string>
     <string name="initial_sync">Sincronitza ara!</string>
-    <string name="first_info">"Abans de començar, haurem d\'entrar i sincronitzar amb Twitter. "</string>
-    <string name="second_info">Genial! Estem parlant amb Twitter per tal de sincronitzar el teu compte.</string>
-    <string name="third_info">Esperem que gaudeixis de Talon</string>
+    <string name="first_info">"Abans de començar, haurem d\'entrar i sincronitzar amb Mastodon. "</string>
+    <string name="second_info">Genial! Estem parlant amb Mastodon per tal de sincronitzar el teu compte.</string>
+    <string name="third_info">Esperem que gaudeixis de Focus for Mastodon</string>
     <string name="syncing_timeline">Sincronitzant pàgina principal...</string>
     <string name="syncing_mentions">Sincronitzant mencions...</string>
     <string name="syncing_direct_messages">Sincronitzant missatges directes...</string>
     <string name="syncing_user">Sincronitzant amics...</string>
     <string name="done_syncing">Sincronització finalitzada.</string>
-    <string name="login_error">"Hi ha quelcom que ha anat malament... Torna a intentar, si us plau. \n\nPodria ser que la data i hora del teu dispositiu no estigui configurada com \"automàtic\". Aquest és un requisit de la API de Twitter. "</string>
     <string name="no_network">No estàs connectat a Internet</string>
     <string name="no_thanks">Ara no</string>
     <string name="follow_me">Seguir!</string>
-    <string name="follow_me_description">"Marca la casella per seguir automàticament els usuaris de suport, o premi enrere per ometre aquest pas. "</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">Nou Tweet</string>
     <string name="compose_tweet_hint">Escriu el Tweet...</string>
@@ -207,10 +199,10 @@
     <string name="url_char_length">Enllaç: limitat a 100 caracters</string>
     <string name="location_char_length">Localització: limitat a 30 caracters</string>
     <string name="description_char_length">Descripció: limitat a 160 caracters</string>
-    <!-- Retweets Activity -->
-    <string name="retweets_lower">retweets</string>
-    <string name="retweet_lower">retweet</string>
-    <string name="retweeter">retweet per @</string>
+    <!-- boosts Activity -->
+    <string name="retweets_lower">boosts</string>
+    <string name="retweet_lower">boost</string>
+    <string name="retweeter">"boosted per "</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">Obrir enllaç web</string>
     <string name="menu_copy_text">Copiar Tweet</string>
@@ -227,7 +219,7 @@
     <string name="sending">Enviant</string>
     <string name="open_what">Què obrir</string>
     <string name="youtube_error">Error al reproduir vídeo</string>
-    <string name="no_conversation">No hi ha Tweets anteriors</string>
+    <string name="no_conversation">No hi ha posts anteriors</string>
     <string name="saving_picture">Guardant imatge</string>
     <string name="saved_picture">La imatge ha estat guardada correctament</string>
     <string name="retweet_success">Retweetat correctament</string>
@@ -267,9 +259,6 @@
     <string name="make_a_theme">Crear un estil</string>
     <string name="layout">Disseny de la pàgina principal</string>
     <string name="themeing_complete">Estil aplicat</string>
-    <string name="themeing_complete_summary">Talon es tancarà.\n\n
-Hauràs d\'esborrar Talon de la llista d\'aplicacions recents per que els canvis s\'apliquin a la pàgina principal.\n\n
-Si les fotos de perfil no surten com s\'esperava (ej. en cercles o quadrats), hauràs d\'esborrar i tornar a afegir el giny.</string>
     <string name="layout_summary">Canviar aquesta opció netejarà la memoria cau de l\'aplicació</string>
     <string name="text_size">Mida del text</string>
     <string name="night_mode">Mode nit</string>
@@ -277,7 +266,7 @@ Si les fotos de perfil no surten com s\'esperava (ej. en cercles o quadrats), ha
     <string name="night_mode_day">Seleccioni el inici del dia</string>
     <string name="night_mode_theme">Seleccioni l\'estil per al mode nit</string>
     <string name="device_font">Utilitzar la tipografia del dispositiu</string>
-    <string name="device_font_summary">\"Roboto regular\" a la majoria de dispositius. Talon utilitza \"Roboto Light\" de forma predeterminada.</string>
+    <string name="device_font_summary">\"Roboto regular\" a la majoria de dispositius. Focus for Mastodon utilitza \"Roboto Light\" de forma predeterminada.</string>
     <string name="ui_extras">Extres de la interfície</string>
     <string name="ui_extras_summary">Inclou\n
 - Amagar la barra d\'acció\n
@@ -285,7 +274,7 @@ Si les fotos de perfil no surten com s\'esperava (ej. en cercles o quadrats), ha
 - Barres de sistema de notificacions transparents (només a Android 4.4)\n\n
 Habilitar aquesta opció afectarà al rendiment del desplaçament.</string>
     <string name="inline_pics">Mostrar imatges incrustades</string>
-    <string name="use_screen_name">Mostrar el nom de Twitter</string>
+    <string name="use_screen_name">Mostrar el nom de Mastodon</string>
     <string name="use_screen_name_summary">Mostrar a les línies de temps el nom d\'usuari enlloc del nom real.</string>
     <string name="timestamp">Utilitzar format de 24 hores</string>
     <string name="enable_emojis">Utilitzar emoticones de iOS</string>
@@ -314,27 +303,22 @@ Nota: les icones continuaran funcionant encara que hagi finalitzat el període d
     <string name="refresh_on_startup">Carregar a l\'inici</string>
     <string name="mentions_sync_interval">Frequència d\'actualització de mencions</string>
     <string name="dm_sync_interval">Frequència d\'actualització de missatges</string>
-    <string name="sync_friends">Sincronitzar dades d\'amics</string>
-    <string name="sync_friends_summary2">Resincronitzar dades d\'amics per utilitzar-les escrivint tweets.</string>
-    <string name="sync_friends_summary">Sincronitzar llista d\'amics manualment.\n\nAixò es va realitzar al inici, també s\'actualitza la llista quan es prem a \"seguir algú\" desde Talon, però amb aquesta opció obtindràs els més recents de la llista de \"seguint\".\n\n
-Aquestes dades son utilitzades al buscar usuaris mentre escrius un tweet.</string>
     <string name="sync_success">Sincronització correcta</string>
     <string name="sync_failed">Sincronització fallida</string>
     <string name="push_notification_options">"Opcions per a \"notificacions push\""</string>
-    <string name="push_notifications">Talon Pull</string>
+    <string name="push_notifications">Focus for Mastodon Pull</string>
     <string name="notification_settings">Configuració de notificacions</string>
-    <string name="pebble_notifications">Notificacions per a Pebble</string>
     <string name="advanced_settings">Configuració avançada</string>
     <string name="app_feel_category">Experiència amb l\'aplicació</string>
     <string name="advance_windowed">Finestres avançades</string>
-    <string name="advance_windowed_summary">Obrir perfils i tweets a una finestra emergent sobre la línia de temps</string>
+    <string name="advance_windowed_summary">Obrir perfils i posts a una finestra emergent sobre la línia de temps</string>
     <string name="full_screen_browsers">Navegadors a pantalla comperta</string>
-    <string name="full_screen_browsers_summary">Obrir tweets que continguin un lloc web en pantalla complerta.</string>
+    <string name="full_screen_browsers_summary">Obrir posts que continguin un lloc web en pantalla complerta.</string>
     <string name="reverse_click_actions">Invertir accions</string>
     <string name="reverse_click_actions_summary">Invertir accions al premer un tweet.\n\n
 Predeterminat (al desactivar):\n
 - Prèmer llarg per obrir el tweet\n
-- Prèmer curt per expandir el tweet</string>
+- Prèmer curt per expandir el post</string>
     <string name="extra_pages">Utilitzar-hi pàgines extra</string>
     <string name="extra_pages_summary">Afegir-ne pàgines d\'enllaços o imatges a l\'esquerre de la línia de temps.</string>
     <string name="live_streaming">Actualització \"en viu\"</string>
@@ -344,7 +328,7 @@ Predeterminat (al desactivar):\n
     <string name="not_cache">Això no aplica a la memòria cau de l\'aplicació.</string>
     <string name="current_cache_size">Mida actual de la memòria cau</string>
     <string name="cache_dialog_summary">Aquesta acció no es pot desfer.</string>
-    <string name="timeline_size_summary">Número màxim de tweets guardats.</string>
+    <string name="timeline_size_summary">Número màxim de posts guardats.</string>
     <string name="mentions_size">Mida de les mencions</string>
     <string name="mentions_size_summary">Número màxim de mencions guardades.</string>
     <string name="dm_size">Mida dels missatges directes</string>
@@ -371,14 +355,14 @@ Predeterminat (al desactivar):\n
     <string name="google_plus">Comunitat de Google+</string>
     <string name="xda_thread">Conversació en XDA (en anglès)</string>
     <string name="email_me">Envía\'m un e-mail</string>
-    <string name="tweet_me">Envía\'m un tweet</string>
-    <string name="follow_talon">Seguir a Talon en Twitter</string>
+    <string name="tweet_me">Envía\'m un post</string>
+    <string name="follow_Focus_for_Mastodon">Seguir a Focus for Mastodon en Mastodon</string>
     <string name="credits">Crèdits</string>
     <string name="disclaimer">Avís legal</string>
     <string name="other_apps">Altres aplicacions</string>
     <string name="whats_new">Novetats</string>
-    <string name="rate_it">Qualificar Talon</string>
-    <string name="talon_settings">Configuració de Talon</string>
+    <string name="rate_it">Qualificar Focus_for_Mastodon</string>
+    <string name="Focus_for_Mastodon_settings">Configuració de Focus for Mastodon</string>
     <string name="feature_requests">Sol·licitar noves funcions</string>
     <!-- Emoji Keyboard -->
     <string name="recent">Recents</string>
@@ -407,11 +391,11 @@ Predeterminat (al desactivar):\n
     <string name="discussion">Discusió</string>
     <string name="no_replies">No hi ha respostes</string>
     <string name="rt_style_quotes">Preferir estil \"RT\" per citar</string>
-    <string name="rt_style_quotes_summary">Utilitzar l\'estil \"RT @usuari: ...\" per citar en lloc del mètode de Talon.\n\nDisponibles des-de la Barra d\'Accions o el menú de cada tweet.</string>
+    <string name="rt_style_quotes_summary">Utilitzar l\'estil \"RT @usuari: ...\" per citar en lloc del mètode de Focus for Mastodon.\n\nDisponibles des-de la Barra d\'Accions o el menú de cada tweet.</string>
     <string name="clear_searches">Netejar cerques</string>
     <string name="compose_with_search">Escriure tweet incloent la cerca</string>
     <string name="use_toast">Mostrar botó \"anar a inici\"</string>
-    <string name="ignore_retweets">Ignorar retweets</string>
+    <string name="ignore_retweets">Ignorar boosts</string>
     <string name="view">Veure</string>
     <string name="muted_hashtags">Hashtags en silenci</string>
     <string name="muted_hashtags_summary">Premi el hashtag per tornar a mostrar-lo</string>
@@ -425,13 +409,10 @@ Predeterminat (al desactivar):\n
     <string name="delete_conversation">Esborrar conversa?</string>
     <string name="deleting_messages">Esborrant missatges</string>
     <string name="type_message">Escriure missatge...</string>
-    <string name="fill_gaps_summary">Emplena els buits que succeeixen quan la actualització \"en viu\" està habilitada pero falla per problemes de connexió</string>
     <string name="filling_timeline">Emplenant buits a la cronología</string>
     <string name="follows_you">Et segueix</string>
     <string name="not_following_you">No et segueix</string>
     <string name="device">Tipografía del dispositiu</string>
-    <string name="roboto_light">Roboto Light (Predeterminada)</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="our_website">Lloc Web</string>
     <string name="alert_types">Mètodes d\'alertes</string>
     <string name="timeline_notifications">Notificacions de la línia de temps</string>
@@ -442,10 +423,10 @@ Predeterminat (al desactivar):\n
     <string name="use_twitlonger">Habilitar TwitLonger</string>
     <string name="twitlonger">TwitLonger</string>
     <string name="post_with_twitlonger">El tweet supera els 140 caracters.\n\nT\'agradaria publicar-lo mitjançant TwitLonger?</string>
-    <string name="remove_retweet">Esborrar retweet</string>
+    <string name="remove_retweet">Esborrar boost</string>
     <string name="edit">Editar</string>
     <string name="use_twitpic">Utilitzar TwitPic</string>
-    <string name="twitpic_summary">Utilitza TwitPic per adjuntar imatges en lloc del servei de imatges de Twitter.</string>
+    <string name="twitpic_summary">Utilitza TwitPic per adjuntar imatges en lloc del servei de imatges de Mastodon.</string>
     <string name="verified">Verificat</string>
     <string name="do_not_use">No utilitzar</string>
     <string name="automatic_refresh">TweetMarker automàtic</string>
@@ -454,7 +435,7 @@ Predeterminat (al desactivar):\n
     <string name="loading">Carregant</string>
     <string name="loading_tweets">Carregant tweets...</string>
     <string name="pull_to_refresh">Estirar per actualitzar</string>
-    <string name="removing_retweet">Esborrant retweet</string>
+    <string name="removing_retweet">Esborrant boost</string>
     <string name="retweeting_status">Retweetant estat</string>
     <string name="jumping_workaround">Solució per evitar els salts</string>
     <string name="jumping_workaround_summary">Habilita aquesta opció si la teva cronología salta a sota després de carregar.</string>
@@ -468,9 +449,9 @@ Predeterminat (al desactivar):\n
     <string name="dont_use">No utilitzar aquesta pàgina</string>
     <string name="page_1">Pàgina 1</string>
     <string name="page_2">Pàgina 2</string>
-    <string name="load_tweets">Carregar tweets</string>
+    <string name="load_tweets">Carregar posts</string>
     <string name="download_portal">Descarregar la app d\'estils Portal</string>
-    <string name="download_portal_summary">Aquesta es \"Portal\" de Klinker Apps per estar al dia de les darreres notícies, així com trobar els millors estils per Talon i EvolveSMS a un sol lloc!</string>
+    <string name="download_portal_summary">Aquesta es \"Portal\" de Klinker Apps per estar al dia de les darreres notícies, així com trobar els millors estils per Focus for Mastodon i EvolveSMS a un sol lloc!</string>
     <string name="pwiccer">Pwiccer</string>
     <string name="view_favoriters">M\'agrada</string>
     <string name="attach_video">Vídeo</string>
@@ -484,13 +465,13 @@ Predeterminat (al desactivar):\n
     <string name="and">i</string>
     <string name="no_favorites">Cap \"M\'agrada\"</string>
     <string name="quote_style">Estil de cita</string>
-    <string name="quote_style_twitter">Estil de Twitter (enllaç al tweet)</string>
-    <string name="quote_style_talon">\"\@lukeklinker &#8230;\"</string>
-    <string name="quote_style_rt">RT \"\@lukeklinker &#8230;\"</string>
+    <string name="quote_style_twitter">Estil de Mastodon (enllaç al tweet)</string>
+    <string name="quote_style_Focus_for_Mastodon">\"\@allentown521 &#8230;\"</string>
+    <string name="quote_style_rt">RT \"\@allentown521 &#8230;\"</string>
     <string name="show_pull_notification">Mostra la notificació persistent</string>
     <string name="show_pull_notification_summary">"Si desactives aquesta notificació, el sistema Android podria tallar la comunicació en qualsevol moment. Tingues molta cura. "</string>
     <string name="custom_tab_title">Pestanyes personalitzades de Chrome</string>
-    <string name="custom_tab_message">"El teu sistema no permet a Talon l\'inici automàtic de les pestanyes personalitzades de Chrome. Per utilitzar aquesta funcionalitat, hauràs de configurar Chrome com el navegador predeterminat, si no, Talon continuarà utilitzant el navegador integrat. \n\nSi us plau, selecciona \"Sí\" si Chrome serà el navegador predeterminat o \"No\" si no l\'utilitzaràs com predeterminat. "</string>
+    <string name="custom_tab_message">"El teu sistema no permet a Focus for Mastodon l\'inici automàtic de les pestanyes personalitzades de Chrome. Per utilitzar aquesta funcionalitat, hauràs de configurar Chrome com el navegador predeterminat, si no, Focus for Mastodon continuarà utilitzant el navegador integrat. \n\nSi us plau, selecciona \"Sí\" si Chrome serà el navegador predeterminat o \"No\" si no l\'utilitzaràs com predeterminat. "</string>
     <string name="learn_more">En vull saber més</string>
     <!-- Long click methods -->
     <string name="open_to_web">Obrir enllaços web al Tweet</string>

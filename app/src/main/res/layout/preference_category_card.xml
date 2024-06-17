@@ -19,7 +19,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginBottom="16dp"
         android:textSize="15sp"
-        android:textColor="?textColor"
+        android:textColor="?android:textColorPrimary"
         android:id="@android:id/title"
         android:layout_gravity="start|center_vertical" />
 

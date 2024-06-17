@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -19,73 +19,49 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:key="auto_refresh_category"
         android:title="@string/auto_refresh_category" >
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="notifications"
             android:summary="@string/notifications_for_background_refreshes"/>
 
         <!-- Default of 30 mins -->
-        <ListPreference
-            android:key="timeline_sync_interval"
-            android:title="@string/timeline_sync_interval"
-            android:defaultValue="0"
-            android:entries="@array/sync_interval"
-            android:entryValues="@array/sync_interval_inserted" />
-
-        <!-- Default of 30 mins -->
-        <ListPreference
-            android:key="mentions_sync_interval"
-            android:title="@string/mentions_sync_interval"
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
+            android:key="sync_interval"
+            android:title="@string/background_interval"
             android:defaultValue="1800000"
             android:entries="@array/sync_interval"
             android:entryValues="@array/sync_interval_inserted" />
 
-        <!-- Default of 30 mins -->
-        <ListPreference
-            android:key="dm_sync_interval"
-            android:title="@string/dm_sync_interval"
-            android:defaultValue="0"
-            android:entries="@array/sync_interval"
-            android:entryValues="@array/sync_interval_inserted" />
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-        <ListPreference
-            android:key="activity_sync_interval"
-            android:title="@string/activity_sync_interval"
-            android:defaultValue="0"
-            android:entries="@array/sync_interval"
-            android:entryValues="@array/sync_interval_inserted" />
-
-        <ListPreference
-            android:key="list_sync_interval"
-            android:title="@string/list_sync_interval"
-            android:summary="@string/list_sync_summary"
-            android:defaultValue="0"
-            android:entries="@array/sync_interval"
-            android:entryValues="@array/sync_interval_inserted" />
-
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
-
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:key="other_options"
         android:title="@string/sync_options" >
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
             android:key="refresh_on_start"
             android:title="@string/refresh_on_startup"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/advanced" >
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="advanced"
             android:title="@string/advanced_options"/>
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
 </PreferenceScreen>

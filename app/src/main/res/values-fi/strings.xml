@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,7 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon for Twitter</string>
+
     <string name="extension_description">Näyttää lukemattomien twiittien, mainintojen ja yksityisviestien määrän.</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Päivitä aikajana</string>
@@ -77,7 +76,6 @@
     <string name="new_direct_message">uusi yksityisviesti</string>
     <string name="new_direct_messages">uutta yksityisviestiä</string>
     <string name="no_new_direct_messages">Ei uusia yksityisviestejä</string>
-    <string name="tap_to_setup">Määritä napauttamalla</string>
     <string name="new_account">Uusi tili</string>
     <string name="from_top">ylhäältä</string>
     <string name="jump_to_top">Ensimmäiseen</string>
@@ -99,7 +97,6 @@
     <string name="popup">Ponnahdusikkuna</string>
     <string name="fav_user_tweets">uudet suosikkikäyttäjän twiitit</string>
     <string name="sec_acc">Toinen tili</string>
-    <string name="talon_pull">Talon Pull</string>
     <string name="listening">Kuunnellaan</string>
     <string name="listening_for_mentions">Kuunnellaan vuorovaikutuksia</string>
     <string name="refreshing">Päivitetään</string>
@@ -113,28 +110,25 @@
     <string name="followed">seuraa sinua</string>
     <string name="new_retweets">uudelleentwiitit</string>
     <string name="new_favorites">suosikit</string>
-    <string name="new_tweets_upper">Uusia twiittejä</string>
     <!-- Login Screen -->
-    <string name="setup_talon">Määritä Talon</string>
-    <string name="login_to_twitter">Kirjaudu Twitteriin</string>
-    <string name="first_welcome">Tervetuloa Taloniin!</string>
+    <string name="setup_Focus_for_Mastodon">Määritä Focus_for_Mastodon</string>
+    <string name="login_to_twitter">Kirjaudu Mastodoniin</string>
+    <string name="first_welcome">Tervetuloa Focus_for_Mastodoniin!</string>
     <string name="second_welcome">Synkronointi</string>
     <string name="third_welcome">Ja sillä selvä!</string>
     <string name="back_to_timeline">Vie minut aikajanalleni!</string>
     <string name="initial_sync">Synkronoi nyt!</string>
     <string name="first_info">Ennen kuin aloitamme, sinun täytyy kirjaudua sisälle.</string>
     <string name="second_info">Mahtavaa!\n\nNoudamme muutamia oleellisia lähtötietoja.\n\nTämä voi kestää jonkin aikaa riippuen verkkoyhteydestäsi.</string>
-    <string name="third_info">Toivottavasti nautitte Talonista!\n\n-- Luke Klinker</string>
+    <string name="third_info">Toivottavasti nautitte Focus_for_Mastodonista!\n\n-- allentown</string>
     <string name="syncing_timeline">Synkronoidaan aikajana...</string>
     <string name="syncing_mentions">Synkronoidaan mainintoja...</string>
     <string name="syncing_direct_messages">Synkronoidaan yksityisviestejä...</string>
     <string name="syncing_user">Synkronoidaan ystäviä...</string>
     <string name="done_syncing">Synkronointi valmis.</string>
-    <string name="login_error">Jotain meni pieleen... Yritä uudelleen!</string>
     <string name="no_network">Et ole yhteydessä internetiin</string>
     <string name="no_thanks">Ei nyt, kiitos</string>
     <string name="follow_me">Seuraa!</string>
-    <string name="follow_me_description">Seuraa @TalonAndroid ja @lukeklinker lukeaksesi kaikista uusista ominaisuuksista ja saa tukea!</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">Uusi twiitti</string>
     <string name="compose_tweet_hint">Mitä haluat sanoa...</string>
@@ -202,10 +196,10 @@
     <string name="url_char_length">URL: 100 merkin rajan</string>
     <string name="location_char_length">Sijaint9: 30 merkin rajan</string>
     <string name="description_char_length">Kuvuas: 160 merkin rajan</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">uudelleentwiitit</string>
     <string name="retweet_lower">uudelleentwiitti</string>
-    <string name="retweeter">uudelleentwiitattu @</string>
+    <string name="retweeter">"uudelleentwiitattu "</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">Avaa linkki</string>
     <string name="menu_copy_text">Kopioi twiitin sisältö</string>
@@ -260,9 +254,6 @@
     <string name="make_a_theme">Luo teema</string>
     <string name="layout">Ulkoasu</string>
     <string name="themeing_complete">Teema sovellettu</string>
-    <string name="themeing_complete_summary">Talon sulkeutuu nyt.\n\n
-Ottaaksesi kaikki muutokset voimaan, sinun täytyy pyyhkäistä Talon pois viimeksi käytetyistä sovelluksista.\n\n
-Jos profiilikuvasi eivät näy niin kuin pitäisi (eli ympyränä tai neliönä), sinun täytyy lisätä widgetti uudelleen.</string>
     <string name="layout_summary">Muuttaminen tyhjentää sovelluksen välimuistin.</string>
     <string name="text_size">Koko</string>
     <string name="night_mode">Yötila</string>
@@ -270,7 +261,7 @@ Jos profiilikuvasi eivät näy niin kuin pitäisi (eli ympyränä tai neliönä)
     <string name="night_mode_day">Päivätila alkaa</string>
     <string name="night_mode_theme">Valitse yötilan teema</string>
     <string name="device_font">Käytä laitteen fonttia</string>
-    <string name="device_font_summary">\"Roboto\" useimmissa laitteissa. Talonin oletusfontti on \"Roboto Light\".</string>
+    <string name="device_font_summary">\"Roboto\" useimmissa laitteissa. Focus_for_Mastodonin oletusfontti on \"Roboto Light\".</string>
     <string name="ui_extras">Käyttöliittymän extrat</string>
     <string name="ui_extras_summary">Sisältää:\n
 - Toimintopalkin piilottaminen\n
@@ -278,15 +269,15 @@ Jos profiilikuvasi eivät näy niin kuin pitäisi (eli ympyränä tai neliönä)
 - Läpinäkyvä järjestelmäpalkit (vain Android 4.4)\n\n
 Asetuksen ottaminen käyttöön vaikuttaa vierityksen suorituskykyyn.</string>
     <string name="inline_pics">Näytä upotetut kuvat</string>
-    <string name="use_screen_name">Näytä Twitter-nimimerkki</string>
-    <string name="use_screen_name_summary">Näyttää käyttäjän Twitter-nimimerkin aikajanoissa heidän nimensä sijaan</string>
+    <string name="use_screen_name">Näytä Mastodon-nimimerkki</string>
+    <string name="use_screen_name_summary">Näyttää käyttäjän Mastodon-nimimerkin aikajanoissa heidän nimensä sijaan</string>
     <string name="timestamp">24 tunnin kello</string>
     <string name="enable_emojis">Emojit</string>
     <string name="to_market">Play-kauppaan</string>
     <string name="get_android">Hae Android emojit</string>
     <string name="get_ios">Hae iOS emojit</string>
     <string name="emoji_dialog_summary">Käyttääksesi emojia sovelluksessa, sinulla täytyy olla \"Sliding Emoji Keyboard\" tai \"Sliding Emoji Keyboard - iOS\" asennettuna, jotka löydät Play-kaupasta.\n\n
-Voit vaihdella kahden emojin välillä poistamalla yhden ja asentamalla toisen. Jos molemmat paketit on asennettua, Talon käyttää Androidin oletusemojeja.\n\n
+Voit vaihdella kahden emojin välillä poistamalla yhden ja asentamalla toisen. Jos molemmat paketit on asennettua, Focus_for_Mastodon käyttää Androidin oletusemojeja.\n\n
 HUOM: Emojit jatkavat toimivista sovelluksessa, vaikka kokeilujakso olisi päättynyt! Pakettia käytetään laajennuksena sekä erillisenä näppäimistönä.</string>
     <string name="theme_light">Vaalea teema</string>
     <string name="theme_dark">Tumma teema</string>
@@ -311,19 +302,13 @@ HUOM: Emojit jatkavat toimivista sovelluksessa, vaikka kokeilujakso olisi päät
     <string name="timeline_sync_interval">Aikajanan päivitysväli</string>
     <string name="mentions_sync_interval">Mainintojen päivitysväli</string>
     <string name="dm_sync_interval">Yksityisviestien päivitysväli</string>
-    <string name="sync_friends">Synkronoi ystävien tiedot</string>
-    <string name="sync_friends_summary2">Synkronoi uudelleen ystävien tiedot, kun kirjoitetaan twiittejä.</string>
-    <string name="sync_friends_summary">Synkronoi ystävälistat manuaalisesti.\n\nTämä suoritettiin sisäänkirjauduttaessa ja ne lisätään automaattisesti kun seuraat jotakuta Talonin kautta, mutta tämä vaihtoehto päivittää kaikki uusimmat \"seuraajat\".\n\n
-Näitä tietoja käytetään, kun etsitään käyttäjiä kirjoittaessa twiittiä.</string>
     <string name="sync_success">Synkronointi onnistui</string>
     <string name="sync_failed">Synkronointi epäonnistui</string>
     <string name="push_notification_options">"Push-ilmoitus"</string>
-    <string name="push_notifications">Talon Pull</string>
+    <string name="push_notifications">Focus for Mastodon Pull</string>
     <string name="push_notifications_summary">Tämä käynnistää kuuntelijat, joka lähettää ilmoituksia, kun saat uusia vuorovaikutuksia (maininnoista, yksityisviesteistä, suosikeista, uudelleentwiittauksista tai uusista seuraajista).</string>
     <string name="push_notification_warning">Voit lukea lisää tästä ominaisuudesta napauttamalla tästä.</string>
     <string name="notification_settings">Ilmoitus</string>
-    <string name="pebble_notifications">Pebble-ilmoitukset</string>
-    <string name="pebble_notifications_summary">Käytetään Pebble-älykellon kanssa.</string>
     <string name="advanced_settings">Edistyneille</string>
     <string name="app_feel_category">Sovelluksen tuntuma</string>
     <string name="advance_windowed">Lisänäkymä</string>
@@ -373,13 +358,13 @@ Oletus (kun pois käytöstä):\n
     <string name="xda_thread">XDA-ketju</string>
     <string name="email_me">Lähetä minulle sähköpostia</string>
     <string name="tweet_me">Twiittaa minulle</string>
-    <string name="follow_talon">Seuraa Talonia Twitterissä</string>
+    <string name="follow_Focus_for_Mastodon">Seuraa Focus_for_Mastodonia Mastodonissä</string>
     <string name="credits">Kiitokset</string>
     <string name="disclaimer">Vastuuvapauslauseke</string>
     <string name="other_apps">Muut sovelluksemme</string>
     <string name="whats_new">Mitä uutta</string>
-    <string name="rate_it">Arvostele Talon</string>
-    <string name="talon_settings">Talonin asetukset</string>
+    <string name="rate_it">Arvostele Focus_for_Mastodon</string>
+    <string name="Focus_for_Mastodon_settings">Focus for Mastodonin asetukset</string>
     <string name="feature_requests">Ominaisuuspyynnöt</string>
     <!-- Emoji Keyboard -->
     <string name="recent">Viimeisimmät</string>
@@ -405,13 +390,12 @@ Oletus (kun pois käytöstä):\n
     <string name="dismiss_all">Hylkää kaikki</string>
     <string name="handle_and_name">Näytä nimimerkki ja nimi</string>
     <string name="notification_types">Ilmoitustyypit</string>
-    <string name="with_talon_pull">Käytettävissä \"Talon Pull\" kautta.</string>
     <string name="favorited_tweet">Pitää twiiteistäsi</string>
     <string name="new_followers">Uusia seuraajia</string>
     <string name="discussion">Keskustelu</string>
     <string name="no_replies">Ei vastauksia</string>
     <string name="rt_style_quotes">Suosi \"RT\"-tyylistä lainausta</string>
-    <string name="rt_style_quotes_summary">Käyttää vanhaa \"RT @käyttäjätunnus: ...\" lainatakseen Talonin lainausmenetelmän sijaan.\n\nPääset käsiksi toimintapalkista tai valikosta mistä tahansa twiitistä.</string>
+    <string name="rt_style_quotes_summary">Käyttää vanhaa \"RT @käyttäjätunnus: ...\" lainatakseen Focus_for_Mastodonin lainausmenetelmän sijaan.\n\nPääset käsiksi toimintapalkista tai valikosta mistä tahansa twiitistä.</string>
     <string name="absolute_date">Absoluuttinen päivämäärä</string>
     <string name="clear_searches">Tyhjennä haut</string>
     <string name="compose_with_search">Kirjoita twiitti haulla</string>
@@ -431,19 +415,14 @@ Oletus (kun pois käytöstä):\n
     <string name="delete_conversation">Poistetaanko kesksutelu?</string>
     <string name="deleting_messages">Poistetaan viestejä</string>
     <string name="type_message">Kirjoita viesti....</string>
-    <string name="fill_gaps">Täytä aikajanan aukot</string>
-    <string name="fill_gaps_summary">Täyttää aukot, jotka ilmenevät huonon striimausyhteydestä, kun live-striimaus on käytössä.</string>
     <string name="filling_timeline">Täytetään aikajanan aukot</string>
     <string name="follows_you">Seuraa sinua</string>
     <string name="not_following_you">Ei seuraa sinua</string>
     <string name="device">Laitteen fontti</string>
-    <string name="roboto_light">Roboto Light (oletus)</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="font_type">Fontti</string>
     <string name="our_website">Verkkosivu</string>
     <string name="alert_types">Hälytykset tyypit</string>
     <string name="timeline_notifications">Aikajanan ilmoitukset</string>
-    <string name="interactions_notifications">Vuorovaikutuksien ilmoitukset</string>
     <string name="timelines_settings">Aikajana</string>
     <string name="tweet_look_options">Twiitin tyyli</string>
     <string name="limiting_options">Rajoitukset</string>
@@ -455,7 +434,7 @@ Oletus (kun pois käytöstä):\n
     <string name="remove_retweet">Poista uudelleentwiittaus</string>
     <string name="edit">Muokkaa</string>
     <string name="use_twitpic">TwitPic</string>
-    <string name="twitpic_summary">TwitPicin avulla voit liittää kuvia twiitteihin Twitterin oman kuvapalvelun sijaan.</string>
+    <string name="twitpic_summary">TwitPicin avulla voit liittää kuvia twiitteihin Mastodonin oman kuvapalvelun sijaan.</string>
     <string name="verified">Todennettu</string>
     <string name="use_tweetmarker">TweetMarker</string>
     <string name="tweetmarker_summary">Vielä hieman kokeellinen, joten voit kohdata ongelmia yrittäessäsi siirtyä alaosaan.</string>
@@ -482,7 +461,7 @@ Oletus (kun pois käytöstä):\n
     <string name="page_2">Sivu 2</string>
     <string name="load_tweets">Lataa twiitit</string>
     <string name="download_portal">Lataa teema</string>
-    <string name="download_portal_summary">Tämä on Klinker Apps:n \"Portal\"-sovellus, jonka avulla pysyt kärryillä uusimmista uutisista sekä löydät parhaimmat teemat Talon- ja EvolveSMS-sovelluksiin yhdestä paikasta!</string>
+    <string name="download_portal_summary">Tämä on Klinker Apps:n \"Portal\"-sovellus, jonka avulla pysyt kärryillä uusimmista uutisista sekä löydät parhaimmat teemat Focus_for_Mastodon- ja EvolveSMS-sovelluksiin yhdestä paikasta!</string>
     <string name="compose_dm_hint">Kirjoita viesti...</string>
     <string name="pwiccer">Pwiccer</string>
     <string name="select_shortening_service">Valitse lyhennyspalvleu tai lyhenne twiittiä.</string>
@@ -495,7 +474,7 @@ Oletus (kun pois käytöstä):\n
     <string name="error_check_network">Virhe ladattaessa profiilia. Tarkista verkkoyhteys.</string>
     <string name="error_loading_timeline">Ei voitu ladata aikajanaa! Tarkista verkkoyhteys.</string>
     <string name="currently_in_beta">Tällä hetkellä beeta.</string>
-    <string name="changed_screenname">Vaihdoit käyttäjätunnuksesi ennen kuin Talon ehdi tallentaa tunnuksesi! Sinun täytyy kirjautua ulos ja kirjautua takaisin sisään!</string>
+    <string name="changed_screenname">Vaihdoit käyttäjätunnuksesi ennen kuin Focus_for_Mastodon ehdi tallentaa tunnuksesi! Sinun täytyy kirjautua ulos ja kirjautua takaisin sisään!</string>
     <string name="menu_save_search">Tallenna haku</string>
     <string name="saving_search">Tallenna haku</string>
     <string name="delete_saved_search">Poista tallennettu haku</string>
@@ -509,7 +488,7 @@ Oletus (kun pois käytöstä):\n
     <string name="setting_up_mentions">Mainintojen määrittäminen...</string>
     <string name="setting_up_dms">Yksityisviestien määrittäminen...</string>
     <string name="setting_up_lists">Listojen määrittäminen...</string>
-    <string name="version_two_setup_done">Talon 2.0 määrittäminen on valmis, nauti!</string>
+    <string name="version_two_setup_done">Focus for Mastodon 2.0 määrittäminen on valmis, nauti!</string>
     <string name="no_content">Hajaantukaa, täällä ei ole mitään nähtävää!</string>
     <string name="discover">Löydä</string>
     <string name="suggested_users">Ehdotetut käyttäjät</string>
@@ -546,7 +525,7 @@ Oletus (kun pois käytöstä):\n
     <string name="widget_trans_black">Läpinäkyvä musta</string>
     <string name="ui_settings">Käyttöliittymä</string>
     <string name="show_pos_dashclock">Näytä aikajanan sijainti</string>
-    <string name="talon_large_widget">Talon - Aikajana</string>
+    <string name="Focus_for_Mastodon_large_widget">Focus for Mastodon - Aikajana</string>
     <string name="show_muted_mentions">Näytä mykistetyt maininnat</string>
     <string name="menu_view_drafts">Näytä luonnokset</string>
     <string name="menu_schedule_tweet">Ajasta twiitti</string>
@@ -569,7 +548,7 @@ Oletus (kun pois käytöstä):\n
     <string name="conversation_page">Keskustelusivu</string>
     <string name="browser_settings">Selainasetukset</string>
     <string name="memory_manage">Muistinhallinta</string>
-    <string name="twitter">Twitter</string>
+    <string name="twitter">Mastodon</string>
     <string name="user">Käyttäjät</string>
     <string name="menu_translate">Käännä twiitti</string>
     <string name="add_new_tweet">Lisää uusi twiitti</string>

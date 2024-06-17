@@ -7,7 +7,6 @@
     <string name="saved_video">סיים לשמור</string>
     <string name="encoding_gif">מקודד GIF...</string>
     <string name="scroll_options">אפשרויות גלילה</string>
-    <string name="static_ui_title">ממשק משתמש סטטי</string>
     <string name="static_ui_summary">זה יעשה שבר הניווט, כפתור כתיבת פוסט וsnackbar לא יעלמו בזמן הגלילה.</string>
     <string name="list_sync_interval">קצב רענון של רשימות</string>
     <string name="list_sync_summary">זה יבצע סנכרון ברקע לכל הרשימות שבהן תשתמש כדפים נוספים בציר הזמן הראשי.</string>
@@ -50,14 +49,12 @@
     <string name="location">מיקום</string>
     <string name="color_options">אפשרויות צבע</string>
     <string name="advanced_options">אפשרויות מתקדמות</string>
-    <string name="material_color">צבע Material Design</string>
     <string name="base_theme">ערכת נושא בסיסית</string>
     <string name="functionality_options">אפשרויות פונקציונליות</string>
     <string name="account_to_display">חשבון להצגה</string>
     <string name="timeline_to_display">ציר זמן להצגה</string>
     <string name="swipable_pages">דפים הניתנים להחלקה</string>
     <string name="app_drawer">מגירת אפליקציות</string>
-    <string name="notifications_for_background_refreshes">התראות יכולות להיות מופעלות לאחר שריענוני הרקע האלה יסיימו.</string>
     <string name="tweetmarker_text">השירות TweetMarker יכול לשמש לסנכרון עמדת ציר הזמן הנוכחית שלך בין מכשירים.</string>
     <string name="precache_text">זה יוריד תמונות לאחר רענון ברקע, כך שהם זמינים באופן מיידי באפליקציה.</string>
     <string name="timeline_notifications_text">התראות אלה יכבו לאחר שרענון הרקע יושלם.</string>

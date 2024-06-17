@@ -14,7 +14,7 @@
     <string name="manage_mutes">จัดการ Mute</string>
     <string name="location_settings">ตั้งค่าตำแหน่ง</string>
     <string name="twitpic_summary_l">รูปภาพทั้งหมดจะถุก upload ไปยัง TwitPic</string>
-    <string name="dont_use_pull">ไม่ใช้ Talon Pull</string>
+    <string name="dont_use_pull">ไม่ใช้ Focus_for_Mastodon Pull</string>
     <string name="always">ตลอดเวลา</string>
     <string name="never">ไม่ใช้</string>
     <string name="only_on_wifi">เมื่อใช้ WiFi เท่านั้น</string>
@@ -34,14 +34,12 @@
     <string name="rate_on_rating_dialog">ให้คะแนน</string>
     <string name="share_on_rating_dialog">แชร์</string>
     <string name="ignore">ไม่สนใจ</string>
-    <string name="when_talon_pull_on">"นำมาใช้เมื่อได้เปิดใช้งาน Talon Pull "</string>
-    <string name="transparent_system_bars">ใช้ System Bars แบบโปร่งใส</string>
     <string name="accent_color">สีเน้น</string>
     <string name="nav_bar_present">ใช้ Nav Bar</string>
     <string name="nav_bar_gone">ไม่ใช้ Nav Bar</string>
     <string name="tip_title">"คำแนะนำ : "</string>
     <string name="profile_pictures_helper_message">เปิดทวีตพร้อมกับรูปภาพอย่างง่ายๆ ด้วยการแตะค้างที่ภาพตามเส้นแนวนี้ \n\nการแตะธรรมดาจะเป็นการเปิดตัวแสดงภาพ</string>
-    <string name="quote_disclaimer">ลิ๊งค์ของ Twitter จะแสดงฝังอยู่ทวีตบน Twitter Client ลิงค์นี้จะประพฤติเหมือนกับทวีตแบบอ้างถึง</string>
+    <string name="quote_disclaimer">ลิ๊งค์ของ Mastodon จะแสดงฝังอยู่ทวีตบน Mastodon Client ลิงค์นี้จะประพฤติเหมือนกับทวีตแบบอ้างถึง</string>
     <string name="sync_options">รูปแบบการซิงค์</string>
     <string name="manual_syncs">กดซิงค์ด้วยตนเอง</string>
     <string name="download_video">ดาวน์โหลดวิดีโอ</string>
@@ -90,22 +88,16 @@
     <string name="location">ตำแหน่งที่ตั้ง</string>
     <string name="color_options">ตัวเลือกสี</string>
     <string name="advanced_options">ตัวเลือกเพิ่มเติม</string>
-    <string name="material_color">สีของแมททีเรียล ดีไซน์</string>
     <string name="base_theme">สีธีมพื้นฐาน</string>
     <string name="functionality_options">ตัวเลือกฟังก์ชั่น</string>
     <string name="account_to_display">บัญชีที่แสดง</string>
     <string name="timeline_to_display">Timeline ที่แสดงผล</string>
     <string name="swipable_pages">หน้าที่รูดปัดได้</string>
     <string name="app_drawer">หน้ารวมแอพ</string>
-    <string name="notifications_for_background_refreshes">การแจ้งเตือนจะแสดงขึ้นมาภาพหลังการรีเฟรชข้อมูลเบื้องหลังแล้วเสร็จ</string>
     <string name="tweetmarker_text">TweetMarker สามารถซิงค์ตำแหน่งปัจจุบันของ Timeline ระหว่างอุปกรณ์ของท่านได้</string>
     <string name="timeline_notifications_text">การแจ้งเตือนจะถูกปิดหลังจากการรีเฟรชข้อมูลเบื้องหลังแล้วเสร็จ</string>
-    <string name="tweetmarker_always_refreshes">TweetMarker  จะรีเฟรชเสมอเมื่อเปิดขึ้นมา</string>
-    <string name="background_refreshes_disclaimer">ทุกอย่างภายใต้ \"การรีเฟรชข้อมูลเบื้องหลัง\" จะเป็นการใช้ข้อมูลและแบ็ตเตอรี่เป็นอย่างมาก</string>
     <string name="discover_section_options">ตัวเลือกส่วน Discover</string>
     <string name="clear_memory">ล้างหน่วยความจำ</string>
     <string name="in_app_browser_summary">เมื่อปิดเบราซเซอร์ภายในแอพ จะเป็นการใช้เบราซ์เซอร์เริ่มต้นของเครื่องแทนเมื่อกดลิงค์</string>
-    <string name="chrome_custom_tabs_summary">เบราซเซอร์ภายในแอพของ Talon เองด้วยเซอร์วิสของ Google Chrome</string>
-    <string name="auto_dismiss">ยกเลิกการแจ้งเตือนอัตโนมัติ</string>
     <string name="followers_only_auto_complete_summary">ไม่ค้นหาทั่วทวิตเตอร์เมื่อขณะทำ auto-complete แก่การพูดถึง</string>
 </resources>

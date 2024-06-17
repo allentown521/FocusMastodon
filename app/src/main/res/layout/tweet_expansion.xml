@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:layout_marginTop="16dp" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="16dp">
 
     <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -20,7 +21,7 @@
         android:layout_marginTop="12dp"
         android:elevation="2dp"
         card_view:cardCornerRadius="3dp"
-        card_view:cardBackgroundColor="?drawerBackground"
+        card_view:cardBackgroundColor="?colorSurface"
         android:visibility="gone" />
 
     <include layout="@layout/tweet_expansion_counts" />
@@ -54,13 +55,15 @@
             android:paddingBottom="56dp"
             android:background="?tweet_activity_background">
 
-            <ProgressBar
+
+            <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/convo_spinner"
-                android:layout_width="244dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:indeterminateOnly="true"
-                style="?android:attr/progressBarStyleHorizontal" />
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="82574-progress-bar-animation.json"
+                app:lottie_loop="true" />
 
         </LinearLayout>
 

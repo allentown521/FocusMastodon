@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,17 +15,16 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon for Twitter</string>
-    <string name="extension_description">当推文，提及和私信更新时显示未读条目的数量</string>
+
+    <string name="extension_description">当嘟文，提及和私信更新时显示未读条目的数量</string>
     <!-- Action Bar -->
     <string name="menu_refresh">刷新时间线</string>
-    <string name="menu_compose">新的推文</string>
+    <string name="menu_compose">发推</string>
     <string name="menu_logout">登出</string>
     <string name="menu_settings">设置</string>
     <string name="menu_follow">关注用户</string>
     <string name="menu_unfollow">取消关注用户</string>
-    <string name="menu_tweet">发送推文</string>
+    <string name="menu_tweet">发送嘟文</string>
     <string name="menu_dm">发送私信</string>
     <string name="menu_block">屏蔽用户</string>
     <string name="menu_unblock">取消屏蔽用户</string>
@@ -59,26 +58,26 @@
     <string name="timeline">主页</string>
     <string name="mentions">提及</string>
     <string name="direct_messages">私信</string>
-    <string name="retweets">转推</string>
-    <string name="favorite_tweets">喜欢的推文</string>
+    <string name="retweets">转嘟</string>
+    <string name="favorite_tweets">喜欢的嘟文</string>
     <string name="favorite_users">收藏的用户</string>
-    <string name="favorite_users_tweets">收藏用户的推文</string>
+    <string name="favorite_users_tweets">收藏用户的嘟文</string>
     <string name="trends">趋势</string>
     <string name="local_trends">本地</string>
     <string name="world_trends">世界</string>
     <string name="search">搜索</string>
     <string name="lists">列表</string>
+    <string name="list_item">列表项</string>
     <string name="search_hint">搜索...</string>
-    <string name="new_tweet">条新推文</string>
-    <string name="new_tweets">条新推文</string>
-    <string name="no_new_tweets">没有新推文</string>
+    <string name="new_tweet">条新嘟文</string>
+    <string name="new_tweets">条新嘟文</string>
+    <string name="no_new_tweets">没有新嘟文</string>
     <string name="new_mention">条新提及</string>
     <string name="new_mentions">条新提及</string>
     <string name="no_new_mentions">没有新的提及</string>
     <string name="new_direct_message">条新私信</string>
     <string name="new_direct_messages">条新私信</string>
     <string name="no_new_direct_messages">没有新的私信</string>
-    <string name="tap_to_setup">点击进行设置</string>
     <string name="new_account">添加新帐号</string>
     <string name="from_top">推至顶端</string>
     <string name="jump_to_top">跳至顶端</string>
@@ -86,8 +85,8 @@
     <string name="view_new">载入？</string>
     <string name="old_interactions">所有互动</string>
     <!-- Notifications -->
-    <string name="tweet">推文</string>
-    <string name="tweets">推文</string>
+    <string name="tweet">嘟文</string>
+    <string name="tweets">嘟文</string>
     <string name="mention">提及</string>
     <string name="message">消息</string>
     <string name="messages">消息</string>
@@ -96,10 +95,8 @@
     <string name="mark_read">标记已读</string>
     <string name="noti_reply">回复</string>
     <string name="popup">弹出</string>
-    <string name="fav_user_tweets">收藏用户有新推文</string>
+    <string name="fav_user_tweets">收藏用户有新嘟文</string>
     <string name="sec_acc">第二帐号</string>
-    <string name="talon_pull">Talon Pull</string>
-    <string name="talon_pull_summary">警告：在 Lollipop 系统上启用该选项可能会导致耗电严重</string>
     <string name="listening">正在侦听</string>
     <string name="listening_for_mentions">正在侦听互动信息</string>
     <string name="refreshing">更新中</string>
@@ -108,38 +105,35 @@
     <string name="new_interaction_upper">新的互动</string>
     <string name="new_interactions_lower">新的互动</string>
     <string name="new_interactions">新的互动</string>
-    <string name="retweeted">转推了你的推文</string>
-    <string name="favorited">喜欢了你的推文</string>
-    <string name="quoted">引用了你的推文</string>
+    <string name="retweeted">转嘟了你的嘟文</string>
+    <string name="favorited">喜欢了你的嘟文</string>
+    <string name="quoted">引用了你的嘟文</string>
     <string name="followed">已关注你</string>
-    <string name="new_retweets">转推</string>
+    <string name="new_retweets">转嘟</string>
     <string name="new_favorites">喜欢</string>
     <string name="new_quotes">引用</string>
-    <string name="new_tweets_upper">新的推文</string>
     <!-- Login Screen -->
-    <string name="setup_talon">设置Talon</string>
-    <string name="login_to_twitter">登录到Twitter</string>
-    <string name="first_welcome">欢迎您使用 Talon！</string>
+    <string name="setup_Focus_for_Mastodon">设置 Focus_for_Mastodon</string>
+    <string name="login_to_twitter">登录到Mastodon</string>
+    <string name="first_welcome">欢迎您使用 Focus_for_Mastodon！</string>
     <string name="second_welcome">同步数据</string>
     <string name="third_welcome">就是这些了-请尽情享受吧！</string>
     <string name="back_to_timeline">带我转到我的时间线！</string>
     <string name="initial_sync">现在同步！</string>
-    <string name="first_info">在开始之前，请先让我们带您登录到 Twitter 并同步信息吧</string>
-    <string name="second_info">做得很棒！我们正在连接 Twitter 来同步您的帐号信息</string>
-    <string name="third_info">希望您能喜欢 Talon ！</string>
+    <string name="first_info">在开始之前，请先让我们带您登录到 Mastodon 并同步信息吧</string>
+    <string name="second_info">做得很棒！我们正在连接 Mastodon 来同步您的帐号信息</string>
+    <string name="third_info">希望您能喜欢 Focus_for_Mastodon ！</string>
     <string name="syncing_timeline">同步时间线中...</string>
     <string name="syncing_mentions">同步提及中...</string>
     <string name="syncing_direct_messages">同步私信中...</string>
     <string name="syncing_user">正在同步关注信息...</string>
     <string name="done_syncing">同步完成</string>
-    <string name="login_error">好像出现了一些错误…请重试！\n\n这可能是由于你的设备上没有设置自动确定日期和时间。这点是 Twitter 在第三方 API 内作出的要求</string>
-    <string name="no_network">因特网连接失败</string>
+    <string name="no_network">网络连接失败</string>
     <string name="no_thanks">暂时还不</string>
     <string name="follow_me">关注！</string>
-    <string name="follow_me_description">点击查看可自动关注我们的技术支持帐号，您也可以按返回键选择跳过</string>
     <!-- Compose New Activity -->
-    <string name="compose_activity">撰写新推文</string>
-    <string name="compose_tweet_hint">输入推文…</string>
+    <string name="compose_activity">撰写新嘟文</string>
+    <string name="compose_tweet_hint">输入嘟文…</string>
     <string name="send_to">输入用户名...</string>
     <string name="direct_message_sent">私信已发送</string>
     <string name="type_user">输入用户</string>
@@ -149,7 +143,7 @@
     <string name="finding_location">正在查找地理位置……</string>
     <string name="draft_found">发现草稿</string>
     <string name="apply">应用？</string>
-    <string name="tweet_failed">推文发送失败</string>
+    <string name="tweet_failed">嘟文发送失败</string>
     <string name="tap_to_retry">点击重试</string>
     <string name="one_recepient">单条私信只能选择一个用户发送！</string>
     <!-- Actionbar Done-Discard -->
@@ -164,9 +158,9 @@
     <string name="cancel">取消</string>
     <string name="delete_direct_message">删除信息？</string>
     <string name="save_image">图片已保存</string>
-    <string name="tweet_success">推文已发送</string>
-    <string name="error_sending_tweet">推文发送失败</string>
-    <string name="tweet_to_long">推文内容过长！</string>
+    <string name="tweet_success">嘟文已发送</string>
+    <string name="error_sending_tweet">嘟文发送失败</string>
+    <string name="tweet_to_long">嘟文内容过长！</string>
     <string name="ok">确认</string>
     <string name="no">取消</string>
     <string name="yes">确认</string>
@@ -175,6 +169,10 @@
     <string name="no_location">找不到地理信息</string>
     <string name="take_picture">拍摄图片</string>
     <string name="from_file">添加图片</string>
+    <string name="visibility_public">公开：所有人可见，并会出现在公共时间轴上</string>
+    <string name="visibility_unlisted">不公开：所有人可见，但不会出现在公共时间轴上</string>
+    <string name="visibility_private">仅关注者：只有经过你确认后关注你的用户可见</string>
+    <string name="visibility_direct">私信：只有被提及的用户可见</string>
     <string name="via">通过</string>
     <string name="version">版本</string>
     <string name="from">从</string>
@@ -205,31 +203,31 @@
     <string name="url_char_length">URL: 100 字数限制</string>
     <string name="location_char_length">位置：限制 30 个字符</string>
     <string name="description_char_length">描述: 160 字数限制</string>
-    <!-- Retweets Activity -->
-    <string name="retweets_lower">转推</string>
-    <string name="retweet_lower">转推</string>
-    <string name="retweeter">转推者：@</string>
+    <!-- boosts Activity -->
+    <string name="retweets_lower">转嘟</string>
+    <string name="retweet_lower">转嘟</string>
+    <string name="retweeter">转嘟者：</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">打开网页链接</string>
-    <string name="menu_copy_text">复制推文</string>
-    <string name="menu_share">分享推文</string>
-    <string name="menu_delete_tweet">删除推文</string>
+    <string name="menu_copy_text">复制嘟文</string>
+    <string name="menu_share">分享嘟文</string>
+    <string name="menu_delete_tweet">删除嘟文</string>
     <string name="conversation">对话</string>
     <string name="webpage">网页</string>
     <string name="tweet_youtube">Youtube</string>
-    <string name="gif">推文媒体</string>
+    <string name="gif">嘟文媒体</string>
     <string name="vine">Vine</string>
-    <string name="menu_quote">引用推文</string>
-    <string name="deleted_tweet">推文已删除</string>
-    <string name="error_deleting">删除推文时发生错误</string>
+    <string name="menu_quote">引用嘟文</string>
+    <string name="deleted_tweet">嘟文已删除</string>
+    <string name="error_deleting">删除嘟文时发生错误</string>
     <string name="sending">正在发送</string>
     <string name="open_what">打开什么</string>
     <string name="youtube_error">视频播放失败</string>
-    <string name="no_conversation">没有更早的推文了</string>
+    <string name="no_conversation">没有更早的嘟文了</string>
     <string name="saving_picture">正在保存图片</string>
     <string name="saved_picture">保存图片成功</string>
-    <string name="retweet_success">转推成功</string>
-    <string name="favorite_success">喜欢推文成功</string>
+    <string name="retweet_success">转嘟成功</string>
+    <string name="favorite_success">喜欢嘟文成功</string>
     <string name="success">成功</string>
     <!-- User Lists -->
     <string name="view_users">查看用户</string>
@@ -262,14 +260,11 @@
     <string name="other_options">其他设置</string>
     <string name="theme">主题</string>
     <string name="addon_themes">附加主题</string>
-    <string name="addon_note">点击这里查看新的主题\n\n注意事项：\n-这将会禁用在回复推文时所使用的内置表情符号键盘\n-请在先确定自己并没有使用第三方主题的情况下进行错误报告</string>
+    <string name="addon_note">点击这里查看新的主题\n\n注意事项：\n-这将会禁用在回复嘟文时所使用的内置表情符号键盘\n-请在先确定自己并没有使用第三方主题的情况下进行错误报告</string>
     <string name="use_addon_themes">使用附加主题</string>
     <string name="make_a_theme">制作主题</string>
     <string name="layout">布局</string>
     <string name="themeing_complete">应用主题</string>
-    <string name="themeing_complete_summary">\"Talon\" 程序现在将会关闭。 \n\n
-想要将更改完全应用至各时间线上，您还需要在多任务列表里选择侧滑清除 Talon 。\n\n
-如果您的个人资料头像没有如设置中一样被正确显示（如：方形或圆形），则需要先移除桌面小部件然后选择重新创建。</string>
     <string name="layout_summary">修改此项将清除应用的缓存</string>
     <string name="text_size">文本大小</string>
     <string name="night_mode">夜间模式</string>
@@ -277,7 +272,7 @@
     <string name="night_mode_day">选择结束时间</string>
     <string name="night_mode_theme">选择夜间模式主题</string>
     <string name="device_font">使用设备字体</string>
-    <string name="device_font_summary">多数设备默认使用 \"Roboto\" 字体。Talon 的默认字体为 \"Roboto Light\"</string>
+    <string name="device_font_summary">多数设备默认使用 \"Roboto\" 字体。Focus_for_Mastodon 的默认字体为 \"Roboto Light\"</string>
     <string name="ui_extras">UI 附加项</string>
     <string name="ui_extras_summary">包含：\n
  - 隐藏动作栏\n
@@ -302,7 +297,7 @@
     <string name="notifications">通知</string>
     <string name="sound">通知提示音</string>
     <string name="quiet_hours">勿扰模式</string>
-    <string name="max_number_on_refresh">刷新时获取的最大推文数</string>
+    <string name="max_number_on_refresh">刷新时获取的最大嘟文数</string>
     <string name="fav_users_notifications">收藏用户的通知</string>
     <string name="sync_second_mentions">同步第二帐号</string>
     <string name="sync_second_mentions_summary">自动同步检查第一帐号与第二帐号内的提及和私信并发出通知</string>
@@ -312,29 +307,24 @@
     <string name="timeline_sync_interval">主页时间线刷新频率</string>
     <string name="mentions_sync_interval">提及刷新频率</string>
     <string name="dm_sync_interval">私信刷新频率</string>
-    <string name="sync_friends">同步关注信息</string>
-    <string name="sync_friends_summary2">撰写新推文时重新同步关注信息</string>
-    <string name="sync_friends_summary">手动同步关注信息。\n\n同步在登录帐号后就已经完成过了。当您在 Talon 内新关注用户时他们将被自动添加到关注信息中，但这个设置将会强制拉取更新您当前所有的关注信息。\n\n这些关注信息主要被用于撰写新推文时的用户搜索。</string>
     <string name="sync_success">同步成功</string>
     <string name="sync_failed">同步失败</string>
     <string name="push_notification_options">"推送通知选项"</string>
-    <string name="push_notifications">Talon Pull</string>
-    <string name="push_notifications_summary">该选项将会启用一个侦听进程并在有新的互动时发出通知提醒（包含提及，私信，喜欢，转推以及新的关注者）。</string>
-    <string name="push_notification_warning">想要阅读关于 Talon 拉取消息的更多详情，请点击这里</string>
+    <string name="push_notifications">Focus for Mastodon Pull</string>
+    <string name="push_notifications_summary">该选项将会启用一个侦听进程并在有新的互动时发出通知提醒（包含提及，私信，喜欢，转嘟以及新的关注者）。</string>
+    <string name="push_notification_warning">想要阅读关于 Focus_for_Mastodon 拉取消息的更多详情，请点击这里</string>
     <string name="notification_settings">通知</string>
-    <string name="pebble_notifications">Pebble 通知</string>
-    <string name="pebble_notifications_summary">用来设置 Pebble 智能手表。如果在您的手表上收到了重复的通知请关闭该选项</string>
     <string name="advanced_settings">高级设置</string>
     <string name="app_feel_category">应用外观选项</string>
     <string name="advance_windowed">高级窗口模式</string>
-    <string name="advance_windowed_summary">在位于时间线上层的窗口内打开个人资料和推文页面</string>
+    <string name="advance_windowed_summary">在位于时间线上层的窗口内打开个人资料和嘟文页面</string>
     <string name="full_screen_browsers">全屏浏览器</string>
-    <string name="full_screen_browsers_summary">在全屏模式下打开含有网页的推文</string>
+    <string name="full_screen_browsers_summary">在全屏模式下打开含有网页的嘟文</string>
     <string name="reverse_click_actions">交换点击动作</string>
-    <string name="reverse_click_actions_summary">交换点击推文时的动作。\n\n
+    <string name="reverse_click_actions_summary">交换点击嘟文时的动作。\n\n
 默认（当禁用时）：\n
-- 长按时打开推文\n
-- 短按时展开推文</string>
+- 长按时打开嘟文\n
+- 短按时展开嘟文</string>
     <string name="extra_pages">追加扩展栏目</string>
     <string name="extra_pages_summary">在时间线左侧添加链接和图片页</string>
     <string name="live_streaming">开启实时流</string>
@@ -344,8 +334,8 @@
     <string name="not_cache">这将不会影响到应用缓存</string>
     <string name="current_cache_size">当前缓存大小</string>
     <string name="cache_dialog_summary">该操作将无法撤销</string>
-    <string name="timeline_size">主页推文容量</string>
-    <string name="timeline_size_summary">数据库中保存推文的最大数量</string>
+    <string name="timeline_size">主页嘟文容量</string>
+    <string name="timeline_size_summary">数据库中保存嘟文的最大数量</string>
     <string name="mentions_size">提及容量</string>
     <string name="mentions_size_summary">数据库中保存提及的最大数量</string>
     <string name="dm_size">私信容量</string>
@@ -372,13 +362,13 @@
     <string name="google_plus">Google+ 社群</string>
     <string name="xda_thread">XDA论坛帖</string>
     <string name="email_me">发电子邮件联系我</string>
-    <string name="tweet_me">在 Twitter 上联系我</string>
-    <string name="follow_talon">在 Twitter 上关注 Talon</string>
+    <string name="tweet_me">在 Mastodon 上联系我</string>
+    <string name="follow_Focus_for_Mastodon">在 Mastodon 上关注 Focus_for_Mastodon</string>
     <string name="credits">致谢</string>
     <string name="disclaimer">免责声明</string>
     <string name="other_apps">我们的其他应用</string>
     <string name="whats_new">更新日志</string>
-    <string name="talon_settings">Talon 设置</string>
+    <string name="Focus_for_Mastodon_settings">设置</string>
     <string name="feature_requests">请求新功能</string>
     <!-- Emoji Keyboard -->
     <string name="recent">最近使用的</string>
@@ -401,23 +391,22 @@
     <string name="layout_hangouts">环聊</string>
     <!-- added after release -->
     <string name="use_inapp_browser">使用内置浏览器</string>
-    <string name="use_browser_on_tweet">在推文窗口内浏览页面</string>
+    <string name="use_browser_on_tweet">在嘟文窗口内浏览页面</string>
     <string name="dismiss_all">清除所有</string>
     <string name="handle_and_name">同时显示用户的昵称和用户名</string>
     <string name="notification_types">通知类型</string>
-    <string name="with_talon_pull">通过 “Talon Pull” 访问</string>
-    <string name="favorited_tweet">喜欢你的推文</string>
+    <string name="favorited_tweet">喜欢你的嘟文</string>
     <string name="new_followers">新的关注者</string>
     <string name="discussion">讨论</string>
     <string name="no_replies">没有回复</string>
     <string name="rt_style_quotes">使用RT型引用</string>
-    <string name="rt_style_quotes_summary">使用旧式的 “RT @username: ...” 来取代 Talon 自己的引用方式。\n\n可从任意推文的操作栏或菜单中访问。\n</string>
+    <string name="rt_style_quotes_summary">使用旧式的 “RT @username: ...” 来取代 Focus_for_Mastodon 自己的引用方式。\n\n可从任意嘟文的操作栏或菜单中访问。\n</string>
     <string name="absolute_date">使用绝对时间</string>
     <string name="clear_searches">清除搜索</string>
-    <string name="compose_with_search">撰写一条关于此搜索结果的推文</string>
+    <string name="compose_with_search">撰写一条关于此搜索结果的嘟文</string>
     <string name="use_toast">使用 “回到顶端” 消息框</string>
-    <string name="ignore_retweets">忽略所有转推</string>
-    <string name="ignore_retweets_summary">在主时间线上不显示任何转推的推文</string>
+    <string name="ignore_retweets">忽略所有转嘟</string>
+    <string name="ignore_retweets_summary">在主时间线上不显示任何转嘟的嘟文</string>
     <string name="view">查看</string>
     <string name="muted_hashtags">已静音的话题</string>
     <string name="muted_hashtags_summary">点击话题来取消静音</string>
@@ -425,22 +414,17 @@
     <string name="mute_hashtags">静音话题</string>
     <string name="muted">已静音</string>
     <string name="auto_insert_hashtags">自动插入话题</string>
-    <string name="to_replies">在回复里自动插入原推文中的所有话题</string>
+    <string name="to_replies">在回复里自动插入原嘟文中的所有话题</string>
     <string name="clean_now">清理当前数据库</string>
     <string name="clean_now_summary">优化数据库并移除当中的重复项</string>
-    <string name="fill_gaps">补全时间线上的空隙</string>
-    <string name="fill_gaps_summary">填补当开启实时流后因信息流连接不稳定而造成的版面空隙</string>
     <string name="filling_timeline">正在补全时间线上的空隙</string>
     <string name="follows_you">关注了你</string>
     <string name="not_following_you">没有关注你</string>
     <string name="device">设备字体</string>
-    <string name="roboto_light">Roboto Light (默认)</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="font_type">字体类型</string>
     <string name="our_website">官方主页</string>
     <string name="alert_types">通知方式</string>
     <string name="timeline_notifications">时间线通知</string>
-    <string name="interactions_notifications">互动通知</string>
     <string name="timelines_settings">时间线设置</string>
     <string name="tweet_look_options">时间线选项</string>
     <string name="limiting_options">内容限制选项</string>
@@ -448,12 +432,12 @@
     <string name="custom_ringtone">自定义铃声</string>
     <string name="use_twitlonger">启用TwitLonger</string>
     <string name="twitlonger">TwitLonger</string>
-    <string name="post_with_twitlonger">启用后推文字数可超过 140 字。\n\n您希望使用 TwitLonger 来发送推文吗？</string>
-    <string name="remove_retweet">移除转推</string>
+    <string name="post_with_twitlonger">启用后嘟文字数可超过 140 字。\n\n您希望使用 TwitLonger 来发送嘟文吗？</string>
+    <string name="remove_retweet">移除转嘟</string>
     <string name="edit">编辑</string>
-    <string name="split_tweet">分割推文</string>
+    <string name="split_tweet">分割嘟文</string>
     <string name="use_twitpic">使用TwitPic</string>
-    <string name="twitpic_summary">使用 Twitpic 来为推文添加图片而非 Twitter 官方的图片上传服务</string>
+    <string name="twitpic_summary">使用 Twitpic 来为嘟文添加图片而非 Mastodon 官方的图片上传服务</string>
     <string name="verified">已验证</string>
     <string name="use_tweetmarker">TweetMarker</string>
     <string name="tweetmarker_summary">在多部设备间同步您的阅读位置</string>
@@ -462,12 +446,12 @@
     <string name="manual_refresh">手动 TweetMarker</string>
     <string name="finding_tweetmarker">正在查找 TweetMarker</string>
     <string name="loading">加载中</string>
-    <string name="loading_tweets">正在加载推文...</string>
+    <string name="loading_tweets">正在加载嘟文...</string>
     <string name="pull_to_refresh">下拉以刷新</string>
-    <string name="removing_retweet">正在移除转推</string>
-    <string name="retweeting_status">正在转推</string>
+    <string name="removing_retweet">正在移除转嘟</string>
+    <string name="retweeting_status">正在转嘟</string>
     <string name="removing_favorite">正在移除喜欢</string>
-    <string name="favoriting_status">喜欢推文</string>
+    <string name="favoriting_status">喜欢嘟文</string>
     <string name="jumping_workaround">修正时间线跳跃</string>
     <string name="jumping_workaround_summary">如果在刷新信息后发现时间线向下位移可尝试开启此项修复</string>
     <string name="menu_share_link">分享链接</string>
@@ -481,23 +465,23 @@
     <string name="dont_use">不使用该页面</string>
     <string name="page_1">页面 1</string>
     <string name="page_2">页面 2</string>
-    <string name="load_tweets">加载推文</string>
+    <string name="load_tweets">加载嘟文</string>
     <string name="download_portal">下载主题商店应用</string>
-    <string name="download_portal_summary">这是 Klinker 应用系列里的 \"Portal\"。你可以在这里了解到我们最新的消息还可以找到所有关于 EvolveSMS 和 Talon 程序的精美主题</string>
+    <string name="download_portal_summary">这是 Klinker 应用系列里的 \"Portal\"。你可以在这里了解到我们最新的消息还可以找到所有关于 EvolveSMS 和 Focus_for_Mastodon 程序的精美主题</string>
     <string name="compose_dm_hint">输入消息...</string>
     <string name="pwiccer">Pwiccer</string>
-    <string name="select_shortening_service">选择一个推文短缩服务或重新编辑推文</string>
+    <string name="select_shortening_service">选择一个嘟文短缩服务或重新编辑嘟文</string>
     <string name="use_shortening_service">使用短缩服务</string>
-    <string name="use_shortening_service_summary">你可以选择使用 TwitLonger 或 Pwiccer（这些服务可以将您的长推文转换为图片格式以便发布）。</string>
-    <string name="view_retweeters">转推者</string>
+    <string name="use_shortening_service_summary">你可以选择使用 TwitLonger 或 Pwiccer（这些服务可以将您的长嘟文转换为图片格式以便发布）。</string>
+    <string name="view_retweeters">转嘟者</string>
     <string name="view_favoriters">喜欢</string>
-    <string name="no_tweets">没有推文</string>
+    <string name="no_tweets">没有嘟文</string>
     <string name="only_7_days">只保留7天</string>
     <string name="saved_searches">保存的搜索</string>
     <string name="error_check_network">加载个人资料失败。请检查您的网络连接</string>
     <string name="error_loading_timeline">无法加载时间线！请检查您的数据连接</string>
     <string name="currently_in_beta">这目前仅是Beta阶段</string>
-    <string name="changed_screenname">在 Talon 存储你的 ID 之前你更改了自己的用户名！现在你需要先注销帐号然后重新登录来使当前变动生效</string>
+    <string name="changed_screenname">在 Focus_for_Mastodon 存储你的 ID 之前你更改了自己的用户名！现在你需要先注销帐号然后重新登录来使当前变动生效</string>
     <string name="menu_save_search">保存搜索</string>
     <string name="saving_search">正在保存搜索</string>
     <string name="delete_saved_search">删除已保存的搜索</string>
@@ -506,12 +490,12 @@
     <string name="start">开始！</string>
     <string name="version_two">版本 2.0.0</string>
     <string name="cleaning_databases">正在清理数据库…</string>
-    <string name="setup_version_two">最近 Talon 的程序内发生了很多变化，为了确保您能得到最好的用户体验，在进入应用之前我们需要先进行一些清理工作！\n\n这个步骤可能需要一些时间执行，具体取决于您在应用内存储推文的数量大小</string>
+    <string name="setup_version_two">最近 Focus_for_Mastodon 的程序内发生了很多变化，为了确保您能得到最好的用户体验，在进入应用之前我们需要先进行一些清理工作！\n\n这个步骤可能需要一些时间执行，具体取决于您在应用内存储嘟文的数量大小</string>
     <string name="setting_up_timeline">正在设置主页时间线...</string>
     <string name="setting_up_mentions">正在设置提及…</string>
     <string name="setting_up_dms">正在设置私信……</string>
     <string name="setting_up_lists">正在设置列表……</string>
-    <string name="version_two_setup_done">Talon 2.0设置完成，祝您使用愉快！</string>
+    <string name="version_two_setup_done">Focus for Mastodon 2.0设置完成，祝您使用愉快！</string>
     <string name="no_content">无内容可显示！</string>
     <string name="discover">发现</string>
     <string name="suggested_users">建议的用户</string>
@@ -521,7 +505,7 @@
     <string name="country_region">国家/地区</string>
     <string name="city">城市</string>
     <string name="menu_apply_picture_filter">只保留含图片的搜索结果</string>
-    <string name="menu_remove_rt">移除转推</string>
+    <string name="menu_remove_rt">移除转嘟</string>
     <string name="input_expression">要静音的表达式...</string>
     <string name="mute_expression">静音表达式</string>
     <string name="view_muted_expressions">移除静音表达式</string>
@@ -534,8 +518,8 @@
     <string name="display_options">显示选项</string>
     <string name="third_party_services">第三方服务</string>
     <string name="open_keyboard">自动打开键盘</string>
-    <string name="open_keyboard_summary">在推文查看器中自动打开键盘以进行回复</string>
-    <string name="no_retweets">没有转推</string>
+    <string name="open_keyboard_summary">在嘟文查看器中自动打开键盘以进行回复</string>
+    <string name="no_retweets">没有转嘟</string>
     <string name="profile">个人资料</string>
     <string name="favorites">喜欢</string>
     <string name="load_pictures">加载图片</string>
@@ -548,27 +532,29 @@
     <string name="widget_trans_black">黑色透明主题</string>
     <string name="ui_settings">用户界面设置</string>
     <string name="show_pos_dashclock">显示时间线位置</string>
-    <string name="show_pos_dashclock_summary">在主页时间线上显示当前位置而非新推文的数量</string>
-    <string name="talon_large_widget">Talon - 主页时间线</string>
-    <string name="unread_bar_widget">Talon - 未读信息条</string>
+    <string name="show_pos_dashclock_summary">在主页时间线上显示当前位置而非新嘟文的数量</string>
+    <string name="Focus_for_Mastodon_large_widget">Focus for Mastodon - 主页时间线</string>
+    <string name="unread_bar_widget">Focus for Mastodon - 未读信息条</string>
     <string name="show_muted_mentions">显示静音用户的提及</string>
     <string name="force_overflow_summary">在操作栏上始终显示三点式 “溢出菜单”。主要用于含实体菜单键的设备</string>
     <string name="menu_view_drafts">查看草稿</string>
-    <string name="menu_schedule_tweet">定时发送推文</string>
+    <string name="menu_schedule_tweet">定时发送嘟文</string>
+    <string name="alway_show_tweet_buttons">总是显示嘟文操作按钮</string>
+    <string name="alway_show_tweet_buttons_summary">在时间线的嘟文底部显示“喜欢”、“转嘟”、“回复”、“书签”和“分享”按钮</string>
     <string name="menu_save_draft">保存草稿</string>
     <string name="saved_draft">已保存草稿</string>
     <string name="delete_draft">删除草稿</string>
-    <string name="no_tweet">没有推文！</string>
+    <string name="no_tweet">没有嘟文！</string>
     <string name="menu_attach_picture">添加图片</string>
     <string name="twitpic_disclaimer">TwitPic免责声明</string>
-    <string name="twitpic_disclaimer_summary">Twitter 的 API 不允许用户在私信内直接添加图片。因此 Talon 会先将图片上传至 TwitPic 然后把指向图片的链接地址发送给私信的收件人。\n\n
+    <string name="twitpic_disclaimer_summary">Mastodon 的 API 不允许用户在私信内直接添加图片。因此 Focus_for_Mastodon 会先将图片上传至 TwitPic 然后把指向图片的链接地址发送给私信的收件人。\n\n
 发送出的图片可在您的 TwitPic 资料中查看到。</string>
     <string name="dont_show_again">不再显示</string>
     <string name="error_attaching_image">添加图片时发生错误！</string>
-    <string name="sending_tweet">正在发送推文...</string>
+    <string name="sending_tweet">正在发送嘟文...</string>
     <string name="attached_images">已添加</string>
-    <string name="twitpic_disclaimer_multi_summary">Twitter 的 API 不支持在一条推文内添加多张图片。\n\n
-Talon 将选择把图片上传至 TwitPic。</string>
+    <string name="twitpic_disclaimer_multi_summary">Mastodon 的 API 不支持在一条嘟文内添加多张图片。\n\n
+Focus_for_Mastodon 将选择把图片上传至 TwitPic。</string>
     <string name="loading_webpage">载入网页...</string>
     <string name="plain_text_browser">纯文本浏览器</string>
     <string name="plain_text_summary">移除网页内的图片和页面格式仅显示其中的文字内容</string>
@@ -579,38 +565,37 @@ Talon 将选择把图片上传至 TwitPic。</string>
     <string name="pre_cache_summary">在获得实时信息流或时间线后台刷新取得数据时立即下载当中的图片</string>
     <string name="pre_cache_settings">预缓存选项</string>
     <string name="pre_cache_only_wifi">只在WiFi下</string>
-    <string name="tweet_page">推文页</string>
+    <string name="tweet_page">嘟文页</string>
     <string name="web_page">网页</string>
     <string name="conversation_page">对话页</string>
-    <string name="viewer_page">推文查看器</string>
-    <string name="viewer_page_summary">当查看推文时要打开的默认页</string>
+    <string name="viewer_page">嘟文查看器</string>
+    <string name="viewer_page_summary">当查看嘟文时要打开的默认页</string>
     <string name="browser_settings">浏览器设置</string>
     <string name="memory_manage">存储管理</string>
-    <string name="protected_account">该用户的推文已被保护！</string>
-    <string name="mute_rt">静音该用户的转推</string>
-    <string name="unmute_rt">取消静音该用户的转推</string>
-    <string name="muted_rts">已静音的转推用户</string>
-    <string name="twitter">推特</string>
+    <string name="protected_account">该用户的嘟文已被保护！</string>
+    <string name="mute_rt">静音该用户的转嘟</string>
+    <string name="unmute_rt">取消静音该用户的转嘟</string>
+    <string name="muted_rts">已静音的转嘟用户</string>
     <string name="user">用户</string>
-    <string name="menu_translate">翻译推文</string>
-    <string name="add_new_tweet">添加新推文</string>
-    <string name="scheduled_tweets">已设置定时发送的推文</string>
+    <string name="menu_translate">翻译嘟文</string>
+    <string name="add_new_tweet">添加新嘟文</string>
+    <string name="scheduled_tweets">已设置定时发送的嘟文</string>
     <string name="done_label">完成</string>
-    <string name="tweet_queued">推文已加入到队列！</string>
-    <string name="only_queue_no_pic">队列中只能保留无图片的推文！</string>
-    <string name="menu_view_queued">查看队列中的推文</string>
-    <string name="keep_queued_tweet">保留队列中的推文？</string>
+    <string name="tweet_queued">嘟文已加入到队列！</string>
+    <string name="only_queue_no_pic">队列中只能保留无图片的嘟文！</string>
+    <string name="menu_view_queued">查看队列中的嘟文</string>
+    <string name="keep_queued_tweet">保留队列中的嘟文？</string>
     <string name="date_picker">选择日期</string>
     <string name="time_picker">选择时间</string>
     <string name="complete_form">请填写完成此表格！</string>
     <string name="no_drafts">没有发现草稿</string>
-    <string name="no_queued">队列中没有推文</string>
-    <string name="menu_show_top_tweets">查看搜索结果中的热门推文</string>
+    <string name="no_queued">队列中没有嘟文</string>
+    <string name="menu_show_top_tweets">查看搜索结果中的热门嘟文</string>
     <string name="delete_all">删除所有草稿</string>
     <string name="muted_clients">已静音的客户端</string>
     <string name="mute_client">静音客户端</string>
     <string name="no_clients">无客户端</string>
-    <string name="muted_clients_summary">允许您静音掉来自某种特定客户端的所有推文信息</string>
+    <string name="muted_clients_summary">允许您静音掉来自某种特定客户端的所有嘟文信息</string>
     <string name="client_not_found">未找到客户端！</string>
     <string name="favorite">喜欢</string>
     <string name="menu_share_image">分享图片</string>
@@ -619,53 +604,44 @@ Talon 将选择把图片上传至 TwitPic。</string>
     <string name="both_accounts">每个帐号</string>
     <string name="attach_gif">添加 GIF 动画</string>
     <string name="attach_video">选择视频</string>
-    <string name="roboto_l">Android Lollipop Roboto</string>
     <string name="second_account">第二帐号</string>
-    <string name="second_account_login_info">由于 Twitter 会在它的系统中保留您的一部分登录信息，在接下来出现的页面中您可能无法立即使用新的帐号信息登录。如果它跳过了登录步骤而直接进入到授权页面，只需点击位于网页右上角的  “登出”  按钮来让应用带您进入到第二帐号的登录页面。</string>
+    <string name="second_account_login_info">由于 Mastodon 会在它的系统中保留您的一部分登录信息，在接下来出现的页面中您可能无法立即使用新的帐号信息登录。如果它跳过了登录步骤而直接进入到授权页面，只需点击位于网页右上角的  “登出”  按钮来让应用带您进入到第二帐号的登录页面。</string>
     <string name="fetch_tweetmarker">获取 TweetMarker</string>
     <string name="rate_limit_reached">已达到刷新上限</string>
     <string name="info">说明</string>
     <string name="help_and_feedback">帮助/反馈</string>
-    <string name="faq_first">您好，非常感激您愿意协助我改进 Talon！
-
-如果有任何疑问或想进行反馈，请随时给我发送电子邮件或推文。不过在此之前，您是否已经阅读过了 \"常见问题\" 部分呢？
-
-Talon 程序内已内置了丰富的帮助说明。在焦急等待我的回复之前，不妨先去查看一下吧。（尽管我已在竭尽所能的去回复您的消息...）
-
-希望您能满意我的作品！</string>
     <string name="contact">联系</string>
     <string name="follow">关注</string>
     <string name="menu_number_of_pages">额外页面数目</string>
     <!-- %s will be replaced with a number for the currently selected page -->
     <string name="page">页面 %s</string>
     <string name="set_as_default">设为默认</string>
-    <string name="main_pages_and_drawer">可滑动页面和应用抽屉</string>
     <string name="drawer_elements">可见的抽屉项目</string>
     <string name="drawer_elements_summary">选择在应用导航抽屉内显示或隐藏的项目</string>
+    <string name="swipe_hide_navigation_title">滑动列表时隐藏</string>
     <string name="second_acc_mentions">第二帐号内的提及</string>
     <string name="using_second_account">正在使用 %s 帐号！</string>
     <!-- the username will replace %s -->
     <string name="error_gif">查找媒体时出错</string>
     <string name="saved_search">保存的搜索</string>
+    <string name="saved_search_list">保存的搜索列表</string>
     <string name="activity">活动</string>
     <string name="sending_direct_message">正在发送私信</string>
     <string name="fav_rt_multiple_accounts">跨帐号操作</string>
-    <string name="fav_rt_multiple_accounts_summary">如果有多个帐号，这将可以让您选择使用哪一个来执行喜欢或转推</string>
-    <string name="talon_pull_notifications">Talon Pull（即时）通知</string>
-    <string name="talon_pull_turned_on">要使用该功能请先在后台同步设置中启用 Talon Pull</string>
+    <string name="fav_rt_multiple_accounts_summary">如果有多个帐号，这将可以让您选择使用哪一个来执行喜欢或转嘟</string>
     <string name="activity_sync_interval">活动刷新频率</string>
     <string name="mentioned_you">提及了你</string>
     <string name="favorites_lower">喜欢</string>
     <string name="favorite_lower">喜欢</string>
-    <string name="retweeted_your_status">转推了你的推文</string>
+    <string name="retweeted_your_status">转嘟了你的嘟文</string>
     <string name="followed_you">已关注你</string>
     <string name="new_activity">新的活动</string>
     <string name="use_interaction_drawer">启用互动抽屉</string>
-    <string name="use_interaction_drawer_summary">该抽屉中显示的内容是由 Talon Pull 获取的（信息流）。</string>
+    <string name="use_interaction_drawer_summary">该抽屉中显示的内容是由 Focus_for_Mastodon Pull 获取的（信息流）。</string>
     <string name="no_activity_yet">当前尚无活动！</string>
     <string name="no_activity_yet_desc">该区域内的信息将随着您互动次数的增多而增加。\n\n
-有关您的提及，新的关注者，转推/喜欢状态都将出现在这里。</string>
-    <string name="retweet">转推</string>
+有关您的提及，新的关注者，转嘟/喜欢状态都将出现在这里。</string>
+    <string name="retweet">转嘟</string>
     <string name="new_follower_lower">名新关注者</string>
     <string name="new_followers_lower">名新关注者</string>
     <string name="item">条项目</string>
@@ -673,20 +649,20 @@ Talon 程序内已内置了丰富的帮助说明。在焦急等待我的回复�
     <string name="and">和</string>
     <string name="no_favorites">没有喜欢</string>
     <string name="quote_style">引用样式</string>
-    <string name="quote_style_twitter">Twitter 样式（推文链接）</string>
-    <string name="quote_style_talon">\"\@lukeklinker &#8230;\"</string>
-    <string name="quote_style_rt">RT \@lukeklinker &#8230;</string>
+    <string name="quote_style_twitter">Mastodon 样式（嘟文链接）</string>
+    <string name="quote_style_Focus_for_Mastodon">\"\@allentown521 &#8230;\"</string>
+    <string name="quote_style_rt">RT \@allentown521 &#8230;</string>
     <string name="show_pull_notification">显示可持续性通知</string>
     <string name="show_pull_notification_summary">如果禁用该通知，安卓系统可能会随时关闭掉信息流的传输。请谨慎使用</string>
     <string name="custom_tab_title">Chrome 自定义标签页</string>
-    <string name="custom_tab_message">您的系统不允许 Talon 自动启用 Chrome 自定义标签页。想要使用该功能，请先将 Chrome 设为系统默认浏览器，否则 Talon 将继续使用内置的浏览器。\n\n如果 Chrome 已为系统默认浏览器请点击选择“确认”，如不想将其设为默认浏览器请点击“取消”。</string>
+    <string name="custom_tab_message">您的系统不允许 Focus_for_Mastodon 自动启用 Chrome 自定义标签页。想要使用该功能，请先将 Chrome 设为系统默认浏览器，否则 Focus_for_Mastodon 将继续使用内置的浏览器。\n\n如果 Chrome 已为系统默认浏览器请点击选择“确认”，如不想将其设为默认浏览器请点击“取消”。</string>
     <string name="learn_more">了解更多</string>
     <!-- Long click methods -->
     <string name="open_profile">打开用户资料</string>
     <string name="copy_handle">复制用户名</string>
     <string name="search_user">搜索用户</string>
     <string name="mute_user">静音用户</string>
-    <string name="mute_retweets">静音转推</string>
+    <string name="mute_retweets">静音转嘟</string>
     <string name="share_profile">分享用户资料</string>
     <string name="open_to_external_browser">在外部浏览器中打开</string>
     <string name="open_to_internal_browser">在内部浏览器中打开</string>
@@ -700,90 +676,340 @@ Talon 程序内已内置了丰富的帮助说明。在焦急等待我的回复�
     <string name="copied">已复制文本</string>
     <string name="favorite_user_text">收藏用户</string>
     <string name="open_to_web">I</string>
-    <string name="open_to_web_summary">如果推文中包含有网页链接，点击后将直接打开该网页页面而非推文本身。</string>
+    <string name="open_to_web_summary">如果嘟文中包含有网页链接，点击后将直接打开该网页页面而非嘟文本身。</string>
     <string name="open_webpage">打开链接</string>
     <string name="get_android">获取 Android 表情符号</string>
     <string name="play_gif">播放</string>
-    <string name="add_to_tweet_gif">添加至推文</string>
+    <string name="add_to_tweet_gif">添加至嘟文</string>
     <string name="find_a_gif">查找 GIF</string>
     <string name="three_mb_limit">5MB 大小限制</string>
-    <string name="three_mb_message">Twitter 仅允许用户发布不大于 5MB 的 GIF 图片。 Talon 将会从 Giphy 上抓取符合该项规定的最高画质 GIF 图片。\n\n您看到的所有显示结果都将有符合这一限制的版本存在，而那些降低图片质量以满足发布规定的图片将不被显示。</string>
+    <string name="three_mb_message">Mastodon 仅允许用户发布不大于 5MB 的 GIF 图片。 Focus_for_Mastodon 将会从 Giphy 上抓取符合该项规定的最高画质 GIF 图片。\n\n您看到的所有显示结果都将有符合这一限制的版本存在，而那些降低图片质量以满足发布规定的图片将不被显示。</string>
     <string name="quoted_you">引用了你</string>
     <string name="privacy_policy">隐私策略</string>
-    <string name="saved_tweets">Gespeicherte Tweets</string>
-    <string name="save_for_later">Für später speichern</string>
-    <string name="remove_from_saved_tweets">Von den gespeicherten Tweets entfernen</string>
-    <string name="today">Heute</string>
-    <string name="last_week">Diese Woche</string>
-    <string name="last_month">Diesen Monat</string>
-    <string name="older">Älter</string>
-    <string name="undo">Rückgängig machen</string>
-    <string name="enter_search">Suchen nach...</string>
-    <string name="message_from_bullet">%1$s •</string>
-    <string name="now">Jetzt</string>
-    <string name="failed">Fehlgeschlagenen</string>
-    <string name="delivered">Nachricht zugestellt</string>
-    <string name="attach_image">Bild anhängen</string>
-    <string name="capture_image">Bild aufzeichnen</string>
-    <string name="record_video">Video aufnehmen</string>
-    <string name="flip_picture">Kamera umdrehen</string>
-    <string name="fullscreen">Vollbild</string>
-    <string name="attached_image">Angehängtes Bild</string>
-    <string name="share">Teilen</string>
-    <string name="share_content">Inhalt teilen...</string>
-    <string name="saved">In das Download-Verzeichnis gespeichert!</string>
-    <string name="failed_to_save">Speichern fehlgeschlagen</string>
-    <string name="read">Gelesen</string>
-    <string name="mark_as_read">Als gelesen markieren</string>
-    <string-array name="reply_choices">
-        <item>Ja</item>
-        <item>Nein</item>
-        <item>Vielleicht</item>
-        <item>Ok</item>
-        <item>Danke</item>
-    </string-array>
-    <string name="status_notifications_channel">Status-Benachrichtigungen</string>
-    <string name="background_service_channel">Hintergrund-Service-Benachrichtigungen</string>
-    <string name="general_notifications_channel">Grundsätzliche Benachrichtigungen</string>
-    <string name="copyright_summary">Open Source Lizenzinformation anzeigen</string>
-    <string name="app_version">App Version</string>
-    <string name="faqs">Häufig Fragen</string>
-    <string name="get_help">Hilfe</string>
-    <string name="google_plus_summary">Pulse Beta Benutzergruppe</string>
-    <string name="email">Email</string>
-    <string name="email_summary">luke@klinkerapps.com</string>
-    <string name="twitter_summary">\@KlinkerApps</string>
-    <string name="support">Support</string>
-    <string name="theme_settings_category">Erscheinungsbild</string>
-    <string name="conversation_list_category">Konversations-Liste</string>
-    <string name="general_category">Allgemein</string>
-    <string name="theme_settings_redirect">Thema</string>
-    <string name="add">Hinzufügen</string>
-    <string name="privacy_policy_summary">Unsere Datenschutzerklärung im Web einsehen</string>
-    <string name="signout_time">Von %1$s abmelden</string>
-    <string name="no_apps_found">Keine App mit dieser Aktion verknüpft</string>
-    <string name="you_denied_permission">Du hast die Genehmigung verweigert</string>
-    <string name="verify">Überprüfen</string>
-    <string name="default_text">Standard</string>
-    <string name="dismiss">Verwerfen</string>
-    <string name="renew">Erneuern</string>
-    <string name="hours">Stunden</string>
-    <string name="minutes">Minuten</string>
-    <string name="test">Test</string>
-    <string name="off">Aus</string>
-    <string name="on">An</string>
-    <!-- Times -->
-    <string name="one_second">Eine Sekunde</string>
-    <string name="three_seconds">Drei Sekunden</string>
-    <string name="five_seconds">Fünf Sekunden</string>
-    <string name="ten_seconds">Zehn Sekunden</string>
-    <string name="fifteen_seconds">Fünfzehn Sekunden</string>
-    <string name="thirty_seconds">Dreißig Sekunden</string>
-    <string name="one_minute">Eine Minute</string>
-    <string name="one_week">Eine Woche</string>
-    <string name="two_weeks">Zwei Wochen</string>
-    <string name="one_month">Ein Monat</string>
-    <string name="three_months">Drei Monate</string>
-    <string name="six_months">Sechs Monate</string>
-    <string name="one_year">Ein Jahr</string>
+    <string name="saved_tweets">保存的嘟文</string>
+    <string name="save_for_later">保存此嘟文</string>
+    <string name="remove_from_saved_tweets">从已保存的嘟文中删除</string>
+
+    <string name="pref_theme_title_trueblack">纯黑（适用于 AMOLED 设备）</string>
+    <string name="pref_custom_launcher_title">自定义启动器图标</string>
+    <string name="pref_title_wallpaper_accent">壁纸主题色</string>
+    <string name="pref_title_desaturated_color">低饱和颜色</string>
+    <string name="pref_summary_wallpaper_accent">从壁纸中提取主题色</string>
+    <string name="accent_color_desc">主题强调色</string>
+    <string name="pref_summary_desaturated_color">根据质感设计规范，深色模式下应使用低饱和度颜色</string>
+    <string name="pref_custom_launcher_summary">并非所有的手机都支持这个功能，请自行测试</string>
+    <string name="login_error">认证失败，Mastodon已开始对使用他们服务的开发者进行收费，并且费用是小企业无法承担的，我通过其他方式绕过了这个限制，退出登录后重新登录将会正常，如果依旧无法登陆那么请等待我的更新</string>
+    <string name="app_pro">Focus for Mastodon 高级版</string>
+    <string name="pro_summary">自定义主题、自定义首页等，打造属于自己的独一无二的Mastodon app</string>
+    <string name="pro_tip_remove_ads">去广告</string>
+    <string name="pro_tip_custom_theme">自定义主题色</string>
+    <string name="pro_tip_custom_icon">自定义app图标</string>
+    <string name="pro_tip_fonts">更多字体选择</string>
+    <string name="pro_tip_custom_launcher">解除自定义8个启动页的限制</string>
+    <string name="pro_tip_link_preview">嘟文中链接预览</string>
+    <string name="search_communities">服务器或 URL</string>
+    <string name="instance_rules_title">服务器规则</string>
+    <string name="instance_rules_subtitle">继续的话，您将同意以下由 %s 之管理员设置及执行的服务器规则。</string>
+    <string name="signup_title">新增账号</string>
+    <string name="instance_signup_closed">此服务器不接受新注册。</string>
+    <string name="not_accepting_new_members">目前暂不开放新成员</string>
+    <string name="login_subtitle">登陆到你创建账户的服务器</string>
+    <string name="server_url">服务器地址</string>
+    <string name="get_started">创建账户</string>
+    <string name="poll_option_hint">选项 %d</string>
+    <plurals name="x_minutes">
+        <item quantity="other">%d 分钟</item>
+    </plurals>
+    <plurals name="x_hours">
+        <item quantity="other">%d 小时</item>
+    </plurals>
+    <plurals name="x_days">
+        <item quantity="other">%d 天</item>
+    </plurals>
+    <string name="compose_poll_duration">时长：%s</string>
+    <plurals name="x_seconds_left">
+        <item quantity="other">%d 秒后结束</item>
+    </plurals>
+    <plurals name="x_minutes_left">
+        <item quantity="other">%d 分钟后结束</item>
+    </plurals>
+    <plurals name="x_hours_left">
+        <item quantity="other">%d 小时后结束</item>
+    </plurals>
+    <plurals name="x_days_left">
+        <item quantity="other">%d 天后结束</item>
+    </plurals>
+    <plurals name="x_voters">
+        <item quantity="other">%d 人已投票</item>
+    </plurals>
+    <string name="poll_closed">已关闭</string>
+    <string name="poll_allow_multiple_choices">多项选择</string>
+    <string name="removing_bookmark">正在移除书签</string>
+    <string name="bookmarking_status">正在添加书签</string>
+    <string name="bookmark_success">已添加书签</string>
+    <plurals name="x_people_talking">
+        <item quantity="other">%d 人在讨论</item>
+    </plurals>
+    <plurals name="discussed_x_times">
+        <item quantity="other">讨论了 %d 次</item>
+    </plurals>
+    <string name="already_have_account">我已经有账户</string>
+    <string name="log_in">登录</string>
+    <string name="next">下一步</string>
+    <string name="loading_instance">正在获取服务器信息...</string>
+    <string name="not_a_mastodon_instance">%s 似乎并非Mastodon实例。</string>
+    <string name="preparing_auth">正在准备身份验证…</string>
+    <string name="finishing_auth">正在完成身份认证…</string>
+    <string name="in_reply_to">回复 %s</string>
+    <string name="user_followed_you">关注了你</string>
+    <string name="user_sent_follow_request">向你发送了关注请求</string>
+    <string name="user_favorited">喜欢了你的嘟文</string>
+    <string name="poll_ended">投票已结束</string>
+    <string name="time_seconds">%d 秒前</string>
+    <string name="time_minutes">%d 分钟前</string>
+    <string name="time_hours">%d 小时前</string>
+    <string name="time_days">%d 天前</string>
+    <string name="share_toot_title">分享</string>
+    <string name="settings">设置</string>
+    <string name="publish">发布</string>
+    <string name="discard_draft">丢弃草稿？</string>
+    <plurals name="followers">
+        <item quantity="other">关注者</item>
+    </plurals>
+    <plurals name="following">
+        <item quantity="other">正在关注</item>
+    </plurals>
+    <plurals name="posts">
+        <item quantity="other">嘟文</item>
+    </plurals>
+    <string name="posts">嘟文</string>
+    <string name="posts_and_replies">嘟文和回复</string>
+    <string name="media">媒体</string>
+    <string name="profile_about">关于</string>
+    <plurals name="x_posts">
+        <item quantity="other">%d 条嘟文</item>
+    </plurals>
+    <string name="profile_joined">加入于</string>
+    <string name="done">完成</string>
+    <string name="field_label">标签</string>
+    <string name="field_content">内容</string>
+    <string name="saving">正在保存…</string>
+
+    <string name="confirm_mute_title">隐藏用户</string>
+    <string name="confirm_mute">确定要隐藏 %s 吗？</string>
+    <string name="do_mute">确定</string>
+    <string name="confirm_unmute_title">取消隐藏</string>
+    <string name="confirm_unmute">确定不再隐藏 %s 吗？</string>
+    <string name="do_unmute">确定</string>
+    <string name="confirm_block_title">屏蔽用户</string>
+    <string name="confirm_block_domain_title">屏蔽域名</string>
+    <string name="confirm_block">确定要屏蔽 %s 吗？</string>
+    <string name="do_block">确定</string>
+    <string name="confirm_unblock_title">解除屏蔽</string>
+    <string name="confirm_unblock_domain_title">解除屏蔽</string>
+    <string name="confirm_unblock">确定不再屏蔽 %s 吗？</string>
+    <string name="do_unblock">确定</string>
+    <string name="button_muted">已隐藏</string>
+    <string name="action_vote">投票</string>
+    <string name="tap_to_reveal">点击显示</string>
+    <string name="confirm_delete_title">删除嘟文</string>
+    <string name="confirm_delete">确定要删除这条嘟文吗？</string>
+    <string name="deleting">正在删除…</string>
+    <string name="notification_channel_audio_player">音频播放</string>
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
+    <string name="log_out">退出账户</string>
+    <string name="add_account">添加账户</string>
+    <string name="hashtags">话题</string>
+    <string name="news">新闻</string>
+    <string name="for_you">推荐关注</string>
+    <string name="all_notifications">全部</string>
+
+    <string name="report_title">举报 %s</string>
+    <string name="report_choose_reason">这条嘟文有什么问题？</string>
+    <string name="report_choose_reason_account">%s 有什么问题？</string>
+    <string name="report_choose_reason_subtitle">选择最匹配的理由</string>
+    <string name="report_reason_personal">我不喜欢它</string>
+    <string name="report_reason_personal_subtitle">这不是你想看到的东西</string>
+    <string name="report_reason_spam">垃圾信息</string>
+    <string name="report_reason_spam_subtitle">恶意链接、虚假互动或重复回复</string>
+    <string name="report_reason_violation">违反社区规则</string>
+    <string name="report_reason_violation_subtitle">你意识到它违反了特定的规则</string>
+    <string name="report_reason_other">其他原因</string>
+    <string name="report_reason_other_subtitle">以上理由都不适用</string>
+    <string name="report_choose_rule">违反了哪些规则？</string>
+    <string name="report_choose_rule_subtitle">选择所有适用项</string>
+    <string name="report_choose_posts">是否有任何嘟文支持此举报？</string>
+    <string name="report_choose_posts_subtitle">选择所有适用项</string>
+    <string name="report_comment_title">还有什么要告诉我们的吗？</string>
+    <string name="report_comment_hint">备注</string>
+    <string name="sending_report">正在提交举报…</string>
+    <string name="report_sent_title">感谢举报，我们将会处理。</string>
+    <string name="report_sent_subtitle">我们审查此问题期间，你也可以对 %s 采取行动。</string>
+    <string name="unfollow_user">不再关注 %s</string>
+    <string name="unfollow">取消关注</string>
+    <string name="block_user_explain">他们不能再关注你或看到你的嘟文，但他们可以知道他们是否被屏蔽。</string>
+    <string name="report_personal_title">不想看到这个？</string>
+    <string name="report_personal_subtitle">如果在Mastodon看到不喜欢的东西，可以尝试移除它。</string>
+    <string name="back">返回</string>
+    <string name="instance_catalog_title">Mastodon由来自不同服务器的用户组成。</string>
+    <string name="instance_catalog_subtitle">根据你的兴趣、地区或其他目的挑选一个服务器。无论你选择哪个服务器，你都可以跟所有人联系。</string>
+    <string name="edit_photo">编辑</string>
+    <!-- %s is the email address -->
+    <string name="compose_hint">写下你的想法</string>
+    <string name="content_warning">内容警告</string>
+    <string name="add_image_description">添加图片描述…</string>
+    <string name="retry_upload">重新上传</string>
+    <string name="edit_image">编辑图片</string>
+    <string name="add_alt_text">添加备注</string>
+    <string name="alt_text_subtitle">备注可以为视障人士描述你的图片，请尽量只包含足以理解内容的信息。</string>
+    <string name="alt_text_hint">例如，镜头前有一只狗眯着眼睛警惕地看着四周。</string>
+    <string name="visibility_followers_only">仅关注者</string>
+    <string name="search_all">全部</string>
+    <string name="search_people">用户</string>
+    <string name="recent_searches">最近搜索</string>
+    <string name="step_x_of_n">第 %1$d 步（共 %2$d 步）</string>
+    <string name="notification_type_follow">新关注者</string>
+    <string name="notification_type_favorite">喜欢</string>
+    <string name="notification_type_mention">提及</string>
+    <string name="notification_type_poll">投票</string>
+    <string name="choose_account">选择账户</string>
+    <string name="err_not_logged_in">请先登陆到Mastodon</string>
+    <plurals name="cant_add_more_than_x_attachments">
+        <item quantity="other">你不能添加超过 %d 个媒体附件</item>
+    </plurals>
+    <string name="media_attachment_unsupported_type">文件 %s 是不支持的类型</string>
+    <string name="media_attachment_too_big">文件 %1$s 的大小超出 %2$s MB的限制</string>
+    <string name="settings_theme">外观</string>
+    <string name="theme_auto">自动</string>
+    <string name="theme_true_black">纯黑模式</string>
+    <string name="settings_behavior">行为</string>
+    <string name="settings_gif">播放动态头像和表情</string>
+    <string name="settings_custom_tabs">使用内置浏览器</string>
+    <string name="settings_notifications">通知</string>
+    <string name="notify_me_when">接收通知的范围</string>
+    <string name="notify_anyone">任何人</string>
+    <string name="notify_follower">关注者</string>
+    <string name="notify_followed">我关注的</string>
+    <string name="notify_none">关闭通知</string>
+    <string name="notify_favorites">喜欢我的嘟文</string>
+    <string name="notify_follow">关注我</string>
+    <string name="notify_mention">提及我</string>
+    <string name="settings_boring">更多</string>
+    <string name="settings_account">账户设置</string>
+    <string name="settings_contribute">贡献给Mastodon</string>
+    <string name="settings_tos">使用条款</string>
+    <string name="settings_privacy_policy">隐私政策</string>
+    <string name="settings_spicy">危险地带</string>
+    <string name="settings_clear_cache">清除媒体缓存</string>
+    <string name="settings_app_version">Mastodon for Android v%1$s (%2$d)</string>
+    <string name="media_cache_cleared">媒体缓存已清除</string>
+    <string name="confirm_log_out">确定要退出账户吗？</string>
+    <string name="sensitive_content">敏感内容</string>
+    <string name="sensitive_content_explain">作者将此媒体标记为敏感内容，点击显示。</string>
+    <string name="media_hidden">点击显示</string>
+    <string name="avatar_description">跳转到 %s 的资料页</string>
+    <string name="more_options">更多选项</string>
+    <string name="reveal_content">显示内容</string>
+    <string name="hide_content">隐藏内容</string>
+    <string name="new_post">新嘟文</string>
+    <string name="button_reply">回复</string>
+    <string name="button_favorite">喜欢</string>
+    <string name="button_share">分享</string>
+    <string name="media_no_description">没有描述的媒体</string>
+    <string name="add_media">添加媒体</string>
+    <string name="add_poll">发起投票</string>
+    <string name="emoji">表情</string>
+    <string name="post_visibility">嘟文可见性</string>
+    <string name="home_timeline">主页时间轴</string>
+    <string name="my_profile">我的资料</string>
+    <string name="media_viewer">媒体查看器</string>
+    <string name="follow_user">关注 %s</string>
+    <string name="open_in_browser">在浏览器中打开</string>
+    <string name="profile_header">资料页横幅图片</string>
+    <string name="profile_picture">头像</string>
+    <string name="reorder">重新排序</string>
+    <string name="download">下载</string>
+    <string name="permission_required">需要权限</string>
+    <string name="storage_permission_to_download">应用程序需要存储权限才能保存文件。</string>
+    <string name="open_settings">打开「设置」</string>
+    <string name="error_saving_file">保存文件时出错</string>
+    <string name="file_saved">文件已保存</string>
+    <string name="no_app_to_handle_action">未找到可处理此操作的应用</string>
+    <string name="local_timeline">本站时间轴</string>
+    <string name="trending_posts_info_banner">这是在你的Mastodon角落备受关注的内容。</string>
+    <string name="trending_hashtags_info_banner">这是在你的Mastodon角落备受关注的话题。</string>
+    <string name="trending_links_info_banner">这是在你的Mastodon角落分享最多的新闻故事。</string>
+    <string name="local_timeline_info_banner">这是你所在的Mastodon服务器上的用户发布的最新嘟文。</string>
+    <string name="dismiss">驳回</string>
+    <string name="see_new_posts">查看新嘟文</string>
+    <string name="load_missing_posts">加载嘟文</string>
+    <string name="manually_approves_followers">手动批准关注请求</string>
+    <string name="current_account">当前账号</string>
+    <string name="log_out_account">退出 %s</string>
+    <!-- translators: %,d is a valid placeholder, it formats the number with locale-dependent grouping separators -->
+    <plurals name="x_followers">
+        <item quantity="other">%,d 名关注者</item>
+    </plurals>
+    <plurals name="x_following">
+        <item quantity="other">关注 %,d 人</item>
+    </plurals>
+    <plurals name="x_favorites">
+        <item quantity="other">%,d 次喜欢</item>
+    </plurals>
+    <string name="timestamp_via_app">%1$s 来自 %2$s</string>
+    <string name="time_now">刚刚</string>
+    <string name="post_info_favorites">喜欢</string>
+    <string name="edit_history">编辑记录</string>
+    <string name="last_edit_at_x">编辑于 %s</string>
+    <string name="time_just_now">不久前</string>
+    <plurals name="x_seconds_ago">
+        <item quantity="other">%d 秒前</item>
+    </plurals>
+    <plurals name="x_minutes_ago">
+        <item quantity="other">%d 分钟前</item>
+    </plurals>
+    <string name="edited_timestamp">已编辑 %s</string>
+    <string name="edit_original_post">初始嘟文</string>
+    <string name="edit_text_edited">修改了文本</string>
+    <string name="edit_spoiler_added">添加了内容警告</string>
+    <string name="edit_spoiler_edited">修改了内容警告</string>
+    <string name="edit_spoiler_removed">移除了内容警告</string>
+    <string name="edit_poll_added">添加了投票</string>
+    <string name="edit_poll_edited">修改了投票</string>
+    <string name="edit_poll_removed">移除了投票</string>
+    <string name="edit_media_added">添加了媒体</string>
+    <string name="edit_media_removed">移除了媒体</string>
+    <string name="edit_media_reordered">调整了媒体顺序</string>
+    <string name="edit_marked_sensitive">标记为敏感内容</string>
+    <string name="edit_marked_not_sensitive">取消了敏感内容标记</string>
+    <string name="edit_multiple_changed">编辑了嘟文</string>
+    <string name="discard_changes">放弃更改？</string>
+    <string name="upload_failed">上传失败</string>
+    <string name="file_size_bytes">%d 字节</string>
+    <string name="file_size_kb">%.2f KB</string>
+    <string name="file_size_mb">%.2f MB</string>
+    <string name="file_size_gb">%.2f GB</string>
+    <string name="file_upload_progress">已上传 %1$s，共 %2$s</string>
+    <string name="file_upload_time_remaining">剩余 %s</string>
+    <string name="upload_error_connection_lost">网络连接已断开</string>
+    <string name="upload_processing">正在处理…</string>
+    <!-- %s is version like 1.2.3 -->
+    <string name="update_available">Mastodon 安卓新版本 %s 已准备就绪</string>
+    <!-- %s is version like 1.2.3 -->
+    <string name="update_ready">Mastodon 安卓新版本 %s 已下载并准备安装</string>
+    <!-- %s is file size -->
+    <string name="download_update">已下载(%s)</string>
+    <string name="install_update">安装</string>
+    <string name="i_agree">我同意</string>
+    <string name="empty_list">还没有内容</string>
+    <string name="text_copied">复制成功</string>
+    <string name="add_bookmark">添加到书签</string>
+    <string name="remove_bookmark">移除书签</string>
+    <string name="bookmarks">书签</string>
+    <string name="your_favorites">你喜欢的</string>
+    <string name="login_title">欢迎回来</string>
+    <string name="world_timeline">跨站时间轴</string>
+    <string name="bookmarked_tweets">加书签的嘟文</string>
+    <string name="pref_title_timeline_filters">过滤器</string>
 </resources>

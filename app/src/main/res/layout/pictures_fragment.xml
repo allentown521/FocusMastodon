@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@
         android:layout_width="fill_parent"
         android:gravity="center">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="@string/pic_search_disclaimer"
@@ -62,7 +62,7 @@
         android:gravity="right"
         android:visibility="gone">
 
-        <ProgressBar
+        <allen.town.focus_common.views.AccentProgressBar
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

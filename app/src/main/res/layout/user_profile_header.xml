@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -38,11 +38,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/background_image"
-        android:background="?windowBackground"
+        android:background="?colorSurface"
         android:orientation="vertical"
         android:layoutDirection="ltr">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:maxLines="1"
             android:layout_marginLeft="150dp" />
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:id="@+id/user_statement"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,11 +72,11 @@
                 android:layout_weight="1"
                 android:textSize="14dp"
                 android:contentDescription="View Tweets"
-                android:background="?android:selectableItemBackground"
+                android:background="?roundSelector"
                 android:text="@string/tweets" />
 
             <View
-                android:background="?textColor"
+                android:background="?android:textColorPrimary"
                 android:layout_width="1dp"
                 android:layout_height="40dp" />
 
@@ -86,11 +86,11 @@
                 android:layout_weight="1"
                 android:textSize="14dp"
                 android:contentDescription="View Followers"
-                android:background="?android:selectableItemBackground"
+                android:background="?roundSelector"
                 android:text="@string/followers" />
 
             <View
-                android:background="?textColor"
+                android:background="?android:textColorPrimary"
                 android:layout_width="1dp"
                 android:layout_height="40dp" />
 
@@ -100,7 +100,7 @@
                 android:layout_weight="1"
                 android:textSize="14dp"
                 android:contentDescription="View Following"
-                android:background="?android:selectableItemBackground"
+                android:background="?roundSelector"
                 android:text="@string/following" />
 
         </LinearLayout>
@@ -122,7 +122,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="-70dp" />
 
-    <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
         android:id="@+id/verified_text"
         android:layout_width="96dp"
         android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
         android:gravity="center"
         android:visibility="gone" />
 
-    <ProgressBar
+    <allen.town.focus_common.views.AccentProgressBar
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_below="@+id/background_image"

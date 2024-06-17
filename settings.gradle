@@ -14,4 +14,9 @@
  * limitations under the License.
  */
 
-include ':app', ':wear', ':shared_assets', ':searchview'
+include ':app', ':shared_assets', ':searchview', ':mpv-video'
+include ':focus-common'
+include ':focus-themeCore'
+include ':focus-purchase'
+include ':searchpreference'
+//include ':twidere.component.common'

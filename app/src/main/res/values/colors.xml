@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -41,12 +41,30 @@
     <color name="photo_dialog_background">#90000000</color>
     <color name="white_divider">#40ffffff</color>
     <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#B2FFFFFF</color>
 
     <!-- Light Theme -->
     <color name="light_ptr_1">#80FFFFFF</color>
     <color name="light_ptr_2">#4DFFFFFF</color>
-    <color name="light_background">#dddddd</color>
+    <color name="background">#dddddd</color>
     <color name="light_background_settings">#f6f6f6</color>
+    <color name="text">#020202</color>
+    <color name="text_drawer">#20020202</color>
+    <color name="date">#555555</color>
+    <color name="drawer">#EAE8E8</color>
+    <color name="emoji_divider">#22333333</color>
+    <color name="circle_outline">#AA444444</color>
+    <color name="action_bar">#DDDDDD</color>
+    <color name="message">#FFFFFF</color>
+    <color name="border">#18222222</color>
+    <color name="icon">#CC5c5c5c</color>
+    <color name="ripple">#11000000</color>
+    <color name="tweet_activity_background">#f5f5f5</color>
+    <color name="revamped_tweet_timeline_line_light">#e5e5e5</color>
+
+
+    <!-- Light Theme -->
+    <color name="light_background">#dddddd</color>
     <color name="light_text">#020202</color>
     <color name="light_text_drawer">#20020202</color>
     <color name="light_date">#555555</color>
@@ -59,7 +77,6 @@
     <color name="icon_light">#CC5c5c5c</color>
     <color name="light_ripple">#11000000</color>
     <color name="tweet_activity_light_background">#f5f5f5</color>
-    <color name="revamped_tweet_timeline_line_light">#e5e5e5</color>
 
     <!-- Dark Theme -->
     <color name="dark_background">#202024</color>
@@ -93,10 +110,18 @@
 
 
     <!-- Drawer colors -->
-    <color name="drawer_options_background_light">#f7f7f7</color>
-    <color name="drawer_options_background_dark">#212121</color>
+    <color name="drawer_options_background">#f7f7f7</color>
     <color name="drawer_divider_color">#e5e5e5</color>
     <color name="drawer_subtext_light">#666666</color>
     <color name="drawer_subtext_dark">#A4A4A4</color>
-
+    <color name="elephant_friend_border_color">#121419</color>
+    <color name="elephant_friend_accent_color">@color/tusky_blue</color>
+    <color name="tusky_blue">#2b90d9</color>
+    <color name="tusky_blue_light">#56a7e1</color>
+    <color name="elephant_friend_body_color">#9BAEC8</color>
+    <color name="elephant_friend_dark_body_color_1">#8192A6</color>
+    <color name="elephant_friend_dark_body_color_2">#7F90A4</color>
+    <color name="elephant_friend_light_color_1">#CAD4E0</color>
+    <color name="elephant_friend_light_color_2">#d9e1e8</color>
+    <color name="fluent_default_icon_tint">?android:textColorPrimary</color>
 </resources>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_weight="10"
     android:id="@+id/main"
-    android:background="#4CAF50">
+    android:background="@color/black">
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,18 +35,19 @@
             android:id="@+id/image"
             android:paddingRight="16dp" />
     </LinearLayout>
-    <TextView
+    <allen.town.focus_common.common.views.AccentCheckbox
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="3"
         android:layout_gravity="center"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
         android:textSize="16sp"
-        android:text="@string/follow_me_description"
-        android:id="@+id/description" />
+        android:checked="true"
+        android:text="@string/follow_Focus_for_Mastodon"
+        android:id="@+id/follow_me_twitter" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="64dp" />

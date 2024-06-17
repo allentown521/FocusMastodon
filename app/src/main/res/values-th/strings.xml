@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -69,7 +69,6 @@
     <string name="new_tweet">ทวีตใหม่</string>
     <string name="new_tweets">ทวีตใหม่ๆ</string>
     <string name="no_new_tweets">ไม่มีทวีตใหม่</string>
-    <string name="tap_to_setup">แตะเพื่อตั้งค่า</string>
     <string name="new_account">บัญชีผู้ใช้ใหม่</string>
     <string name="from_top">จากบนสุด</string>
     <string name="jump_to_top">จากลำดับแรก</string>
@@ -88,7 +87,6 @@
     <string name="popup">ป๊อปอัพ</string>
     <string name="fav_user_tweets">ทวีตของบัญชีที่ชื่นชอบใหม่</string>
     <string name="sec_acc">บัญชีสำรอง</string>
-    <string name="talon_pull_summary">คำเตือน : การเปิดใช้งานตัวเลือกนี้ เป็นสาเหตุของการสิ้นเปลืองแบ็ตเตอรี่อย่างมีนัยสำคัญ บน Android Lollipop</string>
     <string name="listening">กำลังตรวจสอบ</string>
     <string name="listening_for_mentions">กำลังตรวจสอบการตอบโต้</string>
     <string name="refreshing">กำลังรีเฟรช</string>
@@ -102,30 +100,27 @@
     <string name="new_retweets">รีทวีต</string>
     <string name="new_favorites">ถูกใจ</string>
     <string name="new_quotes">อ้างอิง</string>
-    <string name="new_tweets_upper">ทวีตใหม่</string>
     <!-- Login Screen -->
-    <string name="setup_talon">ตั้งค่า Talon</string>
-    <string name="login_to_twitter">เข้าสู่ระบบ Twitter</string>
+    <string name="setup_Focus_for_Mastodon">ตั้งค่า Focus_for_Mastodon</string>
+    <string name="login_to_twitter">เข้าสู่ระบบ Mastodon</string>
     <string name="second_welcome">กำลังซิงค์ข้อมูล</string>
     <string name="third_welcome">นี่แหละ  ขอให้สนุก!</string>
     <string name="back_to_timeline">"พาฉันไป Timeline "</string>
     <string name="initial_sync">ซิงค์เดี๋ยวนี้</string>
-    <string name="first_info">ก่อนที่เราจะเริ่มกัน มาเข้าระบบและซิงค์ข้อมูลจาก Twitter กัน</string>
-    <string name="second_info">"เยี่ยม! เราได้ให้ Twitter ทำการซิงค์ข้อมูลบัญชีของท่านแล้ว
+    <string name="first_info">ก่อนที่เราจะเริ่มกัน มาเข้าระบบและซิงค์ข้อมูลจาก Mastodon กัน</string>
+    <string name="second_info">"เยี่ยม! เราได้ให้ Mastodon ทำการซิงค์ข้อมูลบัญชีของท่านแล้ว
 
 
 "</string>
-    <string name="third_info">หวังว่าท่านจะสนุกกับ Talon!</string>
+    <string name="third_info">หวังว่าท่านจะสนุกกับ Focus_for_Mastodon!</string>
     <string name="syncing_timeline">กำลังซิงค์ไทม์ไลน์...</string>
     <string name="syncing_mentions">กำลังซิงค์รายการพูดถึง</string>
     <string name="syncing_direct_messages">กำลังซิงค์รายการข้อความ</string>
     <string name="syncing_user">กำลังซิงค์รายชื่อเพื่อน</string>
     <string name="done_syncing">เรียบร้อย</string>
-    <string name="login_error">มีบางอย่างผิดปกติ กรุณาลองใหม่อีกครั้ง\n\nอาจเกิดจากวันและเวลาบนอุปกรณ์ของท่านไม่ได้ตั้งค่าเป็นอัตโนมัติเอาไว้ ซึ่งเป็นสิ่งที่จำเป็นต่อ Twitter 3rd party API อย่างมาก</string>
     <string name="no_network">ท่านไม่ได้เชื่อมต่ออินเตอร์เน็ต</string>
     <string name="no_thanks">ไม่ใช่ตอนนี้</string>
     <string name="follow_me">ติดตาม!</string>
-    <string name="follow_me_description">กรุณาเลือกที่ปุ่มเพื่อติดตามบัญชีซัพพอร์ตโดยอัตโนมัติ หรือกดปุ่ม back เพื่อข้ามรายการนี้</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">ทวีตใหม่</string>
     <string name="compose_tweet_hint">พิมพ์ทวีตที่นี่...</string>
@@ -191,10 +186,10 @@
     <string name="name_char_length">ชื่อ : ไม่เกิน 20 ตัวอักษร</string>
     <string name="url_char_length">URL : ไม่เกิน 100 ตัวอักษร</string>
     <string name="description_char_length">ประวัติ : ไม่เกิน 160 ตัวอักษร</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">รีทวีต</string>
     <string name="retweet_lower">รีทวิต</string>
-    <string name="retweeter">รีทวีตโดย @</string>
+    <string name="retweeter">รีทวีตโดย </string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">เปิดเว็บจากลิงค์</string>
     <string name="menu_copy_text">คัดลอกข้อความทวีต</string>
@@ -275,10 +270,8 @@
     <string name="new_followers">ผู้ติดตามใหม่</string>
     <string name="rt_style_quotes">รูปแบบแสดงผล \"RT\"</string>
     <string name="follows_you">ติดตามคุณ</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="our_website">เว็บไซต์</string>
     <string name="timeline_notifications">แจ้งเตือนไทม์ไลน์</string>
-    <string name="interactions_notifications">แจ้งเตือนการโต้ตอบ</string>
     <string name="timelines_settings">ตั้งค่าไทม์ไลน์</string>
     <string name="edit">แก้ไข</string>
     <string name="use_twitpic">ใช้ TwitPic</string>
@@ -311,7 +304,7 @@
     <string name="quote_style_twitter">รูปแบบการแสดงผลทวีต (ลิงค์ไปยังทวีต)</string>
     <string name="show_pull_notification">แสดงการแจ้งเตือนที่ยังตกค้าง</string>
     <string name="show_pull_notification_summary">หากท่านปิดการแจ้งเตือน ระบบ Android อาจปิดการสตรีมเมื่อไหร่ก็ได้ โปรใช้ความระมัดระวังอย่างมาก</string>
-    <string name="custom_tab_message">ระบบของท่านไม่อนุญาตให้ Talon เปิด Chrome Custom Tab โดยอัตโนมัติได้ หากต้องการใช้ฟีเจอร์นี้ ต้องการให้ท่านตั้งค่าให้ Chrome เป็นเบราซ์เซอร์เริ่มต้นของระบบ Talon จะเริ่มเป็นเบราซ์เซอร์ในแอพต่อไป\n\nกรุณาเลือก \"ใช่\"  หาก Chrome เบราซ์เซอร์เริ่มต้นของระบบ หรือ \"ไม่\" หากท่านไม่ได้เลือกเป็นค่าเริ่มต้น</string>
+    <string name="custom_tab_message">ระบบของท่านไม่อนุญาตให้ Focus_for_Mastodon เปิด Chrome Custom Tab โดยอัตโนมัติได้ หากต้องการใช้ฟีเจอร์นี้ ต้องการให้ท่านตั้งค่าให้ Chrome เป็นเบราซ์เซอร์เริ่มต้นของระบบ Focus_for_Mastodon จะเริ่มเป็นเบราซ์เซอร์ในแอพต่อไป\n\nกรุณาเลือก \"ใช่\"  หาก Chrome เบราซ์เซอร์เริ่มต้นของระบบ หรือ \"ไม่\" หากท่านไม่ได้เลือกเป็นค่าเริ่มต้น</string>
     <string name="learn_more">เรียนรู้เพ่ิมเติม</string>
     <!-- Long click methods -->
     <string name="open_to_web">เปิดหน้าเว็บ</string>
@@ -321,6 +314,6 @@
     <string name="add_to_tweet_gif">เพิ่มเข้าไปในทวีต</string>
     <string name="find_a_gif">ค้นหาภาพ GIF</string>
     <string name="three_mb_limit">จำกัดขนาดที่ 5 MB</string>
-    <string name="three_mb_message">Twitter อนุญาตให้ส่งภาพ GIF ขนาดไม่เกิน 5 MB Talon จะจำเอา GIF ที่คุณภาพดีที่สุดจาก Giphy ที่พอดีกับข้อจำกัดนี้\n\nผลที่ท่านได้รับคือ จะเห็นภาพเวอร์ชั่นที่พอดีกับข้อจำกัดนี้ เราจะไม่แสดงภาพ GIF ที่ถูกลดคุณภาพตามข้อจำกัด 5 MB นี้แต่อย่างใด</string>
+    <string name="three_mb_message">Mastodon อนุญาตให้ส่งภาพ GIF ขนาดไม่เกิน 5 MB Focus_for_Mastodon จะจำเอา GIF ที่คุณภาพดีที่สุดจาก Giphy ที่พอดีกับข้อจำกัดนี้\n\nผลที่ท่านได้รับคือ จะเห็นภาพเวอร์ชั่นที่พอดีกับข้อจำกัดนี้ เราจะไม่แสดงภาพ GIF ที่ถูกลดคุณภาพตามข้อจำกัด 5 MB นี้แต่อย่างใด</string>
     <string name="quoted_you">อ้างอิงถึงคุณ</string>
 </resources>

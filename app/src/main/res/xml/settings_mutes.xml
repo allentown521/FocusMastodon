@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,68 +16,84 @@
   limitations under the License.
   -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/manage_mutes_options">
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="manage_mutes"
             android:title="@string/muted_users" />
 
-        <Preference
-            android:key="manage_mutes_rt"
-            android:title="@string/muted_rts" />
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="manage_blocks"
+            android:title="@string/blocked_user" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="manage_mutes_hashtags"
             android:title="@string/muted_hashtags"
             android:summary="@string/muted_hashtags_summary" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="manage_muted_clients"
             android:title="@string/muted_clients"
             android:summary="@string/muted_clients_summary" />
 
-        <Preference
-            android:key="mute_regex"
-            android:title="@string/mute_expression"
-            android:summary="@string/regex_disclaimer" />
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="filter"
+            android:title="@string/pref_title_timeline_filters"/>
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="manage_regex_mute"
+            app:isPreferenceVisible="false"
             android:title="@string/view_muted_expressions" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/manage_muffles" >
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:icon="@drawable/ic_round_info_24"
+            android:enabled="false"
             android:summary="@string/muffle_definition" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
                 android:key="manage_muffles"
                 android:title="@string/muffled_users"
                 android:summary="@string/click_to_remove_muffle"/>
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/advanced">
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
             android:key="ignore_retweets"
             android:title="@string/ignore_retweets"
             android:summary="@string/ignore_retweets_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
             android:key="show_muted_mentions"
+            app:isPreferenceVisible="false"
             android:title="@string/show_muted_mentions"
             android:defaultValue="false" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
 </PreferenceScreen>

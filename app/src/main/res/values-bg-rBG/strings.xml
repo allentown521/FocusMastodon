@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name_full">Talon for Twitter</string>
     <string name="extension_description">Показвай броя на непрочетените туийтове, споменавания и директни съобщения, в момента в който се актуализират.</string>
     <!-- Action Bar -->
     <string name="menu_compose">Нов Туийт</string>
@@ -71,7 +70,6 @@
     <string name="new_direct_message">ново директно съобщение</string>
     <string name="new_direct_messages">нови директни съобщения</string>
     <string name="no_new_direct_messages">Няма нови директни съобщения</string>
-    <string name="tap_to_setup">Натисни за настройка</string>
     <string name="new_account">Нов Профил</string>
     <string name="all_read">Всичко е прочетено!</string>
     <!-- Notifications -->
@@ -94,17 +92,16 @@
     <string name="followed">те последва</string>
     <string name="new_retweets">ретуийта</string>
     <string name="new_quotes">цитати</string>
-    <string name="new_tweets_upper">Нови Туийта</string>
     <!-- Login Screen -->
-    <string name="login_to_twitter">Влез в Twitter</string>
-    <string name="first_welcome">Добре дошли в Talon!</string>
+    <string name="login_to_twitter">Влез в Mastodon</string>
+    <string name="first_welcome">Добре дошли в Focus_for_Mastodon!</string>
     <string name="second_welcome">Синхронизиране на данните</string>
     <string name="third_welcome">Това е - наслаждавайте се!</string>
     <string name="back_to_timeline">Заведи ме към моята лента!</string>
     <string name="initial_sync">Синхронизирай сега!</string>
-    <string name="first_info">Преди да започнем, нека ти помогнем да влезеш и синхронизираш Twitter профила си.</string>
+    <string name="first_info">Преди да започнем, нека ти помогнем да влезеш и синхронизираш Mastodon профила си.</string>
     <string name="second_info">Супер!\n\nСега ще получим малко първоначални данни.\n\nВ зависимост от вашата интернет връзка, това може да отнеме известно време.</string>
-    <string name="third_info">Надяваме се Talon да ти хареса!\n\n-- Luke Klinker</string>
+    <string name="third_info">Надяваме се Focus_for_Mastodon да ти хареса!\n\n-- allentown</string>
     <string name="syncing_timeline">Синхронизиране на лентата...</string>
     <string name="syncing_mentions">Синхронизиране на споменаванията...</string>
     <string name="syncing_direct_messages">Синхронизиране на директните съобщения...</string>
@@ -113,7 +110,6 @@
     <string name="no_network">Не сте свързани към интернет</string>
     <string name="no_thanks">Не сега</string>
     <string name="follow_me">Последвай!</string>
-    <string name="follow_me_description">Последвай @TalonAndroid и @lukeklinker за поддръжка и всички новости около приложението.</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">Нов Туийт</string>
     <string name="compose_tweet_hint">Напиши някакъв туийт...</string>
@@ -160,9 +156,9 @@
     <string name="url_char_length">URL адрес: Лимит от 100 знака</string>
     <string name="location_char_length">Местоположение: Лимит от 30 знака</string>
     <string name="description_char_length">Описание: Лимит от 160 знака</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">ретуийта</string>
-    <string name="retweeter">ретуийтнато от @</string>
+    <string name="retweeter">"ретуийтнато от "</string>
     <!-- Tweet Activity -->
     <string name="menu_copy_text">Копирай Текста на Туийта</string>
     <string name="menu_share">Сподели Туийта</string>
@@ -198,9 +194,9 @@
     <string name="and">и</string>
     <string name="no_favorites">Няма харесвания</string>
     <string name="quote_style">Стил на Цитатите</string>
-    <string name="quote_style_twitter">Twitter Стил (линк към туийта)</string>
-    <string name="quote_style_talon">\"\@lukeklinker &#8230;\"</string>
-    <string name="quote_style_rt">RT \@lukeklinker &#8230;</string>
+    <string name="quote_style_twitter">Mastodon Стил (линк към туийта)</string>
+    <string name="quote_style_Focus_for_Mastodon">\"\@allentown521 &#8230;\"</string>
+    <string name="quote_style_rt">RT \@allentown521 &#8230;</string>
     <string name="learn_more">Научете Повече</string>
     <!-- Long click methods -->
     <string name="open_webpage">Отворете Връзката</string>

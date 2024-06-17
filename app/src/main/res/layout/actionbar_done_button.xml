@@ -17,6 +17,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="?android:actionButtonStyle"
     android:id="@+id/actionbar_done"
+    android:background="?rectSelector"
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1">
@@ -27,10 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingRight="20dp"
-        android:drawableLeft="@drawable/ic_action_accept_dark"
+        android:drawableLeft="@drawable/ic_round_done_24"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:singleLine="true"
-        android:textColor="@android:color/white"
+        android:textColor="?android:attr/textColorPrimary"
         android:text="@string/send"/>
 </FrameLayout>

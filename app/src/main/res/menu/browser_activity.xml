@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:talon="http://schemas.android.com/apk/res-auto">
+      xmlns:Focus_for_Mastodon="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/menu_open_web"
         android:orderInCategory="3"
         android:title="@string/menu_open_web"
-        android:icon="@drawable/ic_links_dark"
-        talon:showAsAction="always" />
+        android:icon="@drawable/ic_round_insert_link_24"
+        Focus_for_Mastodon:showAsAction="always" />
 </menu>

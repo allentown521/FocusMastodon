@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,55 +15,72 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="?windowBackground" >
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="?colorSurface"
+    android:orientation="vertical">
 
-    <LinearLayout android:id="@+id/list_progress"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:visibility="gone"
+        tools:visibility="visible"
+        style="@style/Toolbar"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:gravity="center" >
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_keyboard_backspace_black"
+        app:title="@null" />
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            style="@style/Widget.AppCompat.ProgressBar"
-            android:indeterminateOnly="true" />
-    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <LinearLayout android:id="@+id/no_content"
-                  android:orientation="vertical"
-                  android:layout_height="match_parent"
-                  android:layout_width="match_parent"
-                  android:layout_weight="1"
-                  android:gravity="center"
-                  android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/list_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
+            <allen.town.focus_common.views.AccentProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:indeterminateOnly="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/no_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
                 android:id="@+id/no_content_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/no_retweets" />
 
+        </LinearLayout>
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="?drawerDividerColor"
+            android:dividerHeight="1dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+
     </LinearLayout>
-
-    <ListView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/listView"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:divider="?drawerDividerColor"
-        android:dividerHeight="1dp"
-        android:scrollbars="vertical"
-        android:listSelector="@android:color/transparent"
-        android:visibility="gone"
-        />
-
 </LinearLayout>

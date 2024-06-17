@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ProgressBar
+    <allen.town.focus_common.views.AccentProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.ProgressBar"
+
         android:visibility="gone"
         android:layout_marginTop="-3dp" />
 
-    <com.klinker.android.twitter_l.views.widgets.HTML5WebView
+    <allen.town.focus.twitter.views.widgets.HTML5WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="0dp"

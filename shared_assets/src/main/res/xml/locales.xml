@@ -33,6 +33,7 @@
     <locale android:name="tr" />
     <locale android:name="uk" />
     <locale android:name="ur-rIN" />
-    <locale android:name="zh-rCN" />
-    <locale android:name="zh-rTW" />
+    <locale android:name="zh-CN"/> <!-- Chinese (Simplified) -->
+    <locale android:name="zh-TW"/> <!-- Chinese (Traditional) -->
+    <!-- https://developer.android.com/guide/topics/resources/app-languages#sample-config -->
 </locale-config>

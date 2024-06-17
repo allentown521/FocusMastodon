@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,7 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon for Twitter</string>
+
     <string name="extension_description">Megjeleníti az olvasatlan tweetek, említések és közvetelen üzenetek számát, amint frissülnek.</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Idővonal frissítése</string>
@@ -69,8 +68,8 @@
     <string name="search">Keresés</string>
     <string name="lists">Listák</string>
     <string name="search_hint">Keresés...</string>
-    <string name="new_tweet">új tweet</string>
-    <string name="new_tweets">új tweet</string>
+    <string name="new_tweet">új post</string>
+    <string name="new_tweets">új post</string>
     <string name="no_new_tweets">Nincsenek új tweetek</string>
     <string name="new_mention">új említés</string>
     <string name="new_mentions">új említések</string>
@@ -78,7 +77,6 @@
     <string name="new_direct_message">új követlen üzenet</string>
     <string name="new_direct_messages">új követlen üzenetek</string>
     <string name="no_new_direct_messages">Nincsenek új közvetlen üzenetek</string>
-    <string name="tap_to_setup">Érintse meg a beállításhoz</string>
     <string name="new_account">Új fiók</string>
     <string name="from_top">a legfelsőtől</string>
     <string name="jump_to_top">Elsőhöz</string>
@@ -100,8 +98,6 @@
     <string name="popup">Előhoz</string>
     <string name="fav_user_tweets">kedvenc felhasználó új tweetjei</string>
     <string name="sec_acc">Második fiók</string>
-    <string name="talon_pull">Talon Pull</string>
-    <string name="talon_pull_summary">FIGYELEM: Az opció engedélyezésével Android Lollipopon jelentősen nőhet az akkumulátor fogyasztás.</string>
     <string name="listening">Figyelés</string>
     <string name="listening_for_mentions">Események figyelése</string>
     <string name="refreshing">Frissítés</string>
@@ -114,14 +110,13 @@
     <string name="favorited">kedvencekhez adta az állapotát</string>
     <string name="quoted">idézte az állapotod</string>
     <string name="followed">követi</string>
-    <string name="new_retweets">retweet</string>
+    <string name="new_retweets">boost</string>
     <string name="new_favorites">kedvenc</string>
     <string name="new_quotes">idézések</string>
-    <string name="new_tweets_upper">Új Tweetek</string>
     <!-- Login Screen -->
-    <string name="setup_talon">Talon beállítása</string>
-    <string name="login_to_twitter">Bejelentkezés a Twitterbe</string>
-    <string name="first_welcome">Üdvözli a Talon!</string>
+    <string name="setup_Focus_for_Mastodon">Focus for Mastodon beállítása</string>
+    <string name="login_to_twitter">Bejelentkezés a Mastodonbe</string>
+    <string name="first_welcome">Üdvözli a Focus_for_Mastodon!</string>
     <string name="second_welcome">Adatok szinkronizálása</string>
     <string name="third_welcome">Kész!</string>
     <string name="back_to_timeline">Ugrás az idővonalhoz!</string>
@@ -132,19 +127,17 @@
 Most lekérdezünk pár szükséges adatot.
 
 Az internet kapcsolattól függően ez eltarthat egy ideig.</string>
-    <string name="third_info">Reméljük élvezni fogja a Talon használatát!
+    <string name="third_info">Reméljük élvezni fogja a Focus_for_Mastodon használatát!
 
--- Luke Klinker</string>
+-- allentown</string>
     <string name="syncing_timeline">Idővonal szinkronizálása...</string>
     <string name="syncing_mentions">Említések szinkronizálása...</string>
     <string name="syncing_direct_messages">Közvetlen üzenetek szinkronizálása...</string>
     <string name="syncing_user">Barátok szinkronizálása...</string>
     <string name="done_syncing">A szinkronizálás befejeződött.</string>
-    <string name="login_error">Valami hiba történt... Kérem próbálja meg újra!\n\nLehetséges, hogy a dátum és időbeállítás nincs automatikusra állítva. Ez alapkövetelmény a külső Twitter alkalmazásokhoz.</string>
     <string name="no_network">Nincs kapcsolódva az internethez</string>
     <string name="no_thanks">Most nem</string>
     <string name="follow_me">Kövessen minket!</string>
-    <string name="follow_me_description">Kövesse @TalonAndroid és @lukeklinker felhasználókat a támogatáshoz és, hogy értesüljön a legújabb funkciókról!</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">Új Tweet</string>
     <string name="compose_tweet_hint">Tweet írása...</string>
@@ -213,10 +206,10 @@ Az internet kapcsolattól függően ez eltarthat egy ideig.</string>
     <string name="url_char_length">URL: max. 100 karakter</string>
     <string name="location_char_length">Hely: max. 30 karakter</string>
     <string name="description_char_length">Leírás: max. 160 karakter</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">retweetek</string>
-    <string name="retweet_lower">retweet</string>
-    <string name="retweeter">retweetelte: @</string>
+    <string name="retweet_lower">boost</string>
+    <string name="retweeter">"boosted: "</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">Webes hivatkozás megnyitása</string>
     <string name="menu_copy_text">Tweet szövegének másolása</string>
@@ -236,7 +229,7 @@ Az internet kapcsolattól függően ez eltarthat egy ideig.</string>
     <string name="no_conversation">Nincsenek régebbi tweetek</string>
     <string name="saving_picture">Kép Mentése</string>
     <string name="saved_picture">Kép mentése sikerült</string>
-    <string name="retweet_success">Sikeres Retweet</string>
+    <string name="retweet_success">Sikeres Boost</string>
     <string name="favorite_success">Kedvenc hozzáadása sikerült</string>
     <string name="success">Sikerült</string>
     <!-- User Lists -->
@@ -275,9 +268,6 @@ Az internet kapcsolattól függően ez eltarthat egy ideig.</string>
     <string name="make_a_theme">Készítsen témát</string>
     <string name="layout">Elrendezés</string>
     <string name="themeing_complete">Téma alkalmazása</string>
-    <string name="themeing_complete_summary">A \"Talon\" most bezáródik.\n\n
-                A változások alkalmazásához csúsztatással el kell távolítania a \"Talon-t\" a legutóbbi alkalmazások listájáról.\n\n
-                Ha a profilképek nem úgy jelennek meg, ahogy kellene (pl. kör vagy négyzet), akkor el kell távolítani és újra hozzá kell adni a widgetet.</string>
     <string name="layout_summary">Ennek megváltoztatásával törlődni fog az alkalmazás gyorsítótára.</string>
     <string name="text_size">Betűméret</string>
     <string name="night_mode">Éjszakai mód</string>
@@ -285,21 +275,21 @@ Az internet kapcsolattól függően ez eltarthat egy ideig.</string>
     <string name="night_mode_day">Nappal kezdete</string>
     <string name="night_mode_theme">Éjszakai mód témájának kiválasztása</string>
     <string name="device_font">Használja az eszköz betűtípusát</string>
-    <string name="device_font_summary">Általában \"Roboto\" a legtöbb eszközön. A Talon alapértelmezett betűtípusa \"Roboto Light\".</string>
+    <string name="device_font_summary">Általában \"Roboto\" a legtöbb eszközön. A Focus_for_Mastodon alapértelmezett betűtípusa \"Roboto Light\".</string>
     <string name="ui_extras">UI extrák</string>
     <string name="ui_extras_summary">Tartalmazza:\n
                 - Műveleti sáv elrejtése\n
                 - Művelet képes Toast sáv\n
                 - Átlátszó rendszersávok (csak Android 4.4)\n\nA beállítás engedélyezése hatással lesz a görgetési teljesítményre.</string>
     <string name="inline_pics">Beágyazott képek megjelenítése</string>
-    <string name="use_screen_name">Twitter név megjelenítése</string>
-    <string name="use_screen_name_summary">A felhasználó Twitter nevének megjelenítése az idővonalon a neve helyett.</string>
+    <string name="use_screen_name">Mastodon név megjelenítése</string>
+    <string name="use_screen_name_summary">A felhasználó Mastodon nevének megjelenítése az idővonalon a neve helyett.</string>
     <string name="timestamp">24 órás időbélyegző</string>
     <string name="enable_emojis">Hangulatjel engedélyezése</string>
     <string name="to_market">A Play Áruházba</string>
     <string name="get_ios">iOS Emojik beszerzése</string>
     <string name="emoji_dialog_summary">Az emojik alkamazáson belüli engedélyezéséhez, először telepíteni kell a Play Áruházból a \"Sliding Emoji Keyboard\" vagy a \"Sliding Emoji Keyboard - iOS\" csomagot.\n\n
-                A két emoji típus között úgy válthat, hogy eltávolítja az egyiket és telepíti a másikat. Ha mindkét csomag telepítve van, akkor a Talon az alapértelmezett Android emojikat fogja használni.\n\n
+                A két emoji típus között úgy válthat, hogy eltávolítja az egyiket és telepíti a másikat. Ha mindkét csomag telepítve van, akkor a Focus_for_Mastodon az alapértelmezett Android emojikat fogja használni.\n\n
                 MEGJEGYZÉS: Az Emojik a próbaidőszak lejárata után is működni fognak! A csomag használható pluginként és különálló billentyűzetként is.</string>
     <string name="theme_light">Világos téma</string>
     <string name="theme_dark">Sötét téma</string>
@@ -324,21 +314,15 @@ Az internet kapcsolattól függően ez eltarthat egy ideig.</string>
     <string name="timeline_sync_interval">Idővonal frissítési gyakoriság</string>
     <string name="mentions_sync_interval">Említések frissítési gyakoriság</string>
     <string name="dm_sync_interval">Közvetlen üzenetek frissítési gyakoriság</string>
-    <string name="sync_friends">Barátok adatainak szinkronizálása</string>
-    <string name="sync_friends_summary2">Új tweetek írásakor újraszinkronizálja a barátok adatait.</string>
-    <string name="sync_friends_summary">Barátok lista kézi frissítése.\n\nEz el lett végezve a bejelentkezéskor, valamint az újak automatikusan hozzá lettek adva, ha a Talonból adta hozzá követéshez. Ez az opció le fogja kérni az összes legújabb \"követését\".\n\n
-                    Ez az adat egy új tweet írásakor a felhasználók kereséséhez lesz használva.</string>
     <string name="sync_success">Szinkronizáció sikeres</string>
     <string name="sync_failed">Szinkronizáció sikertelen</string>
     <string name="push_notification_options">"\"Push értesítések\" beállítás"</string>
-    <string name="push_notifications">Talon Pull</string>
+    <string name="push_notifications">Focus for Mastodon Pull</string>
     <string name="push_notifications_summary">Egy figyelő szolgáltatást indít, hogy azonnali értesítéseket küldjön új események érkezésekor (említések, közvetlen üzenetek, kedvencek, retweetek, új követők).
 
 Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="push_notification_warning">További információkért kattintson ide.</string>
     <string name="notification_settings">Értesítés beállítások</string>
-    <string name="pebble_notifications">Pebble értesítések</string>
-    <string name="pebble_notifications_summary">Pebble okosórával használható.</string>
     <string name="advanced_settings">Haladó beállítások</string>
     <string name="app_feel_category">Alkalmazás beállítások</string>
     <string name="advance_windowed">Előrehozott ablakok</string>
@@ -388,13 +372,13 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="xda_thread">XDA fórum</string>
     <string name="email_me">Email küldése</string>
     <string name="tweet_me">Tweet küldése</string>
-    <string name="follow_talon">Kövesse a Talont a Twitteren</string>
+    <string name="follow_Focus_for_Mastodon">Kövesse a Focus_for_Mastodont a Mastodonen</string>
     <string name="credits">Készítők</string>
     <string name="disclaimer">Jogi nyilatkozat</string>
     <string name="other_apps">További alkalmazásaink</string>
     <string name="whats_new">Újdonságok</string>
-    <string name="rate_it">Talon értékelése</string>
-    <string name="talon_settings">Talon beállítások</string>
+    <string name="rate_it">Focus for Mastodon értékelése</string>
+    <string name="Focus_for_Mastodon_settings">beállítások</string>
     <string name="feature_requests">Új funkció kérése</string>
     <!-- Emoji Keyboard -->
     <string name="recent">Legutóbbi</string>
@@ -421,13 +405,12 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="dismiss_all">Összes elvetése</string>
     <string name="handle_and_name">Becenév és rendes név megjelenítése</string>
     <string name="notification_types">Értesítés típusok</string>
-    <string name="with_talon_pull">Elérhető a \"Talon Pull\"-on keresztül</string>
     <string name="favorited_tweet">Kedvelt tweetek</string>
     <string name="new_followers">Nincsenek követők</string>
     <string name="discussion">Beszélgetés</string>
     <string name="no_replies">Nincsenek válaszok</string>
     <string name="rt_style_quotes">\"RT\" stílusú idézetek használata</string>
-    <string name="rt_style_quotes_summary">A régi \" RT @felhasználónév: ...\" idézet használata a Talon módszer helyett.\n\nBármelyik tweet esetén hozzáférhető a műveleti sávról vagy a menüből.</string>
+    <string name="rt_style_quotes_summary">A régi \" RT @felhasználónév: ...\" idézet használata a Focus_for_Mastodon módszer helyett.\n\nBármelyik tweet esetén hozzáférhető a műveleti sávról vagy a menüből.</string>
     <string name="absolute_date">Teljes dátum használata</string>
     <string name="clear_searches">Keresések törlése</string>
     <string name="compose_with_search">Tweet írása kereséssel</string>
@@ -447,19 +430,14 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="delete_conversation">Törli a beszélgetést?</string>
     <string name="deleting_messages">Üzenetek törlése</string>
     <string name="type_message">Üzenet írása...</string>
-    <string name="fill_gaps">Idővonal rések kitöltése</string>
-    <string name="fill_gaps_summary">Kitölti a rossz kapcsolat által okozott réseket, ha az élő közvetítés engedélyezve van.</string>
     <string name="filling_timeline">Idővonal rések kitöltése</string>
     <string name="follows_you">Követ</string>
     <string name="not_following_you">Nem követ</string>
     <string name="device">Eszköz betűtípus</string>
-    <string name="roboto_light">Roboto Light (Alapértelmezett)</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="font_type">Betűtípus</string>
     <string name="our_website">Weboldal</string>
     <string name="alert_types">Riasztási módok</string>
     <string name="timeline_notifications">Idővonal értesítések</string>
-    <string name="interactions_notifications">Esemény értesítések</string>
     <string name="timelines_settings">Idővonal beállítások</string>
     <string name="tweet_look_options">Tweet megjelenés beállítások</string>
     <string name="limiting_options">Korlátozó beállítások</string>
@@ -472,7 +450,7 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="edit">Szerkeszt</string>
     <string name="split_tweet">Tweet felosztása</string>
     <string name="use_twitpic">TwitPic használata</string>
-    <string name="twitpic_summary">Képek csatolásakor a TwitPic használata a Twitter képfeltöltés szolgáltatás helyett.</string>
+    <string name="twitpic_summary">Képek csatolásakor a TwitPic használata a Mastodon képfeltöltés szolgáltatás helyett.</string>
     <string name="verified">Ellenőrizve</string>
     <string name="use_tweetmarker">TweetMarker</string>
     <string name="tweetmarker_summary">A különböző eszközök pozíciójának szinkronizálásához használható.</string>
@@ -502,7 +480,7 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="page_2">Oldal 2</string>
     <string name="load_tweets">Tweetek betöltése</string>
     <string name="download_portal">Theme Portal alkalmazás letöltése</string>
-    <string name="download_portal_summary">Ez a Klinker Apps \"Portál\" alkalmazása, melynek segítségével naprakész lehet a legújabb hírekkel, valamint egy helyen találhatja meg a Talon és az EvolveSMS legjobb témáit.</string>
+    <string name="download_portal_summary">Ez a Klinker Apps \"Portál\" alkalmazása, melynek segítségével naprakész lehet a legújabb hírekkel, valamint egy helyen találhatja meg a Focus_for_Mastodon és az EvolveSMS legjobb témáit.</string>
     <string name="compose_dm_hint">Üzenet írása...</string>
     <string name="pwiccer">Pwiccer</string>
     <string name="select_shortening_service">Rövidítés szolgáltatás kiválasztása vagy tweet szerkesztése</string>
@@ -516,7 +494,7 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="error_check_network">Hiba a profil betöltésekor. Ellenőrizze a hálózati kapcsolatot.</string>
     <string name="error_loading_timeline">Az idővonal betöltése sikertelen! Ellenőrizze az adatkapcsolatot.</string>
     <string name="currently_in_beta">Jelenleg BETA.</string>
-    <string name="changed_screenname">Megváltoztatta a felhasználónevet mielőtt a Talon elmentette volna az ID-jét! A változások megfelelő alkalmazásához ki kell jelentkeznie, majd újra bejelentkezni.</string>
+    <string name="changed_screenname">Megváltoztatta a felhasználónevet mielőtt a Focus_for_Mastodon elmentette volna az ID-jét! A változások megfelelő alkalmazásához ki kell jelentkeznie, majd újra bejelentkezni.</string>
     <string name="menu_save_search">Keresés mentése</string>
     <string name="saving_search">Keresés mentése</string>
     <string name="delete_saved_search">Mentett keresés törlése</string>
@@ -525,12 +503,12 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="start">Kezdjük!</string>
     <string name="version_two">2.0.0 verzió</string>
     <string name="cleaning_databases">Adatbázisok takarítása...</string>
-    <string name="setup_version_two">Sokminden változott mostanában a Talonban, és hogy biztosak legyünk abban, hogy a legjobb élményben legyen része, ezért egy kis takarítást kel végezni az alkalmazásba lépés előtt! \n\nEz hosszabb ideig is eltarthat attól függően, hogy mennyi tweetet tárol!</string>
+    <string name="setup_version_two">Sokminden változott mostanában a Focus_for_Mastodonban, és hogy biztosak legyünk abban, hogy a legjobb élményben legyen része, ezért egy kis takarítást kel végezni az alkalmazásba lépés előtt! \n\nEz hosszabb ideig is eltarthat attól függően, hogy mennyi tweetet tárol!</string>
     <string name="setting_up_timeline">Idővonal beállítása...</string>
     <string name="setting_up_mentions">Említések beállítása...</string>
     <string name="setting_up_dms">Közvetlen üzenetek beállítása...</string>
     <string name="setting_up_lists">Listák beállítása...</string>
-    <string name="version_two_setup_done">Elkészült a Talon 2.0 beállítása, élvezze!</string>
+    <string name="version_two_setup_done">Elkészült a Focus_for_Mastodon 2.0 beállítása, élvezze!</string>
     <string name="no_content">Nincs mit megjeleníteni!</string>
     <string name="discover">Felfedezés</string>
     <string name="suggested_users">Ajánlott felhasználók</string>
@@ -568,8 +546,8 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="ui_settings">UI beállítások</string>
     <string name="show_pos_dashclock">Idővonal pozíció megjelenítése</string>
     <string name="show_pos_dashclock_summary">Az új tweetek száma helyett aktuális pozíciót mutatja az idővonalon.</string>
-    <string name="talon_large_widget">Talon - Idővonal</string>
-    <string name="unread_bar_widget">Talon - Olvasatlan sáv</string>
+    <string name="Focus_for_Mastodon_large_widget">Focus for Mastodon - Idővonal</string>
+    <string name="unread_bar_widget">Focus for Mastodon - Olvasatlan sáv</string>
     <string name="show_muted_mentions">Némított értesítések megjelenítése</string>
     <string name="force_overflow_summary">Mindig mutassa a 3-pontos menüt a műveleti sávon. Fizikai gombbal rendelkező telefonoknál használható.</string>
     <string name="menu_view_drafts">Piszkozat megjelenítés</string>
@@ -580,14 +558,14 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="no_tweet">Nincs tweet!</string>
     <string name="menu_attach_picture">Kép csatolása</string>
     <string name="twitpic_disclaimer">TwitPic nyilatkozat</string>
-    <string name="twitpic_disclaimer_summary">A Twitter API nem támogatja a képek hozzáadását közvetlen üzeneteknél. Emiatt a Talon feltölti a képet a TwitPic-re és megosztja a hivatkozást a címzettel.\n\n
+    <string name="twitpic_disclaimer_summary">A Mastodon API nem támogatja a képek hozzáadását közvetlen üzeneteknél. Emiatt a Focus_for_Mastodon feltölti a képet a TwitPic-re és megosztja a hivatkozást a címzettel.\n\n
  Ez a kép megtekinthető a TwitPic profiljában.</string>
     <string name="dont_show_again">Ne mutassa többet</string>
     <string name="error_attaching_image">Hiba a kép csatolásakor!</string>
     <string name="sending_tweet">Tweet küldése...</string>
     <string name="attached_images">Csatolva</string>
-    <string name="twitpic_disclaimer_multi_summary">A Twitter API nem támogatja egynél több kép csatolását egy tweethez.\n\n
- Emiatt a Talon feltölti a képeket a TwitPic használatával.</string>
+    <string name="twitpic_disclaimer_multi_summary">A Mastodon API nem támogatja egynél több kép csatolását egy tweethez.\n\n
+ Emiatt a Focus_for_Mastodon feltölti a képeket a TwitPic használatával.</string>
     <string name="loading_webpage">Weboldal betöltése...</string>
     <string name="plain_text_browser">Csak szöveges böngésző</string>
     <string name="plain_text_summary">Eltávolítja a képeket és a formázást a böngészőből és csak a weboldal szövegét jeleníti meg.</string>
@@ -609,7 +587,7 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="mute_rt">Retweetek némítása</string>
     <string name="unmute_rt">Retweet némítás feloldása</string>
     <string name="muted_rts">Némított retweetelők</string>
-    <string name="twitter">Twitter</string>
+    <string name="twitter">Mastodon</string>
     <string name="user">Felhasználók</string>
     <string name="menu_translate">Tweet fordítása</string>
     <string name="add_new_tweet">Új tweet hozzáadása</string>
@@ -638,24 +616,18 @@ Az idővonalán is azonnal élőben jeleníti a tweeteket.</string>
     <string name="both_accounts">Mindkét fiók</string>
     <string name="attach_gif">Animált GIF</string>
     <string name="attach_video">Videó</string>
-    <string name="roboto_l">Android \"L\" Roboto</string>
     <string name="second_account">Második fiók</string>
-    <string name="second_account_login_info">Mivel a Twitter a saját rendszerén belül tárolja a bejelentkezési információkat, ezért a következő képernyőn nem biztos, hogy azonnal engedélyezi az új fiókkal való bejelentkezést. Ha átlépi a bejelentkezést és közvetlenül a hitelesítő oldalra irányítja, akkor egyszerűen nyomjon a \"Kijelentkezés\" gombra a jobb felső sarokban, hogy engedélyezhesse az alkalmazásnak a második fiókkal való bejelentkezést.</string>
+    <string name="second_account_login_info">Mivel a Mastodon a saját rendszerén belül tárolja a bejelentkezési információkat, ezért a következő képernyőn nem biztos, hogy azonnal engedélyezi az új fiókkal való bejelentkezést. Ha átlépi a bejelentkezést és közvetlenül a hitelesítő oldalra irányítja, akkor egyszerűen nyomjon a \"Kijelentkezés\" gombra a jobb felső sarokban, hogy engedélyezhesse az alkalmazásnak a második fiókkal való bejelentkezést.</string>
     <string name="fetch_tweetmarker">TweetMarker lekérdezése</string>
     <string name="rate_limit_reached">Értékhatár elérve</string>
     <string name="info">Info</string>
     <string name="help_and_feedback">Segítség/Visszajelzés</string>
-    <string name="faq_first">Örülünk, hogy segíteni szeretne a Talon fejlesztésében!\n\n
-Nyugodtan küldjön emailt vagy egy tweetet a kérdéseivel, visszajelzéseivel, de mielőtt így tesz elolvasta már a GYIK részt?\n\n
-A Talon egész kiterjedt listával rendelkezik támogató témákból és kérésekből, mely közvetlenül az alkalmazásban is megtalálható. Nézze meg ezt mielőtt azon aggódik, hogy mikor kap választ tőlünk! (Ettől függetlenül megpróbálunk válaszolni, amint csak lehetséges..)\n\n
-Reméljük élvezni fogja a munkánkat!</string>
     <string name="contact">Kapcsolat</string>
     <string name="follow">Követés</string>
     <string name="menu_number_of_pages">Extra oldalak száma</string>
     <!-- %s will be replaced with a number for the currently selected page -->
     <string name="page">%s oldal</string>
     <string name="set_as_default">Beállítás alapértelmezettnek</string>
-    <string name="main_pages_and_drawer">Főoldal és oldalsáv</string>
     <string name="drawer_elements">Oldalsávon látható elemek</string>
     <string name="drawer_elements_summary">Az alkalmazás főoldalán látható oldalsávon lévő elemek megjelenítése vagy elrejtése.</string>
     <string name="second_acc_mentions">Második fiók említések</string>
@@ -667,8 +639,6 @@ Reméljük élvezni fogja a munkánkat!</string>
     <string name="sending_direct_message">Közvetlen üzenet küldése</string>
     <string name="fav_rt_multiple_accounts">Többfiókos műveletek</string>
     <string name="fav_rt_multiple_accounts_summary">Ha több fiókja van, akkor ezzel választhat, hogy melyik fiókkal akar kedvencekhez adni vagy retweetelni.</string>
-    <string name="talon_pull_notifications">Talon Pull (azonnali) értesítések</string>
-    <string name="talon_pull_turned_on">A funkció használatához a Talon Pull engedélyezve kell legyen a szinkronizálás beállításainál.</string>
     <string name="activity_sync_interval">Tevékenység frissítési gyakoriság</string>
     <string name="mentioned_you">megemlített</string>
     <string name="favorites_lower">kedvencek</string>
@@ -677,11 +647,11 @@ Reméljük élvezni fogja a munkánkat!</string>
     <string name="followed_you">Követ</string>
     <string name="new_activity">Új tevékenység!</string>
     <string name="use_interaction_drawer">Esemény sáv engedélyezése</string>
-    <string name="use_interaction_drawer_summary">Ennek a sávnak a tartalmát a Talon Pull (közvetítés) tölti fel.</string>
+    <string name="use_interaction_drawer_summary">Ennek a sávnak a tartalmát a Focus_for_Mastodon Pull (közvetítés) tölti fel.</string>
     <string name="no_activity_yet">Még nincs tevékenység!</string>
-    <string name="no_activity_yet_desc">Ez a rész akkor lesz feltöltve, ha több esemény történik veled a Twitteren.\n\n
+    <string name="no_activity_yet_desc">Ez a rész akkor lesz feltöltve, ha több esemény történik veled a Mastodonen.\n\n
 Említések, új követők, retweetek/állapot kedvelések itt fognak megjelenni.</string>
-    <string name="retweet">Retweet</string>
+    <string name="retweet">Boost</string>
     <string name="new_follower_lower">új követő</string>
     <string name="new_followers_lower">új követő</string>
     <string name="item">elem</string>
@@ -689,13 +659,13 @@ Említések, új követők, retweetek/állapot kedvelések itt fognak megjelenni
     <string name="and">és</string>
     <string name="no_favorites">Nincs kedvelés</string>
     <string name="quote_style">Idézés stílusa</string>
-    <string name="quote_style_twitter">Twitter stílus (tweet hivatkozás)</string>
-    <string name="quote_style_talon">\"\@lukeklinker &#8230;\"</string>
-    <string name="quote_style_rt">RT \@lukeklinker &#8230;</string>
+    <string name="quote_style_twitter">Mastodon stílus (tweet hivatkozás)</string>
+    <string name="quote_style_Focus_for_Mastodon">\"\@allentown521 &#8230;\"</string>
+    <string name="quote_style_rt">RT \@allentown521 &#8230;</string>
     <string name="show_pull_notification">Állandó értesítés mutatása</string>
     <string name="show_pull_notification_summary">Ha letiltja ezt az értesítést, akkor az Android bármikor bezárhatja a közvetítést. Használja kiemelt figyelemmel.</string>
     <string name="custom_tab_title">Chrome egyéni lapok</string>
-    <string name="custom_tab_message">A rendszer nem engedi a Chrome egyéni lapk automatikus indítását. A funkció használatához a Chrome-nak kell lenni az alapértelmezett böngészőnek, különben a Talon továbbra is a saját belső böngészőjét fogja használni.\n\nKérjük válassza az \"Igen\"-t, ha a Chrome legyen az alapértelmezett böngésző, vagy a \"Nem\"-t, ha nem akarja alapértelmezettként használni.</string>
+    <string name="custom_tab_message">A rendszer nem engedi a Chrome egyéni lapk automatikus indítását. A funkció használatához a Chrome-nak kell lenni az alapértelmezett böngészőnek, különben a Focus_for_Mastodon továbbra is a saját belső böngészőjét fogja használni.\n\nKérjük válassza az \"Igen\"-t, ha a Chrome legyen az alapértelmezett böngésző, vagy a \"Nem\"-t, ha nem akarja alapértelmezettként használni.</string>
     <string name="learn_more">Tudjon meg többet</string>
     <!-- Long click methods -->
     <string name="open_profile">Profil megnyitása</string>
@@ -723,7 +693,7 @@ Említések, új követők, retweetek/állapot kedvelések itt fognak megjelenni
     <string name="add_to_tweet_gif">Hozzáadás a Tweethez</string>
     <string name="find_a_gif">GIF keresése</string>
     <string name="three_mb_limit">5MB méret korlát</string>
-    <string name="three_mb_message">A Twitter csak 5MB-nál kisebb GIFek közzétételét engedélyezi. A Talon a legjobb minőségű GIF verziót szedi le a Giphy-ről, ami belefér ebbe a korlátba.\n\nAz összes eredmény amit látsz belefér ebbe a korlátba. Nem jeleníti meg azokat a GIFeket, melyek minősége csökkentett hogy beleférjen az 5MB korlátba.</string>
+    <string name="three_mb_message">A Mastodon csak 5MB-nál kisebb GIFek közzétételét engedélyezi. A Focus_for_Mastodon a legjobb minőségű GIF verziót szedi le a Giphy-ről, ami belefér ebbe a korlátba.\n\nAz összes eredmény amit látsz belefér ebbe a korlátba. Nem jeleníti meg azokat a GIFeket, melyek minősége csökkentett hogy beleférjen az 5MB korlátba.</string>
     <string name="quoted_you">idézett téged</string>
     <string name="privacy_policy">Adatvédelmi irányelvek</string>
     <string name="emoji_style">Emoji stílus</string>

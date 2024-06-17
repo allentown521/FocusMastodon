@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,53 +17,60 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    <com.klinker.android.twitter_l.views.widgets.text.FontPrefEditText
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <allen.town.focus.twitter.views.widgets.text.FontPrefEditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/list_name"
-        android:id="@+id/name"/>
-    
-    <com.klinker.android.twitter_l.views.widgets.text.FontPrefEditText
+        android:hint="@string/list_name" />
+
+    <allen.town.focus.twitter.views.widgets.text.FontPrefEditText
+        android:id="@+id/description"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/list_description"
-        android:id="@+id/description"/>
-    
+        android:visibility="gone"
+        android:hint="@string/list_description" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        
-        <Button
+
+        <allen.town.focus_common.views.AccentMaterialTextButton
+            android:id="@+id/cancel"
+            style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
             android:contentDescription="@string/cancel"
-            android:textColor="?textColor"
-            android:text="@string/cancel"
-            android:id="@+id/cancel"/>
-        <Button
+            android:text="@string/cancel" />
+
+        <allen.town.focus_common.views.AccentMaterialTextButton
+            style="@style/Widget.Material3.Button.TextButton"
+            android:id="@+id/private_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
+            android:visibility="gone"
             android:contentDescription="Private List"
-            android:text="@string/sPrivate"
-            android:textColor="?textColor"
-            android:id="@+id/private_btn"/>
-        <Button
+            android:text="@string/sPrivate" />
+
+        <allen.town.focus_common.views.AccentMaterialTextButton
+            android:id="@+id/public_btn"
+            style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
             android:contentDescription="Public List"
-            android:text="@string/sPublic"
-            android:textColor="?textColor"
-            android:id="@+id/public_btn"/>
+            android:text="@android:string/ok" />
     </LinearLayout>
 
 </LinearLayout>

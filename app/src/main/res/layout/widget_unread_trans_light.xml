@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,7 +17,9 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bar_widget_light"
     android:padding="5dp"
@@ -36,20 +38,21 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@mipmap/ic_launcher"
-            android:background="?android:selectableItemBackground"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <ImageButton
             android:id="@+id/replyButton"
+            android:tint="@color/md_grey_800"
             android:contentDescription="Compose New Tweet"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="7dp"
-            android:background="?android:selectableItemBackground"
-            android:src="@drawable/ic_action_new_light"
-            android:scaleX=".60"
-            android:scaleY=".60"/>
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_fab_pencil"
+            android:scaleType="fitCenter"
+/>
 
     </LinearLayout>
 
@@ -63,12 +66,11 @@
 
         <ImageButton
             android:id="@+id/timeline"
+            android:tint="@color/md_grey_800"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:scaleX=".85"
-            android:scaleY=".85"
-            android:src="@drawable/timeline_light"
-            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_round_home_24"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <TextView
@@ -78,7 +80,7 @@
             android:fontFamily="sans-serif-light"
             android:text="0"
             android:alpha=".6"
-            android:textColor="@android:color/black"
+            android:textColor="@color/md_grey_800"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:textSize="16sp"/>
@@ -86,12 +88,13 @@
 
         <ImageButton
             android:id="@+id/mentions"
+            android:tint="@color/md_grey_800"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:scaleX=".85"
-            android:scaleY=".85"
-            android:src="@drawable/mentions_light"
-            android:background="?android:selectableItemBackground"
+            android:scaleX=".75"
+            android:scaleY=".75"
+            android:src="@drawable/ic_mention"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <TextView
@@ -101,7 +104,7 @@
             android:fontFamily="sans-serif-light"
             android:text="0"
             android:alpha=".6"
-            android:textColor="@android:color/black"
+            android:textColor="@color/md_grey_800"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:textSize="16sp"/>
@@ -109,12 +112,13 @@
 
         <ImageButton
             android:id="@+id/dms"
+            android:tint="@color/md_grey_800"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:scaleX=".85"
             android:scaleY=".85"
-            android:src="@drawable/ic_action_reply_light"
-            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_round_message_24"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <TextView
@@ -124,7 +128,7 @@
             android:fontFamily="sans-serif-light"
             android:text="0"
             android:alpha=".6"
-            android:textColor="@android:color/black"
+            android:textColor="@color/md_grey_800"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:textSize="16sp"/>

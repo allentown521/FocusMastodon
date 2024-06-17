@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -19,8 +19,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="?drawerBackground">
+    android:background="?colorSurface">
 
     <ImageView
         android:id="@+id/background_image"
@@ -107,14 +108,15 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:adjustViewBounds="true"
-                android:background="?android:attr/selectableItemBackground"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Options"
                 android:maxHeight="48dp"
                 android:maxWidth="48dp"
                 android:minHeight="48dp"
                 android:minWidth="48dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_action_navigation_arrow" />
+                app:tint="@android:color/white"
+                android:src="@drawable/ic_round_arrow_drop_down_24" />
         </LinearLayout>
 
 

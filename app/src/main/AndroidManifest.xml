@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,25 +17,29 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.klinker.android.twitter_l">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-sdk tools:overrideLibrary="android.support.customtabs" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEOS" />
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <!-- http://android-developers.blogspot.com/2016/05/bring-your-android-app-to-chromebooks.html -->
     <!-- http://www.chromium.org/chromium-os/android-apps -->
@@ -76,23 +80,22 @@
     <uses-feature
         android:name="android.software.app_widget"
         android:required="false" />
-
     <application
-        android:name="com.klinker.android.twitter_l.data.App"
+        android:name="allen.town.focus.twitter.data.App"
         android:appCategory="social"
         android:fullBackupContent="@xml/backup_content"
         android:hardwareAccelerated="true"
+        android:localeConfig="@xml/locales"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="false"
         android:resizeableActivity="true"
+        android:theme="@style/Theme.Focus_for_Mastodon.Splash"
         android:supportsRtl="true"
-        android:localeConfig="@xml/locales"
         tools:replace="android:fullBackupContent">
         <!--android:roundIcon="@mipmap/ic_launcher_round"-->
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -103,43 +106,39 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <meta-data
-            android:name="com.klinker.android.twitter_l.utils.glide.TwitterGlideModule"
-            android:value="GlideModule" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <provider
-            android:name="com.klinker.android.twitter_l.data.sq_lite.HomeContentProvider"
-            android:authorities="com.klinker.android.twitter_l.material.android_l_provider"
+            android:name="allen.town.focus.twitter.data.sq_lite.HomeContentProvider"
+            android:authorities="${applicationId}.home.provider"
             android:exported="true"
             android:multiprocess="true" />
-
         <activity
-            android:name="com.klinker.android.twitter_l.activities.setup.TutorialActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Tutorial" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.MainActivity"
+            android:name="allen.town.focus.twitter.activities.SplashActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
 
-            <meta-data
-                android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+        </activity>
+
+        <activity
+            android:name="allen.town.focus.twitter.activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -153,42 +152,29 @@
 
         </activity>
 
-        <activity
-            android:name=".activities.RateItDialog"
-            android:exported="false"
-            android:launchMode="singleInstance"
-            android:theme="@style/tutorial_FloatingTutorialTheme" />
 
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.Focus_for_MastodonLight.Main" />
 
         <activity
-            android:name=".activities.GiphySearch"
+            android:name="allen.town.focus.twitter.activities.GiphySearch"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.RetweetActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/retweets"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
-            android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".activities.media_viewer.image.ImageViewerActivity"
+            android:name="allen.town.focus.twitter.activities.media_viewer.image.ImageViewerActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:theme="@style/Theme.ImageViewer" />
 
         <activity
-            android:name=".activities.media_viewer.VideoViewerActivity"
+            android:name="allen.town.focus.twitter.activities.media_viewer.VideoViewerActivity"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
             android:exported="false"
             android:launchMode="singleTop"
@@ -196,133 +182,73 @@
             android:theme="@style/DragDismissTheme" />
 
         <activity
-            android:name=".activities.media_viewer.YouTubeViewerActivity"
+            android:name="allen.town.focus.twitter.activities.media_viewer.YouTubeViewerActivity"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
             android:exported="false"
             android:supportsPictureInPicture="true"
             android:theme="@style/Theme.PhotoViewerBlack" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.FavoritesActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/favorite_tweets"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
-            android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="com.afollestad.materialcamera.CaptureActivity"
-            android:exported="false"
-            android:theme="@style/MaterialCamera.CaptureActivity" />
-
-        <activity
-            android:name="com.afollestad.materialcamera.CaptureActivity2"
-            android:exported="false"
-            android:theme="@style/MaterialCamera.CaptureActivity" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.FavoriteUsersActivity"
+            android:name="allen.town.focus.twitter.activities.drawer_activities.lists.ViewUsers"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/favorite_users"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
+
             android:windowSoftInputMode="adjustResize" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.lists.ViewUsers"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/favorite_users"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="adjustResize" />
+
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.discover.DiscoverPager"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/local_trends"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.lists.ListsActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/lists"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.scheduled_tweets.NewScheduledTweet"
+            android:name="allen.town.focus.twitter.activities.scheduled_tweets.NewScheduledTweet"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/scheduled_tweets"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.scheduled_tweets.ViewScheduledTweets"
+            android:name="allen.town.focus.twitter.activities.scheduled_tweets.ViewScheduledTweets"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/scheduled_tweets"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="adjustResize" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.SavedSearchesActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/saved_searches"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
-            android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.lists.ChoosenListActivity"
+            android:name="allen.town.focus.twitter.activities.drawer_activities.lists.ChoosenListActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/lists"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="adjustResize" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.DirectMessageConversation"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.settings.configure_pages.ConfigurePagerActivity"
+            android:name="allen.town.focus.twitter.settings.configure_pages.ConfigurePagerActivity"
             android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Tweet.Launcher" />
+            android:label="@string/app_name" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.settings.configure_pages.ListChooser"
+            android:name="allen.town.focus.twitter.settings.configure_pages.ListChooser"
             android:exported="false"
             android:label="@string/lists"
-            android:theme="@style/Theme.TalonLight.Launcher" />
+             />
 
         <activity
-            android:name="com.klinker.android.twitter_l.settings.configure_pages.UserChooser"
+            android:name="allen.town.focus.twitter.settings.configure_pages.UserChooser"
             android:exported="false"
             android:label="@string/user_tweets"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.settings.configure_pages.SearchChooser"
-            android:exported="false"
-            android:label="@string/saved_searches"
-            android:theme="@style/Theme.TalonLight.Launcher" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.search.SearchPager"
+            android:name="allen.town.focus.twitter.activities.search.SearchPager"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
+
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
 
             <intent-filter>
@@ -424,12 +350,12 @@
         </activity>
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.discover.trends.SearchedTrendsActivity"
+            android:name="allen.town.focus.twitter.activities.drawer_activities.discover.trends.SearchedTrendsActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/trends"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.TalonLight.Main.Launcher"
+
             android:windowSoftInputMode="adjustResize">
 
             <intent-filter>
@@ -442,12 +368,12 @@
         </activity>
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.discover.trends.LauncherSearchedTrends"
+            android:name="allen.town.focus.twitter.activities.drawer_activities.discover.trends.LauncherSearchedTrends"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/trends"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="adjustResize">
 
             <intent-filter>
@@ -460,168 +386,129 @@
         </activity>
 
         <activity
-            android:name=".activities.setup.material_login.MaterialLogin"
+            android:name="allen.town.focus.twitter.activities.setup.material_login.MaterialLogin"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:label="@string/app_name_full"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label="@string/app_name" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.setup.Version2Setup"
-            android:configChanges="orientation|screenSize"
+            android:name="allen.town.focus.twitter.activities.BrowserActivity"
             android:exported="false"
-            android:label="@string/app_name_full"
-            android:theme="@style/Theme.TalonLight.Launcher" />
+            android:label="@string/app_name"
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.BrowserActivity"
-            android:exported="false"
-            android:label="@string/app_name_full"
-            android:theme="@style/Theme.TalonLight.Launcher"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.PlainTextBrowserActivity"
-            android:exported="false"
-            android:label="@string/app_name_full"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.MainActivityPopup"
+            android:name="allen.town.focus.twitter.activities.MainActivityPopup"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.NoActionBar.Popup"
+            android:theme="@style/Theme.Focus_for_MastodonLight.NoActionBar.Popup"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.launcher_page.LauncherPopup"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Notif.Launcher"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RefreshNotificationsRedirect"
+            android:name="allen.town.focus.twitter.utils.redirects.RefreshNotificationsRedirect"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToPopup"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToPopup"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToMyAccount"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToMyAccount"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToSecondAccount"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToSecondAccount"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToTweetViewer"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToTweetViewer"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name=".utils.redirects.RedirectToPlayStore"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToTimeline"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonDark.Popup"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToLauncherPopup"
-            android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToTimeline"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToMentions"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToMentions"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToFavoriteUsers"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToFavoriteUsers"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToDMs"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToDMs"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToActivity"
+            android:name="allen.town.focus.twitter.utils.redirects.RedirectToDrawer"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
+
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.RedirectToDrawer"
-            android:configChanges="orientation|screenSize"
+            android:name="allen.town.focus.twitter.utils.redirects.SwitchAccountsRedirect"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+             />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.SwitchAccountsRedirect"
+            android:name="allen.town.focus.twitter.utils.redirects.SwitchAccountsToActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher" />
+             />
 
         <activity
-            android:name="com.klinker.android.twitter_l.utils.redirects.SwitchAccountsToActivity"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.ComposeActivity"
+            android:name="allen.town.focus.twitter.activities.compose.ComposeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:label="@string/app_name"
@@ -630,52 +517,43 @@
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name=".activities.compose.ComposeSecAccActivity"
+            android:name="allen.town.focus.twitter.activities.compose.ComposeSecAccActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.TalonDark.Popup"
+            android:theme="@style/Theme.Focus_for_MastodonDark.Popup"
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.NotificationCompose"
+            android:name="allen.town.focus.twitter.activities.compose.NotificationCompose"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="false"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
+            android:theme="@style/DragDismissTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.NotificationComposeSecondAcc"
+            android:name="allen.town.focus.twitter.activities.compose.NotificationComposeSecondAcc"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="false"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
+            android:theme="@style/DragDismissTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.NotificationDMCompose"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
-            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.RetryCompose"
+            android:name="allen.town.focus.twitter.activities.compose.RetryCompose"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
+            android:theme="@style/DragDismissTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible">
 
             <intent-filter>
@@ -692,79 +570,38 @@
         </activity>
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.WidgetCompose"
+            android:name="allen.town.focus.twitter.activities.compose.WidgetCompose"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="false"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
+            android:theme="@style/DragDismissTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.LauncherCompose"
+            android:name="allen.town.focus.twitter.activities.compose.LauncherCompose"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
+            android:theme="@style/DragDismissTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.compose.ComposeDMActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:label="@string/compose_activity"
-            android:theme="@style/Theme.TalonLight.Popup.Notif"
-            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.settings.FAQActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/faq"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.tweet_viewer.TweetActivity"
+            android:name="allen.town.focus.twitter.activities.tweet_viewer.TweetActivity"
             android:configChanges="orientation"
             android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/DragDismissTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
 
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.tweet_viewer.LauncherTweetActivity"
-            android:configChanges="orientation"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:launchMode="singleInstance"
-            android:theme="@style/DragDismissTheme"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
 
+        <activity android:name="allen.town.focus.twitter.activities.PurchaseActivity" />
         <activity
-            android:name="com.klinker.android.twitter_l.activities.tweet_viewer.NotiTweetActivity"
-            android:configChanges="orientation"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:launchMode="singleInstance"
-            android:theme="@style/DragDismissTheme"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.drawer_activities.discover.people.PeopleSearch"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:label="@string/suggested_users"
-            android:theme="@style/Theme.TalonLight.Launcher"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.activities.tweet_viewer.TweetActivityWidget"
+            android:name="allen.town.focus.twitter.activities.tweet_viewer.TweetActivityWidget"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
@@ -773,7 +610,7 @@
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.activities.profile_viewer.ProfilePager"
+            android:name="allen.town.focus.twitter.activities.profile_viewer.ProfilePager"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/app_name"
@@ -781,12 +618,11 @@
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
 
         <activity
-            android:name="com.klinker.android.twitter_l.settings.SettingsActivity"
+            android:name="allen.town.focus.twitter.settings.SettingsActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
-            android:label="@string/talon_settings"
+            android:label="@string/Focus_for_Mastodon_settings"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.TalonLight.Settings"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
 
             <intent-filter>
@@ -794,28 +630,10 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.klinker.android.twitter_l.settings.PrefActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/talon_settings"
-            android:launchMode="singleTop"
-            android:theme="@style/Theme.TalonLight.Settings"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-
-        <activity
-            android:name="com.klinker.android.twitter_l.settings.PrefActivityAdvanced"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="@string/talon_settings"
-            android:launchMode="singleTop"
-            android:theme="@style/Theme.TalonLight.Settings"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-
         <service
-            android:name=".services.NotificationListener"
+            android:name="allen.town.focus.twitter.services.NotificationListener"
             android:exported="true"
-            android:label="@string/app_name_full"
+            android:label="@string/app_name"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
@@ -823,7 +641,7 @@
         </service>
 
         <service
-            android:name=".services.ComposeTileService"
+            android:name="allen.town.focus.twitter.services.ComposeTileService"
             android:exported="true"
             android:icon="@drawable/ic_stat_icon"
             android:label="@string/menu_compose"
@@ -835,7 +653,7 @@
 
         <!-- Firebase Dispatcher Jobs -->
         <service
-            android:name=".services.DataCheckService"
+            android:name="allen.town.focus.twitter.services.DataCheckService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -843,7 +661,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.TimelineRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.TimelineRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -851,7 +669,7 @@
         </service>
 
         <service
-            android:name=".services.PreCacheService"
+            android:name="allen.town.focus.twitter.services.PreCacheService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -859,7 +677,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.ListRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.ListRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -867,7 +685,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.MentionsRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.MentionsRefreshService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -875,7 +693,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.DirectMessageRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.DirectMessageRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -883,7 +701,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.ActivityRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.ActivityRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -891,7 +709,7 @@
         </service>
 
         <service
-            android:name=".services.TrimDataService"
+            android:name="allen.town.focus.twitter.services.TrimDataService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -899,7 +717,7 @@
         </service>
 
         <service
-            android:name=".services.SendQueueService"
+            android:name="allen.town.focus.twitter.services.SendQueueService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -907,7 +725,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.SecondDMRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.SecondDMRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -915,7 +733,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.SecondActivityRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.SecondActivityRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -923,7 +741,7 @@
         </service>
 
         <service
-            android:name=".services.background_refresh.SecondMentionsRefreshService"
+            android:name="allen.town.focus.twitter.services.background_refresh.SecondMentionsRefreshService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -931,42 +749,32 @@
         </service>
 
         <service
-            android:name=".services.FavoriteTweetService"
+            android:name="allen.town.focus.twitter.services.FavoriteTweetService"
             android:exported="false" />
         <service
-            android:name=".services.RetweetService"
+            android:name="allen.town.focus.twitter.services.RetweetService"
             android:exported="false" />
         <service
-            android:name=".services.ReplyFromWearService"
+            android:name="allen.town.focus.twitter.services.ReplyFromWearService"
             android:exported="false" />
         <service
-            android:name=".services.ReplySecondAccountFromWearService"
+            android:name="allen.town.focus.twitter.services.ReplySecondAccountFromWearService"
             android:exported="false" />
         <service
-            android:name=".services.SendTweet"
+            android:name="allen.town.focus.twitter.services.MarkReadService"
             android:exported="false" />
         <service
-            android:name=".services.MarkReadService"
+            android:name="allen.town.focus.twitter.services.MarkReadSecondAccService"
             android:exported="false" />
         <service
-            android:name=".services.MarkReadSecondAccService"
+            android:name="allen.town.focus.twitter.services.ReadInteractionsService"
             android:exported="false" />
         <service
-            android:name=".services.ReadInteractionsService"
+            android:name="allen.town.focus.twitter.services.background_refresh.WidgetRefreshService"
             android:exported="false" />
-        <service
-            android:name=".services.background_refresh.WidgetRefreshService"
-            android:exported="false" />
-        <service
-            android:name=".services.TweetWearableService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
-            </intent-filter>
-        </service>
 
         <receiver
-            android:name="com.klinker.android.twitter_l.receivers.BootReceiver"
+            android:name="allen.town.focus.twitter.receivers.BootReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -974,31 +782,31 @@
         </receiver>
 
         <receiver
-            android:name=".services.SendScheduledTweet"
+            android:name="allen.town.focus.twitter.services.SendScheduledTweet"
             android:exported="false" />
 
         <receiver
-            android:name="com.klinker.android.twitter_l.receivers.MarkMentionReadReceiver"
+            android:name="allen.town.focus.twitter.receivers.MarkMentionReadReceiver"
             android:exported="false" />
 
         <receiver
-            android:name="com.klinker.android.twitter_l.receivers.NotificationDeleteReceiverOne"
+            android:name="allen.town.focus.twitter.receivers.NotificationDeleteReceiverOne"
             android:exported="true" />
 
         <receiver
-            android:name="com.klinker.android.twitter_l.receivers.NotificationDeleteReceiverTwo"
+            android:name="allen.town.focus.twitter.receivers.NotificationDeleteReceiverTwo"
             android:exported="true" />
 
         <provider
-            android:name="com.klinker.android.twitter_l.utils.MySuggestionsProvider"
-            android:authorities="com.klinker.android.twitter_l.MySuggestionsProvider"
+            android:name="allen.town.focus.twitter.utils.MySuggestionsProvider"
+            android:authorities="${applicationId}.suggest.provider"
             android:exported="false" />
 
         <!-- Widget -->
         <receiver
-            android:name="com.klinker.android.twitter_l.widget.timeline.TimelineWidgetProvider"
+            android:name="allen.town.focus.twitter.widget.timeline.TimelineWidgetProvider"
             android:exported="true"
-            android:label="@string/talon_large_widget">
+            android:label="@string/Focus_for_Mastodon_large_widget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -1010,7 +818,7 @@
 
         <!-- unread widget -->
         <receiver
-            android:name="com.klinker.android.twitter_l.widget.UnreadWidgetProvider"
+            android:name="allen.town.focus.twitter.widget.UnreadWidgetProvider"
             android:exported="true"
             android:label="@string/unread_bar_widget">
             <intent-filter>
@@ -1022,49 +830,30 @@
                 android:resource="@xml/widget_unread" />
         </receiver>
 
-        <activity
-            android:name="com.klinker.android.twitter_l.widget.WidgetProxyActivity"
-            android:exported="false"
-            android:theme="@style/Theme.TalonLight.Launcher" />
 
         <service
-            android:name="com.klinker.android.twitter_l.widget.timeline.TimelineWidgetService"
+            android:name="allen.town.focus.twitter.widget.timeline.TimelineWidgetService"
             android:exported="false"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
         <service
-            android:name="com.klinker.android.twitter_l.widget.UnreadWidgetProvider$UnreadWidgetService"
+            android:name="allen.town.focus.twitter.widget.UnreadWidgetProvider$UnreadWidgetService"
             android:exported="false" />
 
         <!-- DashClock -->
-        <service
-            android:name="com.klinker.android.twitter_l.widget.TalonDashClockExtension"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name_full"
-            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+
+        <activity android:name="allen.town.focus.twitter.activities.OAuthActivity" android:exported="true" android:configChanges="orientation|screenSize" android:launchMode="singleTask">
             <intent-filter>
-                <action android:name="com.google.android.apps.dashclock.Extension" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="focus-mastodon-android-auth" android:host="callback"/>
+                <data android:scheme="mastodon-android-auth" android:host="callback"/>
             </intent-filter>
+        </activity>
 
-            <meta-data
-                android:name="protocolVersion"
-                android:value="2" />
-            <meta-data
-                android:name="worldReadable"
-                android:value="true" />
-            <meta-data
-                android:name="description"
-                android:value="@string/extension_description" />
-            <meta-data
-                android:name="settingsActivity"
-                android:value=".settings.DashClockSettingsActivity" />
-        </service>
-
-        <activity
-            android:name="com.klinker.android.twitter_l.settings.DashClockSettingsActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TalonLight.Launcher" />
+        <activity android:name="allen.town.focus.twitter.activities.AccountListActivity" />
+        <activity android:name="allen.town.focus.twitter.activities.filters.FiltersActivity" />
+        <activity android:name="allen.town.focus.twitter.activities.filters.EditFilterActivity" />
 
     </application>
 </manifest>

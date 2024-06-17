@@ -7,7 +7,7 @@
     <string name="show_all">Tümünü Göster</string>
     <string name="stats">İstatistikler</string>
     <string name="list_count">%s listelerde.</string>
-    <string name="joined_twitter">Twitter\'a katıldı:</string>
+    <string name="joined_twitter">Mastodon\'a katıldı:</string>
     <string name="top_down">Yukarıdan Aşağı Modu</string>
     <string name="top_down_summary">Zaman akışı, kaydırma konumunuzu asla kaydetmez. En yukarıdan başlar.</string>
     <string name="timeline_text_size">Metin Boyutu</string>
@@ -16,13 +16,12 @@
     <string name="twitpic_summary_l">Tüm resim yüklemeleri TwitPic üzerinden geçecektir.</string>
     <string name="interactions_only">Sadece Etkileşimler</string>
     <string name="inter_stream">Etkileşimler ve Canlı Akış</string>
-    <string name="dont_use_pull">Talon Pull\'u Kullanma</string>
+    <string name="dont_use_pull">Focus for Mastodon Pull\'u Kullanma</string>
     <string name="always">Daima</string>
     <string name="never">Asla</string>
     <string name="only_on_wifi">Sadece WiFi\'de</string>
     <string name="only_on_data">Yalnızca Veri Üzerinde</string>
     <string name="contact_me">Benimle İletişim Kur</string>
-    <string name="my_google_plus">Benim Google+</string>
     <string name="follow_progress">İlerlememizi takip etmek için tıklayın:</string>
     <string name="general">Genel</string>
     <string name="no_interactions">Etkileşim Yok</string>
@@ -31,7 +30,6 @@
     <string name="web">Ağ</string>
     <string name="heads_up">Heads Up</string>
     <string name="use_snackbar">Snackbar\'ı Kullan</string>
-    <string name="use_snackbar_summary">Zaman akışının en tepesine kaç tweet kaldığını gösterir.</string>
     <string name="bottom_pictures">Resimler Tweetlerin Altında</string>
     <string name="bottom_pictures_summary">Tweetler bu seçenekle aynı çizgide genişlemeyecektir.</string>
     <string name="preparing_signin">Oturum Açmaya Hazırlanıyor</string>
@@ -42,16 +40,12 @@
     <string name="click_to_remove_muffle">Sönük olmaktan çıkarmak için bir kullanıcıya tıklayın.</string>
     <string name="muffle_user">Kullanıcıyı Söndür</string>
     <string name="unmuffle_user">Sönük Olmaktan Çıkar</string>
-    <string name="enjoying_talon">Talon\'un tadını çıkarıyor musun?</string>
+    <string name="enjoying_FocusforMastodon">Focus for Mastodon\'un tadını çıkarıyor musun?</string>
     <string name="give_a_rating">Bir derece vermeyi veya arkadaşlarınızla paylaşmayı düşünün!\n\n5 yıldızlı değerlendirmeler kalbimi ısıttı :)</string>
     <string name="rate_on_rating_dialog">Oyla</string>
     <string name="share_on_rating_dialog">Paylaş</string>
     <string name="ignore">Yoksay</string>
-    <string name="when_talon_pull_on">Talon Pull açık olduğunda uygulanır.</string>
-    <string name="transparent_system_bars">Şeffaf Sistem Çubuklarını Kullan</string>
     <string name="accent_color">Vurgu Rengi</string>
-    <string name="nav_bar_option">Gezinti Çubuğunu Geçersiz Kıl</string>
-    <string name="nav_bar_option_summary">Uygulamalar, bazı cihazların bir gezinti çubuğunun olup olmadığını kesin olarak bulamaz. Talon bu yerleşim şekli üzerine inşa edildiği için, bu seçenek onu elle belirlemenizi sağlar.</string>
     <string name="nav_bar_automatic">Otomatik Belirlenmiş</string>
     <string name="nav_bar_present">Gezinti Çubuğu Kullanarak</string>
     <string name="nav_bar_gone">Gezinti Çubuğu Olmadan</string>
@@ -61,14 +55,8 @@
     <string name="sync_options">Eşitleme Seçenekleri</string>
     <string name="manual_syncs">Manuel Senkronizasyon</string>
     <string name="timeline_notifications_summary">Bu bildirimlerin gerçekleşmesi için bir arkaplan yenileme aralığı açık olmalıdır.</string>
-    <string name="favorite_user_notifications_summary">Favori kullanıcı bildirimlerini kullanmak için ana sayfa akışına ait bir arkaplan yenileme aralığı veya canlı akış etkin olmalıdır.</string>
     <string name="alert_methods_summary">Nasıl bildirim almak istiyorsanız: Titreşim, ses, LED vb.</string>
     <string name="windowed_helper_message">Tablet üzerindeki bir pencereyi kapatmak için, pencerenin dışındaki soluk bölgeyi tıklamanız yeterlidir.\n\nBu, zaman çizelgenizin asla çok uzak olmamasını sağlar!</string>
-    <string name="permission_check_title">Talon\'un İzinleri:</string>
-    <string name="permission_check_message">Talon, şu iki konuda sizden izin istemek üzere: konum ve depolama.\n\n
-- Konum, yerel trendlere erişmenin yanı sıra, konumunuzu tweetlerinize eklemek için kullanılır (tabi isterseniz). Konumunuzu hiç bir zaman kaydetmiyoruz.\n
-- Depolama, tweet resimlerini harici belleğe kaydetmek için (istenirse) ve resimlerinizi Twitter\'a yüklediğinizde kullanılır.\n\n
-İzinleri reddetmekten çekinmeyin. Bunlara, sisteminizin uygulama ayarlarından manuel olarak erişebilirsiniz.</string>
     <string name="tell_about_swipe_down">İpucu: Bu ekranı kapatmak için aşağı doğru hızlıca kaydırın.</string>
     <string name="download_video">Video indir</string>
     <string name="download_gif">Gif indir</string>
@@ -77,7 +65,6 @@
     <string name="saved_video">Kaydetme bitti</string>
     <string name="encoding_gif">GIF kodlama ...</string>
     <string name="scroll_options">Kaydırma Seçenekleri</string>
-    <string name="static_ui_title">Statik Kullanıcı Arayüzü</string>
     <string name="static_ui_summary">Kaydırma yaparken uygulama çubuğu, FAB oluşturma ve snackbar kaybolmaz.</string>
     <string name="list_sync_interval">Liste Yenileme Hızı</string>
     <string name="list_sync_summary">Bu, ana sayfa akışında ekstra sayfa olarak kullandığınız tüm listeler için bir arkaplan eşitlemesi gerçekleştirir.</string>
@@ -95,7 +82,7 @@
     <string name="discover_people">Kişiler</string>
     <string name="no_media_preview">Bu video servisi için önizleme yok.</string>
     <string name="autoplay_title">Zaman Akışı Otomatik Oynatımı</string>
-    <string name="autoplay_summary">Zaman akışından ayrılmadan otomatik olarak videoları ve Twitter GIF\'lerini oynat.</string>
+    <string name="autoplay_summary">Zaman akışından ayrılmadan otomatik olarak videoları ve Mastodon GIF\'lerini oynat.</string>
     <string name="high_quality_images">Yüksek Kaliteli Resimler Kullan</string>
     <string name="high_quality_images_summary">Uygulamanın tamamında uygulanır.</string>
     <string name="view_likes">Beğenileri Görüntüle</string>
@@ -120,19 +107,15 @@
     <string name="location">Konum</string>
     <string name="color_options">Renk Seçenekleri</string>
     <string name="advanced_options">Gelişmiş Seçenekler</string>
-    <string name="material_color">Materyal Tasarım Rengi</string>
     <string name="base_theme">Ana Tema</string>
     <string name="functionality_options">İşlevsellik Seçenekleri</string>
     <string name="account_to_display">Gösterilecek Hesap</string>
     <string name="timeline_to_display">Gösterilecek Zaman Akışı</string>
     <string name="swipable_pages">Kaydırılabilir Sayfalar</string>
     <string name="app_drawer">Uygulama Çekmecesi</string>
-    <string name="notifications_for_background_refreshes">Bu arkaplan yenilemeleri tamamlandıktan sonra bildirimler tetiklenebilir.</string>
     <string name="tweetmarker_text">TweetMarker, mevcut zaman akışı konumunuzu diğer cihazlar arasında senkronize etmek için kullanılabilir.</string>
     <string name="precache_text">Bu, bir arkaplan yenilemesinden sonra resimleri indirir, böylece uygulamada hemen mevcut olurlar.</string>
     <string name="timeline_notifications_text">Bu bildirimler, bir arkaplan yenilemesi tamamlandıktan sonra kapanır.</string>
-    <string name="tweetmarker_always_refreshes">TweetMarker başlangıçta daima yenilenir.</string>
-    <string name="background_refreshes_disclaimer">\"Arkaplan Eşitlemesi\" altında bulunan tüm tercihler hem veri hem de pil tüketir.</string>
     <string name="discover_section_options">Bölüm Seçeneklerini Keşfedin</string>
     <string name="clear_memory">Belleği Temizle</string>
     <string name="manage_mutes_options">Susturulanları Yönet</string>
@@ -141,11 +124,8 @@
     <string name="widget_material_dark">Materyal Tasarım Koyu</string>
     <string name="widget_material_transparent">Tamamen Şeffaf</string>
     <string name="in_app_browser_summary">Bağlantıları açarken uygulama içi tarayıcıyı devre dışı bırakmanız sizi varsayılan tarayıcınıza gönderecektir.</string>
-    <string name="chrome_custom_tabs_summary">Talon\'un kendi dahili tarayıcısının yerine geçer. Google Chrome tarafından sağlanan hizmetleri kullanır.</string>
     <string name="reverse_click_actions_default">Varsayılan (Ters eylem yok):\n- Kısa Tıklama = Satır İçi Genişlet\n- Uzun Tıklama = Tweet Görüntüleyicisi</string>
     <string name="show_images_on_widget">Widget\'ta Resimleri Göster</string>
-    <string name="auto_dismiss">Bildirimleri Otomatik Reddet</string>
-    <string name="auto_dismiss_summary">Açık konumdaysa Talon\'un bildirimleri otomatik reddedilir. Varsayılan olarak açıktır.</string>
     <string name="media">Kullanıcının Medyası</string>
     <string name="ignored_on_compact">Bu ayar kompakt düzende dikkate alınmaz.</string>
     <string name="use_peek">\"Gözatma\" Özelliğini Kullan</string>
@@ -181,7 +161,7 @@
     <string name="enable_fingerprint_lock">Parmak İzi Kilidini Aç</string>
     <string name="disable_fingerprint_lock">Parmak İzi Kilidini Kapat</string>
     <string name="followers_only_auto_complete">Takipçileri Otomatik Tamamla</string>
-    <string name="followers_only_auto_complete_summary">Bir bahsedileni otomatik tamamlarken tüm Twitter\'ı arama.</string>
+    <string name="followers_only_auto_complete_summary">Bir bahsedileni otomatik tamamlarken tüm Mastodon\'ı arama.</string>
     <string name="quoting">Alıntı Yapılıyor</string>
     <string name="profile_timeline">Zaman Akışı</string>
     <string name="show_all_tweets">Tüm Tweetleri Göster</string>
@@ -189,22 +169,13 @@
     <string name="are_you_sure_follow">Bu kullanıcıyı takip etmek istediğinize emin misiniz?</string>
     <string name="are_you_sure_spam">Bu tweeti spam olarak işaretlemek istediğinize emin misiniz?</string>
     <string name="larger_images">Büyük Resimler Kullan</string>
-    <string name="show_profile_pictures">Profil Resimlerini Göster</string>
     <string name="reply_to">Yanıtlanan:</string>
     <string name="others">diğerleri</string>
     <string name="compress_reply_handles">Yanıtlarda Kullanıcı Adını Sıkıştır</string>
     <string name="compress_reply_handles_summary">Bu, uzun yanıt zincirlerinin işlenişini iyileştirir.</string>
     <string name="interaction_notifications">Etkileşim Bildirimleri</string>
-    <string name="interaction_notifications_summary">Bunlar, etkinlik sayfası için bir arkaplan yenilemesi, Twitter Push durdurucu veya Talon Pull\'un etkinleştirilmesini gerektirir.</string>
-    <string name="swipable_page_notifications">Kaydırılabilir Sayfa Bildirimleri</string>
-    <string name="swipable_page_notifications_summary">Kaydırılabilir bir sayfa arkaplanda güncellendiğinde bunlar gösterilir</string>
     <string name="never_show_notifications">Bildirimleri asla gösterme</string>
-    <string name="after_background_refresh_talon_pull">\nArkaplan yenilemesi veya Talon Pull (akış) olayı sonrası\n</string>
-    <string name="intercept_twitter_push_notifications">\nTwitter uygulamasının Push bildirimlerini durdur\n</string>
-    <string name="intercept_twitter_push_description">Bu özelliği kullanmak için normal Twitter uygulamasını yüklemeniz ve giriş yapmanız gerekiyor.\n\n
-Bildirimleri bu uygulama üzerinden belirleyebilirsiniz.
-Aldığınız bildirimler, Twitter uygulaması yerine, Talon bildirimi olarak gösterilecek.
-Bu özelliği kullanmak için sonraki ekranda Talon\'u etkinleştirmelisiniz. Böylece Talon uygulaması, Twitter uygulamasını bildirimler için dinleyebilecek.</string>
+    <string name="intercept_twitter_push_notifications">\nMastodon uygulamasının Push bildirimlerini durdur\n</string>
     <string name="widget_refresh_channel">Widget Yenileme Bildirimleri</string>
     <string name="media_downloads_channel">Medya İndirme Bildirimleri</string>
     <string name="tweeting_notifications_channel">Tweetleme Bildirimleri</string>
@@ -213,16 +184,12 @@ Bu özelliği kullanmak için sonraki ekranda Talon\'u etkinleştirmelisiniz. B�
     <string name="interactions_channel">Etkileşim Bildirimleri</string>
     <string name="scheduled_messages_channel">Zamanlanmış Tweet Gönderim Bildirimleri</string>
     <string name="favorite_user_channel">Favori Kullanıcı Bildirimleri</string>
-    <string name="talon_pull_channel">Talon Pull Bildirimleri</string>
     <string name="mentions_channel">Bahseden Bildirimleri</string>
     <string name="direct_messages_channel">Direkt Mesaj Bildirimleri</string>
     <string name="notification_channels">Bildirim Kanalları</string>
-    <string name="notification_channels_summary">Kanallar, bildirimler için aldığınız ikaz türlerini kontrol eder ve bildirimleri özelleştirmenize izin verir.</string>
-    <string name="crop_images">Zaman Akışında Resimleri Kes</string>
     <string name="update_tweet">Tweeti Güncelle</string>
     <string name="rate_it_button">Oyla!</string>
     <string name="rate_it_title">Yüksek değerlendirmeler çok yararlıdır</string>
-    <string name="rate_it_summary"><b>5-yıldızlı değerlendirmeler</b> uygulamanın Play Store\'da büyümesine ve görünür olmasına oldukça yardımcı olur. Uygulamanın <i>hızla yükseldiğini</i> görmek istiyorsanız, bana yardımcı olun!</string>
     <string name="rate_it_not_ready">Değerlendirme yapmaya hazır değil misiniz? Bu pencereyi kapatın, tekrar sormayacağım.</string>
     <string name="preview_web_links">Web Bağlantılarını Önizle</string>
     <string name="seconds_ago">%1$d saniye önce</string>

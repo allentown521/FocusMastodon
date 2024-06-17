@@ -14,3 +14,6 @@ local.properties
 *~
 .DS_Store
 secrets.properties
+/app/*.jks
+/app/google-services.json
+/secrets.properties

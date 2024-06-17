@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,13 +16,14 @@
   limitations under the License.
   -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.klinker.android.twitter_l.views.preference.TweetStylePreviewPreference
+    <allen.town.focus.twitter.views.preference.TweetStylePreviewPreference
         android:key="tweet_style_preview" />
 
-    <ListPreference
+    <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+        android:layout="@layout/list_item_view"
         android:key="timeline_pictures"
         android:title="@string/tweet_style"
         android:summary="@string/tweet_style_description"
@@ -30,98 +31,163 @@
         android:entries="@array/timeline_pictures"
         android:entryValues="@array/timeline_pictures_inserted"/>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:key="color_options_ground"
         android:title="@string/color_options" >
 
-        <ListPreference
-            android:key="main_theme_string"
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:defaultValue="auto"
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_values"
+            android:key="general_theme"
+            android:layout="@layout/list_item_view"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
             android:title="@string/base_theme"
-            android:defaultValue="1"
-            android:entries="@array/choose_theme"
-            android:entryValues="@array/choose_theme_inserted" />
+            app:icon="@drawable/ic_color_lens" />
 
-        <Preference
-            android:key="material_theme"
-            android:title="@string/material_color" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:key="black_theme"
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:title="@string/pref_theme_title_trueblack" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="@bool/md3_enabled"
+            android:disableDependentsState="true"
+            android:key="material_you"
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:title="@string/pref_title_md3"
+            app:isPreferenceVisible="@bool/md3_available" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="wallpaper_accent"
+            android:layout="@layout/list_item_view_switch"
+            android:dependency="material_you"
+            android:summary="@string/pref_summary_wallpaper_accent"
+            android:title="@string/pref_title_wallpaper_accent"
+            app:isPreferenceVisible="@bool/wallpaper_accent_visible" />
+        <allen.town.focus_common.common.prefs.supportv7.ATEColorPreference
+            android:dependency="material_you"
             android:key="accent_color"
-            android:title="@string/accent_color" />
+            android:layout="@layout/list_item_color_view"
+            android:persistent="false"
+            android:summary="@string/accent_color_desc"
+            android:title="@string/accent_color"
+            app:icon="@drawable/ic_colorize" />
 
-        <SwitchPreference
-            android:key="night_mode"
-            android:title="@string/night_mode"
-            android:defaultValue="false" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:dependency="material_you"
+            android:key="desaturated_color"
+            android:layout="@layout/list_item_view_switch"
+            android:summary="@string/pref_summary_desaturated_color"
+            android:title="@string/pref_title_desaturated_color" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view"
+            android:key="custom_launcher_key"
+            android:summary="@string/pref_custom_launcher_summary"
+            android:title="@string/pref_custom_launcher_title"/>
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/font_options" >
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:defaultValue="0"
+            android:entries="@array/pref_tab_text_mode_titles"
+            android:entryValues="@array/pref_tab_text_mode_values"
+            android:key="tab_text_mode"
+            android:layout="@layout/list_item_view"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_tab_text_mode" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="emoji_style"
+            app:icon="@drawable/ic_round_emoji_emotions_24"
             android:title="@string/emoji_style"
             android:defaultValue="android_o"
             android:entries="@array/emoji_style"
             android:entryValues="@array/emoji_style_values"/>
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="font_type"
-            android:title="@string/font_type"
-            android:defaultValue="1"
-            android:entries="@array/font_type"
-            android:entryValues="@array/font_type_inserted" />
+            app:icon="@drawable/ic_round_font_download_24"
+            android:title="@string/font_type" />
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="text_size"
+            app:icon="@drawable/ic_round_text_fields_24"
             android:title="@string/timeline_text_size"
             android:defaultValue="14"
             android:entries="@array/text_size"
             android:entryValues="@array/text_size" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
             android:key="military_time"
             android:title="@string/timestamp"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
             android:key="absolute_date"
             android:title="@string/absolute_date"
             android:defaultValue="false" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/advanced" >
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
             android:key="always_show_tweet_buttons"
+            app:icon="@drawable/ic_round_call_to_action_24"
             android:title="@string/alway_show_tweet_buttons"
             android:summary="@string/alway_show_tweet_buttons_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
             android:key="detailed_quotes"
+            app:isPreferenceVisible="false"
+            app:icon="@drawable/ic_round_format_quote_24"
             android:title="@string/detailed_quotes"
             android:summary="@string/detailed_quotes_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
             android:key="drag_dismiss"
             android:title="@string/enable_drag_dismiss"
             android:summary="@string/enable_drag_dismiss_summary"
             android:defaultValue="true" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:icon="@drawable/ic_round_insert_link_24"
             android:key="web_previews_timeline"
             android:title="@string/preview_web_links"
-            android:defaultValue="true" />
+            android:summary="@string/preview_web_links_sum"
+            android:defaultValue="false" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="advanced"
             android:title="@string/advanced_options"/>
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
 </PreferenceScreen>

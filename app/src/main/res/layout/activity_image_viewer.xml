@@ -12,17 +12,18 @@
         android:layout_height="match_parent"
         android:background="@android:color/black">
 
-        <com.klinker.android.twitter_l.views.widgets.HackyViewPager
+        <allen.town.focus.twitter.views.widgets.HackyViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
+            style="@style/Toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/transparent"
-            app:popupTheme="@style/ThemeOverlay.AppCompat" />
+             />
 
         <LinearLayout
             android:id="@+id/show_info"
@@ -32,7 +33,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:animateLayoutChanges="true"
-            android:background="?android:selectableItemBackground"
+            android:background="?rectSelector"
             android:fitsSystemWindows="true"
             android:gravity="center_vertical"
             android:padding="16dp"
@@ -42,7 +43,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="6dp"
-                android:src="@drawable/ic_heart_dark"
+                android:src="@drawable/ic_heart"
                 android:tint="@android:color/white" />
 
             <TextView
@@ -58,7 +59,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="6dp"
-                android:src="@drawable/ic_action_repeat_dark"
+                android:src="@drawable/ic_retweet"
                 android:tint="@android:color/white" />
 
             <TextView
@@ -74,7 +75,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="6dp"
-                android:src="@drawable/ic_action_navigation_arrow"
+                android:src="@drawable/ic_round_arrow_drop_down_24"
                 android:rotation="180"
                 android:tint="@android:color/white"
                 android:visibility="gone"/>

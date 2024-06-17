@@ -1,77 +1,158 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.wyjson.gorouter'
 apply plugin: 'com.google.firebase.crashlytics'
-
+apply from: "../common.gradle"
 android {
 
+    def secrets = new Properties()
+    File secretsFile = rootProject.file('secrets.properties')
+
     defaultConfig {
-        applicationId buildInfo.id
+        namespace "allen.town.focus.twitter"
+        applicationId rootProject.ext.applicationId
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
 
-        File secretsFile = rootProject.file('secrets.properties')
         if (secretsFile.exists()) {
-            def secrets = new Properties()
             secrets.load(new FileInputStream(secretsFile))
-
-            buildConfigField "String", "CONSUMER_KEY", secrets['CONSUMER_KEY']
-            buildConfigField "String", "CONSUMER_SECRET", secrets['CONSUMER_SECRET']
-            buildConfigField "String", "YOUTUBE_API_KEY", secrets['YOUTUBE_API_KEY']
-            buildConfigField "String", "TWEETMARKER_KEY", secrets['TWEETMARKER_KEY']
-            buildConfigField "String", "TWITLONGER_KEY", secrets['TWITLONGER_KEY']
             buildConfigField "String", "GIPHY_API_KEY", secrets['GIPHY_KEY']
-            buildConfigField "String", "ARTICLE_API_KEY", secrets['ARTICLE_KEY']
-            buildConfigField "String", "MERCURY_API_KEY", secrets['MERCURY_KEY']
-            buildConfigField "String", "LVL_KEY", secrets['LVL_KEY'] != null ? secrets['LVL_KEY'] : "\"none\""
-
-            buildConfigField "String", "CONSUMER_KEY_OLD_1", secrets['CONSUMER_KEY_OLD_1'] != null ? secrets['CONSUMER_KEY_OLD_1'] : "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_SECRET_OLD_1", secrets['CONSUMER_SECRET_OLD_1'] != null ? secrets['CONSUMER_SECRET_OLD_1'] : "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_KEY_OLD_2", secrets['CONSUMER_KEY_OLD_2'] != null ? secrets['CONSUMER_KEY_OLD_2'] : "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_SECRET_OLD_2", secrets['CONSUMER_SECRET_OLD_2'] != null ? secrets['CONSUMER_SECRET_OLD_2'] : "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_KEY_OLD_3", secrets['CONSUMER_KEY_OLD_3'] != null ? secrets['CONSUMER_KEY_OLD_3'] : "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_SECRET_OLD_3", secrets['CONSUMER_SECRET_OLD_3'] != null ? secrets['CONSUMER_SECRET_OLD_3'] : "\"This is optional.\""
+            buildConfigField "String", "GOOGLE_PAY_PUBLIC_KEY", secrets['googlePayPublicKey']
         } else {
-            buildConfigField "String", "CONSUMER_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "CONSUMER_SECRET", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "YOUTUBE_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "TWEETMARKER_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "TWITLONGER_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "GIPHY_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "ARTICLE_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "MERCURY_API_KEY", "\"View Talon's readme to learn about inserting your keys.\""
-            buildConfigField "String", "LVL_KEY", "\"none\""
-
-            buildConfigField "String", "CONSUMER_KEY_OLD_1", "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_SECRET_OLD_1", "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_KEY_OLD_2", "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_SECRET_OLD_2", "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_KEY_OLD_3", "\"This is optional.\""
-            buildConfigField "String", "CONSUMER_SECRET_OLD_3", "\"This is optional.\""
+            println "signing.properties file does not exist. Please make sure the file is properly configured.View Readme to learn about it."
         }
+
+        manifestPlaceholders = [
+                googleAdsKey: secrets['googleAdsKey']
+        ]
+
+        kapt {
+            arguments {
+                arg('eventBusIndex', 'allen.town.podcast.ApEventBusIndex')
+                arg("dagger.uses_old_metadata_format", "true")
+            }
+        }
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file(secrets.getProperty('storeFile'))
+            storePassword secrets.getProperty('storePassword')
+            keyAlias secrets.getProperty('keyAlias')
+            keyPassword secrets.getProperty('keyPassword')
+        }
+
+        debug {
+            storeFile file(secrets.getProperty('storeFile'))
+            storePassword secrets.getProperty('storePassword')
+            keyAlias secrets.getProperty('keyAlias')
+            keyPassword secrets.getProperty('keyPassword')
+        }
+
     }
 
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             minifyEnabled true
-            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
-    
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    packagingOptions {
+        exclude 'LICENSE'
+        exclude 'README.md'
+        exclude 'Other/'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+
+    lintOptions {
+        ignore "InnerClasses"
+        abortOnError false
+    }
+
+    aaptOptions {
+        noCompress 'apk'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+
+    // If using Kotlin
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        androidTest {
+            setRoot('src/test')
+        }
+    }
+
+
 }
 
+//禁止上传Mapping文件到Google服务器
+gradle.taskGraph.whenReady {
+    tasks.each { task ->
+        if (task.name.contains("uploadCrashlyticsMappingFile")) {
+            task.enabled = false
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+//        force 'androidx.core:core-ktx:1.6.0'
+//        force 'androidx.core:core:1.6.0'
+        force 'com.google.android.datatransport:transport-backend-cct:3.1.7'
+        force 'com.google.android.gms:play-services-ads-identifier:18.0.0'
+//        force 'androidx.recyclerview:recyclerview:1.2.1'
+//        force 'com.github.bumptech.glide:glide:3.7.0'
+    }
+}
 dependencies {
 
-    wearApp project(':wear')
-    
-    implementation "androidx.appcompat:appcompat:1.1.0"
-    implementation "androidx.recyclerview:recyclerview:1.1.0"
+//    wearApp project(':wear')
+    implementation project(':focus-common')
+    implementation project(':focus-purchase')
+    implementation project(':searchpreference')
+    implementation project(':mpv-video')
+
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "androidx.emoji:emoji:1.1.0"
-    implementation "com.google.android.material:material:1.1.0"
-    implementation "androidx.browser:browser:1.2.0"
-    implementation "androidx.preference:preference:1.1.1"
+    implementation "androidx.browser:browser:1.3.0"
+    implementation "androidx.preference:preference-ktx:$preferenceVersion"
     implementation "androidx.legacy:legacy-preference-v14:${versions.androidX}"
-    implementation 'androidx.multidex:multidex:2.0.0'
-    implementation "com.google.android.play:core:1.8.0"
-    implementation "com.google.android.play:core-ktx:1.8.0"
-    implementation "androidx.work:work-runtime:2.7.0"
+    implementation 'androidx.multidex:multidex:2.0.1'
+//    implementation "com.google.android.play:core:1.10.0"
+//    implementation "com.google.android.play:core-ktx:1.8.1"
+    implementation "androidx.work:work-runtime:2.7.1"
 
     implementation 'com.klinkerapps:link_builder:2.0.5'
     implementation 'com.klinkerapps:peekview:1.2.3'
@@ -82,10 +163,19 @@ dependencies {
     implementation 'com.klinkerapps:drag-dismiss-activity:1.7.0'
     implementation 'com.klinkerapps:floating-tutorial:1.1.0'
 
-    implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.15.0@aar'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.github.halilozercan:BetterVideoPlayer:kotlin-SNAPSHOT'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    implementation 'at.connyduck:networkresult-calladapter:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+
+
+
+    implementation 'com.github.bumptech.glide:glide:4.15.0'
+    playImplementation 'com.google.android.ads:mediation-test-suite:3.0.0'
+    kapt "com.github.bumptech.glide:compiler:4.15.0"
+    implementation 'com.github.halilozercan:BetterVideoPlayer:2.0.0-alpha01'
     implementation 'com.github.ybq:Android-SpinKit:1.2.0'
     implementation 'com.github.apl-devs:appintro:v4.2.0'
     implementation 'de.timroes.android:EnhancedListView:0.3.2@aar'
@@ -93,23 +183,72 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.melnykov:floatingactionbutton:1.3.0'
     implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    implementation 'com.flipboard:bottomsheet-core:1.5.0'
-    implementation 'com.github.yalantis:ucrop:2.2.2'
+    implementation 'com.flipboard:bottomsheet-core:1.5.2'
+    implementation 'com.github.yalantis:ucrop:2.2.8'
     implementation 'me.leolin:ShortcutBadger:1.1.19@aar'
     implementation 'com.github.ajalt.reprint:core:3.2.1@aar'
-    implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.github.HamidrezaAmz:MagicalExoPlayer:2.0.7'
+    implementation "com.google.android.material:material:$googleMaterialVersion"
+    implementation 'com.github.ChickenHook:RestrictionBypass:2.2'
+    implementation "com.airbnb.android:lottie:5.0.3"
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    playImplementation 'com.google.firebase:firebase-core:21.0.0'
+    // Add the dependencies for the Firebase Cloud Messaging and Analytics libraries
+    playImplementation 'com.google.firebase:firebase-messaging:23.0.7'
+//    implementation 'jp.wasabeef:glide-transformations:2.2.1'//4.3.0是glide4版本
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    implementation "com.google.dagger:dagger:2.51.1"
+    implementation "com.google.dagger:dagger-android:2.51.1"
+    implementation "com.google.dagger:dagger-android-support:2.51.1"
+    kapt 'com.google.dagger:dagger-compiler:2.51.1'
+    kapt 'com.google.dagger:dagger-android-processor:2.51.1'
+
+    implementation 'org.jsoup:jsoup:1.14.3'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    kapt 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation "org.greenrobot:eventbus:$eventbusVersion"
+    kapt "org.greenrobot:eventbus-annotation-processor:$eventbusVersion"
+
+    implementation 'org.parceler:parceler-api:1.1.12'
+    kapt 'org.parceler:parceler:1.1.12'
+
+    implementation 'androidx.activity:activity-ktx:1.7.1'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0'
+    playImplementation 'com.google.firebase:firebase-analytics:21.1.0'
+    playImplementation 'com.google.firebase:firebase-perf:20.1.0'
+    implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
+    implementation "com.github.mariotaku.RestFu:library:0.9.64"
+    implementation ('me.grishka.appkit:appkit:1.2.7'){
+        exclude group:'me.grishka.litex'
+    }
+//    compileOnly 'org.slf4j:slf4j-api:2.0.2'
+//    compileOnly 'org.apache.logging.log4j:log4j-core:2.19.0'
+//    implementation 'org.jetbrains:annotations:23.0.0'
+//    implementation 'org.twitter4j:twitter4j-core:4.0.7'
     implementation files('lib/YouTubeAndroidPlayerApi.jar')
+
+    implementation "com.github.mariotaku.ExportablePreferences:core:${sharedVersions['ExportablePreferences']}"
+    kapt "com.github.mariotaku.ExportablePreferences:processor:${sharedVersions['ExportablePreferences']}"
+    implementation "com.github.mariotaku.CommonsLibrary:logansquare:${sharedVersions['MariotakuCommons']}"
+    implementation "com.github.mariotaku.CommonsLibrary:objectcursor:${sharedVersions['MariotakuCommons']}"
+    implementation "com.github.mariotaku.ObjectCursor:core:${sharedVersions['ObjectCursor']}"
+    kapt "com.github.mariotaku.ObjectCursor:processor:${sharedVersions['ObjectCursor']}"
+    implementation "com.github.mariotaku.RestFu:library:${sharedVersions['RestFu']}"
+    implementation "com.github.mariotaku.RestFu:oauth:${sharedVersions['RestFu']}"
+
+    //https://twitter4j.org/en/versions.html
     // version 1.2.2
-    implementation files('lib/twitter4j-fork.jar')
-    implementation files('lib/twitter4j-http2-fork.jar')
+//    implementation files('lib/twitter4j-fork.jar')
+//    implementation files('lib/twitter4j-http2-fork.jar')
     implementation(name: 'ChipCloud-3.0.3', ext: 'aar')
-    implementation(name: 'datetimepicker', ext: 'aar')
     implementation(name: 'sectioned-recyclerview', ext: 'aar')
-    implementation(name: 'material-camera', ext: 'aar')
-    implementation(name: 'rating-prompt-lib', ext: 'aar')
     implementation(name: 'event-emitter-lib', ext: 'aar')
-    implementation(name: 'easyvideoplayer-0.3.0', ext: 'aar')
 
     implementation project(':searchview')
     implementation project(':shared_assets')

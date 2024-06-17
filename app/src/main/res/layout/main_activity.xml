@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,16 +16,18 @@
   limitations under the License.
   -->
 
-<com.klinker.android.twitter_l.views.widgets.NotificationDrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<allen.town.focus.twitter.views.widgets.NotificationDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:background="?windowBackground"
-                  android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorSurface"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -33,74 +35,82 @@
             android:layout_weight="1">
 
             <androidx.viewpager.widget.ViewPager
-                             xmlns:tools="http://schemas.android.com/tools"
-                             android:id="@+id/pager"
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             tools:context=".MainActivity" />
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-            <View android:id="@+id/activity_status_bar"
+            <View
+                android:id="@+id/activity_status_bar"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:elevation="5dp"
-                android:background="@android:color/black"
-                android:visibility="gone"/>
+                android:background="?colorSurface" />
 
-            <androidx.appcompat.widget.Toolbar
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:id="@+id/toolbar"
-                    android:elevation="5dp"
-                    android:gravity="center_vertical"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat"
-                    style="@style/MyToolbar"/>
+            <com.google.android.material.appbar.MaterialToolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                style="@style/MyToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?colorSurface"
+                android:gravity="center_vertical" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                xmlns:fab="http://schemas.android.com/apk/res-auto"
+            <allen.town.focus_common.views.AccentFloatingActionButton
                 android:id="@+id/send_button"
+                style="@style/Widget.Material3.FloatingActionButton.Primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="60dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_fab_pencil"
-                fab:fabSize="normal"/>
-          
+                app:fabSize="normal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
         </RelativeLayout>
 
+        <allen.town.focus_common.views.TintedBottomNavigationView
+            android:id="@+id/navigationView"
+            style="@style/Widget.Material3.BottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:minHeight="@dimen/bottom_nav_height"
+            app:itemHorizontalTranslationEnabled="false"
+            tools:viewBindingType="com.google.android.material.navigation.NavigationBarView" />
     </LinearLayout>
 
-    <com.lapism.searchview.view.SearchView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.lapism.searchview.view.SearchView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:search_version = "menu_item"
-        app:search_style = "menu_item_classic"
-        app:search_divider = "false"
-        app:search_hint = "@string/search"
-        app:search_hint_size = "16sp"
-        app:search_voice = "true"
-        app:search_voice_text = "@string/search"
-        app:search_animation_duration = "300"
-        app:search_shadow_color = "#80000000"/>
+        app:search_animation_duration="300"
+        app:search_divider="false"
+        app:search_hint="@string/search"
+        app:search_hint_size="16sp"
+        app:search_shadow_color="#80000000"
+        app:search_style="menu_item_classic"
+        app:search_version="menu_item"
+        app:search_voice="true"
+        app:search_voice_text="@string/search" />
 
 
-<!-- The navigation drawer -->
-<include layout="@layout/main_drawer"
-         android:id="@+id/left_drawer"
-         android:layout_width="300dp"
-         android:layout_height="match_parent"
-         android:layout_gravity="left" >
+    <!-- The navigation drawer -->
+    <include
+        android:id="@+id/left_drawer"
+        layout="@layout/main_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left">
 
-</include>
+    </include>
 
-<include layout="@layout/notification_drawer"
-         android:id="@+id/right_drawer"
-         android:layout_width="300dp"
-         android:layout_height="match_parent"
-         android:layout_gravity="right"/>
+    <include
+        android:id="@+id/right_drawer"
+        layout="@layout/notification_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" />
 
-</com.klinker.android.twitter_l.views.widgets.NotificationDrawerLayout>
+</allen.town.focus.twitter.views.widgets.NotificationDrawerLayout>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">تالون</string>
-    <string name="app_name_full">تالون توییتر</string>
     <string name="extension_description">نشان دادن شمارهای توییت های خوانده نشده, تذکر پیام های مستقیم بعنوان بروزرسانی</string>
     <!-- Action Bar -->
     <!-- Times -->
@@ -14,7 +12,7 @@
     <!-- Actionbar Done-Discard -->
     <!-- Other -->
     <!-- User Profile Activity -->
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <!-- Tweet Activity -->
     <!-- User Lists -->
     <!-- Tutorial Activity -->

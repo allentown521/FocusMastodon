@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon pro Twitter</string>
     <string name="extension_description">Zobrazení počtu nepřečtených twítů, zmínek a přímých zpráv, tak jak jsou obnovovány.</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Obnovení Timeline</string>
@@ -67,7 +65,7 @@
     <string name="search">Hledat</string>
     <string name="lists">Seznamy</string>
     <string name="search_hint">Hledám...</string>
-    <string name="new_tweet">Nový tweet</string>
+    <string name="new_tweet">Nový post</string>
     <string name="new_tweets">Nové tweety</string>
     <string name="no_new_tweets">Žádné nové tweety</string>
     <string name="new_mention">Nová zmínka</string>
@@ -76,7 +74,6 @@
     <string name="new_direct_message">Nová přímá zpráva</string>
     <string name="new_direct_messages">Nové přímé zprávy</string>
     <string name="no_new_direct_messages">Žádné nové přímé zprávy</string>
-    <string name="tap_to_setup">Klepni pro nastavení</string>
     <string name="new_account">Nový účet</string>
     <string name="all_read">Vše přečteno!</string>
     <!-- Notifications -->
@@ -85,7 +82,7 @@
     <!-- Actionbar Done-Discard -->
     <!-- Other -->
     <!-- User Profile Activity -->
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <!-- Tweet Activity -->
     <!-- User Lists -->
     <!-- Tutorial Activity -->

@@ -2,7 +2,7 @@
 
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -19,11 +19,59 @@
 
 <resources>
 
+    <style name="Theme.Focus_for_Mastodon.MD3.Base.Black" parent="Theme.Focus_for_Mastodon.MD3.Base">
+        <item name="colorSurface">@color/blackColorSurface</item>
+    </style>
+
+    <style name="Theme.Focus_for_Mastodon.Splash" parent="Theme.FocusPodcast.FollowSystem">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="emptyViewLayout">@layout/appkit_empty</item>
+        <item name="errorViewLayout">@layout/appkit_error</item>
+    </style>
+
+    <!-- 这里需要注意，如果activity在manifest中不先指定一个主题，那么使用MD3主题进行切换时item弹窗的文字不会变色，原因未知 -->
+    <style name="MainTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--        <item name="android:windowAnimationStyle">@style/AnimationActivityTopDown</item>-->
+    </style>
+
+    <!-- 这里是覆盖ArticleActivity自己的主题 -->
+    <style name="DragDismissTheme.Base" parent="Theme.FocusPodcast.FollowSystem">
+        <item name="colorPrimary">@color/dragdismiss_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/dragdismiss_colorPrimaryDark</item>
+        <item name="colorAccent">@color/dragdismiss_colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.Focus_for_Mastodon.MD3.Base" parent="Theme.FocusPodcast.MD3">
+        <item name="android:navigationBarColor">@color/transparent_system_bar</item>
+        <!-- For Slidr -->
+        <item name="android:windowIsTranslucent">false</item>
+
+        <item name="drawerDividerColor">@color/text_drawer</item>
+        <item name="embeddedTweetBackground">@color/drawer</item>
+        <item name="textShadowColor">@color/background</item>
+        <item name="emojiDivider">@color/emoji_divider</item>
+        <item name="icon_color">@color/icon</item>
+        <item name="drawer_options_background">@color/drawer_options_background</item>
+        <item name="tweet_background">@color/background</item>
+        <item name="tweet_activity_background">@color/tweet_activity_background</item>
+        <item name="revamped_tweet_timeline_line">@color/revamped_tweet_timeline_line_light</item>
+        <item name="revamped_tweet_background">@color/tweet_activity_background</item>
+        <item name="circleBorder">@drawable/circle_border</item>
+
+        <item name="snackbar">@drawable/snack_bar</item>
+    </style>
+
     <style name="Theme.ImageViewer" parent="@style/Theme.Tutorial">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentTransitions">true</item>
 
+        <item name="android:colorPrimary">@android:color/black</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -41,6 +89,7 @@
     <style name="Theme.PhotoViewerBlack" parent="@style/Theme.Tutorial">
         <item name="android:windowActionBar">true</item>
         <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
     </style>
 
     <style name="Theme.PhotoViewerLight.Popup" parent="@style/Theme.Tutorial">
@@ -80,10 +129,10 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-    <style name="Theme.Tutorial" parent="@style/Theme.TalonDark.Purple">
+    <style name="Theme.Tutorial" parent="@style/Theme.Focus_for_MastodonDark.Main">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackground">@android:color/transparent</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionModeOverlay">true</item>
@@ -98,32 +147,60 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
-        <!-- Main theme colors -->
-        <!--   your app's branding color (for the app bar) -->
-        <item name="colorPrimary">@color/primary</item>
-        <!--   darker variant of colorPrimary (for status bar, contextual app bars) -->
-        <item name="colorPrimaryDark">@color/darker_primary</item>
-        <!--   theme UI controls like checkboxes and text fields -->
-        <item name="colorAccent">@color/accent</item>
+
+    <style name="m3_body_large">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">5dp</item>
     </style>
 
-    <style name="DrawerOptionsButton">
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
-        <item name="android:paddingLeft">13dp</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textColor">?textColor</item>
-        <item name="android:layout_centerVertical">true</item>
+    <style name="Widget.Mastodon.M3.Button" parent="android:Widget.Material.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:stateListAnimator">@null</item>
     </style>
 
-    <style name="MyToolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:actionOverflowButtonStyle">@style/Widget.AppCompat.Light.ActionButton.Overflow</item>
+    <style name="m3_title_medium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+    </style>
 
-        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
-        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    <style name="m3_title_small">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="m3_label_medium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingMultiplier">1.14</item>
+    </style>
+
+    <style name="m3_body_small">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="m3_label_large">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="m3_body_medium">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="MyToolbar" parent="@style/Toolbar">
     </style>
 
 </resources>

@@ -2,7 +2,7 @@
 
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -22,11 +22,6 @@
     android:layout_width="match_parent"
     android:orientation="vertical" >
 
-    <View android:id="@+id/activity_status_bar"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="@android:color/black"
-        android:visibility="gone"/>
 
     <LinearLayout android:id="@+id/list_progress"
         android:orientation="vertical"
@@ -35,10 +30,10 @@
         android:layout_weight="1"
         android:gravity="center" >
 
-        <ProgressBar
+        <allen.town.focus_common.views.AccentProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.ProgressBar"
+
             android:indeterminateOnly="true" />
 
     </LinearLayout>
@@ -52,12 +47,12 @@
         android:gravity="center"
         android:visibility="gone">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/no_content_local_trends" />
+            android:text="@string/no_hashtags" />
 
     </LinearLayout>
 

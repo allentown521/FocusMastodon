@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">تالون</string>
-    <string name="app_name_full">تالون لـ تويتر</string>
     <string name="extension_description">عرض عدد التغريدات والإشارات والرسائل الخاصة الغير مقروءة حال تحديثها</string>
     <!-- Action Bar -->
     <string name="menu_refresh">تحديث الخط الزمني</string>
@@ -78,7 +76,6 @@
     <string name="new_direct_message">"رسالة خاصة جديدة "</string>
     <string name="new_direct_messages">"رسائل خاصة جديدة "</string>
     <string name="no_new_direct_messages">"لاتوجد رسائل خاصة جديدة "</string>
-    <string name="tap_to_setup">أضغط للأعداد</string>
     <string name="new_account">"حساب جديد "</string>
     <string name="from_top">"من الأعلى "</string>
     <string name="jump_to_top">إلى الأولى</string>
@@ -98,8 +95,6 @@
     <string name="popup">منبثقة</string>
     <string name="fav_user_tweets">"التغريدات الجديدة لمستخدم مفضل "</string>
     <string name="sec_acc">"حساب ثاني "</string>
-    <string name="talon_pull">"سحب تالون "</string>
-    <string name="talon_pull_summary">تحذير: تمكين هذا الخيار يمكن أن يسبب استنزاف كبير للبطارية على أندرويد لولي بوب.</string>
     <string name="listening">استماع</string>
     <string name="listening_for_mentions">"الأستماع إلى التنبيهات "</string>
     <string name="refreshing">"تحديث "</string>
@@ -115,9 +110,8 @@
     <string name="new_retweets">"إعادة التغريدات "</string>
     <string name="new_favorites">الإعجابات</string>
     <string name="new_quotes">يقتبس</string>
-    <string name="new_tweets_upper">"تغريدات جديدة "</string>
     <!-- Login Screen -->
-    <string name="setup_talon">إعداد تالون</string>
+    <string name="setup_Focus_for_Mastodon">إعداد تالون</string>
     <string name="login_to_twitter">"الدخول إلى تويتر "</string>
     <string name="first_welcome">"مرحبا بك في تالون! "</string>
     <string name="second_welcome">مزامنة البيانات</string>
@@ -132,11 +126,9 @@
     <string name="syncing_direct_messages">"مزامنة الرسائل الخاصة... "</string>
     <string name="syncing_user">مزامنة الأصدقاء...</string>
     <string name="done_syncing">"تمت المزامنة. "</string>
-    <string name="login_error">حصل خلل ما... الرجاء إعادة المحاولة! \n\nمن الممكن أن إعدادت التاريخ والوقت على جهازك غير موضوعة على الوضع التلقائي. هذا متطلب أساسي في جميع برامج الطرف الثالث لتويتر.</string>
     <string name="no_network">"أنت غير متصل بالشبكة "</string>
     <string name="no_thanks">"ليس الآن "</string>
     <string name="follow_me">تابع!</string>
-    <string name="follow_me_description">استخدم زر الخيارات لمتابعة حسابات الدعم ، أو اضغط زر الرجوع لتخطي هذا</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">"تغريدة جديدة "</string>
     <string name="compose_tweet_hint">اكتب تغريدة...</string>
@@ -205,10 +197,10 @@
     <string name="url_char_length">رابط موقع: 100 رمز كحد أقصى</string>
     <string name="location_char_length">الموقع: 30 رمز كحد أقصى</string>
     <string name="description_char_length">الوصف: 160 رمز كحد أقصى</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">"إعادة التغريدات "</string>
     <string name="retweet_lower">"إعادة تغريد "</string>
-    <string name="retweeter">إعادة تغريد بواسطة @</string>
+    <string name="retweeter">"إعادة تغريد بواسطة "</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">أفتح رابط الأنترنت</string>
     <string name="menu_copy_text">"نسخ نص التغريدة "</string>
@@ -267,9 +259,6 @@
     <string name="make_a_theme">اصنع شكل</string>
     <string name="layout">"تصميم "</string>
     <string name="themeing_complete">تطبيق الخلفية</string>
-    <string name="themeing_complete_summary">\"تالون\" سيغلق الآن \n\n
-يجب أن تقوم بسحب \"تالون\" من قائمة آخر البرامج المشغلة لكي ترى جميع أثر التغييرات على خطك الزمني.\n\n
-إذا كانت صور العرض الشخصية معروضة ليست بالطريقة المناسبة (دوائر أو مربعات)، ينبغي عليك إزالة ومن ثم إضافة الأيقونة.</string>
     <string name="layout_summary">"هذا التغيير سيقوم بمسح جميع الملفات المؤقتة للبرنامج "</string>
     <string name="text_size">"حجم الخط "</string>
     <string name="night_mode">"الوضع الليلي "</string>
@@ -313,10 +302,6 @@
     <string name="timeline_sync_interval">معدل تحديث الخط الزمني الرئيسي</string>
     <string name="mentions_sync_interval">معدل تحديث الإشارات</string>
     <string name="dm_sync_interval">معدل تحديث الرسائل الخاصة</string>
-    <string name="sync_friends">مزامنة بيانات الأصدقاء</string>
-    <string name="sync_friends_summary2">إعادة مزامنة بيانات الآصدقاء عند إرسال التغريدات.</string>
-    <string name="sync_friends_summary">مزامنة قوائم الأصدقاء يدويا.\n\nوقد تم ذلك في تسجيل الدخول بالنسبة لك، ويتم إضافتها تلقائيا عند اتباع شخص من تالون، ولكن هذا الخيار سحب كل من الأحدث \"متابعة\".\n\n
-يتم استخدام هذه البيانات عند البحث للمستخدمين عند إنشاء تغريدة.</string>
     <string name="sync_success">تمت المزامنة</string>
     <string name="sync_failed">فشلت المزامنة</string>
     <string name="push_notification_options">"خيارات \"تدفق التنبيهات\""</string>
@@ -324,8 +309,6 @@
     <string name="push_notifications_summary">سيتم تفعيل الأستماع إلى التنبيهات المتدفقة في حال أستلام تفاعلات جديدة (إشارات، رسائل خاصة، إعجابات، إعادة تغريد، أو متابع جديد).</string>
     <string name="push_notification_warning">لقراءة المزيد عن سحب تالون ، انقر فوق هذا التفضيل.</string>
     <string name="notification_settings">التنبيهات</string>
-    <string name="pebble_notifications">تنبيهات بيبل</string>
-    <string name="pebble_notifications_summary">أستخدم مع ساعة بيبل الذكية ، عطل هذا إذا كنت تحصل على إخطارين على ساعتك</string>
     <string name="advanced_settings">الخيارات المتقدمة</string>
     <string name="app_feel_category">خيارات البرنامج الحسية</string>
     <string name="advance_windowed">نافذة منبثقة</string>
@@ -375,12 +358,12 @@
     <string name="xda_thread">نظم XDA</string>
     <string name="email_me">أرسل لي إيميل</string>
     <string name="tweet_me">أرسل تغريدة على حسابي</string>
-    <string name="follow_talon">تابع تالون في تويتر</string>
+    <string name="follow_Focus_for_Mastodon">تابع تالون في تويتر</string>
     <string name="credits">ألأمتيازات</string>
     <string name="disclaimer">تنازل</string>
     <string name="other_apps">برامجنا الأخرى</string>
     <string name="whats_new">ماهو الجديد</string>
-    <string name="talon_settings">أعدادات تالون</string>
+    <string name="Focus_for_Mastodon_settings">أعدادات تالون</string>
     <string name="feature_requests">طلب الخصائص</string>
     <!-- Emoji Keyboard -->
     <string name="recent">حديثا</string>
@@ -407,7 +390,6 @@
     <string name="dismiss_all">تجاهل الكل</string>
     <string name="handle_and_name">عرض اسم المستخدم واسم العرض</string>
     <string name="notification_types">أنواع التنبيهات</string>
-    <string name="with_talon_pull">تم الوصول من خلال \"سحب تالون\".</string>
     <string name="favorited_tweet">الإعجابات من تغريداتك</string>
     <string name="new_followers">متابعون جدد</string>
     <string name="discussion">نقاش</string>
@@ -430,19 +412,14 @@
     <string name="to_replies">أضف أي هاشتاق موجود في التغريدة إلى الرد.</string>
     <string name="clean_now">نظف قاعدة البيانات الآن</string>
     <string name="clean_now_summary">يتضمن ترتيب وإزالة التكرارات في قاعدة البيانات الخاصة بك.</string>
-    <string name="fill_gaps">ملء الفراغات في الخط الزمني</string>
-    <string name="fill_gaps_summary">عبئ الفراغات التي حصلت نتيجة أتصال مباشر سيء وتفعيل البث المباشر.</string>
     <string name="filling_timeline">يعبئ الفراغات في الخط الزمني</string>
     <string name="follows_you">يتابعك</string>
     <string name="not_following_you">لا يتابعك</string>
     <string name="device">خط الجهاز</string>
-    <string name="roboto_light">روبوتو فاتح (أفتراضي)</string>
-    <string name="roboto_condensed">روبوتو كثيف</string>
     <string name="font_type">"نوع الخط "</string>
     <string name="our_website">الموقع</string>
     <string name="alert_types">طريقة التنبيه</string>
     <string name="timeline_notifications">تنبيهات الخط الزمني</string>
-    <string name="interactions_notifications">تنبيهات التفاعلات</string>
     <string name="timelines_settings">أعدادات الخط الزمني</string>
     <string name="tweet_look_options">خيارات الخط الزمني</string>
     <string name="limiting_options">خيارات محدودة</string>
@@ -551,7 +528,7 @@
     <string name="ui_settings">إعدادات الواجهة</string>
     <string name="show_pos_dashclock">عرض الموضع الحالي في الخط الزمني</string>
     <string name="show_pos_dashclock_summary">عرض الموضع الحالي في الخط الزمني الرئيسي بدلاً من عدد التغريدات الجديدة.</string>
-    <string name="talon_large_widget">تالون - الخط الزمني الرئيسي</string>
+    <string name="Focus_for_Mastodon_large_widget">تالون - الخط الزمني الرئيسي</string>
     <string name="unread_bar_widget">تالون - شريط الغير مقروءة</string>
     <string name="show_muted_mentions">عرض الإشارات المكتومة</string>
     <string name="force_overflow_summary">دائماً أظهر النقاط الثلاثة \"لعرض القائمة\" في الشريط العلوي؛ تستخدم للأجهزة التي لديها زر قائمة ملموس.</string>
@@ -621,24 +598,18 @@
     <string name="both_accounts">كلا الحسابين</string>
     <string name="attach_gif">صور GIF المتحركة من الجهاز</string>
     <string name="attach_video">اختر فيديو</string>
-    <string name="roboto_l">روبوت أندرويد لولي بوب</string>
     <string name="second_account">الحساب الثاني</string>
     <string name="second_account_login_info">بما أن تويتر يحمل بعض معلومات تسجيل الدخول في نظامها ، الشاشة التالية قد لا تسمح لك الدخول مع حسابك الجديد على الفور . إذا كان يتخطى هذا الدخول ويذهب مباشرة إلى صفحة إذن ، بمجرد الضغط على زر \" تسجيل الخروج \" في الزاوية اليمنى العليا من الموقع سيسمح للتطبيق تسجيل دخولك إلى حساب الثاني .</string>
     <string name="fetch_tweetmarker">جلب تويت ماركر</string>
     <string name="rate_limit_reached">بلغ حد المعدل</string>
     <string name="info">معلومات</string>
     <string name="help_and_feedback">مساعدة/ردود فعل</string>
-    <string name="faq_first">مرحبا، سعيد لأنك تريد مساعدتي في تحسين تالون !\n\n
-لا تتردد في كتابة إيميل  أو إرسال تغريدة لي من ردود الفعل الخاص بك أو أي أسئلة قد تكون لديكم ، ولكن قبل أن تفعل ذلك، هل دققت في قسم الأسئلة الشائعة؟\n\n
-تالون لديه قائمة واسعة جدا من موضوعات الدعم و طلبات إقامت الحق في التطبيق. تحقق منها قبل القلق حول انتظار رد مني ! ( على الرغم من أنني في محاولة للحصول على بالرد عليك في أسرع وقت كما يمكن ل عملية رجل واحد ..)\n\n
-نأمل لكم الاستمتاع بعملي!</string>
     <string name="contact">اتصال</string>
     <string name="follow">تابع</string>
     <string name="menu_number_of_pages">عدد الصفحات الإضافية</string>
     <!-- %s will be replaced with a number for the currently selected page -->
     <string name="page">الصفحة %s</string>
     <string name="set_as_default">افتراضي</string>
-    <string name="main_pages_and_drawer">الصفحات القابل للتمرير السريع و درج التطبيق</string>
     <string name="drawer_elements">درج عناصر مرئية</string>
     <string name="drawer_elements_summary">إظهار أو إخفاء العناصر في درج تصفح التطبيقات الرئيسية.</string>
     <string name="second_acc_mentions">إشارات الحساب الثاني</string>
@@ -650,8 +621,6 @@
     <string name="sending_direct_message">إرسال رسالة مباشرة</string>
     <string name="fav_rt_multiple_accounts">إجراءات الحساب عبر</string>
     <string name="fav_rt_multiple_accounts_summary">إذا كان لديك حسابات متعددة، هذا سوف يتيح لك تحديد أي حساب لأداء الإعجاب  أو إعادة التغريد مع .</string>
-    <string name="talon_pull_notifications">سحب تالون (فوري) الإشعارات</string>
-    <string name="talon_pull_turned_on">يجب تشغيل سحب تالون من خيارات التحديث في الخلفية لاستخدام هذه الميزة.</string>
     <string name="activity_sync_interval">معدل تحديث النشاطات</string>
     <string name="mentioned_you">ذكرك</string>
     <string name="favorites_lower">الإعجابات</string>
@@ -674,8 +643,8 @@
     <string name="no_favorites">لا يوجد إعجابات</string>
     <string name="quote_style">نمط الإقتباس</string>
     <string name="quote_style_twitter">نمط تويتر (رابط إلى تويتر)</string>
-    <string name="quote_style_talon">\"@lukeklinker ...\"</string>
-    <string name="quote_style_rt">RT @lukeklinker ...</string>
+    <string name="quote_style_Focus_for_Mastodon">\"@allentown521 ...\"</string>
+    <string name="quote_style_rt">RT @allentown521 ...</string>
     <string name="show_pull_notification">عرض الإخطار المستمر</string>
     <string name="show_pull_notification_summary">إذا تم تعطيل هذا الإشعار، يمكن لنظام الأندرويد إيقاف التدفق في أي وقت. استخدام بحذر الشديد .</string>
     <string name="custom_tab_title">علامات تبويب كروم المخصصة</string>

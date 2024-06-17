@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,9 +15,8 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon pour Twitter</string>
-    <string name="extension_description">Afficher le nombre de tweets non lus, les mentions et les messages privés en temps réel</string>
+
+    <string name="extension_description">Afficher le nombre de posts non lus, les mentions et les messages privés en temps réel</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Rafraîchir la Timeline</string>
     <string name="menu_compose">Nouveau Tweet</string>
@@ -25,7 +24,7 @@
     <string name="menu_settings">Réglages</string>
     <string name="menu_follow">Suivre l\'utilisateur</string>
     <string name="menu_unfollow">Ne plus suivre l\'utilisateur</string>
-    <string name="menu_tweet">Envoyer le tweet</string>
+    <string name="menu_tweet">Envoyer le post</string>
     <string name="menu_dm">Envoyer un message privé</string>
     <string name="menu_block">Bloquer l\'utilisateur</string>
     <string name="menu_unblock">Débloquer l\'utilisateur</string>
@@ -59,7 +58,7 @@
     <string name="timeline">Timeline</string>
     <string name="mentions">Mentions</string>
     <string name="direct_messages">Messages privés</string>
-    <string name="retweets">Retweets</string>
+    <string name="retweets">Boosts</string>
     <string name="favorite_tweets">Favoris</string>
     <string name="favorite_users">Utilisateurs favoris</string>
     <string name="favorite_users_tweets">Tweets utilisateurs préférés</string>
@@ -69,16 +68,15 @@
     <string name="search">Rechercher</string>
     <string name="lists">Listes</string>
     <string name="search_hint">\@nom d\'utilisateur ou recherche...</string>
-    <string name="new_tweet">nouveau tweet</string>
-    <string name="new_tweets">nouveaux tweets</string>
-    <string name="no_new_tweets">Pas de nouveau tweet</string>
+    <string name="new_tweet">nouveau post</string>
+    <string name="new_tweets">nouveaux posts</string>
+    <string name="no_new_tweets">Pas de nouveau post</string>
     <string name="new_mention">nouvelle mention</string>
     <string name="new_mentions">nouvelles mentions</string>
     <string name="no_new_mentions">Pas de nouvelles mentions</string>
     <string name="new_direct_message">nouveau message privé</string>
     <string name="new_direct_messages">Nouveaux messages privés</string>
     <string name="no_new_direct_messages">Pas de nouveaux messages privés</string>
-    <string name="tap_to_setup">Appuyez pour configurer</string>
     <string name="new_account">Nouveau compte</string>
     <string name="from_top">Depuis le début</string>
     <string name="jump_to_top">Revenir au premier</string>
@@ -87,7 +85,7 @@
     <string name="old_interactions">Toutes les interactions</string>
     <!-- Notifications -->
     <string name="tweet">Tweet</string>
-    <string name="tweets">Tweets</string>
+    <string name="tweets">Posts</string>
     <string name="mention">Mention</string>
     <string name="message">Message</string>
     <string name="messages">Messages</string>
@@ -100,8 +98,6 @@
     <string name="popup">Popup</string>
     <string name="fav_user_tweets">Nouveau tweet d\'un utilisateur favoris</string>
     <string name="sec_acc">Second Compte</string>
-    <string name="talon_pull">Talon Pull</string>
-    <string name="talon_pull_summary">ATTENTION : Activer cette option peut causer une perte de batterie significative sur Android Lollipop.</string>
     <string name="listening">À l\'écoute</string>
     <string name="listening_for_mentions">A l\'écoute des intéractions</string>
     <string name="refreshing">Rafraîchir</string>
@@ -114,31 +110,28 @@
     <string name="favorited">a mis en favoris votre statut</string>
     <string name="quoted">cité votre statut</string>
     <string name="followed">Vous suit</string>
-    <string name="new_retweets">retweets</string>
+    <string name="new_retweets">boosts</string>
     <string name="new_favorites">favoris</string>
     <string name="new_quotes">citations</string>
-    <string name="new_tweets_upper">Nouveaux Tweets</string>
     <!-- Login Screen -->
-    <string name="setup_talon">Configurer Talon</string>
-    <string name="login_to_twitter">Se connecter à Twitter</string>
-    <string name="first_welcome">Bienvenue sur Talon!</string>
+    <string name="setup_Focus_for_Mastodon">Configurer Focus_for_Mastodon</string>
+    <string name="login_to_twitter">Se connecter à Mastodon</string>
+    <string name="first_welcome">Bienvenue sur Focus_for_Mastodon!</string>
     <string name="second_welcome">Synchroniser les données</string>
     <string name="third_welcome">"C\'est tout ! "</string>
     <string name="back_to_timeline">Emmenez-moi à ma Timeline !</string>
     <string name="initial_sync">"Synchroniser Maintenant ! "</string>
     <string name="first_info">Avant de commencer, connectez-vous.</string>
     <string name="second_info">Super ! Maintenant, nous allons télécharger les données initiales. Cela peut prendre un certain temps selon votre connexion internet.</string>
-    <string name="third_info">J\'espère que vous apprécierez Talon -- Luke Klinker</string>
+    <string name="third_info">J\'espère que vous apprécierez Focus_for_Mastodon -- allentown</string>
     <string name="syncing_timeline">Synchronisation de la timeline...</string>
     <string name="syncing_mentions">Synchronisation des mentions...</string>
     <string name="syncing_direct_messages">Synchronisation des messages privés...</string>
     <string name="syncing_user">Synchronisation des amis...</string>
     <string name="done_syncing">Synchronisation terminée</string>
-    <string name="login_error">Quelque chose s\'est mal passé... S\'il vous plaît réessayer !</string>
     <string name="no_network">Vous n\'êtes pas connecté à Internet.</string>
     <string name="no_thanks">Pas maintenant</string>
     <string name="follow_me">"Suivre ! "</string>
-    <string name="follow_me_description">Suivez @TalonAndroid et @lukeklinker pour connaître les nouvelles fonctionnalités et avoir de l\'aide!</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">Nouveau Tweet</string>
     <string name="compose_tweet_hint">"Tapez votre tweet ici... "</string>
@@ -151,7 +144,7 @@
     <string name="finding_location">Recherche de votre emplacements</string>
     <string name="draft_found">Brouillon trouvé</string>
     <string name="apply">Appliquer ?</string>
-    <string name="tweet_failed">Erreur lors de l\'envoi du tweet</string>
+    <string name="tweet_failed">Erreur lors de l\'envoi du post</string>
     <string name="tap_to_retry">Tapez ici pour recommencer</string>
     <string name="one_recepient">Vous ne pouvez envoyer un DM qu\'à un seul utilisateur</string>
     <!-- Actionbar Done-Discard -->
@@ -207,10 +200,10 @@
     <string name="url_char_length">URL : Limité à 100 caractères</string>
     <string name="location_char_length">Localisation : Limité à 30 caractères</string>
     <string name="description_char_length">Description : Limité à 160 caractères</string>
-    <!-- Retweets Activity -->
-    <string name="retweets_lower">retweets</string>
-    <string name="retweet_lower">retweet</string>
-    <string name="retweeter">retweeté par @</string>
+    <!-- boosts Activity -->
+    <string name="retweets_lower">boosts</string>
+    <string name="retweet_lower">boost</string>
+    <string name="retweeter">"boosted par "</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">Ouvrir le lien</string>
     <string name="menu_copy_text">Copier le texte du Tweet</string>
@@ -223,7 +216,7 @@
     <string name="vine">Vine</string>
     <string name="menu_quote">Citer le Tweet</string>
     <string name="deleted_tweet">Tweet supprimé</string>
-    <string name="error_deleting">Erreur lors de la suppression du tweet</string>
+    <string name="error_deleting">Erreur lors de la suppression du post</string>
     <string name="sending">Envoyé</string>
     <string name="open_what">Ouvrez ce</string>
     <string name="youtube_error">Erreur lors de la lecteur de la vidéo</string>
@@ -267,9 +260,6 @@
     <string name="make_a_theme">Créer un thème</string>
     <string name="layout">Disposition</string>
     <string name="themeing_complete">Thème appliqué</string>
-    <string name="themeing_complete_summary">"\"Talon\" va maintenant se fermer \n\n
-Retirez \"Talon\" de la liste des applications récentes pour que les modifications apportées soient visibles sur vos timelines. \n\n
-Si votre image de profil ne montre pas ce que vous souhaitez (ex: cercle ou carré), vous devez supprimer et ré-ajouter le widget. "</string>
     <string name="layout_summary">Modifier ceci videra le cache de l\'application.</string>
     <string name="text_size">Taille du texte</string>
     <string name="night_mode">Mode nuit</string>
@@ -277,7 +267,7 @@ Si votre image de profil ne montre pas ce que vous souhaitez (ex: cercle ou carr
     <string name="night_mode_day">Paramètrer le mode jour</string>
     <string name="night_mode_theme">Sélectionner le thème pour le mode nuit.</string>
     <string name="device_font">Utiliser la police de l\'appareil</string>
-    <string name="device_font_summary">La plupart des polices utilisées sur les appareils est \"Roboto\". Talon utilise par défaut la police \"Roboto Light\".</string>
+    <string name="device_font_summary">La plupart des polices utilisées sur les appareils est \"Roboto\". Focus_for_Mastodon utilise par défaut la police \"Roboto Light\".</string>
     <string name="ui_extras">UI Extras</string>
     <string name="ui_extras_summary">Comprend:\n
 - Cacher la barre d\'action\n
@@ -285,14 +275,14 @@ Si votre image de profil ne montre pas ce que vous souhaitez (ex: cercle ou carr
 - Barre Système transparente (seulement pour Android 4.4)\n\n
 Activer ces paramètres peut affecter les performances du défilement.\n</string>
     <string name="inline_pics">Afficher les images</string>
-    <string name="use_screen_name">Afficher les pseudos Twitter</string>
-    <string name="use_screen_name_summary">Afficher les pseudos twitter à la place des noms sur les timelines.</string>
+    <string name="use_screen_name">Afficher les pseudos Mastodon</string>
+    <string name="use_screen_name_summary">Afficher les pseudos Mastodon à la place des noms sur les timelines.</string>
     <string name="timestamp">Format 24H</string>
     <string name="enable_emojis">Activer les Emojis</string>
     <string name="to_market">Aller sur Play Store</string>
     <string name="get_ios">Obtenir les Emojis iOS</string>
     <string name="emoji_dialog_summary">Pour appliquer les emojis dans cette application, vous devez avoir les applications \"Sliding Emoji Keyboard\" ou \"Sliding Emoji Keyboard - iOS\" installé depuis le PlayStore.\n\n
-Vous pouvez basculer entre les deux types de emojis en désinstallant l\'un et en installant l\'autre. Si les deux paquets sont installés, Talon utilisera par défaut les emojis Android.\n\n
+Vous pouvez basculer entre les deux types de emojis en désinstallant l\'un et en installant l\'autre. Si les deux paquets sont installés, Focus_for_Mastodon utilisera par défaut les emojis Android.\n\n
 NOTE: Les Emojis continuerons de fonctionner dans cette application même si la période d\'essai est expirée ! Cette application est à la fois utilisée comme un plugin et comme clavier par défaut.</string>
     <string name="theme_light">Thème Clair</string>
     <string name="theme_dark">Thème Sombre</string>
@@ -307,7 +297,7 @@ NOTE: Les Emojis continuerons de fonctionner dans cette application même si la 
     <string name="wake_screen">Réveil l\'écran</string>
     <string name="sound">Son de notification</string>
     <string name="quiet_hours">Ne pas Déranger</string>
-    <string name="max_number_on_refresh">"Nombre Max de Tweets à rafraîchir "</string>
+    <string name="max_number_on_refresh">"Nombre Max de posts à rafraîchir "</string>
     <string name="fav_users_notifications">Notification pour les utilisateurs favoris</string>
     <string name="sync_second_mentions">Synchroniser les mentions du second compte</string>
     <string name="sync_second_mentions_summary">Vérifier automatiquement et notifier les nouvelles mentions de votre deuxième compte avec le premier.</string>
@@ -317,30 +307,24 @@ NOTE: Les Emojis continuerons de fonctionner dans cette application même si la 
     <string name="timeline_sync_interval">Taux de rafraichissement de la Timeline</string>
     <string name="mentions_sync_interval">Taux de rafraichissement des Mentions</string>
     <string name="dm_sync_interval">Taux de rafraichissement des Messages Privés</string>
-    <string name="sync_friends">Synchroniser les données des amis</string>
-    <string name="sync_friends_summary2">Re-synchroniser les données des amis lors de la composition d\'un tweet.</string>
-    <string name="sync_friends_summary">Synchroniser manuellement la liste d\'amis.\n\n Ceci a été fait pour vous à votre login et ils sont ajoutés automatiquement quand vous suivez quelqu\'un depuis Talon, mais cette option va réactualiser votre liste d\'amis. \n\n
-Ces données sont utilisées lors de la recherche d\'utilisateurs lors de la composition d\'un tweet</string>
     <string name="sync_success">Synchronisation réussie</string>
     <string name="sync_failed">Échec de la synchronisation</string>
     <string name="push_notification_options">"Réglage du \"Push\""</string>
-    <string name="push_notifications">Talon Pull</string>
+    <string name="push_notifications">Focus for Mastodon Pull</string>
     <string name="push_notifications_summary">Cela va démarrer un service d\'écoute qui affichera une notification à chaque nouvelle interaction (mentions, dm\'s, favoris, retweets, ou nouveaux followers).</string>
     <string name="push_notification_warning">Pour en savoir plus sur cette option, cliquez ici.</string>
     <string name="notification_settings">Réglages des notifications</string>
-    <string name="pebble_notifications">Notifications Pebble</string>
-    <string name="pebble_notifications_summary">Fonctionne avec la montre Pebble.</string>
     <string name="advanced_settings">Réglages avancés</string>
     <string name="app_feel_category">App Feel Options</string>
     <string name="advance_windowed">Fenêtre avancée</string>
-    <string name="advance_windowed_summary">Ouvrir les profils et les tweets dans une \"fenêtre\" au dessus de la timeline.</string>
+    <string name="advance_windowed_summary">Ouvrir les profils et les posts dans une \"fenêtre\" au dessus de la timeline.</string>
     <string name="full_screen_browsers">Navigateur en plein écran</string>
     <string name="full_screen_browsers_summary">Ouvrir le tweet contenant une page web en mode plein écran.</string>
     <string name="reverse_click_actions">Inverse les actions d\'un clic</string>
     <string name="reverse_click_actions_summary">Inverser les actions lorsque vous appuyiez sur un tweet.\n\n
 Défaut (quand c\'est désactivé) \n
 - Appuie long pour ouvrir un tweet\n
-- Appuie court pour développer le tweet</string>
+- Appuie court pour développer le post</string>
     <string name="extra_pages">Utilisez des pages supplémentaires</string>
     <string name="extra_pages_summary">Ajouter la page des liens et des photos à gauche de votre timeline..</string>
     <string name="live_streaming">Rafraichissement en temps réel</string>
@@ -351,7 +335,7 @@ Défaut (quand c\'est désactivé) \n
     <string name="current_cache_size">Taille actuelle du cache</string>
     <string name="cache_dialog_summary">Cette action ne peut être annulée</string>
     <string name="timeline_size">Taille de la Timeline</string>
-    <string name="timeline_size_summary">Nombre maximum de tweets stockés dans la base de données</string>
+    <string name="timeline_size_summary">Nombre maximum de posts stockés dans la base de données</string>
     <string name="mentions_size">Taille des Mentions</string>
     <string name="mentions_size_summary">Nombre maximum de mentions stockées dans la base de données</string>
     <string name="dm_size">Taille des Messages Privées</string>
@@ -378,14 +362,14 @@ Défaut (quand c\'est désactivé) \n
     <string name="google_plus">Communauté Google+</string>
     <string name="xda_thread">Sujet XDA</string>
     <string name="email_me">M\'envoyer un e-mail</string>
-    <string name="tweet_me">Envoyez moi un tweet</string>
-    <string name="follow_talon">Suivre Talon sur Twitter</string>
+    <string name="tweet_me">Envoyez moi un post</string>
+    <string name="follow_Focus_for_Mastodon">Suivre Focus_for_Mastodon sur Mastodon</string>
     <string name="credits">Crédits</string>
     <string name="disclaimer">Disclaimer</string>
     <string name="other_apps">Nos autres applications</string>
     <string name="whats_new">Quoi de neuf</string>
-    <string name="rate_it">Evaluer Talon</string>
-    <string name="talon_settings">Réglages de Talon</string>
+    <string name="rate_it">Evaluer Focus_for_Mastodon</string>
+    <string name="Focus_for_Mastodon_settings">Réglages de Focus_for_Mastodon</string>
     <string name="feature_requests">Demande de fonctionnalités</string>
     <!-- Emoji Keyboard -->
     <string name="recent">Récent</string>
@@ -408,23 +392,22 @@ Défaut (quand c\'est désactivé) \n
     <string name="layout_hangouts">Hangouts</string>
     <!-- added after release -->
     <string name="use_inapp_browser">Utiliser le navigateur intégré</string>
-    <string name="use_browser_on_tweet">Page du navigateur présente sur le tweet</string>
+    <string name="use_browser_on_tweet">Page du navigateur présente sur le post</string>
     <string name="dismiss_all">Tout rejeter</string>
     <string name="handle_and_name">Afficher le pseudo et le nom complet</string>
     <string name="notification_types">Type de notification</string>
-    <string name="with_talon_pull">Consulter \"Talon Pull\"</string>
-    <string name="favorited_tweet">Favoris sur vos tweets</string>
+    <string name="favorited_tweet">Favoris sur vos posts</string>
     <string name="new_followers">Nouveaux followers</string>
     <string name="discussion">Discussion</string>
     <string name="no_replies">Aucune réponse</string>
     <string name="rt_style_quotes">Choisir le style \"RT\" pour vos citations</string>
-    <string name="rt_style_quotes_summary">Utiliser l\'ancienne façon pour le retweet \"RT @username.....\"\n\nAccessible à partir de la barre d\'action ou du menu sur n\'importe quel tweet</string>
+    <string name="rt_style_quotes_summary">Utiliser l\'ancienne façon pour le retweet \"RT @username.....\"\n\nAccessible à partir de la barre d\'action ou du menu sur n\'importe quel post</string>
     <string name="absolute_date">Utiliser les dates absolues</string>
     <string name="clear_searches">Effacer les recherches</string>
     <string name="compose_with_search">"Composer un tweet avec le mot-clé "</string>
     <string name="use_toast">Utiliser le toast \"Revenir au premier\"</string>
-    <string name="ignore_retweets">Ignorer les retweets</string>
-    <string name="ignore_retweets_summary">Ne pas afficher les retweets dans votre timeline</string>
+    <string name="ignore_retweets">Ignorer les boosts</string>
+    <string name="ignore_retweets_summary">Ne pas afficher les boosts dans votre timeline</string>
     <string name="view">Vue</string>
     <string name="muted_hashtags">Hastags mis en sourdines</string>
     <string name="muted_hashtags_summary">Appuyez sur le hastags pour supprimer le mute</string>
@@ -438,32 +421,27 @@ Défaut (quand c\'est désactivé) \n
     <string name="delete_conversation">Effacer la conversation ?</string>
     <string name="deleting_messages">Effacement des messages</string>
     <string name="type_message">Type de message...</string>
-    <string name="fill_gaps">Combler les problèmes de chronologie</string>
-    <string name="fill_gaps_summary">Combler les lacunes qui se produisent pendant une mauvaise connexion quand le live streaming est activé.</string>
     <string name="filling_timeline">Les problèmes de chronologies sont en cours de résolution</string>
     <string name="follows_you">Vous suit</string>
     <string name="not_following_you">Ne vous suit pas</string>
     <string name="device">Police de l\'appareil</string>
-    <string name="roboto_light">Roboto Light (Défaut)</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="font_type">Type de police</string>
     <string name="our_website">Site web</string>
     <string name="alert_types">Type d\'alerte</string>
     <string name="timeline_notifications">Notifications de la Timeline</string>
-    <string name="interactions_notifications">Notifications pour les interactions</string>
     <string name="timelines_settings">Paramètres de la Timeline</string>
-    <string name="tweet_look_options">Options des tweets</string>
+    <string name="tweet_look_options">Options des posts</string>
     <string name="limiting_options">Limiter vos Options</string>
     <string name="browser_options">Options du navigateur</string>
     <string name="custom_ringtone">"Sonnerie personnalisée "</string>
     <string name="use_twitlonger">Activer TwitLonger</string>
     <string name="twitlonger">TwitLonger</string>
     <string name="post_with_twitlonger">Ce Tweet fait plus de 140 caractères.\n\nVoulez-vous le poster en utilisant TwitLonger ?</string>
-    <string name="remove_retweet">Retirer le Retweet</string>
+    <string name="remove_retweet">Retirer le Boost</string>
     <string name="edit">Modifier</string>
     <string name="split_tweet">Séparer le Tweet</string>
     <string name="use_twitpic">Utiliser TwitPic</string>
-    <string name="twitpic_summary">Utilise TwitPic pour envoyer les images au lieu du service d\'image de Twitter.</string>
+    <string name="twitpic_summary">Utilise TwitPic pour envoyer les images au lieu du service d\'image de Mastodon.</string>
     <string name="verified">Vérifié</string>
     <string name="use_tweetmarker">Activer TweetMarker</string>
     <string name="tweetmarker_summary">Encore un peu expérimental. Vous pouvez avoir des problèmes avec des sauts vers le bas.</string>
@@ -472,9 +450,9 @@ Défaut (quand c\'est désactivé) \n
     <string name="manual_refresh">Tweetmarker Manuel</string>
     <string name="finding_tweetmarker">Recherche TweetMarker</string>
     <string name="loading">Chargement</string>
-    <string name="loading_tweets">Chargement des Tweets</string>
+    <string name="loading_tweets">Chargement des Posts</string>
     <string name="pull_to_refresh">Tirez pour rafraîchir</string>
-    <string name="removing_retweet">Suppression du Retweet</string>
+    <string name="removing_retweet">Suppression du Boost</string>
     <string name="retweeting_status">Retweet du Statut</string>
     <string name="removing_favorite">Retrait des Favoris</string>
     <string name="favoriting_status">Ajout aux Favoris</string>
@@ -491,23 +469,23 @@ Défaut (quand c\'est désactivé) \n
     <string name="dont_use">Ne pas utiliser cette page</string>
     <string name="page_1">Page 1</string>
     <string name="page_2">Page 2</string>
-    <string name="load_tweets">Charger les tweets</string>
+    <string name="load_tweets">Charger les posts</string>
     <string name="download_portal">Télécharger l\'appli \"Theme Portal\"</string>
-    <string name="download_portal_summary">Cette application vous permet d\'être au courant des dernières nouvelles et de trouver les meilleurs thèmes pour Talon et EvolveSMS au même endroit !</string>
+    <string name="download_portal_summary">Cette application vous permet d\'être au courant des dernières nouvelles et de trouver les meilleurs thèmes pour Focus_for_Mastodon et EvolveSMS au même endroit !</string>
     <string name="compose_dm_hint">"Tapez votre message privé ici... "</string>
     <string name="pwiccer">Pwiccer</string>
     <string name="select_shortening_service">Sélectionnez un service de raccourcissement ou modifier le tweet.</string>
     <string name="use_shortening_service">Utiliser le service de raccourcissement</string>
-    <string name="use_shortening_service_summary">Vous serez en mesure de sélectionner l\'une ou l\'autre, TwitLonger ou Pwiccer (un service qui convertit les longs tweets par une image).</string>
+    <string name="use_shortening_service_summary">Vous serez en mesure de sélectionner l\'une ou l\'autre, TwitLonger ou Pwiccer (un service qui convertit les longs posts par une image).</string>
     <string name="view_retweeters">Retweeters</string>
     <string name="view_favoriters">J\'aime</string>
-    <string name="no_tweets">Pas de Tweets</string>
+    <string name="no_tweets">Pas de Posts</string>
     <string name="only_7_days">Seulement disponible 7 jours</string>
     <string name="saved_searches">Recherches enregistrées</string>
     <string name="error_check_network">Erreur de chargement du profil. Vérifiez votre connexion réseau.</string>
     <string name="error_loading_timeline">Impossible de charger votre timeline ! Essayez de vérifier votre connexion de données.</string>
     <string name="currently_in_beta">Actuellement en BETA</string>
-    <string name="changed_screenname">Vous avez changé votre nom d\'utilisateur avant que Talon puisse enregistrer votre ID ! Vous devez vous déconnecter et revenir afin d\'apporter les modifications appropriées!</string>
+    <string name="changed_screenname">Vous avez changé votre nom d\'utilisateur avant que Focus_for_Mastodon puisse enregistrer votre ID ! Vous devez vous déconnecter et revenir afin d\'apporter les modifications appropriées!</string>
     <string name="menu_save_search">Enregistrer la recherche</string>
     <string name="saving_search">Enregistre la recherche</string>
     <string name="delete_saved_search">Supprimer la recherche enregistrée</string>
@@ -516,12 +494,12 @@ Défaut (quand c\'est désactivé) \n
     <string name="start">Commencer !</string>
     <string name="version_two">Version 2.0.0</string>
     <string name="cleaning_databases">Nettoyage de  la base de données ...</string>
-    <string name="setup_version_two">Beaucoup de choses ont changé récemment avec Talon, afin de m\'assurer que je peux vous donner la meilleure expérience, nous devons faire un nettoyage avant d’utiliser l\'application ! \n\nCela pourrait prendre un certain temps selon le nombre de tweets que vous stockez!</string>
+    <string name="setup_version_two">Beaucoup de choses ont changé récemment avec Focus_for_Mastodon, afin de m\'assurer que je peux vous donner la meilleure expérience, nous devons faire un nettoyage avant d’utiliser l\'application ! \n\nCela pourrait prendre un certain temps selon le nombre de posts que vous stockez!</string>
     <string name="setting_up_timeline">Configuration de la Timeline...</string>
     <string name="setting_up_mentions">Configuration des mentions</string>
     <string name="setting_up_dms">Configuration des messages privés</string>
     <string name="setting_up_lists">Configurations de vos listes</string>
-    <string name="version_two_setup_done">Configuration de Talon 2.0 terminée, enjoy !</string>
+    <string name="version_two_setup_done">Configuration de Focus_for_Mastodon 2.0 terminée, enjoy !</string>
     <string name="no_content">Rien à afficher !</string>
     <string name="discover">Découvrir</string>
     <string name="suggested_users">Utilisateurs suggérés</string>
@@ -531,7 +509,7 @@ Défaut (quand c\'est désactivé) \n
     <string name="country_region">Pays/Région</string>
     <string name="city">Ville</string>
     <string name="menu_apply_picture_filter">Appliquer un filtre image</string>
-    <string name="menu_remove_rt">Supprimer le Retweet</string>
+    <string name="menu_remove_rt">Supprimer le Boost</string>
     <string name="input_expression">Mise en sourdine de l\'expression</string>
     <string name="mute_expression">Mettre en sourdine une expression</string>
     <string name="view_muted_expressions">Supprimer les expressions mises en sourdines</string>
@@ -544,8 +522,8 @@ Défaut (quand c\'est désactivé) \n
     <string name="display_options">Options d\'affichage</string>
     <string name="third_party_services">Services Tiers</string>
     <string name="open_keyboard">Ouverture automatique du clavier</string>
-    <string name="open_keyboard_summary">Ouvrir automatiquement le clavier pour répondre dans la fenêtre d\'un tweet</string>
-    <string name="no_retweets">Pas de retweets</string>
+    <string name="open_keyboard_summary">Ouvrir automatiquement le clavier pour répondre dans la fenêtre d\'un post</string>
+    <string name="no_retweets">Pas de boosts</string>
     <string name="profile">Profil</string>
     <string name="favorites">Favoris</string>
     <string name="load_pictures">Charger des photos</string>
@@ -559,26 +537,26 @@ Défaut (quand c\'est désactivé) \n
     <string name="ui_settings">Paramètres de l\'interface utilisateur</string>
     <string name="show_pos_dashclock">Montrer la position de la timeline</string>
     <string name="show_pos_dashclock_summary">Afficher la position actuelle sur le home de la timeline au lieu du nombre de nouveaux tweets.</string>
-    <string name="talon_large_widget">Talon - Timeline</string>
-    <string name="unread_bar_widget">Talon - Non Lus</string>
+    <string name="Focus_for_Mastodon_large_widget">Focus for Mastodon - Timeline</string>
+    <string name="unread_bar_widget">Focus for Mastodon - Non Lus</string>
     <string name="show_muted_mentions">Montrer les mentions mise en sourdines</string>
     <string name="force_overflow_summary">Toujours afficher les 3 points du menu dans l\'Action Bar. Utilisé pour les téléphones avec bouton physique.</string>
     <string name="menu_view_drafts">Afficher les brouillons</string>
-    <string name="menu_schedule_tweet">Programmer un tweet</string>
+    <string name="menu_schedule_tweet">Programmer un post</string>
     <string name="menu_save_draft">Enregistrer le brouillon</string>
     <string name="saved_draft">Brouillon enregistré</string>
     <string name="delete_draft">Supprimer le brouillon</string>
     <string name="no_tweet">Pas de tweet !</string>
     <string name="menu_attach_picture">Joindre une image</string>
     <string name="twitpic_disclaimer">TwitPic Disclaimer</string>
-    <string name="twitpic_disclaimer_summary">L\'API Twitter ne supporte pas l\'ajout d\'une image dans un message privé. Pour cette raison, Talon va uploader l\'image via TwitPic et partager le lien vers cette image avec le destinataire.\n\n
+    <string name="twitpic_disclaimer_summary">L\'API Mastodon ne supporte pas l\'ajout d\'une image dans un message privé. Pour cette raison, Focus_for_Mastodon va uploader l\'image via TwitPic et partager le lien vers cette image avec le destinataire.\n\n
 Cette image sera disponible dans votre profil TwitPic.</string>
     <string name="dont_show_again">Ne plus afficher</string>
     <string name="error_attaching_image">Erreur d\'ajout de l\'image</string>
     <string name="sending_tweet">Envoi du tweet...</string>
     <string name="attached_images">Joint</string>
-    <string name="twitpic_disclaimer_multi_summary">L\'API Twitter ne prends pas en charge l\'ajout de plusieurs images dans un tweet.\n\n
-A la place, Talon permettra le téléchargement des photos via TwitPic.</string>
+    <string name="twitpic_disclaimer_multi_summary">L\'API Mastodon ne prends pas en charge l\'ajout de plusieurs images dans un tweet.\n\n
+A la place, Focus_for_Mastodon permettra le téléchargement des photos via TwitPic.</string>
     <string name="loading_webpage">Chargement de la page</string>
     <string name="plain_text_browser">Texte brut pour le navigateur</string>
     <string name="plain_text_summary">Supprimer les images et le formatage à partir du navigateur web et montrer uniquement le texte sur la page web.</string>
@@ -593,34 +571,34 @@ A la place, Talon permettra le téléchargement des photos via TwitPic.</string>
     <string name="web_page">Page Web</string>
     <string name="conversation_page">Page Conversation</string>
     <string name="viewer_page">Visualiser un Tweet</string>
-    <string name="viewer_page_summary">Page par défaut à ouvrir lors de la lecture d\'un tweet</string>
+    <string name="viewer_page_summary">Page par défaut à ouvrir lors de la lecture d\'un post</string>
     <string name="browser_settings">Paramètres du Navigateur</string>
     <string name="memory_manage">Gestion de la mémoire</string>
     <string name="protected_account">L\'utilisateur a un compte protégé !</string>
-    <string name="mute_rt">Mettre en sourdine les Retweets</string>
-    <string name="unmute_rt">Un-mute les Retweets</string>
+    <string name="mute_rt">Mettre en sourdine les Boosts</string>
+    <string name="unmute_rt">Un-mute les Boosts</string>
     <string name="muted_rts">Retweeteurs mis en sourdine</string>
-    <string name="twitter">Twitter</string>
+    <string name="twitter">Mastodon</string>
     <string name="user">Utilisateurs</string>
     <string name="menu_translate">Traduire le Tweet</string>
     <string name="add_new_tweet">Ajouter un nouveau Tweet</string>
     <string name="scheduled_tweets">Tweets Planifiés</string>
     <string name="done_label">Terminé</string>
     <string name="tweet_queued">Tweet mis en attente !</string>
-    <string name="only_queue_no_pic">Nous pouvons uniquement mettre en attente les tweets qui ne contiennent pas d\'image!</string>
-    <string name="menu_view_queued">Voir les tweets en attente</string>
+    <string name="only_queue_no_pic">Nous pouvons uniquement mettre en attente les posts qui ne contiennent pas d\'image!</string>
+    <string name="menu_view_queued">Voir les posts en attente</string>
     <string name="keep_queued_tweet">Garder le tweet en attente ?</string>
     <string name="date_picker">Choisir la date</string>
     <string name="time_picker">Choisir l\'heure</string>
     <string name="complete_form">S\'il vous plaît remplissez le formulaire!</string>
     <string name="no_drafts">Aucun brouillon trouvé</string>
-    <string name="no_queued">Pas de tweets en attente</string>
+    <string name="no_queued">Pas de posts en attente</string>
     <string name="menu_show_top_tweets">Filtrer \"Top Tweets\"</string>
     <string name="delete_all">Supprimer tous les brouillons</string>
     <string name="muted_clients">Clients mis en sourdine</string>
     <string name="mute_client">Mettre en sourdine le client</string>
     <string name="no_clients">Pas de clients</string>
-    <string name="muted_clients_summary">Vous permet de couper tous les tweets en provenance d\'une application spécifique.</string>
+    <string name="muted_clients_summary">Vous permet de couper tous les posts en provenance d\'une application spécifique.</string>
     <string name="client_not_found">Client non trouvé!</string>
     <string name="favorite">Favoris</string>
     <string name="menu_share_image">Partager l\'image</string>
@@ -629,7 +607,6 @@ A la place, Talon permettra le téléchargement des photos via TwitPic.</string>
     <string name="both_accounts">Deux comptes à la fois</string>
     <string name="attach_gif">GIF animé</string>
     <string name="attach_video">Sélectionner une vidéo</string>
-    <string name="roboto_l">Android \"L\" Roboto</string>
     <string name="second_account">2ème Compte</string>
     <string name="rate_limit_reached">Taux limite atteint</string>
     <string name="info">Info</string>
@@ -640,7 +617,6 @@ A la place, Talon permettra le téléchargement des photos via TwitPic.</string>
     <!-- %s will be replaced with a number for the currently selected page -->
     <string name="page">Page %s</string>
     <string name="set_as_default">Appliquer par défaut</string>
-    <string name="main_pages_and_drawer">Pages principales et Drawer</string>
     <string name="drawer_elements">Éléments visibles dans le drawer</string>
     <string name="second_acc_mentions">Mentions du second compte</string>
     <string name="using_second_account">Utiliser le compte de %s</string>
@@ -660,17 +636,17 @@ A la place, Talon permettra le téléchargement des photos via TwitPic.</string>
     <string name="new_activity">Nouvelle activité!</string>
     <string name="use_interaction_drawer">Activer les interactions dans le drawer</string>
     <string name="no_activity_yet">Pas encore d\'activité!</string>
-    <string name="no_activity_yet_desc">Cette section sera remplie lorsque vous interagirez plus sur Twitter.\n\n
-Les mentions, les nouveaux abonnés et les retweets / j\'aimes sur votre statuts commenceront à apparaître ici.</string>
-    <string name="retweet">Retweeter</string>
+    <string name="no_activity_yet_desc">Cette section sera remplie lorsque vous interagirez plus sur Mastodon.\n\n
+Les mentions, les nouveaux abonnés et les boosts / j\'aimes sur votre statuts commenceront à apparaître ici.</string>
+    <string name="retweet">Boosted by</string>
     <string name="new_follower_lower">nouvel abonné</string>
     <string name="new_followers_lower">nouveaux abonnés</string>
     <string name="item">article</string>
     <string name="items">articles</string>
     <string name="and">et</string>
     <string name="no_favorites">Pas de J\'aime</string>
-    <string name="quote_style_talon">\"\@lukeklinker &#8230;\"</string>
-    <string name="quote_style_rt">RT \@lukeklinker &#8230;</string>
+    <string name="quote_style_Focus_for_Mastodon">\"\@allentown521 &#8230;\"</string>
+    <string name="quote_style_rt">RT \@allentown521 &#8230;</string>
     <string name="show_pull_notification">Afficher la notification persistante</string>
     <string name="show_pull_notification_summary">Si vous désactivez cette notification, le système Android pourrait arrêter le flux à tout moment. Soyez extrêmement prudent.</string>
     <string name="learn_more">En savoir d\'avantage</string>
@@ -678,7 +654,7 @@ Les mentions, les nouveaux abonnés et les retweets / j\'aimes sur votre statuts
     <string name="open_profile">Ouvrir le profil</string>
     <string name="search_user">Chercher un utilisateur</string>
     <string name="mute_user">Mettre en sourdine l\'utilisateur</string>
-    <string name="mute_retweets">Mettre en sourdine les retweets</string>
+    <string name="mute_retweets">Mettre en sourdine les boosts</string>
     <string name="share_profile">Partager le profil</string>
     <string name="open_to_external_browser">Ouvrir dans le navigateur externe</string>
     <string name="open_to_internal_browser">Ouvrir dans le navigateur interne</string>
@@ -701,4 +677,5 @@ Les mentions, les nouveaux abonnés et les retweets / j\'aimes sur votre statuts
     <string name="three_mb_limit">Taille limite de 5MB</string>
     <string name="quoted_you">vous a cité</string>
     <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="poll_allow_multiple_choices">Choix multiples</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">टेलोन</string>
-    <string name="app_name_full">प्लेसहोल्डर्स</string>
     <string name="extension_description">प्लेसहोल्डर्स</string>
     <!-- Action Bar -->
     <!-- Times -->
@@ -30,7 +28,7 @@
     <!-- Actionbar Done-Discard -->
     <!-- Other -->
     <!-- User Profile Activity -->
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <!-- Tweet Activity -->
     <!-- User Lists -->
     <!-- Tutorial Activity -->

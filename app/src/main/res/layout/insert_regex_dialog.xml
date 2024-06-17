@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -20,7 +20,9 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.klinker.android.twitter_l.views.widgets.text.FontPrefEditText
+    <allen.town.focus.twitter.views.widgets.text.FontPrefEditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/input_expression"
@@ -30,23 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
-            android:contentDescription="@string/cancel"
-            android:text="@string/cancel"
-            android:id="@+id/cancel"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
-            android:contentDescription="@string/update"
-            android:text="@string/mute"
-            android:id="@+id/ok"/>
 
     </LinearLayout>
 

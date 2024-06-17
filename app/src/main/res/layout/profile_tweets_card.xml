@@ -11,12 +11,6 @@
         android:layout_height="wrap_content"
         android:background="?tweet_activity_background" >
 
-        <View
-            android:alpha=".30"
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:background="@drawable/top_shadow" />
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -38,7 +32,7 @@
                     android:text="@string/profile_timeline"
                     android:textAllCaps="true"
                     android:textSize="14sp"
-                    android:textColor="?textColor"/>
+                    android:textColor="?android:textColorPrimary"/>
 
                 <Button
                     android:id="@+id/show_all_tweets_button"
@@ -46,12 +40,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/show_all_tweets"
                     android:textSize="11sp"
-                    android:background="?android:selectableItemBackground"
+                    android:background="?rectSelector"
                     android:fontFamily="sans-serif-light"
                     android:textAllCaps="true"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:textColor="?textColor"/>
+                    android:textColor="?android:textColorPrimary"/>
 
             </LinearLayout>
 
@@ -84,12 +78,6 @@
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:alpha=".15"
-            android:background="@drawable/bottom_shadow"
-            android:layout_gravity="bottom" />
 
     </FrameLayout>
 

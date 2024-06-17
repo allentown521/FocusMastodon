@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,9 +15,6 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">"Placeholders: 
-"</string>
-    <string name="app_name_full">جگہ دار:</string>
     <string name="extension_description">جگہ دار:</string>
     <!-- Action Bar -->
     <string name="menu_refresh">جگہ دار:</string>
@@ -79,7 +76,6 @@
     <string name="new_direct_message">براہ راست پیغام</string>
     <string name="new_direct_messages">"نئے براہ راست پیغامات "</string>
     <string name="no_new_direct_messages">کوئی نئے براہ راست پیغامات نہیں</string>
-    <string name="tap_to_setup">سیٹ اپ کیلئے کلک کریں</string>
     <string name="new_account">نیا اکاؤنٹ</string>
     <string name="from_top">اوپر سے</string>
     <string name="jump_to_top">سب سے پہلے</string>
@@ -139,10 +135,10 @@
     <string name="url_char_length">یو آر ایل: 100 حرف کی حد میں</string>
     <string name="location_char_length">مقام: 30 حرف کی حد میں</string>
     <string name="description_char_length">تفصیل: 160 حرف کی حد</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">ریٹویٹس</string>
     <string name="retweet_lower">ریٹویٹ</string>
-    <string name="retweeter">\@ کے ذریعے ریٹویٹ شدہ</string>
+    <string name="retweeter">" کے ذریعے ریٹویٹ شدہ"</string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">ویب لنک کھولیں</string>
     <string name="menu_copy_text">ٹویٹ ٹیکسٹ کاپی کریں</string>
@@ -160,8 +156,6 @@
     <!-- User Lists -->
     <!-- Tutorial Activity -->
     <!-- Settings Menu -->
-    <string name="pebble_notifications">پبل کی اطلاعات</string>
-    <string name="pebble_notifications_summary">پیبل اسمارٹ گھڑی کے لئے استعمال کیا جاتا ہے۔  اگر آپ کو اپنی گھڑی پر دو اطلاعات مل رہی ہیں تو اسے غیر فعال کریں۔</string>
     <string name="advanced_settings">اعلی درجے کی ترتیبات</string>
     <string name="app_feel_category">ایپ کو محسوس کرنے کے اختیارات</string>
     <string name="advance_windowed">ایڈوانس ونڈو</string>
@@ -212,7 +206,7 @@
     <string name="features_explained">خصوصیات کی وضاحت</string>
     <string name="youtube">یوٹیوب ویڈیو</string>
     <string name="google_plus">گوگل + کمیونٹی</string>
-    <string name="talon_settings">ٹلون کی ترتیبات</string>
+    <string name="Focus_for_Mastodon_settings">ٹلون کی ترتیبات</string>
     <string name="feature_requests">نمایاں درخواستیں</string>
     <!-- Emoji Keyboard -->
     <string name="recent">حالیہ</string>
@@ -239,7 +233,6 @@
     <string name="dismiss_all">سب ختم کرو</string>
     <string name="handle_and_name">ہینڈل اور نام دکھائیں</string>
     <string name="notification_types">اطلاع کی اقسام</string>
-    <string name="with_talon_pull">\"ٹیلون پل\" کے ذریعے حاصل کیا گیا۔</string>
     <string name="favorited_tweet">آپ کی ٹویٹس کو پسند کیا</string>
     <string name="new_followers">نئے پیروکار</string>
     <string name="discussion">بحث</string>
@@ -263,7 +256,6 @@
     <string name="clean_now">ڈیٹا بیس کو ابھی صاف کریں</string>
     <string name="clean_now_summary">آپ کے ڈیٹا بیس میں نقول تراشنا اور ہٹانا بھی شامل ہے۔</string>
     <string name="timeline_notifications">ٹائم لائن اطلاعات</string>
-    <string name="interactions_notifications">تعامل کی اطلاعات</string>
     <string name="timelines_settings">ٹائم لائنز کی ترتیبات</string>
     <string name="tweet_look_options">ٹائم لائن کے اختیارات</string>
     <string name="limiting_options">محدود اختیارات</string>
@@ -407,6 +399,4 @@
     <string name="get_help">مدد حاصل کریں</string>
     <string name="google_plus_summary">پلس بیٹا کمیونٹی</string>
     <string name="email">ای میل</string>
-    <string name="email_summary">"luke@klinkerapps.com
-"</string>
 </resources>

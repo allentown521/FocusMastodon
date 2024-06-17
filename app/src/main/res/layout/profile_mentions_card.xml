@@ -35,7 +35,7 @@
                 android:text="@string/mentions"
                 android:textAllCaps="true"
                 android:textSize="14sp"
-                android:textColor="?textColor"/>
+                android:textColor="?android:textColorPrimary"/>
 
             <Button
                 android:id="@+id/show_all_mentions_button"
@@ -43,12 +43,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/show_all"
                 android:textSize="12sp"
-                android:background="?android:selectableItemBackground"
+                android:background="?roundSelector"
                 android:fontFamily="sans-serif-light"
                 android:textAllCaps="true"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:textColor="?textColor"/>
+                android:textColor="?android:textColorPrimary"/>
 
         </LinearLayout>
 

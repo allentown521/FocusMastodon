@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+        android:layout="@layout/list_item_view_switch"
         android:key="data_saver_mode"
         android:title="@string/data_saver_mode"
         android:summary="@string/data_saver_mode_summary"
         android:defaultValue="false" />
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/data_saving_settings">
 
-        <Preference
-            android:summary="@string/background_refreshes_disclaimer" />
-
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
             android:key="sync_mobile_data"
             android:title="@string/sync_mobile_data"
             android:defaultValue="true" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
             android:key="high_quality_images"
             android:title="@string/high_quality_images"
             android:summary="@string/high_quality_images_summary"
             android:defaultValue="true" />
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="pre_cache"
             android:title="@string/pre_cache_images"
             android:summary="@string/precache_text"
             android:defaultValue="1"
             android:entries="@array/pre_cache"
-            android:entryValues="@array/talon_pull_inserted" />
+            android:entryValues="@array/pull_inserted" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/autoplay_title">
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="autoplay"
             android:title="@string/autoplay_title"
             android:summary="@string/autoplay_summary"
@@ -45,12 +49,13 @@
             android:entries="@array/autoplay"
             android:entryValues="@array/autoplay_inserted" />
 
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
             android:key="autoplay_gifs"
             android:title="@string/auto_play_gifs"
             android:summary="@string/auto_play_gifs_summary"
             android:defaultValue="false" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
 </PreferenceScreen>

@@ -1,5 +1,5 @@
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@
                                        android:layout_width="match_parent"
                                        android:layout_height="match_parent"
                                        tools:context=".MainActivity"
-                                       android:background="?windowBackground">
+                                       android:background="?colorSurface">
 
         <!--
         This question strip will display the currently visible page question, as well as the page

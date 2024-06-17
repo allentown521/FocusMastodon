@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@
                 android:layout_height="30dp"
                 android:src="@mipmap/ic_launcher"
                 android:layout_gravity="center_vertical"
-                android:background="?android:selectableItemBackground"
+                android:background="?android:selectableItemBackgroundBorderless"
                 />
 
             <TextView
@@ -65,9 +65,9 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@+id/replyButton"
                 android:layout_marginRight="7dp"
-                android:background="?android:selectableItemBackground"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:paddingBottom="3dp"
-                android:src="@drawable/drawer_sync_dark"
+                android:src="@drawable/ic_round_sync_24"
                 android:scaleX=".85"
                 android:scaleY=".85"
                 android:layout_alignParentTop="true"/>
@@ -79,9 +79,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
-                android:background="?android:selectableItemBackground"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:paddingBottom="3dp"
-                android:src="@drawable/ic_action_new_dark"
+                android:src="@drawable/ic_send_fab"
                 android:scaleX=".85"
                 android:scaleY=".85"
                 android:layout_alignParentTop="true"/>

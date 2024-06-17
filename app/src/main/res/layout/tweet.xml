@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -23,24 +23,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
         android:id="@+id/muffled_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="?rectSelector"
         android:paddingLeft="16dp"
         android:paddingTop="12dp"
         android:paddingRight="16dp"
         android:paddingBottom="12dp"
         android:singleLine="true"
-        android:textColor="?textColor"
+        android:textColor="?android:textColorPrimary"
         android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="?rectSelector"
         android:layoutDirection="ltr"
         android:orientation="vertical"
         android:paddingBottom="16dp">
@@ -86,22 +86,22 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
-                <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="top"
                     android:singleLine="true"
-                    android:textColor="?textColor"
+                    android:textColor="?android:textColorPrimary"
                     android:textStyle="bold" />
 
-                <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                     android:id="@+id/screenname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="top"
                     android:singleLine="true"
-                    android:textColor="?dateColor" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
             </LinearLayout>
 
@@ -114,18 +114,18 @@
                 android:paddingLeft="6dp"
                 android:paddingRight="6dp">
 
-                <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="?dateColor" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <ImageView
                     android:id="@+id/is_a_conversation"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:scaleType="fitCenter"
-                    android:src="?directMessageItem"
+                    android:src="@drawable/ic_round_message_24"
                     android:visibility="gone" />
 
             </LinearLayout>
@@ -134,7 +134,7 @@
 
         <!-- Holds the name, screen name, and time-->
 
-        <com.klinker.android.twitter_l.views.widgets.text.MaterialTextView
+        <allen.town.focus.twitter.views.widgets.text.MaterialTextView
             android:id="@+id/tweet"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -143,9 +143,9 @@
             android:layoutDirection="locale"
             android:paddingTop="12dp"
             android:tag="tweet"
-            android:textColor="?textColor" />
+            android:textColor="?android:textColorPrimary" />
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:id="@+id/reply_to"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -153,10 +153,10 @@
             android:layout_marginRight="16dp"
             android:gravity="end"
             android:paddingTop="3dp"
-            android:textColor="?dateColor"
+            android:textColor="?android:attr/textColorPrimary"
             android:visibility="gone" />
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:id="@+id/retweeter"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
             android:layout_marginRight="16dp"
             android:gravity="end"
             android:paddingTop="3dp"
-            android:textColor="?dateColor"
+            android:textColor="?android:attr/textColorPrimary"
             android:visibility="gone" />
 
         <FrameLayout
@@ -216,21 +216,29 @@
             android:maxWidth="300dp"
             android:visibility="gone"
             card_view:cardBackgroundColor="?embeddedTweetBackground"
-            card_view:cardCornerRadius="3dp"
-            card_view:cardElevation="2dp" />
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="0dp" />
 
-        <com.klinker.android.twitter_l.views.WebPreviewCard xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <allen.town.focus.twitter.views.WebPreviewCard xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/web_preview_card"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginLeft="12dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="6dp"
             android:visibility="gone"
             card_view:cardBackgroundColor="?embeddedTweetBackground"
-            card_view:cardCornerRadius="3dp"
-            card_view:cardElevation="2dp" />
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="0dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/poll_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -240,8 +248,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp"
         android:paddingTop="4dp"
+        android:paddingEnd="12dp"
         android:paddingBottom="4dp"
         android:visibility="gone" />
 

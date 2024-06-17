@@ -17,18 +17,18 @@
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
+apply from: "../common.gradle"
 android {
-
+    defaultConfig {
+        namespace "allen.town.focus.twitter.shared"
+    }
 }
 
 dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
 
-    api 'com.google.firebase:firebase-crashlytics:17.0.1'
-    api "com.google.firebase:firebase-analytics:${versions.firebaseAnalytics}"
+    playApi 'com.google.firebase:firebase-crashlytics:18.2.12'
+    playApi "com.google.firebase:firebase-analytics:${versions.firebaseAnalytics}"
 
-    api "com.google.android.gms:play-services-location:${versions.playServices}"
-    api "com.google.android.gms:play-services-wearable:${versions.playServices}"
     api "androidx.legacy:legacy-support-v13:${versions.androidX}"
 }

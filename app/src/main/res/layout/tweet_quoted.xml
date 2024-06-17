@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -45,15 +45,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                     android:id="@+id/name"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
                     android:textSize="14dp"
-                    android:textColor="?textColor" />
+                    android:textColor="?android:textColorPrimary" />
 
-                <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                     android:id="@+id/screenname"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -61,30 +61,30 @@
                     android:textSize="14dp"
                     android:layout_marginLeft="6dp"
                     android:layout_marginStart="6dp"
-                    android:textColor="?dateColor" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <LinearLayout
                     android:id="@+id/quick_actions"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:background="?android:selectableItemBackground"
+                    android:background="?rectSelector"
                     android:paddingRight="6dp"
                     android:paddingLeft="6dp"
                     android:gravity="right|center_vertical">
 
-                    <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                         android:id="@+id/time"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:textSize="12dp"
-                        android:textColor="?dateColor" />
+                        android:textColor="?android:attr/textColorPrimary" />
 
                     <ImageView
                         android:id="@+id/is_a_conversation"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="?directMessageItem"
+                        android:src="@drawable/ic_round_message_24"
                         android:scaleType="fitCenter"
                         android:visibility="gone"
                         android:layout_marginStart="8dp"/>
@@ -105,7 +105,7 @@
                     android:layout_weight="1"
                     android:layout_height="match_parent">
 
-                    <com.klinker.android.twitter_l.views.widgets.text.MaterialTextView
+                    <allen.town.focus.twitter.views.widgets.text.MaterialTextView
                         android:id="@+id/tweet"
                         android:tag="tweet"
                         android:layout_height="80dp"
@@ -114,27 +114,34 @@
                         android:ellipsize="end"
                         android:gravity="center_vertical"
                         android:maxLines="4"
-                        android:textColor="?textColor"
+                        android:textColor="?android:textColorPrimary"
                         android:layoutDirection="locale" />
 
-                    <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                         android:id="@+id/reply_to"
                         android:layout_height="wrap_content"
                         android:layout_width="fill_parent"
                         android:layout_marginTop="3dp"
                         android:gravity="start"
                         android:textSize="14dp"
-                        android:textColor="?dateColor"
+                        android:textColor="?android:attr/textColorPrimary"
                         android:visibility="gone" />
 
-                    <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                         android:id="@+id/retweeter"
                         android:layout_height="wrap_content"
                         android:layout_width="fill_parent"
                         android:layout_marginTop="3dp"
                         android:gravity="start"
                         android:textSize="14dp"
-                        android:textColor="?dateColor"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:visibility="gone" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/poll_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:scrollbars="none"
                         android:visibility="gone" />
 
                 </LinearLayout>

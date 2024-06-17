@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
     android:layout_width="280dp"
     android:layout_height="fill_parent"
     android:layout_gravity="start"
-    android:background="?drawerBackground"
+    android:background="?colorSurface"
     android:clipToPadding="false"
     android:fitsSystemWindows="true">
 
@@ -34,24 +34,24 @@
         android:paddingTop="10dp"
         style="@android:style/Holo.ButtonBar">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
-            android:textColor="?textColor"
+            android:background="?rectSelector"
+            android:textColor="?android:textColorPrimary"
             android:textSize="16sp"
             android:text="@string/settings_links"
             android:id="@+id/settingsLinks"
             android:padding="10dp"
             android:gravity="center"/>
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?android:selectableItemBackground"
-            android:textColor="?textColor"
+            android:background="?rectSelector"
+            android:textColor="?android:textColorPrimary"
             android:textSize="16sp"
             android:text="@string/other_links"
             android:id="@+id/otherLinks"
@@ -123,7 +123,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:selectableItemBackground"
+        android:background="?rectSelector"
         android:contentDescription="Created By"
         android:id="@+id/created_by_layout"
         android:paddingBottom="10dp"
@@ -131,19 +131,19 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:textColor="?textColor"
+            android:textColor="?android:textColorPrimary"
             android:text="@string/created_by"
             android:id="@+id/created_by"  />
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15dp"
-            android:textColor="?textColor"
+            android:textColor="?android:textColorPrimary"
             android:id="@+id/version_number" />
 
     </LinearLayout>

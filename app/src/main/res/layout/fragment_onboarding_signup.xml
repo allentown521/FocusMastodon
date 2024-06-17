@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.grishka.appkit.views.FragmentRootLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ScrollView
+		android:id="@+id/scroller"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:clipChildren="false">
+
+			<allen.town.focus.twitter.views.FloatingHintEditTextLayout
+				android:id="@+id/display_name_wrap"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minHeight="80dp"
+				android:paddingTop="4dp"
+				app:labelTextColor="@color/m3_outlined_text_field_label"
+				android:foreground="@drawable/bg_m3_outlined_text_field">
+
+				<EditText
+					android:id="@+id/display_name"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginStart="56dp"
+					android:layout_marginEnd="24dp"
+					android:layout_marginTop="8dp"
+					android:padding="16dp"
+					android:background="@null"
+					android:elevation="0dp"
+					android:inputType="textPersonName|textCapWords"
+					android:autofillHints="name"
+					android:singleLine="true"
+					android:hint="@string/display_name"/>
+
+				<View
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_gravity="start|top"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="12dp"
+					android:backgroundTint="?colorOnSurfaceVariant"
+					android:background="@drawable/ic_outline_person_24"/>
+
+			</allen.town.focus.twitter.views.FloatingHintEditTextLayout>
+
+			<allen.town.focus.twitter.views.FloatingHintEditTextLayout
+				android:id="@+id/username_wrap"
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:paddingTop="4dp"
+				app:labelTextColor="@color/m3_outlined_text_field_label"
+				android:foreground="@drawable/bg_m3_outlined_text_field">
+
+				<EditText
+					android:id="@+id/username"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginStart="56dp"
+					android:layout_marginEnd="24dp"
+					android:layout_marginTop="8dp"
+					android:padding="16dp"
+					android:background="@null"
+					android:elevation="0dp"
+					android:inputType="textFilter|textNoSuggestions"
+					android:autofillHints="username"
+					android:singleLine="true"
+					android:layoutDirection="ltr"
+					android:hint="@string/username"/>
+
+				<TextView
+					android:id="@+id/domain"
+					android:layout_width="wrap_content"
+					android:layout_height="56dp"
+					android:layout_gravity="right|top"
+					android:layout_marginRight="20dp"
+					android:layout_marginTop="8dp"
+					android:paddingLeft="8dp"
+					android:paddingRight="16dp"
+					android:textAppearance="@style/m3_body_large"
+					android:gravity="center_vertical"
+					tools:text="\@mastodon.social"/>
+
+			</allen.town.focus.twitter.views.FloatingHintEditTextLayout>
+
+			<allen.town.focus.twitter.views.FloatingHintEditTextLayout
+				android:id="@+id/email_wrap"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="4dp"
+				android:paddingBottom="12dp"
+				app:labelTextColor="@color/m3_outlined_text_field_label"
+				android:foreground="@drawable/bg_m3_outlined_text_field">
+
+				<EditText
+					android:id="@+id/email"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginStart="56dp"
+					android:layout_marginEnd="24dp"
+					android:layout_marginTop="8dp"
+					android:padding="16dp"
+					android:background="@null"
+					android:elevation="0dp"
+					android:inputType="textEmailAddress"
+					android:autofillHints="emailAddress"
+					android:singleLine="true"
+					android:hint="@string/email"/>
+
+				<View
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_gravity="start|top"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="12dp"
+					android:backgroundTint="?colorOnSurfaceVariant"
+					android:background="@drawable/ic_outline_email_24"/>
+
+			</allen.town.focus.twitter.views.FloatingHintEditTextLayout>
+
+			<allen.town.focus.twitter.views.FloatingHintEditTextLayout
+				android:id="@+id/password_wrap"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="4dp"
+				android:paddingBottom="12dp"
+				app:labelTextColor="@color/m3_outlined_text_field_label"
+				android:foreground="@drawable/bg_m3_outlined_text_field">
+
+				<EditText
+					android:id="@+id/password"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginStart="56dp"
+					android:layout_marginEnd="24dp"
+					android:layout_marginTop="8dp"
+					android:padding="16dp"
+					android:background="@null"
+					android:elevation="0dp"
+					android:inputType="textPassword"
+					android:autofillHints="password"
+					android:singleLine="true"
+					android:fontFamily="sans-serif"
+					android:hint="@string/password"/>
+
+				<View
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_gravity="start|top"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="12dp"
+					android:backgroundTint="?colorOnSurfaceVariant"
+					android:background="@drawable/ic_outline_password_24"/>
+
+			</allen.town.focus.twitter.views.FloatingHintEditTextLayout>
+
+			<allen.town.focus.twitter.views.FloatingHintEditTextLayout
+				android:id="@+id/password_confirm_wrap"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="4dp"
+				android:paddingBottom="12dp"
+				app:labelTextColor="@color/m3_outlined_text_field_label"
+				android:foreground="@drawable/bg_m3_outlined_text_field">
+
+				<EditText
+					android:id="@+id/password_confirm"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:layout_marginStart="56dp"
+					android:layout_marginEnd="24dp"
+					android:layout_marginTop="8dp"
+					android:padding="16dp"
+					android:background="@null"
+					android:elevation="0dp"
+					android:inputType="textPassword"
+					android:autofillHints="password"
+					android:singleLine="true"
+					android:fontFamily="sans-serif"
+					android:hint="@string/confirm_password"/>
+
+			</allen.town.focus.twitter.views.FloatingHintEditTextLayout>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="56dp"
+				android:layout_marginEnd="20dp"
+				android:layout_marginTop="-8dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:textAppearance="@style/m3_body_small"
+				android:textColor="?colorOnSurfaceVariant"
+				android:text="@string/password_note"/>
+
+
+			<allen.town.focus.twitter.views.FloatingHintEditTextLayout
+				android:id="@+id/reason_wrap"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="4dp"
+				android:paddingBottom="12dp"
+				app:labelTextColor="@color/m3_outlined_text_field_label"
+				android:foreground="@drawable/bg_m3_outlined_text_field">
+
+				<EditText
+					android:id="@+id/reason"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="56dp"
+					android:layout_marginEnd="24dp"
+					android:layout_marginTop="8dp"
+					android:layout_marginBottom="12dp"
+					android:padding="16dp"
+					android:background="@null"
+					android:elevation="0dp"
+					android:inputType="textCapSentences|textMultiLine"
+					android:hint="@string/signup_reason"/>
+
+			</allen.town.focus.twitter.views.FloatingHintEditTextLayout>
+
+			<TextView
+				android:id="@+id/reason_explain"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="56dp"
+				android:layout_marginEnd="20dp"
+				android:layout_marginTop="-8dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:textAppearance="@style/m3_body_small"
+				android:textColor="?colorOnSurfaceVariant"
+				android:text="@string/signup_reason_note"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:id="@+id/button_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="?colorSurface">
+
+		<allen.town.focus_common.views.AccentMaterialButton
+			android:id="@+id/btn_next"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginBottom="16dp"
+			android:minWidth="145dp"
+			style="@style/Widget.Material3.Button"
+			android:text="@string/next" />
+
+	</LinearLayout>
+
+</me.grishka.appkit.views.FragmentRootLinearLayout>

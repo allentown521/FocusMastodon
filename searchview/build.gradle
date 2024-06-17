@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
-
+apply from: "../common.gradle"
 android {
+
+    defaultConfig {
+        namespace "com.lapism.searchview"
+    }
 
     sourceSets {
         main.res.srcDirs 'res', 'res-public'
@@ -11,4 +15,5 @@ android {
 dependencies {
     implementation "androidx.cardview:cardview:${versions.androidX}"
     implementation "androidx.recyclerview:recyclerview:${versions.androidX}"
+    implementation "com.google.android.material:material:$googleMaterialVersion"
 }

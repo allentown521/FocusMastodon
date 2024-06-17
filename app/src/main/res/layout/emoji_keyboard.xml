@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,65 +16,71 @@
   limitations under the License.
   -->
 
-<com.klinker.android.twitter_l.views.widgets.EmojiKeyboard
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:visibility="gone"
-              android:id="@+id/emojiKeyboard"
-              android:layout_gravity="bottom">
+<allen.town.focus.twitter.views.widgets.EmojiKeyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emojiKeyboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="gone">
 
     <LinearLayout
-            android:layout_height="48dp"
-            android:layout_width="match_parent">
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
 
         <com.astuetz.PagerSlidingTabStrip
-                android:id="@+id/emojiTabs"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="48dp"
-                android:textColor="?dateColor"/>
+            android:id="@+id/emojiTabs"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:textColor="?android:attr/textColorPrimary" />
 
-        <LinearLayout android:orientation="vertical"
-                      android:layout_width="wrap_content"
-                      android:layout_height="48dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:orientation="vertical">
 
-            <LinearLayout android:orientation="horizontal"
-                          android:layout_width="wrap_content"
-                          android:layout_height="46dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:orientation="horizontal">
 
-                <View android:layout_width="1dp"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="10dp"
-                      android:layout_marginTop="12dp"
-                      android:background="?emojiDivider"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="?emojiDivider" />
 
                 <!--suppress AndroidLintContentDescription -->
-                <ImageButton android:id="@+id/delete"
-                             android:layout_width="wrap_content"
-                             android:layout_height="48dp"
-                             android:scaleType="fitCenter"
-                             android:src="?emojiBackspace"
-                             android:contentDescription="Backspace"
-                             android:background="?android:selectableItemBackground"
-                             android:paddingLeft="15dp"
-                             android:paddingRight="15dp"/>
+                <ImageButton
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="?roundSelector"
+                    android:contentDescription="Backspace"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_round_backspace_24"
+                    android:visibility="gone" />
 
             </LinearLayout>
 
-            <View android:layout_width="match_parent"
-                  android:layout_height="2dp"
-                  android:background="?emojiDivider"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?emojiDivider" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <androidx.viewpager.widget.ViewPager
-            android:id="@+id/emojiKeyboardPager"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/emojiKeyboardRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
 
-    </androidx.viewpager.widget.ViewPager>
-</com.klinker.android.twitter_l.views.widgets.EmojiKeyboard>
+    </androidx.recyclerview.widget.RecyclerView>
+</allen.town.focus.twitter.views.widgets.EmojiKeyboard>

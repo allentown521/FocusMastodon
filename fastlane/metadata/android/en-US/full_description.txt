@@ -1,0 +1,13 @@
+★★★★★Main Features★★★★★
+
+- Clean and beautiful Material Design UI
+- Extremely Customizable – themes, font related customizations – basically everything you’d ever wish to be able to customize, it’s all there for you. Tailor your perfect experience
+- Background sync
+- Powerful mute filters
+- Night mode
+- Support for 2 accounts，Each account’s syncability can be controlled by you in the Settings of the app
+- Fully customizable tabs
+- Use our awesome readability-style browser for the best web experience of any app
+- Play Mastodon videos and GIFs without leaving your timeline
+- Native YouTube, Mastodon GIF, and Mastodon video playback
+- Widgets to view the home timeline, mentions, and unread counts

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -19,11 +19,13 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:key="memory_management"
         android:title="@string/memory_management" >
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="timeline_size"
             android:title="@string/timeline_size"
             android:summary="@string/timeline_size_summary"
@@ -31,7 +33,8 @@
             android:entries="@array/timeline_size"
             android:entryValues="@array/timeline_size" />
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="mentions_size"
             android:title="@string/mentions_size"
             android:summary="@string/mentions_size_summary"
@@ -39,7 +42,8 @@
             android:entries="@array/mentions_size"
             android:entryValues="@array/mentions_size" />
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="dm_size"
             android:title="@string/dm_size"
             android:summary="@string/dm_size_summary"
@@ -47,7 +51,8 @@
             android:entries="@array/mentions_size"
             android:entryValues="@array/mentions_size" />
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="list_size"
             android:title="@string/list_size"
             android:summary="@string/list_size_summary"
@@ -55,7 +60,8 @@
             android:entries="@array/lists_size"
             android:entryValues="@array/lists_size" />
 
-        <ListPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
             android:key="user_tweets_size"
             android:title="@string/user_tweets_size"
             android:summary="@string/list_size_summary"
@@ -63,39 +69,46 @@
             android:entries="@array/lists_size"
             android:entryValues="@array/lists_size" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/clear_memory">
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="trim_now"
             android:title="@string/clean_now"
             android:summary="@string/clean_now_summary" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="delete_cache"
             android:title="@string/delete_cache" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="clear_searches"
             android:title="@string/clear_searches" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:key="backup_category"
         android:title="@string/backup_category" >
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="backup"
             android:title="@string/backup_settings" />
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="restore"
             android:title="@string/restore_settings"
             android:summary="@string/restore_settings_summary" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
 </PreferenceScreen>

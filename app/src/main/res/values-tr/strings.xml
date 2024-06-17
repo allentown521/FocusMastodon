@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,7 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Talon</string>
-    <string name="app_name_full">Talon for Twitter</string>
+
     <string name="extension_description">Güncellendiklerinde, okunmamış tweetler, bahsedenler ve direkt mesaj sayıları gösterilir.</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Zaman Akışını Yenile</string>
@@ -69,8 +68,8 @@
     <string name="search">Ara</string>
     <string name="lists">Listeler</string>
     <string name="search_hint">Ara...</string>
-    <string name="new_tweet">yeni tweet</string>
-    <string name="new_tweets">yeni tweet</string>
+    <string name="new_tweet">yeni post</string>
+    <string name="new_tweets">yeni post</string>
     <string name="no_new_tweets">Yeni yok</string>
     <string name="new_mention">yeni bahseden</string>
     <string name="new_mentions">yeni bahseden</string>
@@ -78,7 +77,6 @@
     <string name="new_direct_message">direkt yeni mesaj</string>
     <string name="new_direct_messages">yeni direkt mesaj</string>
     <string name="no_new_direct_messages">Yeni direkt mesaj yok</string>
-    <string name="tap_to_setup">Kurulum için dokunun</string>
     <string name="new_account">Yeni Hesap</string>
     <string name="from_top">üstten</string>
     <string name="jump_to_top">Başa dön</string>
@@ -98,8 +96,6 @@
     <string name="popup">Açılır Pencere</string>
     <string name="fav_user_tweets">yeni favori kullanıcı tweetleri</string>
     <string name="sec_acc">İkinci Hesap</string>
-    <string name="talon_pull">Talon Pull</string>
-    <string name="talon_pull_summary">UYARI: Bu seçeneği etkinleştirmek Android Lollipop\'da kayda değer bir pil tüketimine neden olabilir.</string>
     <string name="listening">Dinleniyor</string>
     <string name="listening_for_mentions">Etkileşimler için dinleniyor</string>
     <string name="refreshing">Yenileniyor</string>
@@ -112,31 +108,28 @@
     <string name="favorited">dumumunuzu beğendi</string>
     <string name="quoted">durumunu alıntıladı</string>
     <string name="followed">seni takip ediyor</string>
-    <string name="new_retweets">retweet</string>
+    <string name="new_retweets">boost</string>
     <string name="new_favorites">beğeni</string>
     <string name="new_quotes">alıntılar</string>
-    <string name="new_tweets_upper">Yeni Tweet</string>
     <!-- Login Screen -->
-    <string name="setup_talon">Talon Ayarları</string>
-    <string name="login_to_twitter">Twitter\'a Giriş Yap</string>
-    <string name="first_welcome">Talon\'a Hoşgeldiniz!</string>
+    <string name="setup_Focus_for_Mastodon">Focus for Mastodon Ayarları</string>
+    <string name="login_to_twitter">Mastodon\'a Giriş Yap</string>
+    <string name="first_welcome">Focus for Mastodon\'a Hoşgeldiniz!</string>
     <string name="second_welcome">Veriler Eşitleniyor</string>
     <string name="third_welcome">İşte bu - tadını çıkarın!</string>
     <string name="back_to_timeline">Beni zaman akışıma götür!</string>
     <string name="initial_sync">Şimdi Eşitle!</string>
-    <string name="first_info">Başlamadan önce, hadi oturum açın ve sizi Twitter ile eşitleyelim.</string>
-    <string name="second_info">Harika! Şimdi Twitter\'a bağlanıyor ve hesabınızı eşitliyoruz.</string>
-    <string name="third_info">Talon\'u beğeneceğinizi umuyoruz!</string>
+    <string name="first_info">Başlamadan önce, hadi oturum açın ve sizi Mastodon ile eşitleyelim.</string>
+    <string name="second_info">Harika! Şimdi Mastodon\'a bağlanıyor ve hesabınızı eşitliyoruz.</string>
+    <string name="third_info">Focus for Mastodon\'u beğeneceğinizi umuyoruz!</string>
     <string name="syncing_timeline">Zaman akışı eşitleniyor...</string>
     <string name="syncing_mentions">Bahsedenler eşitleniyor...</string>
     <string name="syncing_direct_messages">Direkt mesajlar eşitleniyor...</string>
     <string name="syncing_user">Arkadaşlar eşitleniyor...</string>
     <string name="done_syncing">Eşitleme tamamlandı.</string>
-    <string name="login_error">Bir şeyler yanlış gitti ... Lütfen yeniden deneyin!\n\nBu, aygıtınızın tarih ve saati \"otomatik\" olarak ayarlanmadığı için kaynaklanmış olarabilir.</string>
     <string name="no_network">İnternet bağlantınızı kontrol edin</string>
     <string name="no_thanks">Şimdi değil</string>
     <string name="follow_me">Takip Et!</string>
-    <string name="follow_me_description">Destek hesaplarını otomatik-takip etmek için onay düğmesini kullanın veya bu adımı atlamak için geri butonuna basın.</string>
     <!-- Compose New Activity -->
     <string name="compose_activity">Yeni Tweet</string>
     <string name="compose_tweet_hint">Tweet yazın...</string>
@@ -205,10 +198,10 @@
     <string name="url_char_length">URL: en fazla 100 karakter</string>
     <string name="location_char_length">Konum: en fazla 30 karakter</string>
     <string name="description_char_length">Tanım: en fazla 160 karakter</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <string name="retweets_lower">retweetler</string>
-    <string name="retweet_lower">retweet</string>
-    <string name="retweeter">Retweet eden: @</string>
+    <string name="retweet_lower">boost</string>
+    <string name="retweeter">Retweet eden: </string>
     <!-- Tweet Activity -->
     <string name="menu_open_web">Web Bağlantısını Aç</string>
     <string name="menu_copy_text">Tweet Metnini Kopyala</string>
@@ -267,9 +260,6 @@
     <string name="make_a_theme">Tema Yap</string>
     <string name="layout">Düzen</string>
     <string name="themeing_complete">Tema Uygulandı</string>
-    <string name="themeing_complete_summary">\"Talon\" şimdi kapanacak.\n\n
-Ana sayfa akışını tam zamanında almak ve görmek için son uygulamalar listesinden \"Talon\" u kaldırmak zorundasınız.\n\n
-Profil resimlerini (yani daire veya kare) gerektiği şekilde görünmüyorsa, widget\'i kaldırmak ve yeniden eklemek zorunda kalacaksınız.</string>
     <string name="layout_summary">Bunu değiştirmek uygulamanın önbelleğini temizler.</string>
     <string name="text_size">Yazı Boyutu</string>
     <string name="night_mode">Gece Modu</string>
@@ -277,7 +267,7 @@ Profil resimlerini (yani daire veya kare) gerektiği şekilde görünmüyorsa, w
     <string name="night_mode_day">Bitiş Zamanını Seç</string>
     <string name="night_mode_theme">Gece Modu için Tema Seçin</string>
     <string name="device_font">Cihazın Yazı Tipini Kullan</string>
-    <string name="device_font_summary">Çoğu cihazda varsayılan yazı tipi normal \"Roboto\" iken, Talon\'un varsayılanı \"Roboto Light\"tır.</string>
+    <string name="device_font_summary">Çoğu cihazda varsayılan yazı tipi normal \"Roboto\" iken, Focus_for_Mastodon\'un varsayılanı \"Roboto Light\"tır.</string>
     <string name="ui_extras">Kullanıcı Arayüzü Ekstraları</string>
     <string name="ui_extras_summary">Şunları içerir:\n
 - Eylem Çubuğunu gizlemek\n
@@ -285,8 +275,8 @@ Profil resimlerini (yani daire veya kare) gerektiği şekilde görünmüyorsa, w
 - Şeffaf Sistem Çubuğu (Yanlızca Andriod 4.4)\n\n
 Bu ayarın etkinleştirilmesi kaydırma performansını etkileyecektir.</string>
     <string name="inline_pics">Satır-içi Resimleri Göster</string>
-    <string name="use_screen_name">Twitter Kullanıcı Adını Göster</string>
-    <string name="use_screen_name_summary">Zaman akışında kişinin ismi yerine Twitter kullanıcı adını göster.</string>
+    <string name="use_screen_name">Mastodon Kullanıcı Adını Göster</string>
+    <string name="use_screen_name_summary">Zaman akışında kişinin ismi yerine Mastodon kullanıcı adını göster.</string>
     <string name="timestamp">24-Saat Damgası</string>
     <string name="enable_emojis">iOS emojilerini kullan</string>
     <string name="to_market">Play Store\'a Git</string>
@@ -313,18 +303,13 @@ NOT: Deneme süresi dolsa bile Emojiler bu uygulamada kullanılmaya devam edilec
     <string name="timeline_sync_interval">Ana Sayfa Akışı Yenileme Hızı</string>
     <string name="mentions_sync_interval">Bahsedenler Yenileme Hızı</string>
     <string name="dm_sync_interval">Direkt Mesajlar Yenileme Hızı</string>
-    <string name="sync_friends">Arkadaş Verilerini Eşitle</string>
-    <string name="sync_friends_summary2">Arkadaş verilerinizi yeniden eşitleyin ve tweet oluştururken kullanın.</string>
-    <string name="sync_friends_summary">Arkadaş listesini el ile eşitle.\n\nBu, oturum açıldığında sizin adınıza yapılır ve Talon\'da birini takip ettiğinizde otomatik olarak eklenir, ancak bu seçenek en son takip etmeye başladıklarınızı kapsar.\n\nBu veri, bir tweet oluştururken kişi araması yaptığınızda kullanılır.</string>
     <string name="sync_success">Senkronizasyon Başarılı</string>
     <string name="sync_failed">Senkronizasyon Başarısız</string>
     <string name="push_notification_options">"''Push Bildirimi'' Seçenekleri"</string>
-    <string name="push_notifications">Talon Pull</string>
+    <string name="push_notifications">Focus for Mastodon Pull</string>
     <string name="push_notifications_summary">Bu bir izleyici başlatır ve yeni bir etkileşim aldığınızda (bahsedenler, direkt mesajlar, beğeniler, retweetler veya yeni takip edenler) bildirimleri gönderir.</string>
-    <string name="push_notification_warning">Talon Pull hakkında daha fazla bilgi için buraya tıklayın.</string>
+    <string name="push_notification_warning">Focus for Mastodon Pull hakkında daha fazla bilgi için buraya tıklayın.</string>
     <string name="notification_settings">Bildirimler</string>
-    <string name="pebble_notifications">Pebble Bildirimleri</string>
-    <string name="pebble_notifications_summary">Pebble marka akıllı saat ile kullanılır. Eğer saatinize iki bildirim alıyorsanız bunu kapatın.</string>
     <string name="advanced_settings">Gelişmiş Ayarlar</string>
     <string name="app_feel_category">Uygulama Dokunma Seçenekleri</string>
     <string name="advance_windowed">Gelişmiş Pencere</string>
@@ -374,12 +359,12 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="xda_thread">XDA Forumu</string>
     <string name="email_me">Bana E-Posta Gönder</string>
     <string name="tweet_me">Bana Tweet Gönder</string>
-    <string name="follow_talon">Talon\'u Twitter\'da Takip Et</string>
+    <string name="follow_Focus_for_Mastodon">Focus for Mastodon\'u Mastodon\'da Takip Et</string>
     <string name="credits">Katkı Sağlayanlar</string>
     <string name="disclaimer">Sorumluluk Reddi</string>
     <string name="other_apps">Diğer Uygulamalarımız</string>
     <string name="whats_new">Neler Yeni</string>
-    <string name="talon_settings">Talon Ayarları</string>
+    <string name="Focus_for_Mastodon_settings">Ayarları</string>
     <string name="feature_requests">Özellik İstekleri</string>
     <!-- Emoji Keyboard -->
     <string name="recent">Son Aramalar</string>
@@ -406,13 +391,12 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="dismiss_all">Tümünü Reddet</string>
     <string name="handle_and_name">Kullanıcı Adı ve İsim Göster</string>
     <string name="notification_types">Bildirim Türleri</string>
-    <string name="with_talon_pull">\"Talon Pull\" aracığılıyla erişin.</string>
     <string name="favorited_tweet">Beğenilen tweetleriniz</string>
     <string name="new_followers">Yeni takipçi</string>
     <string name="discussion">Tartışma</string>
     <string name="no_replies">Yanıt Yok</string>
     <string name="rt_style_quotes">\"RT\" Stili Alıntıları Tercih Et</string>
-    <string name="rt_style_quotes_summary">Alıntı için Talon\'un alıntı yöntemi yerine, eski yöntem \"RT @kullanıcıadı: ...\" kullanır.\n\nHerhangi bir tweet üzerinden veya Eylem Çubuğundan ulaşılabilir.</string>
+    <string name="rt_style_quotes_summary">Alıntı için Focus_for_Mastodon\'un alıntı yöntemi yerine, eski yöntem \"RT @kullanıcıadı: ...\" kullanır.\n\nHerhangi bir tweet üzerinden veya Eylem Çubuğundan ulaşılabilir.</string>
     <string name="absolute_date">Mutlak Tarih ​​Kullan</string>
     <string name="clear_searches">Aramaları Temizle</string>
     <string name="compose_with_search">Arama ile Tweet Oluştur</string>
@@ -429,19 +413,14 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="to_replies">Yanıtlarken, tweette bulunan herhangi bir hashtagi yanıta ekle.</string>
     <string name="clean_now">Veritabanlarını Hemen Temizle</string>
     <string name="clean_now_summary">Veritabanlarınızın kırpılmasını ve çift kayıtların kaldırılmasını içerir.</string>
-    <string name="fill_gaps">Zaman Akışı Boşluklarını Doldur</string>
-    <string name="fill_gaps_summary">Canlı akış etkinleştirildiğinde, kötü bir bağlantı nedeniyle oluşan boşlukları doldurun.</string>
     <string name="filling_timeline">Zaman akışı boşlukları dolduruluyor</string>
     <string name="follows_you">Seni takip ediyor</string>
     <string name="not_following_you">Seni takip etmiyor</string>
     <string name="device">Cihaz Yazı Tipi</string>
-    <string name="roboto_light">Roboto Light (Varsayılan)</string>
-    <string name="roboto_condensed">Roboto Condensed</string>
     <string name="font_type">Yazı Tipi</string>
     <string name="our_website">Web Sayfası</string>
     <string name="alert_types">İkaz Yöntemleri</string>
     <string name="timeline_notifications">Zaman Akışı Bildirimleri</string>
-    <string name="interactions_notifications">Etkileşim Bildirimleri</string>
     <string name="timelines_settings">Zaman Akışı Ayarları</string>
     <string name="tweet_look_options">Zaman Akışı Seçenekleri</string>
     <string name="limiting_options">Sınırlandırma Seçenekleri</string>
@@ -454,7 +433,7 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="edit">Düzenle</string>
     <string name="split_tweet">Bölümüş Tweet</string>
     <string name="use_twitpic">TwitPic kullan</string>
-    <string name="twitpic_summary">Twitter\'ın resim yükleme servisi yerine, tweetlere görüntüleri eklemek için TwitPic kullanın.</string>
+    <string name="twitpic_summary">Mastodon\'ın resim yükleme servisi yerine, tweetlere görüntüleri eklemek için TwitPic kullanın.</string>
     <string name="verified">Onaylanmış</string>
     <string name="use_tweetmarker">TweetMarker</string>
     <string name="tweetmarker_summary">Konumunuzu, cihazlar arasında eşitlemek için kullanılır</string>
@@ -484,7 +463,7 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="page_2">Sayfa 2</string>
     <string name="load_tweets">Tweetleri Yükle</string>
     <string name="download_portal">Tema Portal Uygulamasını İndir</string>
-    <string name="download_portal_summary">En son haberleri ile güncel alır, Talon ve EvolveSMS için tüm yeni temaları bulmak için Klinker Apps \"Portal\" uygulaması!</string>
+    <string name="download_portal_summary">En son haberleri ile güncel alır, Focus_for_Mastodon ve EvolveSMS için tüm yeni temaları bulmak için Klinker Apps \"Portal\" uygulaması!</string>
     <string name="compose_dm_hint">Mesaj yazın...</string>
     <string name="pwiccer">Pwiccer</string>
     <string name="select_shortening_service">Bir kısaltma servisi seçin veya tweeti düzenlemek için geri\'ye basın.</string>
@@ -498,7 +477,7 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="error_check_network">Profil yükleme hatası. Ağ bağlantısını kontrol edin.</string>
     <string name="error_loading_timeline">Zaman akışı yüklenemedi! Veri bağlantınızı kontrol etmeyi deneyin.</string>
     <string name="currently_in_beta">Şuan için BETA.</string>
-    <string name="changed_screenname">Talon Kimliğinizi kaydetmeden kullanıcı adınızı değiştirdiniz! Doğru değişiklikleri yapabilmek için hemen oturumu kapatarak tekrar giriş yapmalısınız!</string>
+    <string name="changed_screenname">Focus for Mastodon Kimliğinizi kaydetmeden kullanıcı adınızı değiştirdiniz! Doğru değişiklikleri yapabilmek için hemen oturumu kapatarak tekrar giriş yapmalısınız!</string>
     <string name="menu_save_search">Aramayı Kaydet</string>
     <string name="saving_search">Arama Kaydediliyor</string>
     <string name="delete_saved_search">Kayıtlı Aramayı Sil</string>
@@ -507,12 +486,12 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="start">Başla!</string>
     <string name="version_two">Versiyon 2.0.0</string>
     <string name="cleaning_databases">Veritabanları temizleniyor...</string>
-    <string name="setup_version_two">Son zamanlarda Talonda birçok değişiklikler oldu, ve ben size en iyi deneyimi sunduğumdan emin olmak için, uygulamaya giriş yapmadan önce bir kaç temizlik yapmak zorundayız!\n\nBu depolanan tweetlerin sayısına bağlı olarak biraz zaman alabilir!</string>
+    <string name="setup_version_two">Son zamanlarda Focus_for_Mastodonda birçok değişiklikler oldu, ve ben size en iyi deneyimi sunduğumdan emin olmak için, uygulamaya giriş yapmadan önce bir kaç temizlik yapmak zorundayız!\n\nBu depolanan tweetlerin sayısına bağlı olarak biraz zaman alabilir!</string>
     <string name="setting_up_timeline">Ana sayfa akışı ayarlanıyor...</string>
     <string name="setting_up_mentions">Bahsedenler ayarlanıyor...</string>
     <string name="setting_up_dms">Direkt mesajlar ayarlanıyor...</string>
     <string name="setting_up_lists">Listeler ayarlanıyor...</string>
-    <string name="version_two_setup_done">Talon 2.0 nin kurulumu bitti, tadını çıkarın! :)</string>
+    <string name="version_two_setup_done">Focus for Mastodon 2.0 nin kurulumu bitti, tadını çıkarın! :)</string>
     <string name="no_content">Gösterilecek hiçbir şey yok!</string>
     <string name="discover">Keşfet</string>
     <string name="suggested_users">Önerilen Kullanıcılar</string>
@@ -550,8 +529,8 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="ui_settings">Kullanıcı Arayüzü Ayarları</string>
     <string name="show_pos_dashclock">Zaman Akışı Pozisyonunu Göster</string>
     <string name="show_pos_dashclock_summary">Ana sayfa akışı üzerinde yeni tweet sayısı yerine mevcut konumu göster.</string>
-    <string name="talon_large_widget">Talon - Ana Sayfa Akışı</string>
-    <string name="unread_bar_widget">Talon - Okunmamış Çubuğu</string>
+    <string name="Focus_for_Mastodon_large_widget">Focus for Mastodon - Ana Sayfa Akışı</string>
+    <string name="unread_bar_widget">Focus for Mastodon - Okunmamış Çubuğu</string>
     <string name="show_muted_mentions">Susturulan Bahsedenleri Göster</string>
     <string name="force_overflow_summary">Her zaman Eylem Çubuğun\'da 3-Nokta \"Taşma Menüsü\" göstermektedir. Telefonlar için Fiziksel menü butonu ile kullanılır.</string>
     <string name="menu_view_drafts">Taslakları Göster</string>
@@ -562,14 +541,14 @@ Varsayılan (devre dışı bırakıldığında):\n
     <string name="no_tweet">Tweet Yok!</string>
     <string name="menu_attach_picture">Resim Ekle</string>
     <string name="twitpic_disclaimer">TwitPic Yasal Uyarı</string>
-    <string name="twitpic_disclaimer_summary">Twitter\'ın API\'leri doğrudan mesajlara bir görüntü ekleyemeyi desteklemez. Bu nedenle, Talon TwitPic ile resmi yüklemek ve alıcı ile bu resim linkini paylaşmak.\n\n
+    <string name="twitpic_disclaimer_summary">Mastodon\'ın API\'leri doğrudan mesajlara bir görüntü ekleyemeyi desteklemez. Bu nedenle, Focus_for_Mastodon TwitPic ile resmi yüklemek ve alıcı ile bu resim linkini paylaşmak.\n\n
 Bu resim senin TwitPic profilinde görüntülemek için kullanılabilir olacaktır.</string>
     <string name="dont_show_again">Tekrar gösterme</string>
     <string name="error_attaching_image">Resim ekleme hatası!</string>
     <string name="sending_tweet">Tweet Gönderiliyor...</string>
     <string name="attached_images">Eklendi</string>
-    <string name="twitpic_disclaimer_multi_summary">Twitter\'ın API\'leri bir tweete daha fazla görüntü ekleme desteği yoktur.\n\n
-Talon yerine TwitPic kullanarak resim yükleme.</string>
+    <string name="twitpic_disclaimer_multi_summary">Mastodon\'ın API\'leri bir tweete daha fazla görüntü ekleme desteği yoktur.\n\n
+Focus_for_Mastodon yerine TwitPic kullanarak resim yükleme.</string>
     <string name="loading_webpage">Web Sayfası Yükleniyor...</string>
     <string name="plain_text_browser">Düz Metin Tarayıcı</string>
     <string name="plain_text_summary">Web tarayıcı görüntüleri ve biçimlendirmeyi kaldırır ve sadece bir web sayfasındaki metinleri gösterir.</string>
@@ -591,7 +570,7 @@ Talon yerine TwitPic kullanarak resim yükleme.</string>
     <string name="mute_rt">Retweetleri Sustur</string>
     <string name="unmute_rt">Retweetlerin Sesini Aç</string>
     <string name="muted_rts">Susturulan Retwetler</string>
-    <string name="twitter">Twitter</string>
+    <string name="twitter">Mastodon</string>
     <string name="user">Kullanıcılar</string>
     <string name="menu_translate">Tweeti Tecüme Et</string>
     <string name="add_new_tweet">Yeni Tweet Ekle</string>
@@ -620,21 +599,18 @@ Talon yerine TwitPic kullanarak resim yükleme.</string>
     <string name="both_accounts">İki hesap</string>
     <string name="attach_gif">Cihazdan Animasyonlu GIF</string>
     <string name="attach_video">Video Seç</string>
-    <string name="roboto_l">Android Lollipop Roboto</string>
     <string name="second_account">2nci Hesap</string>
-    <string name="second_account_login_info">Twitter bazı giriş bilgilerinizi sisteminde tuttuğundan dolayı, sonraki ekran yeni hesabınızla oturum açmanıza hemen izin vermeyebilir. Eğer oturum açmayı atlayıp doğrulama sayfasına giderse, uygulamanın ikinci hesabınıza girmesine izin vermek için sayfanın sağ üstündeki \"Sign Out\" butonuna dokunun.</string>
+    <string name="second_account_login_info">Mastodon bazı giriş bilgilerinizi sisteminde tuttuğundan dolayı, sonraki ekran yeni hesabınızla oturum açmanıza hemen izin vermeyebilir. Eğer oturum açmayı atlayıp doğrulama sayfasına giderse, uygulamanın ikinci hesabınıza girmesine izin vermek için sayfanın sağ üstündeki \"Sign Out\" butonuna dokunun.</string>
     <string name="fetch_tweetmarker">TweetMarker\'ı getir</string>
     <string name="rate_limit_reached">Akış Sınırına Ulaşıldı</string>
     <string name="info">Bilgi</string>
     <string name="help_and_feedback">Yardım/Geri Bildirim</string>
-    <string name="faq_first">Selam. Talon\'u geliştirmeme yardım etmenize çok sevindim!\n\nSorularınız veya geri bildirimleriniz için bana e-posta veya tweet göndermekten çekinmeyin. Fakat bundan önce sıkça sorulan sorular bölümü kontrol ettiniz mi? \n\nTalon\'un uygulama içinde çok geniş bir yardım/destek konuları bulunur. Benden cevap beklemeden önce bunlara göz atabilirsiniz! (Yine de en kısa sürede cevap vermeye çalışırım) \n\nTalon\'u beğendiğinizi umuyorum!</string>
     <string name="contact">İletişim Kur</string>
     <string name="follow">Takip Et</string>
     <string name="menu_number_of_pages">Extra Sayfa Sayısı</string>
     <!-- %s will be replaced with a number for the currently selected page -->
     <string name="page">Sayfa %s</string>
     <string name="set_as_default">Varsayılan Olarak Belirle</string>
-    <string name="main_pages_and_drawer">Kaydırılabilir Sayfalar ve Çekmece</string>
     <string name="drawer_elements">Görünen Çekmece Öğeleri</string>
     <string name="drawer_elements_summary">Uygulamanın ana gezinti çekmecesinde öğeleri göster veya gizle.</string>
     <string name="second_acc_mentions">İkinci Hesap Bahsedenleri</string>
@@ -646,8 +622,6 @@ Talon yerine TwitPic kullanarak resim yükleme.</string>
     <string name="sending_direct_message">Direkt Mesaj Gönderiliyor</string>
     <string name="fav_rt_multiple_accounts">Çapraz Hesap İşlemleri</string>
     <string name="fav_rt_multiple_accounts_summary">Bu, çoklu hesabınız varsa, beğeni veya retweet için kullanacağınız hesabı seçmenize imkan verir.</string>
-    <string name="talon_pull_notifications">Talon Pull (Anlık) Bildirimler</string>
-    <string name="talon_pull_turned_on">Bu özelliği kullanmak için, Arkaplan Yenileme Seçenekleri\'nden \"Talon Pull\" etkinleştirilmelidir.</string>
     <string name="activity_sync_interval">Etkinlik Yenileme Hızı</string>
     <string name="mentioned_you">sizden bahsetti</string>
     <string name="favorites_lower">Beğeni</string>
@@ -656,11 +630,11 @@ Talon yerine TwitPic kullanarak resim yükleme.</string>
     <string name="followed_you">Seni takip ediyor</string>
     <string name="new_activity">Yeni Etkinlik</string>
     <string name="use_interaction_drawer">Etkileşim Çekmecesini Etkinleştir</string>
-    <string name="use_interaction_drawer_summary">Bu çekmecenin içeriği Talon Pull (Akış) tarafından doldurulur.</string>
+    <string name="use_interaction_drawer_summary">Bu çekmecenin içeriği Focus_for_Mastodon Pull (Akış) tarafından doldurulur.</string>
     <string name="no_activity_yet">Henüz etkinlik yok!</string>
-    <string name="no_activity_yet_desc">Bu bölüm, siz Twitter\'da etkileşimde bulundukça doldurulur.\n\n
+    <string name="no_activity_yet_desc">Bu bölüm, siz Mastodon\'da etkileşimde bulundukça doldurulur.\n\n
 Retweetler, beğeniler, bahsedenler ve yeni takipçiler burada görünmeye başlar.</string>
-    <string name="retweet">Retweet</string>
+    <string name="retweet">Boost</string>
     <string name="new_follower_lower">yeni takipçi</string>
     <string name="new_followers_lower">yeni takipçi</string>
     <string name="item">öğe</string>
@@ -668,13 +642,13 @@ Retweetler, beğeniler, bahsedenler ve yeni takipçiler burada görünmeye başl
     <string name="and">ve</string>
     <string name="no_favorites">Hiçbir beğeni yok</string>
     <string name="quote_style">Alıntı Stili</string>
-    <string name="quote_style_twitter">Twitter Stili (Tweet\'e bağlantı)</string>
-    <string name="quote_style_talon">\"\@lukeklinker &#8230;\"</string>
-    <string name="quote_style_rt">RT \@lukeklinker &#8230;</string>
+    <string name="quote_style_twitter">Mastodon Stili (Tweet\'e bağlantı)</string>
+    <string name="quote_style_Focus_for_Mastodon">\"\@allentown521 &#8230;\"</string>
+    <string name="quote_style_rt">RT \@allentown521 &#8230;</string>
     <string name="show_pull_notification">Kalıcı Bildirim Göster</string>
     <string name="show_pull_notification_summary">Bu bildirimi kapatırsanız, Android Sistemi herhangi bir zamanda akışı dururabilir. Çok dikkatli kullanın.</string>
     <string name="custom_tab_title">Chrome Özel Sekmeleri</string>
-    <string name="custom_tab_message">Sisteminiz, Talon\'a, otomatik olarak Chrome Özel Sekmeleri\'ni başlatma izni vermiyor. Bu özelliği kullanmak için Chrome\'u varsayılan sistem tarayıcınız olarak belirlemelisiniz, aksi halde, Talon kendi orjinal dahili tarayıcısını kullanır.\n\nLütfen Chrome\'un varsayılan tarayıcınız olması için \"Evet\"i veya varsayılan olarak kullanmamak için \"Hayır\"ı seçin.</string>
+    <string name="custom_tab_message">Sisteminiz, Focus_for_Mastodon\'a, otomatik olarak Chrome Özel Sekmeleri\'ni başlatma izni vermiyor. Bu özelliği kullanmak için Chrome\'u varsayılan sistem tarayıcınız olarak belirlemelisiniz, aksi halde, Focus_for_Mastodon kendi orjinal dahili tarayıcısını kullanır.\n\nLütfen Chrome\'un varsayılan tarayıcınız olması için \"Evet\"i veya varsayılan olarak kullanmamak için \"Hayır\"ı seçin.</string>
     <string name="learn_more">Daha Fazla Bilgi</string>
     <!-- Long click methods -->
     <string name="open_profile">Profili Aç</string>
@@ -702,7 +676,7 @@ Retweetler, beğeniler, bahsedenler ve yeni takipçiler burada görünmeye başl
     <string name="add_to_tweet_gif">Tweet\'e Ekle</string>
     <string name="find_a_gif">GIF Bul</string>
     <string name="three_mb_limit">5MB Boyut Sınırı</string>
-    <string name="three_mb_message">Twitter, yalnızca 5MB\'dan az olan GIF\'lerin yayınlanmasına izin verir. Talon, Giphy\'den bu kısıtlamalara uyan en yüksek kalitede GIF sürümünü alacaktır.\n\nGördüğünüz sonuçların tümü bu sınırın içine sığan bir sürüme sahip. Kalitesi 5MB sınırına sığacak şekilde düşürülmüş olan GIF\'ler gösterilmiyor.</string>
+    <string name="three_mb_message">Mastodon, yalnızca 5MB\'dan az olan GIF\'lerin yayınlanmasına izin verir. Focus_for_Mastodon, Giphy\'den bu kısıtlamalara uyan en yüksek kalitede GIF sürümünü alacaktır.\n\nGördüğünüz sonuçların tümü bu sınırın içine sığan bir sürüme sahip. Kalitesi 5MB sınırına sığacak şekilde düşürülmüş olan GIF\'ler gösterilmiyor.</string>
     <string name="quoted_you">seni alıntıladı</string>
     <string name="privacy_policy">Gizlilik Politikası</string>
     <string name="saved_tweets">Kaydedilmiş Tweetler</string>
@@ -746,7 +720,6 @@ Retweetler, beğeniler, bahsedenler ve yeni takipçiler burada görünmeye başl
     <string name="get_help">Yardım Alın</string>
     <string name="google_plus_summary">Pulse Beta Topluluğu</string>
     <string name="email">E-posta</string>
-    <string name="email_summary">luke@klinkerapps.com</string>
     <string name="twitter_summary">\@KlinkerApps</string>
     <string name="support">Destek</string>
     <string name="theme_settings_category">Görünüm</string>

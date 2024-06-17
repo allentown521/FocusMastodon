@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -70,7 +70,7 @@
                     android:singleLine="true"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:textColor="@color/dark_text"
+                    android:textColor="@color/md_grey_200"
                     android:paddingRight="12dp" />
 
                 <TextView
@@ -79,7 +79,7 @@
                     android:singleLine="true"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
-                    android:textColor="@color/dark_text"
+                    android:textColor="@color/md_grey_200"
                     android:gravity="end"
                     android:paddingRight="12dp"
                     android:fontFamily="sans-serif-light"/>
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:textColor="@color/dark_text"
+                android:textColor="@color/md_grey_200"
                 android:paddingRight="12dp"
                 android:fontFamily="sans-serif-light"
                 android:paddingBottom="12dp"/>
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right|end"
-                android:textColor="@color/dark_text"
+                android:textColor="@color/md_grey_200"
                 android:fontFamily="sans-serif-light"
                 android:layout_marginBottom="12dp"
                 android:layout_marginLeft="12dp"

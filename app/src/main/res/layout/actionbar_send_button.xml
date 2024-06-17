@@ -27,7 +27,7 @@
               android:layout_height="wrap_content"
               android:layout_gravity="center"
               android:paddingRight="20dp"
-              android:drawableLeft="@drawable/ic_send_dark"
+              android:drawableLeft="@drawable/ic_round_send_24"
               android:drawablePadding="8dp"
               android:gravity="center_vertical"
               android:singleLine="true"

@@ -2,7 +2,7 @@
 
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -18,10 +18,11 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="?windowBackground">
+    android:background="?colorSurface">
 
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
@@ -35,10 +36,10 @@
             android:layout_weight="1"
             android:gravity="center" >
 
-            <ProgressBar
+            <allen.town.focus_common.views.AccentProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.ProgressBar"
+
                 android:indeterminateOnly="true" />
         </LinearLayout>
 
@@ -56,12 +57,14 @@
             android:visibility="gone"
             />
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/attached_image"
             android:layout_width="match_parent"
+            app:riv_corner_radius="16dp"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
-            android:padding="10dp"
+            tools:visibility="visible"
+            tools:src="@mipmap/ic_launcher"
             android:visibility="gone"/>
 
         <LinearLayout
@@ -77,9 +80,10 @@
                 android:layout_height="48dp"
                 android:layout_gravity="center_vertical"
                 android:background="?selectableItemBackgroundBorderless"
-                android:src="?attachButton" />
+                android:src="@drawable/ic_round_insert_link_24"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-            <com.klinker.android.twitter_l.views.widgets.text.FontPrefEditText
+            <allen.town.focus.twitter.views.widgets.text.FontPrefEditText
                 android:id="@+id/tweet_content"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
@@ -95,7 +99,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
                     android:id="@+id/char_remaining"
                     android:layout_width="48dp"
                     android:layout_height="wrap_content"
@@ -108,9 +112,9 @@
                     android:layout_height="48dp"
                     android:contentDescription="Send Message"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="?sendButton"
+                    android:src="@drawable/ic_round_send_24"
                     android:gravity="center"
-                    android:textColor="?textColor" />
+                    android:textColor="?android:textColorPrimary" />
 
             </LinearLayout>
 
@@ -125,13 +129,12 @@
         android:id="@+id/kitkat_status_bar"
         android:visibility="gone" />
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        android:elevation="5dp"
         android:gravity="center_vertical"
-        app:popupTheme="@style/ThemeOverlay.AppCompat"
+        android:background="?colorSurface"
         style="@style/MyToolbar"/>
 
 </FrameLayout>

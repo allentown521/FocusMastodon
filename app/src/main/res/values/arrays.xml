@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -23,10 +23,16 @@
         <item>@string/theme_black</item>
     </string-array>
 
-    <string-array name="choose_theme_inserted">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="theme_options">
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+        <item>@string/system_default</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>auto</item>
     </string-array>
 
     <string-array name="emoji_style">
@@ -114,11 +120,11 @@
     </string-array>
 
     <string-array name="max_number">
+        <item>40</item>
+        <item>80</item>
+        <item>120</item>
+        <item>160</item>
         <item>200</item>
-        <item>400</item>
-        <item>600</item>
-        <item>800</item>
-        <item>1000</item>
     </string-array>
 
     <!-- Number of pages -->
@@ -158,41 +164,49 @@
     </string-array>
 
     <string-array name="attach_options">
-        <item>@string/take_picture</item>
         <item>@string/from_file</item>
-        <item>@string/attach_gif</item>
-        <item>@string/take_video</item>
         <item>@string/attach_video</item>
     </string-array>
 
-    <string-array name="attach_dm_options">
+    <string-array name="visibility_options">
+        <item>@string/visibility_public</item>
+        <item>@string/visibility_unlisted</item>
+        <item>@string/visibility_private</item>
+        <item>@string/visibility_direct</item>
+    </string-array>
+
+    <string-array name="visibility_values">
+        <item>PUBLIC</item>
+        <item>UNLISTED</item>
+        <item>PRIVATE</item>
+        <item>DIRECT</item>
+    </string-array>
+
+    <string-array name="attach_capture">
         <item>@string/take_picture</item>
+        <item>@string/take_video</item>
+    </string-array>
+
+    <string-array name="attach_dm_options">
         <item>@string/from_file</item>
+        <item>@string/take_picture</item>
         <item>@string/attach_gif</item>
         <item>Giphy</item>
     </string-array>
 
-    <string-array name="font_type">
-        <item>@string/device</item>
-        <item>@string/roboto_light</item>
-        <item>@string/roboto_condensed</item>
-        <item>@string/roboto_l</item>
+    <string-array name="attach_gif_options">
+        <item>@string/attach_gif</item>
+        <item>Giphy</item>
     </string-array>
 
-    <string-array name="font_type_inserted">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
 
-    <string-array name="talon_pull">
+    <string-array name="FocusforMastodon_pull">
         <item>@string/dont_use_pull</item>
         <item>@string/interactions_only</item>
         <item>@string/inter_stream</item>
     </string-array>
 
-    <string-array name="talon_pull_inserted">
+    <string-array name="pull_inserted">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -200,9 +214,9 @@
 
     <string-array name="quote_style">
         <item>@string/quote_style_twitter</item>
-        <item>@string/quote_style_talon</item>
+        <item>@string/quote_style_Focus_for_Mastodon</item>
         <item>@string/quote_style_rt</item>
-        <item>&#8230; via @lukeklinker</item>
+        <item>&#8230; via @allentown521</item>
     </string-array>
 
     <string-array name="quote_style_inserted">
@@ -238,31 +252,6 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
-    </string-array>
-
-    <string-array name="timeline_notifications">
-        <item>@string/timeline</item>
-        <item>@string/direct_messages</item>
-        <item>@string/activity</item>
-    </string-array>
-
-    <string-array name="interactions_notifications">
-<!--        <item>@string/favorited_tweet</item>-->
-        <item>@string/retweets</item>
-        <item>@string/new_followers</item>
-        <item>@string/mentions</item>
-    </string-array>
-
-    <string-array name="timeline_notifications_default">
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
-    <string-array name="interaction_notifications_inserted">
-<!--        <item>1</item>-->
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
     </string-array>
 
     <string-array name="countries">
@@ -399,18 +388,6 @@
         <item>2</item>
     </string-array>
 
-    <string-array name="nav_bar">
-        <item>@string/nav_bar_automatic</item>
-        <item>@string/nav_bar_present</item>
-        <item>@string/nav_bar_gone</item>
-    </string-array>
-
-    <string-array name="nav_bar_inserted">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <string-array name="timeline_pictures">
         <item>@string/revamped_layout</item>
         <item>@string/normal_pictures</item>
@@ -432,10 +409,8 @@
     <string-array name="long_click_mentions">
         <item>@string/open_profile</item>
         <item>@string/copy_handle</item>
-        <item>@string/search_user</item>
         <item>@string/favorite_user_text</item>
         <item>@string/mute_user</item>
-        <item>@string/mute_retweets</item>
         <item>@string/muffle_user</item>
         <item>@string/share_profile</item>
     </string-array>
@@ -449,7 +424,6 @@
 
     <string-array name="long_click_hashtag">
         <item>@string/search_hashtag</item>
-        <item>@string/mute_hashtag</item>
         <item>@string/copy_hashtag</item>
     </string-array>
 
@@ -481,15 +455,16 @@
         <item>Turkish</item>
         <item>Ukrainian</item>
         <item>Portuguese (Brasil)</item>
+        <item>Chinese (Traditional)</item>
     </string-array>
 
     <string-array name="locale_inserted">
-        <item>none</item>
+        <item>auto</item>
         <item>en</item>
         <item>ar</item>
         <item>bg</item>
         <item>ca</item>
-        <item>zh-rCN</item>
+        <item>zh-CN</item>
         <item>da</item>
         <item>nl</item>
         <item>fi</item>
@@ -506,6 +481,7 @@
         <item>tr</item>
         <item>uk</item>
         <item>pt-rBR</item>
+        <item>zh-TW</item>
     </string-array>
 
     <string-array name="widget_timelines">
@@ -535,29 +511,48 @@
     </string-array>
 
     <string-array name="browser_selection">
-        <item>@string/article_enhancer</item>
         <item>@string/custom_tab_title</item>
-        <item>@string/open_to_internal_browser</item>
         <item>@string/open_to_external_browser</item>
     </string-array>
 
     <string-array name="browser_selection_inserted">
-        <item>article</item>
         <item>custom_tab</item>
-        <item>internal</item>
         <item>external</item>
     </string-array>
 
-    <string-array name="notification_options">
-        <item>@string/never_show_notifications</item>
-        <item>@string/after_background_refresh_talon_pull</item>
-        <item>@string/intercept_twitter_push_notifications</item>
+
+    <string-array name="filter_contexts">
+        <item>@string/title_home</item>
+        <item>@string/title_notifications</item>
+        <item>@string/pref_title_public_filter_keywords</item>
+        <item>@string/pref_title_thread_filter_keywords</item>
+        <item>@string/pref_title_account_filter_keywords</item>
     </string-array>
 
-    <string-array name="notification_options_inserted">
-        <item>never</item>
-        <item>legacy</item>
-        <item>push</item>
+    <string-array name="filter_actions">
+        <item>@string/filter_action_warn</item>
+        <item>@string/filter_action_hide</item>
     </string-array>
 
+    <string-array name="filter_duration_names">
+        <item>@string/duration_indefinite</item>
+        <item>@string/duration_5_min</item>
+        <item>@string/duration_30_min</item>
+        <item>@string/duration_1_hour</item>
+        <item>@string/duration_6_hours</item>
+        <item>@string/duration_1_day</item>
+        <item>@string/duration_3_days</item>
+        <item>@string/duration_7_days</item>
+    </string-array>
+
+    <integer-array name="filter_duration_values"> <!-- values in seconds, corresponding to mute_duration_names -->
+        <item>0</item>
+        <item>300</item>
+        <item>1800</item>
+        <item>3600</item>
+        <item>21600</item>
+        <item>86400</item>
+        <item>259200</item>
+        <item>604800</item>
+    </integer-array>
 </resources>

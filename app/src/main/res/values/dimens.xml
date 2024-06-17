@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
   -->
 
 <resources>
-
+    <dimen name="avatar_radius_48dp">6dp</dimen>
     <dimen name="quoted_tweet_height">140dp</dimen>
     <dimen name="action_bar_default_height">48dp</dimen>
     <dimen name="neg_action_bar_default_height">-48dp</dimen>
@@ -52,4 +52,5 @@
 
     <dimen name="user_profile_card_padding">16dp</dimen>
     <dimen name="user_profile_header_padding">16dp</dimen>
+    <dimen name="external_player_height">58dp</dimen>
 </resources>

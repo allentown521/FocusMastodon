@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name_full">Talon para Twitter</string>
     <string name="extension_description">Quando atualizados mostra o número de tweet não lidos, menções e DM\'S</string>
     <!-- Action Bar -->
     <string name="menu_refresh">Atualizar Timiline</string>
@@ -41,7 +40,7 @@
     <string name="timeline">Timeline</string>
     <string name="mentions">Menções</string>
     <string name="direct_messages">Mensagens</string>
-    <string name="retweets">Retweets</string>
+    <string name="retweets">Boosts</string>
     <string name="favorite_tweets">Tweets Favoritos</string>
     <string name="favorite_users">Utilizadores Favoritos</string>
     <string name="trends">Trending</string>
@@ -50,20 +49,19 @@
     <string name="search">Pesquisar</string>
     <string name="lists">Listas</string>
     <string name="search_hint">\@usarname ou pesquisar...</string>
-    <string name="new_tweet">novo tweet</string>
-    <string name="new_tweets">novos tweets</string>
-    <string name="no_new_tweets">Sem novos tweets</string>
+    <string name="new_tweet">novo post</string>
+    <string name="new_tweets">novos posts</string>
+    <string name="no_new_tweets">Sem novos posts</string>
     <string name="new_mention">nova menção</string>
     <string name="new_mentions">novas menções</string>
     <string name="no_new_mentions">Sem novas menções</string>
     <string name="new_direct_message">nova mensagem</string>
     <string name="new_direct_messages">novas mensagens</string>
     <string name="no_new_direct_messages">Sem novas mensagens</string>
-    <string name="tap_to_setup">Clique para definir</string>
     <string name="new_account">Nova Conta</string>
     <!-- Notifications -->
     <string name="tweet">Tweet</string>
-    <string name="tweets">Tweets</string>
+    <string name="tweets">Posts</string>
     <string name="mention">Menção</string>
     <string name="message">Mensagem</string>
     <string name="messages">Mensagens</string>
@@ -80,7 +78,7 @@
     <!-- Actionbar Done-Discard -->
     <!-- Other -->
     <!-- User Profile Activity -->
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <!-- Tweet Activity -->
     <!-- User Lists -->
     <!-- Tutorial Activity -->

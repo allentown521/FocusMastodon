@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -35,21 +35,21 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@mipmap/ic_launcher"
-            android:background="?android:selectableItemBackground"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <ImageButton
             android:id="@+id/replyButton"
             android:contentDescription="Compose New Tweet"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="7dp"
-            android:background="?android:selectableItemBackground"
+            android:background="?android:selectableItemBackgroundBorderless"
             android:paddingBottom="3dp"
-            android:src="@drawable/ic_action_new_dark"
-            android:scaleX=".85"
-            android:scaleY=".85"/>
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_fab_pencil"
+/>
 
     </LinearLayout>
 
@@ -65,10 +65,8 @@
             android:id="@+id/timeline"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:scaleX=".85"
-            android:scaleY=".85"
-            android:src="@drawable/timeline_dark"
-            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_round_home_24"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <TextView
@@ -87,10 +85,10 @@
             android:id="@+id/mentions"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:scaleX=".85"
-            android:scaleY=".85"
+            android:scaleX=".75"
+            android:scaleY=".75"
             android:src="@drawable/mentions_dark"
-            android:background="?android:selectableItemBackground"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <TextView
@@ -111,8 +109,8 @@
             android:layout_height="32dp"
             android:scaleX=".85"
             android:scaleY=".85"
-            android:src="@drawable/ic_action_reply_dark"
-            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_round_message_24"
+            android:background="?android:selectableItemBackgroundBorderless"
             />
 
         <TextView

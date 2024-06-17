@@ -7,7 +7,7 @@
     <string name="show_all">すべて表示</string>
     <string name="stats">ステータス</string>
     <string name="list_count">%s 件のリストに追加されています</string>
-    <string name="joined_twitter">Twitter に登録した日:</string>
+    <string name="joined_twitter">Mastodon に登録した日:</string>
     <string name="top_down">トップダウンモード</string>
     <string name="top_down_summary">タイムライン上の表示位置は保存されません。常にタイムライン最上部から始まります</string>
     <string name="timeline_text_size">フォントサイズ</string>
@@ -16,14 +16,13 @@
     <string name="twitpic_summary_l">すべての画像は TwitPic を通してアップロードされます</string>
     <string name="interactions_only">みんなの反応のみ</string>
     <string name="inter_stream">みんなの反応とストリーム</string>
-    <string name="dont_use_pull">Talon Pull を使用しない</string>
+    <string name="dont_use_pull">Focus for Mastodon Pull を使用しない</string>
     <string name="always">常時</string>
     <string name="never">しない</string>
     <string name="only_on_wifi">Wi-Fi 接続時のみ</string>
     <string name="only_on_data">データ通信使用時のみ</string>
     <string name="contact_me">連絡先</string>
-    <string name="my_google_plus">Google+</string>
-    <string name="follow_progress">Talon for Plusの開発状況はこちら</string>
+    <string name="follow_progress">Focus for Mastodon for Plusの開発状況はこちら</string>
     <string name="general">一般</string>
     <string name="no_interactions">みんなの反応なし</string>
     <string name="emojis_summary">iOS 絵文字を使用するには、Sliding Emoji Keyboard - iOS をダウンロードしてください</string>
@@ -31,7 +30,6 @@
     <string name="web">Web</string>
     <string name="heads_up">Heads Up</string>
     <string name="use_snackbar">スナックバーを使用</string>
-    <string name="use_snackbar_summary">あなたがいる位置から最新ツイートまでの数を表示します</string>
     <string name="bottom_pictures">画像をツイートの下に表示</string>
     <string name="bottom_pictures_summary">ツイートがインラインに展開されなくなります</string>
     <string name="preparing_signin">サインインの準備をしています</string>
@@ -42,16 +40,12 @@
     <string name="click_to_remove_muffle">Muffle を取り消すにはユーザー名をタップしてください</string>
     <string name="muffle_user">このユーザーをマッフル</string>
     <string name="unmuffle_user">マッフルを解除</string>
-    <string name="enjoying_talon">Talon をお楽しみいただけていますか？</string>
+    <string name="enjoying_FocusforMastodon">Focus for Mastodon をお楽しみいただけていますか？</string>
     <string name="give_a_rating">よろしければ、アプリの評価かお友だちへのオススメをお願いします！\n\n ★5 評価していただると、開発者の心が温まります (^^)</string>
     <string name="rate_on_rating_dialog">評価</string>
     <string name="share_on_rating_dialog">共有</string>
     <string name="ignore">無視</string>
-    <string name="when_talon_pull_on">Talon Pull が有効なときに適用されます</string>
-    <string name="transparent_system_bars">透明なシステムバーを使用</string>
     <string name="accent_color">アクセントカラー</string>
-    <string name="nav_bar_option">ナビゲーションバーを無効</string>
-    <string name="nav_bar_option_summary">一部端末において、ナビゲーションバーの有無をアプリ側で把握することができません。Talon ではレイアウトに大きく関わっているため、手動で指定することができます</string>
     <string name="nav_bar_automatic">自動</string>
     <string name="nav_bar_present">ナビバーを使用</string>
     <string name="nav_bar_gone">ナビバーを使用しない</string>
@@ -61,16 +55,8 @@
     <string name="sync_options">同期オプション</string>
     <string name="manual_syncs">手動同期</string>
     <string name="timeline_notifications_summary">バックグランド同期を有効にする必要があります</string>
-    <string name="favorite_user_notifications_summary">タイムラインのバックグラウンド更新、または、ストリーミングを有効にする必要があります</string>
     <string name="alert_methods_summary">通知スタイル: バイブ、音、LED、…</string>
     <string name="windowed_helper_message">タブレットでは、ウィンドウの外側の灰色のエリアをタップすることで、ウィンドウを閉じることができます\n\nあなたのタイムラインがどこかへ行ってしまうことがこれでなくなります！</string>
-    <string name="permission_check_title">"Talon の権限: "</string>
-    <string name="permission_check_message">Talon では 2 つの権限の許可をお願いしています: 位置情報・ストレージ\n\n
-
- - 位置情報は、周辺のトレンドにアクセスするために使用され、(もし利用するのであれば) ツイートに位置情報をつけるためにも同様に使用されます。アプリがあなたの位置情報を保存することはありません\n
- - ストレージは、ツイートの画像を外部ストレージへ保存するために使用され、あなたが画像をツイートする際にも使用されます\n\n
-
-どちらの権限も気兼ねなく拒否していただいてかまいません。システムのアプリ設定から手動で設定し直すことができます</string>
     <string name="tell_about_swipe_down">ヒント: この画面を閉じるには下にスワイプしてください</string>
     <string name="download_video">動画をダウンロード</string>
     <string name="download_gif">GIF をダウンロード</string>
@@ -79,7 +65,6 @@
     <string name="saved_video">保存しました</string>
     <string name="encoding_gif">GIF をエンコード中…</string>
     <string name="scroll_options">スクロールオプション</string>
-    <string name="static_ui_title">静的UI</string>
     <string name="static_ui_summary">アプリバーや Floating Action Button、スタックバーがスクロール中でも隠れません</string>
     <string name="list_sync_interval">リスト更新間隔</string>
     <string name="list_sync_summary">追加ページで使用しているすべてのリストでバックグランド同期をおこないます</string>
@@ -122,30 +107,23 @@
     <string name="location">位置情報</string>
     <string name="color_options">カラー設定</string>
     <string name="advanced_options">詳細設定</string>
-    <string name="material_color">マテリアルデザインカラー</string>
     <string name="base_theme">ベーステーマ</string>
     <string name="functionality_options">動作オプション</string>
     <string name="account_to_display">表示するアカウント</string>
     <string name="timeline_to_display">表示するタイムライン</string>
     <string name="swipable_pages">スワイプ可能なページ</string>
     <string name="app_drawer">アプリ ドロワー</string>
-    <string name="notifications_for_background_refreshes">通知はバックグラウンドでの更新が完了したあとに動作します</string>
     <string name="tweetmarker_text">TweetMarkerは、タイムライン上の表示位置をデバイス間で同期するのに使われます。</string>
     <string name="precache_text">バックグラウンドで更新したあとに画像をダウンロードするので、アプリを開いた際にアプリ上ですぐに画像を見ることができます。</string>
     <string name="timeline_notifications_text">これらの通知はバックグラウンド更新が完了するたびに上書きされます</string>
-    <string name="tweetmarker_always_refreshes">TweetMarkerはアプリの起動毎にタイムラインを更新します。</string>
-    <string name="background_refreshes_disclaimer">「バックグラウンド同期」のすべての設定は通信量とバッテリー容量の両方を消費します</string>
     <string name="clear_memory">メモリを消去</string>
     <string name="manage_mutes_options">ミュートの管理</string>
     <string name="widget_material_light">マテリアルデザイン ライト</string>
     <string name="widget_material_dark">マテリアルデザイン ダーク</string>
     <string name="widget_material_transparent">完全に透明化</string>
     <string name="in_app_browser_summary">リンクを開く際に内蔵ブラウザを無効化している場合は、デフォルト ブラウザで表示されます。</string>
-    <string name="chrome_custom_tabs_summary">Talon 内蔵ブラウザに置き換えします。ブラウザは Google Chrome を使用しています。</string>
     <string name="reverse_click_actions_default">デフォルト(反転されていない場合の動作):\n- 短くタッチ = タイムライン上でツイートを引き延ばして表示\n- 長押し = ツイート詳細画面を表示</string>
     <string name="show_images_on_widget">ウィジェットで画像を表示</string>
-    <string name="auto_dismiss">通知を自動的に消去する</string>
-    <string name="auto_dismiss_summary">通知から Talon を開いたとき自動的に通知を消去します (デフォルト設定は ON)</string>
     <string name="media">ユーザーのメディア</string>
     <string name="ignored_on_compact">この設定はコンパクトレイアウトをオンにしている場合は無視されます。</string>
     <string name="use_peek">\"Peek\"を使用する</string>
@@ -180,13 +158,11 @@
     <string name="are_you_sure_follow">本当にこのユーザーをフォローしますか？</string>
     <string name="are_you_sure_spam">本当にこのツイートをスパムとしてマークしますか？</string>
     <string name="larger_images">大きな画像を使う</string>
-    <string name="show_profile_pictures">プロフィール画像を表示</string>
     <string name="reply_to">次へのリプライ</string>
     <string name="others">その他</string>
     <string name="interaction_notifications">インタラクション通知</string>
     <string name="never_show_notifications">通知を表示しない</string>
     <string name="favorite_user_channel">お気に入りユーザーの通知</string>
-    <string name="crop_images">タイムライン上の画像を切り取り</string>
     <string name="update_tweet">ツイートを更新</string>
     <string name="rate_it_button">評価する！</string>
     <string name="preview_web_links">ウェブ リンクをプレビュー</string>

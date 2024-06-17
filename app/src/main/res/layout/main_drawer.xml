@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,22 +17,23 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/left_drawer"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent" >
+    android:id="@+id/left_drawer"
+    android:background="?colorSurface"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-        <include layout="@layout/user_header"
-                 android:id="@+id/header"
-                 android:layout_height="160dp"
-                 android:layout_width="match_parent"
-                 android:background="?drawerBackground"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <View android:id="@+id/drawer_status_bar"
-              android:layout_width="match_parent"
-              android:layout_height="20dp"
-              android:background="@color/transparent_system_bar" />
+        <include
+            android:id="@+id/header"
+            layout="@layout/user_header"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="?colorSurface" />
+
     </RelativeLayout>
 
 
@@ -40,69 +41,71 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="?drawerBackground"
-        android:orientation="vertical" >
+        android:background="?colorSurface"
+        android:orientation="vertical">
 
         <LinearLayout
-                android:id="@+id/logoutLayout"
-                android:orientation="vertical"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:visibility="gone" >
+            android:id="@+id/logoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <!-- second profile stuff -->
             <RelativeLayout
                 android:id="@+id/second_profile"
                 android:layout_width="match_parent"
                 android:layout_height="66dp"
-                android:paddingLeft="10dp"
+                android:background="?rectSelector"
+                android:gravity="center_vertical"
                 android:paddingStart="10dp"
+                android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="?android:selectableItemBackground"
-                android:gravity="center_vertical">
+                android:paddingBottom="10dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_pic_2"
                     android:layout_width="@dimen/pro_pic_size"
                     android:layout_height="@dimen/pro_pic_size"
-                    android:id="@+id/profile_pic_2"
-                    android:minHeight="@dimen/pro_pic_size" android:minWidth="@dimen/pro_pic_size"
-                    android:maxWidth="@dimen/pro_pic_size" android:maxHeight="@dimen/pro_pic_size"
-                    android:contentDescription="Profile Picture - Account 2"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginRight="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="2dp"
                     android:layout_marginLeft="2dp"
                     android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"/>
+                    android:layout_marginRight="2dp"
+                    android:contentDescription="Profile Picture - Account 2"
+                    android:maxWidth="@dimen/pro_pic_size"
+                    android:maxHeight="@dimen/pro_pic_size"
+                    android:minWidth="@dimen/pro_pic_size"
+                    android:minHeight="@dimen/pro_pic_size" />
 
                 <LinearLayout
-                    android:layout_toRightOf="@id/profile_pic_2"
-                    android:layout_alignTop="@id/profile_pic_2"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginStart="10dp" >
+                    android:layout_toRightOf="@id/profile_pic_2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/name_2"
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="15sp"
-                        android:textColor="?textColor"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/screen_name_2"
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:singleLine="true"
+                        android:layout_height="wrap_content"
                         android:paddingBottom="3dp"
-                        android:textSize="13sp"
-                        android:textColor="?textColor"/>
+                        android:singleLine="true"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
@@ -112,15 +115,16 @@
                 android:id="@+id/dividerView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
-            <Button android:id="@+id/logoutButton"
-                android:layout_height="60dp"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutButton"
                 android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="?rectSelector"
+                android:contentDescription="Logout from Mastodon"
                 android:text="@string/menu_logout"
-                android:contentDescription="Logout from Twitter"
-                android:textColor="?textColor"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textColor="?android:textColorPrimary" />
 
             <View
                 android:id="@+id/nav_bar_seperator"
@@ -132,15 +136,21 @@
 
         <ListView
             android:id="@+id/drawer_list"
-            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
-            android:scrollbars="none"
-            android:overScrollMode="never"
+            android:layout_height="match_parent"
             android:divider="@null"
             android:footerDividersEnabled="false"
-            android:headerDividersEnabled="false"/>
+            android:headerDividersEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
 
-        </LinearLayout>
+    </LinearLayout>
 
+    <include
+        layout="@layout/drawer_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface"/>
 
 </LinearLayout>

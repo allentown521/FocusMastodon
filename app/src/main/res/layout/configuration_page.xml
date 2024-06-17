@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,34 +17,42 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal|center_vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical">
 
     <Spinner
-            android:id="@+id/selection_spinner"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="150dp"/>
+        android:id="@+id/selection_spinner"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp" />
 
-    <LinearLayout android:id="@+id/default_page_layout"
+    <LinearLayout
+        android:id="@+id/default_page_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:padding="10dp"
-            android:descendantFocusability="blocksDescendants">
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/set_as_default" />
+        <allen.town.focus_common.common.views.ATESwitch
+            android:id="@+id/default_page"
+            app:showText="false"
+            app:track="@drawable/switch_track"
+            android:layout_marginLeft="16dp"
+            android:thumb="@drawable/switch_thumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
 
-        <CheckBox android:id="@+id/default_page"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:clickable="false"/>
 
-        <TextView
-                android:layout_marginLeft="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/set_as_default"/>
 
     </LinearLayout>
 </LinearLayout>

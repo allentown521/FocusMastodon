@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -56,7 +56,7 @@
     <string name="yes">예</string>
     <!-- User Profile Activity -->
     <string name="update">업데이트</string>
-    <!-- Retweets Activity -->
+    <!-- boosts Activity -->
     <!-- Tweet Activity -->
     <string name="menu_delete_tweet">트윗 삭제</string>
     <string name="success">성공</string>

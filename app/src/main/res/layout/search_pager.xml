@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -26,33 +27,26 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
 
-        <View android:id="@+id/activity_status_bar"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@android:color/black"
-            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="?windowBackground"
+            android:background="?colorSurface"
             android:orientation="vertical" >
 
-            <androidx.appcompat.widget.Toolbar
+            <com.google.android.material.appbar.MaterialToolbar
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/darker_primary"
                 android:id="@+id/toolbar"
-                android:elevation="5dp"
-                app:popupTheme="@style/ThemeOverlay.AppCompat"
+                android:background="?colorSurface"
                 style="@style/MyToolbar"/>
 
-            <com.google.android.material.tabs.TabLayout
+            <allen.town.focus_common.views.AccentTabLayout
                 android:id="@+id/pager_tab_strip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:background="?colorSurface"
                 app:tabMode="fixed"
                 app:tabGravity="fill" />
 

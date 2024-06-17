@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -9,8 +10,10 @@
         android:layout_height="match_parent"
         android:background="@color/search_shadow_layout" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="?colorSurface"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -33,6 +36,7 @@
 
                 <ImageView
                     android:id="@+id/imageView_arrow_back"
+                    android:background="?android:selectableItemBackgroundBorderless"
                     android:layout_width="@dimen/search_icon"
                     android:layout_height="@dimen/search_icon"
                     android:contentDescription="@string/search_cont_desc" />
@@ -68,6 +72,7 @@
 
                     <ImageView
                         android:id="@+id/imageView_mic"
+                        android:background="?android:selectableItemBackgroundBorderless"
                         android:layout_width="@dimen/search_icon"
                         android:layout_height="@dimen/search_icon"
                         android:contentDescription="@string/search_cont_desc" />
@@ -97,6 +102,6 @@
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </merge>

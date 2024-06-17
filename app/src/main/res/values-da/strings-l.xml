@@ -7,8 +7,8 @@
     <string name="show_all">Vis alle</string>
     <string name="stats">Statistik</string>
     <string name="list_count">I %s lister</string>
-    <string name="joined_twitter">Tilmeldt Twitter:</string>
-    <string name="top_down">Start med nyeste tweet</string>
+    <string name="joined_twitter">Tilmeldt Mastodon:</string>
+    <string name="top_down">Start med nyeste post</string>
     <string name="top_down_summary">Din seneste position på tidslinjen bliver ikke gemt. Du vil starte i toppen ved start</string>
     <string name="timeline_text_size">Tekststørrelse</string>
     <string name="manage_mutes">Indstillinger for mute</string>
@@ -16,14 +16,13 @@
     <string name="twitpic_summary_l">Alle uploads af billeder vil gå via Twitpic</string>
     <string name="interactions_only">Kun interaktioner</string>
     <string name="inter_stream">Interaktioner og live streaming</string>
-    <string name="dont_use_pull">Brug ikke Talon Pull</string>
+    <string name="dont_use_pull">Brug ikke Focus for Mastodon Pull</string>
     <string name="always">Altid</string>
     <string name="never">Aldrig</string>
     <string name="only_on_wifi">Kun via WiFi</string>
     <string name="only_on_data">Kun via mobil data</string>
     <string name="contact_me">Kontakt udvikleren</string>
-    <string name="my_google_plus">Via Google+</string>
-    <string name="follow_progress">Tap for at følge Talon´s udvikling</string>
+    <string name="follow_progress">Tap for at følge Focus for Mastodon´s udvikling</string>
     <string name="general">Generelt</string>
     <string name="no_interactions">Ingen interaktioner</string>
     <string name="emojis_summary">Gør brug af iOS emojis ved at downloade Sliding Emoji Keyboard - iOS</string>
@@ -31,27 +30,22 @@
     <string name="web">Web</string>
     <string name="heads_up">OBS!</string>
     <string name="use_snackbar">Vis dynamisk info boks</string>
-    <string name="use_snackbar_summary">Viser hvor mange tweets der er til toppen af tidslinjen</string>
-    <string name="bottom_pictures">Billeder under tweets</string>
+    <string name="bottom_pictures">Billeder under posts</string>
     <string name="bottom_pictures_summary">Tweets udvides ikke in-line ved valg af dette</string>
     <string name="preparing_signin">Forbereder log ind</string>
     <string name="verifying_login">Verificerer log ind</string>
     <string name="manage_muffles">Rediger begrænsede</string>
-    <string name="muffle_definition">Ved at begrænse en profil vil størstedelen af deres tweets blive skjult fra din tidslinje. Du vil kun se navnet og lidt af indholdet du kan tappe på, skulle du være interesseret i at se mere</string>
+    <string name="muffle_definition">Ved at begrænse en profil vil størstedelen af deres posts blive skjult fra din tidslinje. Du vil kun se navnet og lidt af indholdet du kan tappe på, skulle du være interesseret i at se mere</string>
     <string name="muffled_users">Begrænsede profiler</string>
     <string name="click_to_remove_muffle">Tap på en profil for at fjerne begrænsningen</string>
     <string name="muffle_user">Begræns profil</string>
     <string name="unmuffle_user">Fjern begrænsning for profil</string>
-    <string name="enjoying_talon">Tilfreds med Talon?</string>
-    <string name="give_a_rating">Vil du give en bedømmelse af Talon eller dele app´en med en du kender?\n\nEn 5 stjernet bedømmelse vil være fantastisk!</string>
+    <string name="enjoying_FocusforMastodon">Tilfreds med Focus for Mastodon?</string>
+    <string name="give_a_rating">Vil du give en bedømmelse af Focus for Mastodon eller dele app´en med en du kender?\n\nEn 5 stjernet bedømmelse vil være fantastisk!</string>
     <string name="rate_on_rating_dialog">Bedøm</string>
     <string name="share_on_rating_dialog">Del</string>
     <string name="ignore">Ignorer</string>
-    <string name="when_talon_pull_on">Aktiveret når Talon Pull bruges</string>
-    <string name="transparent_system_bars">Vis transparent system bar</string>
     <string name="accent_color">Sekundær farve</string>
-    <string name="nav_bar_option">Overstyr navigationsbar</string>
-    <string name="nav_bar_option_summary">Nogle applikationer kan ikke selv detektere om alle enheder har navigationsbar. Eftersom Talon er kraftigt afhængig af en sådan, tillader denne mulighed at specificere det manuelt</string>
     <string name="nav_bar_automatic">Bestemt automatisk</string>
     <string name="nav_bar_present">Bruger navigationsbar</string>
     <string name="nav_bar_gone">Bruger ikke navigationsbar</string>
@@ -61,16 +55,8 @@
     <string name="sync_options">Indstillinger for synkronisering</string>
     <string name="manual_syncs">Manuelt synk.</string>
     <string name="timeline_notifications_summary">Interval for [Opdater i baggrunden] skal vælges for at få vist disse notifikationer</string>
-    <string name="favorite_user_notifications_summary">Interval for [Opdater i baggrunden] skal vælges for tidslinjen eller live streaming, for at modtage notifikationer fra favoritter</string>
     <string name="alert_methods_summary">Måder at modtage notifikationer på: vibrer, lyd, LED m.m.</string>
     <string name="windowed_helper_message">For at lukke et vindue på skærmen, tap i området uden for vinduet\n\nDet sikrer at din tidslinje aldrig er langt væk!</string>
-    <string name="permission_check_title">Talon´s tilladelser:</string>
-    <string name="permission_check_message">Talon vil anmode dig om to nye tilladelser: lokation og hukommelse\n\n
-
-        - Lokation bruges til at tilgå lokale trends samt til at lokalisere din position i dine tweets (hvis du beder om det) Ellers gemmes din lokation ikke\n
-        - Hukommelse bruges til at gemme billeder til den eksterne hukommelse (når du beder om det) samt til når du oploader dine billeder til Twitter\n\n
-
-        Du vælger selv om du vil tillade eller afvise hver anmodning. Du kan tilgå dem selv til enhver tid, via indstillinger</string>
     <string name="tell_about_swipe_down">Tip: Swipe ned for at lukke dette vindue</string>
     <string name="download_video">Download video</string>
     <string name="download_gif">Download Gif</string>
@@ -79,7 +65,6 @@
     <string name="saved_video">Gemt</string>
     <string name="encoding_gif">Opretter Gif...</string>
     <string name="scroll_options">Indstillinger ved scroll</string>
-    <string name="static_ui_title">Fast UI</string>
     <string name="static_ui_summary">Dette forhindrer genveje til flere funktioner i at forsvinde, når du scroller</string>
     <string name="list_sync_interval">Interval for opdatering af lister</string>
     <string name="list_sync_summary">Alle ekstra sider du har tilføjet til tidslinjen som lister, synkroniseres</string>
@@ -97,17 +82,17 @@
     <string name="discover_people">Personer</string>
     <string name="no_media_preview">Intet eksempel tilgængeligt for valgte video service</string>
     <string name="autoplay_title">Tidslinje autoplay</string>
-    <string name="autoplay_summary">Afspil automatisk Twitter Gif´s og videoer direkte i din tidslinje</string>
+    <string name="autoplay_summary">Afspil automatisk Mastodon Gif´s og videoer direkte i din tidslinje</string>
     <string name="high_quality_images">Brug højkvalitets billeder</string>
     <string name="high_quality_images_summary">Bruges i hele applikationen</string>
     <string name="view_likes">Vis likes</string>
-    <string name="view_retweets">Vis retweets</string>
+    <string name="view_retweets">Vis boosts</string>
     <string name="list_size">Størrelse på liste</string>
-    <string name="list_size_summary">Max. antal tweets tilgængeligt for swipable list, i database</string>
+    <string name="list_size_summary">Max. antal posts tilgængeligt for swipable list, i database</string>
     <string name="quotes">Citater</string>
     <string name="no_quotes">Ingen citater</string>
     <string name="tweet_style">Tweet stil</string>
-    <string name="tweet_style_description">Hvordan tweets vises på tidslinjen</string>
+    <string name="tweet_style_description">Hvordan posts vises på tidslinjen</string>
     <string name="condensed_tweet_style">Kompakt tweet layout</string>
     <string name="locale">Lokal liste for oversættelser</string>
     <string name="locale_summary">Ikke alle oversættelser er fuldendt</string>
@@ -122,19 +107,15 @@
     <string name="location">Lokation</string>
     <string name="color_options">Farve indstillinger</string>
     <string name="advanced_options">Avancerede indstillinger</string>
-    <string name="material_color">Farve for Material design</string>
     <string name="base_theme">Tema grundindstillinger</string>
     <string name="functionality_options">Funktionalitets indstillinger</string>
     <string name="account_to_display">Aktiv konto</string>
     <string name="timeline_to_display">Valg af visning</string>
     <string name="swipable_pages">Swipable sider</string>
     <string name="app_drawer">App oversigt</string>
-    <string name="notifications_for_background_refreshes">Notifikationer kan blive udløst efter disse funktioner er blevet synkroniseret</string>
-    <string name="tweetmarker_text">TweetMarker kan bruges til at synkronisere din nuværende position, for læste tweets på din tidslinje mellem flere enheder</string>
-    <string name="precache_text">Billeder vil blive downloadet efter en baggrundssynkronisering, så de straks er tilgængelige i Talon</string>
+    <string name="tweetmarker_text">TweetMarker kan bruges til at synkronisere din nuværende position, for læste posts på din tidslinje mellem flere enheder</string>
+    <string name="precache_text">Billeder vil blive downloadet efter en baggrundssynkronisering, så de straks er tilgængelige i Focus for Mastodon</string>
     <string name="timeline_notifications_text">Disse notifikationer vil aktiveres efter en synkronisering er færdig</string>
-    <string name="tweetmarker_always_refreshes">Tweetmarker synkroniserer altid ved opstart</string>
-    <string name="background_refreshes_disclaimer">Alle indstillinger under [Baggrundssynkronisering] bruger både data og batteri</string>
     <string name="discover_section_options">Vis sektion indstillinger</string>
     <string name="clear_memory">Slet hukommelse</string>
     <string name="manage_mutes_options">Rediger mutes</string>
@@ -143,11 +124,8 @@
     <string name="widget_material_dark">Material Design Mørk</string>
     <string name="widget_material_transparent">Helt transparent</string>
     <string name="in_app_browser_summary">Deaktivering af den interne browser, vil ved tap på links åbne standard browseren</string>
-    <string name="chrome_custom_tabs_summary">Alternativ til Talon´s egen interne browser. Bruger services tildelt af Google Chrome</string>
     <string name="reverse_click_actions_default">Standard (Ingen omvendte handlinger):\n- Tap = Vis In-Line\n- Tap &amp; hold = Vis Tweet</string>
     <string name="show_images_on_widget">Vis billeder på widget</string>
-    <string name="auto_dismiss">Afvis automatisk notifikationer</string>
-    <string name="auto_dismiss_summary">Afvis automatisk alle notifikationer ved åbning fra Talon. Er aktiv som standard</string>
     <string name="media">Mine medier</string>
     <string name="ignored_on_compact">Indstillingen ignoreres ved brug af kompakt layout</string>
     <string name="use_peek">Brug \"Smugkik\"</string>
@@ -171,66 +149,49 @@
     <string name="preparing_video">Forbereder video&#8230;</string>
     <string name="take_video">Optag video</string>
     <string name="detailed_quotes">Detaljer for citat</string>
-    <string name="detailed_quotes_summary">Vis mere infomation i citerede tweets på tidslinjen</string>
+    <string name="detailed_quotes_summary">Vis mere infomation i citerede posts på tidslinjen</string>
     <string name="open_to_browser">Åbn i web</string>
     <string name="browser_selection">Web browser</string>
     <string name="article_enhancer">Artikel visning (Readability)</string>
-    <string name="compact_layout_no_pictures">Kompakte tweets (Uden billeder)</string>
-    <string name="user_tweets">Udvalgte brugers tweets</string>
+    <string name="compact_layout_no_pictures">Kompakte posts (Uden billeder)</string>
+    <string name="user_tweets">Udvalgte brugers posts</string>
     <string name="user_tweets_size">Størrelse på visning for bruger</string>
-    <string name="user_tweets_size_summary">Maximale antal tweets der gemmes for visning på swipable sider, i databasen</string>
+    <string name="user_tweets_size_summary">Maximale antal posts der gemmes for visning på swipable sider, i databasen</string>
     <string name="authenticate">Godkend</string>
     <string name="enable_fingerprint_lock">Aktiver lås med fingeraftryk</string>
     <string name="disable_fingerprint_lock">Deaktiver lås med fingeraftryk</string>
     <string name="auto_complete_hashtags">Auto fuldfør hashtags</string>
-    <string name="auto_complete_hashtags_summary">Vis senest søgte og benyttede hashtags, ved oprettelse af nyt tweet</string>
+    <string name="auto_complete_hashtags_summary">Vis senest søgte og benyttede hashtags, ved oprettelse af nyt post</string>
     <string name="followers_only_auto_complete">Fuldfør automatisk</string>
-    <string name="followers_only_auto_complete_summary">Søg ikke hele Twitter igennem når du bruge autofuldførelse af meninger</string>
+    <string name="followers_only_auto_complete_summary">Søg ikke hele Mastodon igennem når du bruge autofuldførelse af meninger</string>
     <string name="quoting">Citérer</string>
     <string name="profile_timeline">Tidslinje</string>
-    <string name="show_all_tweets">Vis alle Tweets</string>
+    <string name="show_all_tweets">Vis alle Posts</string>
     <string name="are_you_sure_unfollow">Er du sikker på du vil stoppe med at følge profilen?</string>
     <string name="are_you_sure_follow">Vil du følge profilen?</string>
     <string name="are_you_sure_spam">Vil du markere Tweetet som spam?</string>
     <string name="larger_images">Vis større billeder</string>
-    <string name="show_profile_pictures">Vis profilbilleder</string>
     <string name="reply_to">Svar til</string>
     <string name="others">andre</string>
     <string name="compress_reply_handles">Komprimer svarene</string>
-    <string name="compress_reply_handles_summary">Forbedrer håndteringen af lange svartråde på Twitter</string>
+    <string name="compress_reply_handles_summary">Forbedrer håndteringen af lange svartråde på Mastodon</string>
     <string name="interaction_notifications">Notifikationer for interaktioner</string>
-    <string name="interaction_notifications_summary">Dette kræver en baggrundssynkronisering for siden [Aktiviteter], Twitter´s push service, eller Talon Pull for at blive aktiveret</string>
-    <string name="swipable_page_notifications">Notifikationer for swipable side</string>
-    <string name="swipable_page_notifications_summary">Vil blive vist hver gang den swipable side er blevet synkroniseret i baggrunden</string>
     <string name="never_show_notifications">Vis aldrig notifikationer</string>
-    <string name="after_background_refresh_talon_pull">\nEfter en baggrundssynkronisering eller Talon Pull (streaming) begivenhed\n</string>
-    <string name="intercept_twitter_push_notifications">\nOpfang push notifikationer fra Twitter app\n</string>
-    <string name="intercept_twitter_push_description">Du skal have den normale Twitter app installeret, og være logget ind for at bruge funktionen.\n\n
-        Sæt notifikationerne op i appen som du normalt ville gøre.
-        Alt som ville give en notifikation i Twitter´s app, vil du nu istedet for få vist som en Talon notifikation.
-        For at bruge funktionen, skal du vælge Talon på den næste skærm. Dette tillader appen at modtage notifikationer fra Twitter´s app.</string>
+    <string name="intercept_twitter_push_notifications">\nOpfang push notifikationer fra Mastodon app\n</string>
     <string name="widget_refresh_channel">Notifikationer for synkronisering af widget</string>
     <string name="media_downloads_channel">Notifikationer for download af media</string>
-    <string name="tweeting_notifications_channel">Notifikationer for tweet</string>
-    <string name="tweet_failure_channel">Notifikationer for fejl ved afsendelse af tweet</string>
+    <string name="tweeting_notifications_channel">Notifikationer for post</string>
+    <string name="tweet_failure_channel">Notifikationer for fejl ved afsendelse af post</string>
     <string name="background_refresh_channel">Notifikationer for synkronisering i baggrunden</string>
     <string name="interactions_channel">Notifikationer for interaktioner</string>
-    <string name="scheduled_messages_channel">Notifikationer for planlagte tweets</string>
+    <string name="scheduled_messages_channel">Notifikationer for planlagte posts</string>
     <string name="favorite_user_channel">Notifikationer for favoritter</string>
-    <string name="talon_pull_channel">Notifikationer for Talon Pull</string>
     <string name="mentions_channel">Notifikationer for meninger</string>
     <string name="direct_messages_channel">Notifikationer for direkte beskeder</string>
     <string name="notification_channels">Notifikationskanaler</string>
-    <string name="notification_channels_summary">Kanaler bestemmer typen af meddelelser du får for
-        notifikationer og giver dig mulighed for at redigere i dem</string>
-    <string name="crop_images">Forminsk billeder på tidslinjen</string>
     <string name="update_tweet">Opdater Tweet</string>
-    <string name="rate_it_button">Bedøm Talon!</string>
+    <string name="rate_it_button">Bedøm Focus for Mastodon!</string>
     <string name="rate_it_title">Top bedømmelser er populære</string>
-    <string name="rate_it_summary"><b>5 stjernede bedømmelser</b>er ekstremt vigtige for appens udvikling
-
-og synlighed i Play Store.
-Hvis du vil bidrage til at udbrede kendskabet til app\'en<i>og dens berettigelse</i>, venligst hjælp mig</string>
     <string name="rate_it_not_ready">Ikke klar til at give en bedømmelse?
 Helt iorden. Tap tilbage for at undlade, og du vil aldrig blive spurgt igen</string>
     <string name="preview_web_links">Eksempel på web link</string>
@@ -243,9 +204,9 @@ Helt iorden. Tap tilbage for at undlade, og du vil aldrig blive spurgt igen</str
     <string name="new_days_ago">%1$d dage siden</string>
     <string name="revamped_layout">Tidslinje stil og Tweet layout</string>
     <string name="widget_display_screenname">Vis brugernavn</string>
-    <string name="saved_tweet_description">For at tilgå gemte Tweets, gå til den  swiable side og tilføj en<i>Gemte Tweets</i>side</string>
+    <string name="saved_tweet_description">For at tilgå gemte Tweets, gå til den  swiable side og tilføj en<i>Gemte Posts</i>side</string>
     <string name="auto_play_gifs">Afspil kun GIF\'s automatisk</string>
-    <string name="auto_play_gifs_summary">Både GIF\'s og Twitter videoer afspilles direkte i tidslinjen som standard</string>
+    <string name="auto_play_gifs_summary">Både GIF\'s og Mastodon videoer afspilles direkte i tidslinjen som standard</string>
     <string name="data_saver_mode">Indstillinger for hukommelse</string>
     <string name="data_saver_mode_summary">Dette vil overskrive nogle af dine hidtidige indstillinger, for at bruge mindst mulig hukommelse i baggrunden</string>
 </resources>

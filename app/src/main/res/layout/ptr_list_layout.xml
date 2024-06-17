@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
     android:id="@+id/ptr_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?windowBackground">
+    android:background="?colorSurface">
 
     <LinearLayout android:id="@+id/list_progress"
         android:orientation="vertical"
@@ -30,10 +30,10 @@
         android:layout_weight="1"
         android:gravity="center" >
 
-        <ProgressBar
+        <allen.town.focus_common.views.AccentProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.ProgressBar"
+
             android:indeterminateOnly="true" />
     </LinearLayout>
 
@@ -44,7 +44,7 @@
         android:gravity="center"
         android:visibility="gone">
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:id="@+id/no_retweeters_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
 
     </LinearLayout>
 
-    <com.klinker.android.twitter_l.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout
+    <allen.town.focus.twitter.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/swipe_refresh_layout">
@@ -69,7 +69,7 @@
             android:visibility="gone"
             />
 
-    </com.klinker.android.twitter_l.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout>
+    </allen.town.focus.twitter.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout>
 
     <View
             android:id="@+id/kitkat_status_bar"
@@ -77,14 +77,13 @@
             android:layout_height="20dp"
             android:visibility="gone"/>
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        android:elevation="5dp"
         android:gravity="center_vertical"
         android:visibility="gone"
-        app:popupTheme="@style/ThemeOverlay.AppCompat"
+        android:background="?colorSurface"
         style="@style/MyToolbar"/>
 
 </RelativeLayout>

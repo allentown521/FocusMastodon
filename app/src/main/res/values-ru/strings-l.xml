@@ -7,7 +7,7 @@
     <string name="show_all">Показать все</string>
     <string name="stats">Статистика</string>
     <string name="list_count">В %s списке(ах).</string>
-    <string name="joined_twitter">Зарегистрирован(а) в Twitter:</string>
+    <string name="joined_twitter">Зарегистрирован(а) в Mastodon:</string>
     <string name="top_down">Режим \"Сверху вниз\"</string>
     <string name="top_down_summary">Лента никогда не будет сохранять вашу позицию. Она будет начинаться с самого верха.</string>
     <string name="timeline_text_size">Размер текста</string>
@@ -16,13 +16,12 @@
     <string name="twitpic_summary_l">Все изображения будут загружаться через TwitPic</string>
     <string name="interactions_only">Только отклики</string>
     <string name="inter_stream">Отклики и Живое обновление</string>
-    <string name="dont_use_pull">Не использовать Talon Pull</string>
+    <string name="dont_use_pull">Не использовать Focus_for_Mastodon Pull</string>
     <string name="always">Всегда</string>
     <string name="never">Никогда</string>
     <string name="only_on_wifi">Только через WiFi</string>
     <string name="only_on_data">Только через мобильную сеть</string>
     <string name="contact_me">Связаться со мной</string>
-    <string name="my_google_plus">Мой Google+</string>
     <string name="follow_progress">Нажмите, чтобы следить за нашим прогрессом:</string>
     <string name="general">Общее</string>
     <string name="no_interactions">Нет откликов</string>
@@ -31,7 +30,6 @@
     <string name="web">Веб</string>
     <string name="heads_up">Поверх окон</string>
     <string name="use_snackbar">Использовать панель Snackbar</string>
-    <string name="use_snackbar_summary">Показывает, сколько твитов отделяет вас от начала вашей ленты.</string>
     <string name="bottom_pictures">Изображения под твитами</string>
     <string name="bottom_pictures_summary">При влючении этой опции твиты не будут открываться в отдельном окне по долгому нажатию.</string>
     <string name="preparing_signin">Подготовка к авторизации</string>
@@ -42,16 +40,12 @@
     <string name="click_to_remove_muffle">Нажмите на пользователя, чтобы удалить его из списка приглушенных</string>
     <string name="muffle_user">Приглушить пользователя</string>
     <string name="unmuffle_user">Не приглушать пользователя</string>
-    <string name="enjoying_talon">Нравится Talon?</string>
+    <string name="enjoying_FocusforMastodon">Нравится Focus_for_Mastodon?</string>
     <string name="give_a_rating">Оцените приложение или поделитесь им с вашими друзьями!\n\nВаша оценка на 5 звезд согреет мое сердце :)</string>
     <string name="rate_on_rating_dialog">Оценить</string>
     <string name="share_on_rating_dialog">Поделиться</string>
     <string name="ignore">Позже</string>
-    <string name="when_talon_pull_on">Применяется, когда включен Talon Pull.</string>
-    <string name="transparent_system_bars">Использовать прозрачные системные панели</string>
     <string name="accent_color">Цвет акцента</string>
-    <string name="nav_bar_option">Переопределить панель навигации</string>
-    <string name="nav_bar_option_summary">Приложения не могут точно определить, имеют ли некоторые устройства панель навигации или нет. Т.к. Talon важно знать это для правильного отображения, эта опция позволяет вам установить это вручную.</string>
     <string name="nav_bar_automatic">Определено автоматически</string>
     <string name="nav_bar_present">Используется панель навигации</string>
     <string name="nav_bar_gone">Не используется панель навигации</string>
@@ -61,17 +55,8 @@
     <string name="sync_options">Настройки синхронизации</string>
     <string name="manual_syncs">Ручная синхронизация</string>
     <string name="timeline_notifications_summary">Чтобы эти уведомления происходили, должен быть включен интервал фонового обновления.</string>
-    <string name="favorite_user_notifications_summary">Интервал фонового обновления для ленты или живое обновление должны быть включены для уведомлений от избранных пользователей.</string>
     <string name="alert_methods_summary">Как вы хотите быть уведомлены: вибрация, звук, LED и т.д.</string>
     <string name="windowed_helper_message">Чтобы закрыть окно на планшете, просто нажмите на затемненную область вокруг окна.\n\nЭта обеспечивает быструю доступность ленты!</string>
-    <string name="permission_check_title">Разрешения Talon:</string>
-    <string name="permission_check_message">Talon сейчас попросит у вас авторизации по двум разрешениям:
-для местоположения и памяти.\n\n
-
-- Местоположение используется для доступа к локальным трендам, а также для добавления вашего местоположения к вашим твитам (если вы используете данную опцию). Я никогда не сохраняю данные о вашем местоположении.\n
-- Память используется, чтобы сохранять изображения твитов на внешнюю память (когда требуется), а также используется при загрузке ваших изображений в Twitter.\n\n
-
-Не бойтесь отклонить любое из разрешений. Вы можете изменять их вручную из ваших системных настроек приложений.</string>
     <string name="tell_about_swipe_down">Совет: просто сделайте свайп вниз, чтобы закрыть этот экран.</string>
     <string name="download_video">Загрузить видео</string>
     <string name="download_gif">Загрузить GIF</string>
@@ -80,7 +65,6 @@
     <string name="saved_video">Сохранение завершено</string>
     <string name="encoding_gif">Кодируем GIF...</string>
     <string name="scroll_options">Опции прокрутки</string>
-    <string name="static_ui_title">Статичный UI</string>
     <string name="static_ui_summary">При включении этой опции панель приложения, кнопка создания твита и панель Snackbar не будут исчезать при прокрутке.</string>
     <string name="list_sync_interval">Частота обновления списка</string>
     <string name="list_sync_summary">Это запустит фоновую синхронизацию любых списков, которые вы используете как дополнительные страницы на основной ленте.</string>
@@ -123,19 +107,15 @@
     <string name="location">Местонахождение</string>
     <string name="color_options">Настройка цветов</string>
     <string name="advanced_options">Дополнительные настройки</string>
-    <string name="material_color">Цвета Material Design</string>
     <string name="base_theme">Основная тема</string>
     <string name="functionality_options">Настройка функциональности</string>
     <string name="account_to_display">Учётная запись для отображения</string>
     <string name="timeline_to_display">Начальный экран</string>
     <string name="swipable_pages">Перелистываемые страницы</string>
     <string name="app_drawer">Меню приложения</string>
-    <string name="notifications_for_background_refreshes">Уведомления могут запуститься после того, как фоновое обновление завершится.</string>
     <string name="tweetmarker_text">TweetMarker может быть использован для синхронизации положения ленты между вашими устройствами.</string>
     <string name="precache_text">Изображения будут загружены фоном для мгновенного доступа в приложении.</string>
     <string name="timeline_notifications_text">Это уведомление исчезнет по окончании фоновых обновлений.</string>
-    <string name="tweetmarker_always_refreshes">TweetMarker будет всегда обновляться при запуске.</string>
-    <string name="background_refreshes_disclaimer">Все настройки в \"Фоновой синхронизации\" будут расходовать данные и заряд аккумулятора.</string>
     <string name="discover_section_options">Настройки местоположения</string>
     <string name="clear_memory">Очистить память</string>
     <string name="manage_mutes_options">Настроить приглушения</string>
@@ -144,11 +124,8 @@
     <string name="widget_material_dark">тёмный Material Design</string>
     <string name="widget_material_transparent">Полностью прозрачный</string>
     <string name="in_app_browser_summary">При отключении встроенного браузера, ссылки будут открываться с системном браузере.</string>
-    <string name="chrome_custom_tabs_summary">Замена на встроенный браузер. Будут использованы сервисы, предоставляемые Google Chrome.</string>
     <string name="reverse_click_actions_default">По умолчанию:\n-Быстрое нажатие = Развернуть в ленте\n-Долгое нажатие = Полноэкранный просмотр</string>
     <string name="show_images_on_widget">Показывать изображения на виджете</string>
-    <string name="auto_dismiss">Автоотклонение уведомлений</string>
-    <string name="auto_dismiss_summary">Не отображать уведомления, когда приложение открыто. Включено по умолчанию.</string>
     <string name="media">Пользовательские медиа-данные</string>
     <string name="ignored_on_compact">Эти настройки будут игнорироваться при компактном стиле.</string>
     <string name="use_peek_description">Долгий тап по аватару, картинке, видео или GIF в ленте чтобы активировать предварительный просмотр.</string>
@@ -194,7 +171,6 @@
     <string name="media_downloads_channel">Уведомления о загрузке медиа</string>
     <string name="background_refresh_channel">Уведомления об обновлении в фоне.</string>
     <string name="notification_channels">Каналы уведомлений</string>
-    <string name="crop_images">Обрезать изображения в ленте</string>
     <string name="update_tweet">Обновить твит</string>
     <string name="rate_it_button">Оценить!</string>
     <string name="preview_web_links">Предпросмотр ссылок</string>

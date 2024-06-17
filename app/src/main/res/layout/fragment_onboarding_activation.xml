@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:fillViewport="true">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:clipChildren="false">
+
+			<TextView
+				android:id="@+id/subtitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="56dp"
+				android:layout_marginEnd="24dp"
+				android:layout_marginTop="12dp"
+				android:textAppearance="@style/m3_body_large"
+				android:textColor="?colorOnSurface"
+				android:text="@string/confirm_email_subtitle"/>
+
+			<Space
+				android:layout_width="1dp"
+				android:layout_height="0px"
+				android:layout_weight="1"/>
+			
+			<ImageView
+				android:layout_width="230dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="12dp"
+				android:importantForAccessibility="no"
+				android:adjustViewBounds="true"
+				android:src="@drawable/confirm_email_art"/>
+
+			<Space
+				android:layout_width="1dp"
+				android:layout_height="0px"
+				android:layout_weight="1"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center_horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="@style/m3_label_large"
+			android:textColor="?colorOnSurfaceVariant"
+			android:text="@string/confirm_email_didnt_get"/>
+
+		<allen.town.focus_common.views.AccentMaterialButton
+			android:id="@+id/btn_resend"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:layout_marginStart="36dp"
+			android:text="@string/resend"
+			android:paddingTop="0dp"
+			android:paddingBottom="0dp"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp"
+			android:fontFeatureSettings="'tnum'"
+			style="@style/Widget.Material3.Button"/>
+
+	</LinearLayout>
+
+	<allen.town.focus_common.views.AccentMaterialButton
+		android:id="@+id/btn_next"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginTop="16dp"
+		android:layout_marginBottom="16dp"
+		android:minWidth="145dp"
+		style="@style/Widget.Material3.Button"
+		android:text="@string/open_email_app" />
+
+</LinearLayout>

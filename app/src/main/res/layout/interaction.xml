@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@
             android:textStyle="bold"
             android:textSize="15sp"
             android:fontFamily="sans-serif-light"
-            android:textColor="?textColor"
+            android:textColor="?android:textColorPrimary"
             />
 
         <TextView
@@ -65,7 +65,7 @@
             android:maxLines="5"
             android:fontFamily="sans-serif-light"
             android:textSize="13sp"
-            android:textColor="?dateColor"
+            android:textColor="?android:attr/textColorPrimary"
             />
 
     </LinearLayout>

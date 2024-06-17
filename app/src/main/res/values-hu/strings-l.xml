@@ -7,7 +7,7 @@
     <string name="show_all">Mutassa mind</string>
     <string name="stats">Statisztika</string>
     <string name="list_count">%s listában.</string>
-    <string name="joined_twitter">Csatlakozott a Twitterhez:</string>
+    <string name="joined_twitter">Csatlakozott a Mastodonhez:</string>
     <string name="top_down">Fentről lefelé mód</string>
     <string name="top_down_summary">Az idővonal pozíció soha nem lesz elmentve. Mindig a tetején fog kezdeni.</string>
     <string name="timeline_text_size">Betűméret</string>
@@ -16,13 +16,12 @@
     <string name="twitpic_summary_l">Az összes kép feltöltése TwitPic-en keresztül.</string>
     <string name="interactions_only">Csak események</string>
     <string name="inter_stream">Események és Élő közvetítés</string>
-    <string name="dont_use_pull">Ne használja a Talon Pull-t</string>
+    <string name="dont_use_pull">Ne használja a Focus_for_Mastodon Pull-t</string>
     <string name="always">Mindig</string>
     <string name="never">Soha</string>
     <string name="only_on_wifi">Csak WiFi-n</string>
     <string name="only_on_data">Csak mobilnettel</string>
     <string name="contact_me">Kapcsolatfelvétel</string>
-    <string name="my_google_plus">Saját Google+</string>
     <string name="follow_progress">Kövesse a haladásunkat:</string>
     <string name="general">Általános</string>
     <string name="no_interactions">Nincsenek események</string>
@@ -31,7 +30,6 @@
     <string name="web">Web</string>
     <string name="heads_up">Felugró értesítések</string>
     <string name="use_snackbar">Felugró sáv használata</string>
-    <string name="use_snackbar_summary">Kijelzi, hogy hány tweet van az idővonal tetejéig.</string>
     <string name="bottom_pictures">Képek a Tweetek alatt</string>
     <string name="bottom_pictures_summary">Ezzel a beállítással a Tweetek nem lesznek kibontva.</string>
     <string name="preparing_signin">Bejelentkezés előkészítése</string>
@@ -42,35 +40,23 @@
     <string name="click_to_remove_muffle">Kattintson egy felhasználóra a halkításs törléséhez.</string>
     <string name="muffle_user">Felhasználó halkítása</string>
     <string name="unmuffle_user">Halkítás visszavonása</string>
-    <string name="enjoying_talon">Élvezi a Talon használatát?</string>
+    <string name="enjoying_FocusforMastodon">Élvezi a Focus_for_Mastodon használatát?</string>
     <string name="give_a_rating">Értékelje vagy ossza meg barátaival!\n\nAz 5 csillagos értékelés jól esik :)</string>
     <string name="rate_on_rating_dialog">Értékelés</string>
     <string name="share_on_rating_dialog">Megosztás</string>
     <string name="ignore">Kihagy</string>
-    <string name="when_talon_pull_on">Akkor érvényesül, ha a Talon Pull be van kapcsolva.</string>
-    <string name="transparent_system_bars">Átlátszó rendszersávok használata</string>
     <string name="accent_color">Kiemelés színe</string>
-    <string name="nav_bar_option">Navigációs sáv felülírása</string>
-    <string name="nav_bar_option_summary">Az alkalmazások nem képesek pontosan megállapítani, hogy egy eszköznek van-e navigációs sávja vagy nincs. Mivel a Talon erősen ezen az elrendezésen alapul, ezért ez a beállítás lehetővé teszi, hogy kézzel adja meg.</string>
     <string name="nav_bar_automatic">Automatikusan meghatározott</string>
     <string name="nav_bar_present">Navigációs sáv használata</string>
     <string name="nav_bar_gone">Nincs navigációs sáv</string>
     <string name="tip_title">Tipp:</string>
     <string name="profile_pictures_helper_message">A képet követő tweet megnyitásához egyszerűen kattintson hosszan ezen a rácson.\n\nA normál kattintás a képnézőt fogja megnyitni.</string>
-    <string name="quote_disclaimer">A modern Twitter kliensekben a twitter állapot hivatkozás beágyazott tweetként fog látszódni. A hivatkozás úgy működik, mint egy idézett tweet.</string>
+    <string name="quote_disclaimer">A modern Mastodon kliensekben a Mastodon állapot hivatkozás beágyazott tweetként fog látszódni. A hivatkozás úgy működik, mint egy idézett tweet.</string>
     <string name="sync_options">Szinkronizálás beállítások</string>
     <string name="manual_syncs">Kézi szinkronizálás</string>
     <string name="timeline_notifications_summary">A háttérben történő frissítések időköze bekapcsolva kell legyenek ezeknél az értesítéseknél.</string>
-    <string name="favorite_user_notifications_summary">Az idővonal háttérben történő frissítésének időköze, vagy az élő közvetítés engedélyezve kell legyen a kedvenc felhasználó értesítésekhez.</string>
     <string name="alert_methods_summary">Hogyan akar értesülni: rezgés, hang, LED, stb.</string>
     <string name="windowed_helper_message">Táblagépen az ablak bezárásához egyszerűen kattintson az ablakon kívüli elsötétített részre.\n\nÍgy biztosja, hogy az idővonal soha nem lesz túl távol!</string>
-    <string name="permission_check_title">Talon engedélyek:</string>
-    <string name="permission_check_message">A Talon két hozzáféréshez kér engedélyt: hely és tárhely.\n\n
-
-- A hely a helyi trendek és a tweetek hely címkéinek hozzáféréséhez kell (ha ezt is kéri). Mi soha nem tároljuk a helyzetét.\n
-- A tárhely a tweet képek külső tárolóra való mentéséhez kell (ha kérte), valamint a képek feltöltéséhez a Twitterre.\n\n
-
-Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáférést a rendszer alkalmazás beállításainál.</string>
     <string name="tell_about_swipe_down">Tipp: egyszerűen csúsztasson le a képernyő bezárásához.</string>
     <string name="download_video">Videó letöltése</string>
     <string name="download_gif">GIF letöltése</string>
@@ -79,7 +65,6 @@ Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáfér�
     <string name="saved_video">Mentés kész</string>
     <string name="encoding_gif">GIF kódolása...</string>
     <string name="scroll_options">Görgetés beállítások</string>
-    <string name="static_ui_title">Statikus UI</string>
     <string name="static_ui_summary">Így az alkalmazás sáv, FAB, felugró sáv nem tűnik el görgetés közben.</string>
     <string name="list_sync_interval">Lista frissítési gyakorisága</string>
     <string name="list_sync_summary">Ez egy háttér szinkronizálást fog végrehajtani azokon a listákon, amiket a fő idővonal extra oldalaiként használ.</string>
@@ -97,7 +82,7 @@ Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáfér�
     <string name="discover_people">Emberek</string>
     <string name="no_media_preview">Ehhez a videó szolgáltatáshoz nincs előnézet.</string>
     <string name="autoplay_title">Idővonal autolejátszás</string>
-    <string name="autoplay_summary">Automatikusan lejátsza a Twitter GIF-eket és videókat anélkül, hogy elhagyná az idővonalat.</string>
+    <string name="autoplay_summary">Automatikusan lejátsza a Mastodon GIF-eket és videókat anélkül, hogy elhagyná az idővonalat.</string>
     <string name="high_quality_images">Jobb minőségű képek használata</string>
     <string name="high_quality_images_summary">Az egész alkalmazásban alkalmazásra kerül.</string>
     <string name="view_likes">Kedvelések megtekintése</string>
@@ -122,19 +107,15 @@ Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáfér�
     <string name="location">Hely</string>
     <string name="color_options">Szín beállítások</string>
     <string name="advanced_options">Haladó beállítások</string>
-    <string name="material_color">Material stílusú szín</string>
     <string name="base_theme">Alap téma</string>
     <string name="functionality_options">Működés beállítások</string>
     <string name="account_to_display">Megjelenítendő fiók</string>
     <string name="timeline_to_display">Megjelenítendő idővonal</string>
     <string name="swipable_pages">Csúsztatható oldalak</string>
     <string name="app_drawer">Alkalmazástár</string>
-    <string name="notifications_for_background_refreshes">Az értesítések ezeknek a háttérfrissítések befejezése után indulnak.</string>
     <string name="tweetmarker_text">A TweetMarker az eszközök közötti idővonal pozíció szinkronizálásához használható.</string>
     <string name="precache_text">Így a háttérben történő frissítéskor a képek is letöltődnek, és azonnal elérhetővé válnak az alkalmazásban.</string>
     <string name="timeline_notifications_text">Ezek az értesítések a háttérben történő frissítés befejezése után indulnak.</string>
-    <string name="tweetmarker_always_refreshes">A TweetMarker mindig induláskor fog frissíteni.</string>
-    <string name="background_refreshes_disclaimer">Minden \"Háttérszinkronizálás\" beállítás fogyasztja az adatforgalmat és az akkumulátort.</string>
     <string name="discover_section_options">Felfedezés beállítások</string>
     <string name="clear_memory">Memória ürítése</string>
     <string name="manage_mutes_options">Némítások kezelése</string>
@@ -143,11 +124,8 @@ Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáfér�
     <string name="widget_material_dark">Sötét Material Stílus</string>
     <string name="widget_material_transparent">Teljesen átlátszó</string>
     <string name="in_app_browser_summary">A belső böngésző letiltásával minden link az alapértelmezett böngészőben fog megnyílni.</string>
-    <string name="chrome_custom_tabs_summary">A Talon saját belső böngészőjének helyettesítője. A Google Chrome által biztosított szolgáltatásokat használja.</string>
     <string name="reverse_click_actions_default">Alapértelmezett (nem fordított műveletek):\n- Rövid kattintás = Kiterjesztés\n- Hosszú kattintás = Tweet megjelenítő</string>
     <string name="show_images_on_widget">Mutassa a képeket a Widgeten</string>
-    <string name="auto_dismiss">Értesítések auto-elutasítása</string>
-    <string name="auto_dismiss_summary">Amikor a Talon nyitva van, akkor automatikusan elutasítja az összes értesítést. Alapértelmezetten be van kapcsolva.</string>
     <string name="media">Felhasználói média</string>
     <string name="ignored_on_compact">Kompakt elrendezésben ez a beállítás nem érvényesül.</string>
     <string name="use_peek">\"Peeking\" használata</string>
@@ -183,7 +161,7 @@ Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáfér�
     <string name="enable_fingerprint_lock">Ujjlenyomat zárolás engedélyezése</string>
     <string name="disable_fingerprint_lock">Ujjlenyomat zárolás letiltása</string>
     <string name="followers_only_auto_complete">Követők auto-kiegészítése</string>
-    <string name="followers_only_auto_complete_summary">Ne keressen az egész Twitteren, amikor autokiegészít egy említést.</string>
+    <string name="followers_only_auto_complete_summary">Ne keressen az egész Mastodonen, amikor autokiegészít egy említést.</string>
     <string name="quoting">Idézés</string>
     <string name="profile_timeline">Idővonal</string>
     <string name="show_all_tweets">Mutassa az összes Tweetet</string>
@@ -191,22 +169,13 @@ Nyugodtan elutasíthatja bármelyik engedélyt. Kézzel megadhatja a hozzáfér�
     <string name="are_you_sure_follow">Biztos, hogy követni akarja ezt a felhasználót?</string>
     <string name="are_you_sure_spam">Biztos, hogy spamnek akarja jelölni ezt a tweetet?</string>
     <string name="larger_images">Nagyobb képek használata</string>
-    <string name="show_profile_pictures">Profilképek mutatása</string>
     <string name="reply_to">Válasz</string>
     <string name="others">egyéb</string>
     <string name="compress_reply_handles">Tömörített válaszok kezelése</string>
-    <string name="compress_reply_handles_summary">Javítja a hosszú válaszok kezelését a Twitteren.</string>
+    <string name="compress_reply_handles_summary">Javítja a hosszú válaszok kezelését a Mastodonen.</string>
     <string name="interaction_notifications">Esemény értesítések</string>
-    <string name="interaction_notifications_summary">Ezekehez engedélyezni kell az aktivitás lap háttérben történő frissítését, a Twitter Push elfogást vagy a Talon Pull-t.</string>
-    <string name="swipable_page_notifications">Csúsztatható lap értesítések</string>
-    <string name="swipable_page_notifications_summary">Ezek jelennek meg amikor a csúsztatható lapok frissülnek a háttérben.</string>
     <string name="never_show_notifications">Soha ne mutassa az értesítéseket</string>
-    <string name="after_background_refresh_talon_pull">\nHáttérben történő frissítés vagy Talon Pull (közvetítés) esemény\n</string>
-    <string name="intercept_twitter_push_notifications">\nTwitter alkalmazás azonnali értesítéseinek elfogása\n</string>
-    <string name="intercept_twitter_push_description">A funkció használatához szükség van a normál Twitter alkalmazás telepítésére és bejelentkezni.\n\n
-Az értesítéseket abban az alkalmazásban kell beállítani, mint normál esetben.
-Minden értesítés, amit a Twitter kap Talon értesítésként fog megjelenni.
-A funkció használatához a következő képernyőn engedélyezni kell a Talon-t. Ez engedélyezi a Talon számára a Twitter értesítések figyelését.</string>
+    <string name="intercept_twitter_push_notifications">\nMastodon alkalmazás azonnali értesítéseinek elfogása\n</string>
     <string name="widget_refresh_channel">Widget frissítés értesítések</string>
     <string name="media_downloads_channel">Média letöltés értesítések</string>
     <string name="tweeting_notifications_channel">Tweetelés értesítések</string>
@@ -215,16 +184,12 @@ A funkció használatához a következő képernyőn engedélyezni kell a Talon-
     <string name="interactions_channel">Események értesítések</string>
     <string name="scheduled_messages_channel">Időzített Tweet küldés értesítések</string>
     <string name="favorite_user_channel">Kedvenc felhasználó értesítések</string>
-    <string name="talon_pull_channel">Talon Pull értesítések</string>
     <string name="mentions_channel">Említés értesítések</string>
     <string name="direct_messages_channel">Közvetlen üzenet értesítések</string>
     <string name="notification_channels">Értesítési csatornák</string>
-    <string name="notification_channels_summary">A csatornák szabályozzák az értesítések riasztási típusait és lehetővé teszik az értesítések testreszabását.</string>
-    <string name="crop_images">Képek levágása az idővonalon</string>
     <string name="update_tweet">Tweet frissítése</string>
     <string name="rate_it_button">Értékelje!</string>
     <string name="rate_it_title">A legjobb értékelésekig hosszú az út</string>
-    <string name="rate_it_summary">Az <b>5 csillagos értékelések</b> nagyot segítenek az alkalmazás népszerűségéhez és láthatóságához a Play Áruházban.  Ha szeretné látni az alkalmazás <i>további szárnyalását</i>, akkor segítsen!</string>
     <string name="rate_it_not_ready">Még nem értékeli? Semmi baj. Lépjen vissza és soha nem kérdezzük újra.</string>
     <string name="preview_web_links">Webes hivatkozások előnézete</string>
     <string name="seconds_ago">%1$d másodperce</string>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  Copyright 2014 Luke Klinker
+<?xml version="1.0" encoding="utf-8"?><!--
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,135 +14,149 @@
   limitations under the License.
   -->
 <!-- The main content view -->
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ptr_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <LinearLayout android:id="@+id/spinner"
-        android:orientation="vertical"
-        android:layout_height="fill_parent"
+    <LinearLayout
+        android:id="@+id/spinner"
         android:layout_width="fill_parent"
-        android:gravity="center" >
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:visibility="gone">
 
-        <ProgressBar
+        <allen.town.focus_common.views.AccentProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.ProgressBar"
+
             android:indeterminateOnly="true" />
 
-        <com.klinker.android.twitter_l.views.widgets.text.FontPrefTextView
+        <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/loading_tweets"
-            android:textColor="?textColor"
             android:layout_marginTop="5dp"
-            android:textSize="15dp"/>
+            android:text="@string/loading_tweets"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="15dp" />
 
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/no_content"
-        android:orientation="vertical"
-        android:layout_height="fill_parent"
+    <LinearLayout
+        android:id="@+id/no_content"
         android:layout_width="fill_parent"
-        android:visibility="gone"
-        android:gravity="center" >
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
 
-        <ImageView android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_biker"
+        <ImageView
             android:id="@+id/picture"
-            android:scaleType="fitCenter"/>
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_biker" />
 
         <TextView
             android:id="@+id/no_content_title"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
-            android:text="@string/no_content_home"
-            android:textColor="?textColor"
-            android:gravity="center"
-            android:textSize="25dp"
+            android:layout_marginBottom="30dp"
             android:fontFamily="sans-serif"
-            android:layout_marginBottom="30dp"/>
+            android:gravity="center"
+            android:text="@string/no_content_home"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/no_content_summary"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
-            android:text="@string/no_content_home_summary"
-            android:textColor="?textColor"
-            android:gravity="center"
             android:fontFamily="sans-serif-light"
-            android:textSize="14dp"/>
+            android:gravity="center"
+            android:text="@string/no_content_home_summary"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="14dp" />
 
     </LinearLayout>
 
-    <com.klinker.android.twitter_l.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout
+    <allen.town.focus.twitter.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:visibility="gone">
 
-        <ListView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/listView"
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
             android:divider="?drawerDividerColor"
             android:dividerHeight="1dp"
-            android:scrollbars="vertical"
-            android:background="@android:color/transparent"
             android:listSelector="@android:color/transparent"
-            android:visibility="gone"
-            />
+            android:scrollbars="vertical"
+            android:visibility="gone" />
 
-    </com.klinker.android.twitter_l.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout>
+    </allen.town.focus.twitter.views.widgets.swipe_refresh_layout.material.MaterialSwipeRefreshLayout>
 
-    <LinearLayout android:id="@+id/toastBar"
+
+    <LinearLayout
+        android:id="@+id/toastBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="65dp"
+        android:gravity="bottom|left"
         android:textDirection="ltr"
-        android:gravity="bottom|left">
+        android:visibility="gone"
+        tools:visibility="visible">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/toast_background"
-            android:layout_width="@dimen/snack_bar_size"
-            android:layout_height="wrap_content"
-            android:background="@drawable/snack_bar_light"
-            android:baselineAligned="true"
             android:layout_marginLeft="20dp"
-            android:orientation="horizontal"
-            android:elevation="3dp">
+            android:layout_width="@dimen/snack_bar_size"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:gravity="left"
-                android:id="@+id/toastDescription"
-                android:singleLine="true"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                android:paddingLeft="16dp"
-                android:paddingTop="18dp"
-                android:paddingBottom="18dp"
-                android:textAllCaps="true"/>
+            <LinearLayout
+                android:layout_width="@dimen/snack_bar_size"
+                android:layout_height="wrap_content"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/toastButton"
-                android:background="@drawable/ripple_dark_borderless"
-                android:gravity="center"
-                android:textSize="14sp"
-                android:textColor="@color/accent_ligher"
-                android:textAllCaps="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"/>
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/toastDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="14sp"
+                    tools:text="we have" />
+
+                <TextView
+                    android:id="@+id/toastButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ripple_dark_borderless"
+                    android:drawableRight="@drawable/ic_round_arrow_upward_24"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textAllCaps="true"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="14sp"
+                    tools:text="2 items" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
 </RelativeLayout>

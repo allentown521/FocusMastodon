@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  Copyright 2014 Luke Klinker
+
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -19,58 +19,82 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/notifications">
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            android:key="noti_intercept_twitter"
+            android:summary="@string/noti_intercept_twitter"
+            android:title="@string/intercept_twitter_push_notifications"
+            android:defaultValue="false" />
 
-        <ListPreference
-            android:key="notification_options"
-            android:title="@string/notifications"
-            android:entries="@array/notification_options"
-            android:entryValues="@array/notification_options_inserted"
-            android:defaultValue="legacy" />
-
-        <SwitchPreference
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
             android:key="quiet_hours"
+            android:icon="@drawable/ic_round_volume_mute_24"
             android:title="@string/quiet_hours"
             android:defaultValue="false" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:title="@string/notification_types" >
-
-        <MultiSelectListPreference
-            android:key="interactions_set"
-            android:title="@string/interaction_notifications"
-            android:summary="@string/interaction_notifications_summary"
-            android:defaultValue="@array/interaction_notifications_inserted"
-            android:entries="@array/interactions_notifications"
-            android:entryValues="@array/interaction_notifications_inserted" />
-
-        <MultiSelectListPreference
-            android:key="timeline_set"
-            android:title="@string/swipable_page_notifications"
-            android:summary="@string/swipable_page_notifications_summary"
-            android:defaultValue="@array/timeline_notifications_default"
-            android:entries="@array/timeline_notifications"
-            android:entryValues="@array/interaction_notifications_inserted" />
-
-        <SwitchPreference
-            android:key="favorite_users_notifications"
-            android:title="@string/fav_users_notifications"
-            android:summary="@string/favorite_user_notifications_summary"
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="favorite_notifications"
+            android:title="@string/favorited_tweet"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="retweet_notifications"
+            android:title="@string/retweets"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="follower_notifications"
+            android:title="@string/new_followers"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="mentions_notifications"
+            android:title="@string/mentions"
             android:defaultValue="true" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="timeline_notifications"
+            android:title="@string/timeline"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="direct_message_notifications"
+            android:title="@string/direct_messages"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="activity_notifications"
+            android:title="@string/activity"
+            android:defaultValue="true" />
 
-    <com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="favorite_users_notifications"
+            android:title="@string/fav_users_notifications"
+            android:defaultValue="true" />
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
         android:key="advanced-notifications"
         android:title="@string/advanced" >
 
-        <Preference
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
             android:key="notification_channels"
-            android:title="@string/notification_channels"
-            android:summary="@string/notification_channels_summary" />
+            android:title="@string/notification_channels" />
 
         <MultiSelectListPreference
             android:key="alert_types"
@@ -80,11 +104,14 @@
             android:entries="@array/alert_types"
             android:entryValues="@array/alert_types_inserted" />
 
-        <Preference
-            android:key="advanced"
-            android:title="@string/advanced_options"/>
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="ringtone"
+            android:title="@string/custom_ringtone"
+            android:ringtoneType="notification"
+            android:defaultValue="content://settings/system/notification_sound" />
 
-    </com.klinker.android.twitter_l.views.preference.MaterialPreferenceCategory>
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
 
 
 </PreferenceScreen>
