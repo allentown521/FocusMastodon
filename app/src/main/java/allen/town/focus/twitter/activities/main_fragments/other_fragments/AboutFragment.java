@@ -108,9 +108,7 @@ public class AboutFragment extends AppCompatDialogFragment {
     public Dialog onCreateDialog(Bundle bundle) {
         View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_about, (ViewGroup) null);
         ButterKnife.bind(this, inflate);
-        if(!App.getInstance().isDroid()){
-            opensourceView.setVisibility(View.GONE);
-        }
+
         this.version.setText(getString(R.string.version) + " " + BuildConfig.VERSION_NAME);
         butterknife.ViewCollections.run(this.styleButtons, (view, i) -> ((ImageView) view)
                 .setColorFilter(ThemeStore.accentColor(getContext()), PorterDuff.Mode.SRC_IN));
