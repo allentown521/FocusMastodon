@@ -7,7 +7,7 @@ if (keystoreProperties.exists()) {
 }
 
 buildscript {
-    ext.kotlin_version = '1.9.0'
+    ext.kotlin_version = '1.9.23'
     ext.versions = [
             'androidX'          : '1.0.0',
             'firebaseAnalytics' : '21.1.0',
