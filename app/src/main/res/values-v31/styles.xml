@@ -1,7 +1,0 @@
-<resources>
-
-    <style name="Theme.Focus_for_Mastodon.Splash" parent="Theme.FocusPodcast.FollowSystem">
-        <item name="emptyViewLayout">@layout/appkit_empty</item>
-        <item name="errorViewLayout">@layout/appkit_error</item>
-    </style>
-</resources>

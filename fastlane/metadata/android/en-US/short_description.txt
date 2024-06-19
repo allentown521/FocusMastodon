@@ -1,1 +1,0 @@
-FocusMastodon is a bright and colourful Mastodon client
