@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:background="?colorSurface"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_height="?actionBarSize"
+            app:title="@string/app_drawer"
+            app:navigationIcon="@drawable/ic_keyboard_backspace_black"
+            app:titleTextAppearance="@style/ToolbarTextAppearanceNormal" />
+
+        <allen.town.focus_common.views.AccentTabLayout xmlns:app="http://schemas.android.com/tools"
+            android:id="@+id/sliding_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?colorSurface"
+            app:tabMode="scrollable" />
+
+        <androidx.viewpager.widget.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <allen.town.focus_common.views.AccentMaterialButton
+        style="@style/Widget.Material3.Button"
+        android:id="@+id/actionbar_done"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:text="@string/done_label" />
+</RelativeLayout>

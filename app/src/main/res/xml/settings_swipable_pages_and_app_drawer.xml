@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+        android:key="pages"
+        android:layout="@layout/list_item_view_no_title"
+        android:summary="@string/drawer_elements_summary"
+        android:title="@string/app_drawer" />
+
+    <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+        android:key="swipe_hide_navigation"
+        android:defaultValue="true"
+        android:layout="@layout/list_item_view_switch"
+        android:title="@string/swipe_hide_navigation_title" />
+
+</PreferenceScreen>

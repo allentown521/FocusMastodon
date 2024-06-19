@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true"
+    app:cardCornerRadius="26dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/discard_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="?roundSelector"
+                        android:contentDescription="Attach Image"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_close" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_pic"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:maxWidth="42dp"
+                        android:maxHeight="42dp"
+                        android:minWidth="42dp"
+                        android:minHeight="42dp"
+                        app:civ_border_width="0dp" />
+
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                        android:id="@+id/current_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                    android:id="@+id/reply_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <allen.town.focus.twitter.views.widgets.text.FontPrefEditText
+                    android:id="@+id/contact_entry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Enter Contact"
+                    android:gravity="top"
+                    android:hint="@string/send_to"
+                    android:padding="15dp"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="?android:attr/textColorPrimary"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+
+                <allen.town.focus.twitter.views.widgets.ImageKeyboardEditText
+                    android:id="@+id/tweet_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:hint="@string/compose_dm_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="15dp"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="?android:attr/textColorPrimary"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+
+                <View
+                    android:id="@+id/prompt_pos"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent" />
+
+                        <FrameLayout
+                            android:id="@+id/holder1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                app:cardCornerRadius="16dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/picture1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="false"
+                                    android:scaleType="centerCrop" />
+
+                                <ImageButton
+                                    android:id="@+id/cancel1"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="right|top"
+                                    android:background="@drawable/trans_round"
+                                    android:src="@drawable/ic_close"
+                                    app:tint="@color/md_white_1000" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/holder2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                app:cardCornerRadius="16dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/picture2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="false"
+                                    android:scaleType="centerCrop" />
+
+                                <ImageButton
+                                    android:id="@+id/cancel2"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="right|top"
+                                    android:background="@drawable/trans_round"
+                                    android:src="@drawable/ic_close"
+                                    app:tint="@color/md_white_1000" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/holder3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                app:cardCornerRadius="16dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/picture3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="false"
+                                    android:scaleType="centerCrop" />
+
+                                <ImageButton
+                                    android:id="@+id/cancel3"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="right|top"
+                                    android:background="@drawable/trans_round"
+                                    android:src="@drawable/ic_close"
+                                    app:tint="@color/md_white_1000" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/holder4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                app:cardCornerRadius="16dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/picture4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="false"
+                                    android:scaleType="centerCrop" />
+
+                                <ImageButton
+                                    android:id="@+id/cancel4"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="right|top"
+                                    android:background="@drawable/trans_round"
+                                    android:src="@drawable/ic_close"
+                                    app:tint="@color/md_white_1000" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+            <ImageButton
+                android:id="@+id/attach"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:background="?roundSelector"
+                android:contentDescription="Attach Image"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_round_image_24" />
+            <ImageButton
+                android:id="@+id/capture"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="6dp"
+                android:background="?roundSelector"
+                android:contentDescription="Attach Video"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_round_photo_camera_24" />
+            <ImageButton
+                android:id="@+id/gif"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:background="?roundSelector"
+                android:contentDescription="Find GIF"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_gif" />
+            <ImageButton
+                android:id="@+id/emoji"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:adjustViewBounds="true"
+                android:background="?roundSelector"
+                android:contentDescription="Add Emojis"
+                android:maxWidth="42dp"
+                android:maxHeight="42dp"
+                android:minWidth="42dp"
+                android:minHeight="42dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_round_emoji_emotions_24" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?rectSelector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/char_remaining"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp" />
+
+                <allen.town.focus_common.views.AccentImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Send Button"
+                    android:focusable="false"
+                    android:maxWidth="40dp"
+                    android:maxHeight="40dp"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_round_send_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/emoji_keyboard" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

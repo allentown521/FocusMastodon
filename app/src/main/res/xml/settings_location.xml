@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+        android:layout="@layout/list_item_view"
+        android:key="language_name"
+        android:title="@string/locale"
+        android:summary="@string/locale_summary"
+        android:defaultValue="auto"
+        app:icon="@drawable/ic_language"
+        android:entries="@array/locale"
+        android:entryValues="@array/locale_inserted" />
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/discover_section_options" >
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="manually_config_location"
+            android:title="@string/manually_config_location"
+            android:defaultValue="false" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
+            android:key="country"
+            android:title="@string/country_region"
+            android:defaultValue="United States"
+            android:entries="@array/countries"
+            android:entryValues="@array/countries"
+            android:dependency="manually_config_location" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="city"
+            android:title="@string/city"
+            android:dependency="manually_config_location" />
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+
+</PreferenceScreen>

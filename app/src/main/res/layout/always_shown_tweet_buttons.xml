@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/always_compose_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:adjustViewBounds="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Reply"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_round_reply_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/always_like_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Like"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_heart_outline" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/always_retweet_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:adjustViewBounds="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Retweet"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_retweet" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/always_quote_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Quote"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_round_format_quote_24" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/always_bookmark_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:adjustViewBounds="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Quote"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/round_bookmark_border_24" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/always_share_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:adjustViewBounds="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Share"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_round_share_24" />
+
+    </LinearLayout>
+
+</LinearLayout>

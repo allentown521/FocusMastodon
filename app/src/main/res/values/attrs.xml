@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Colors -->
+    <attr name="drawerDividerColor" format="color" />
+    <attr name="textShadowColor" format="color" />
+    <attr name="embeddedTweetBackground" format="color" />
+    <attr name="windowBackground" format="color" />
+    <attr name="emojiDivider" format="color" />
+    <attr name="notificationBackground" format="color" />
+    <attr name="borderColor" format="color" />
+    <attr name="icon_color" format="color" />
+    <attr name="drawer_options_background" format="color" />
+    <attr name="tweet_background" format="color" />
+    <attr name="tweet_activity_background" format="color"/>
+    <attr name="revamped_tweet_timeline_line" format="color" />
+    <attr name="revamped_tweet_background" format="color" />
+
+    <!-- Drawables -->
+    <attr name="rippleBackground" format="reference"/>
+    <attr name="myTweetBackground" format="reference"/>
+    <attr name="tweetBackground" format="reference"/>
+    <attr name="tweetBackgroundNoDialog" format="reference"/>
+    <attr name="sendButton" format="reference"/>
+    <attr name="attachButton" format="reference"/>
+    <attr name="newIcon" format="reference"/>
+    <attr name="progressBar" format="reference"/>
+    <attr name="delete" format="reference"/>
+    <attr name="drawerDrawable" format="reference"/>
+    <attr name="playVideo" format="reference"/>
+    <attr name="rotateButton" format="reference"/>
+    <attr name="showMoreButton" format="reference"/>
+    <attr name="retweetButton" format="reference"/>
+    <attr name="favoritedButton" format="reference"/>
+    <attr name="notFavoritedButton" format="reference"/>
+    <attr name="acceptButton" format="reference"/>
+    <attr name="circleBorder" format="reference"/>
+    <attr name="squareBorder" format="reference"/>
+    <attr name="quote_button" format="reference"/>
+    <attr name="check_box" format="reference"/>
+    <attr name="notification_button" format="reference"/>
+    <attr name="replies" format="reference"/>
+    <attr name="heart_button" format="reference"/>
+    <attr name="quick_actions" format="reference"/>
+    <attr name="supporter" format="reference" />
+    <attr name="tweet_interactions" format="reference"/>
+    <attr name="data_saver" format="reference"/>
+    <attr name="widget_customization" format="reference" />
+    <attr name="background_sync" format="reference" />
+    <attr name="notification_settings" format="reference"/>
+    <attr name="reply_button" format="reference" />
+    <attr name="night_mode" format="reference" />
+
+    <!-- Backgrounds -->
+    <attr name="compose_window_background" format="reference"/>
+    <attr name="snackbar" format="reference"/>
+
+    <!-- Drawer Icons -->
+    <attr name="drawerIcon" format="reference"/>
+    <attr name="links" format="reference"/>
+    <attr name="getHelp" format="reference"/>
+    <attr name="favUser" format="reference"/>
+    <attr name="feedback" format="reference"/>
+
+    <!-- Actionbar Icons -->
+    <attr name="actionbar" format="reference"/>
+    <attr name="done" format="reference"/>
+    <attr name="newMessage" format="reference"/>
+
+    <declare-styleable name="FloatingHintEditTextLayout">
+        <attr name="editTextOffsetY" format="dimension"/>
+        <attr name="android:labelTextSize" format="dimension"/>
+        <attr name="labelTextColor" format="color"/>
+    </declare-styleable>
+</resources>

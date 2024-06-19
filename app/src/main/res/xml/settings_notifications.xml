@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/notifications">
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            android:key="noti_intercept_twitter"
+            android:summary="@string/noti_intercept_twitter"
+            android:title="@string/intercept_twitter_push_notifications"
+            android:defaultValue="false" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="quiet_hours"
+            android:icon="@drawable/ic_round_volume_mute_24"
+            android:title="@string/quiet_hours"
+            android:defaultValue="false" />
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/notification_types" >
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="favorite_notifications"
+            android:title="@string/favorited_tweet"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="retweet_notifications"
+            android:title="@string/retweets"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="follower_notifications"
+            android:title="@string/new_followers"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="mentions_notifications"
+            android:title="@string/mentions"
+            android:defaultValue="true" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="timeline_notifications"
+            android:title="@string/timeline"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="direct_message_notifications"
+            android:title="@string/direct_messages"
+            android:defaultValue="true" />
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="activity_notifications"
+            android:title="@string/activity"
+            android:defaultValue="true" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="favorite_users_notifications"
+            android:title="@string/fav_users_notifications"
+            android:defaultValue="true" />
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:key="advanced-notifications"
+        android:title="@string/advanced" >
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="notification_channels"
+            android:title="@string/notification_channels" />
+
+        <MultiSelectListPreference
+            android:key="alert_types"
+            android:title="@string/alert_types"
+            android:summary="@string/alert_methods_summary"
+            android:defaultValue="@array/alert_types_inserted"
+            android:entries="@array/alert_types"
+            android:entryValues="@array/alert_types_inserted" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="ringtone"
+            android:title="@string/custom_ringtone"
+            android:ringtoneType="notification"
+            android:defaultValue="content://settings/system/notification_sound" />
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+
+</PreferenceScreen>

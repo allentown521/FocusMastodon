@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <allen.town.focus.twitter.views.preference.TweetStylePreviewPreference
+        android:key="tweet_style_preview" />
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+        android:layout="@layout/list_item_view"
+        android:key="timeline_pictures"
+        android:title="@string/tweet_style"
+        android:summary="@string/tweet_style_description"
+        android:defaultValue="0"
+        android:entries="@array/timeline_pictures"
+        android:entryValues="@array/timeline_pictures_inserted"/>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:key="color_options_ground"
+        android:title="@string/color_options" >
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:defaultValue="auto"
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_values"
+            android:key="general_theme"
+            android:layout="@layout/list_item_view"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/base_theme"
+            app:icon="@drawable/ic_color_lens" />
+
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:key="black_theme"
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:title="@string/pref_theme_title_trueblack" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="@bool/md3_enabled"
+            android:disableDependentsState="true"
+            android:key="material_you"
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:title="@string/pref_title_md3"
+            app:isPreferenceVisible="@bool/md3_available" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="wallpaper_accent"
+            android:layout="@layout/list_item_view_switch"
+            android:dependency="material_you"
+            android:summary="@string/pref_summary_wallpaper_accent"
+            android:title="@string/pref_title_wallpaper_accent"
+            app:isPreferenceVisible="@bool/wallpaper_accent_visible" />
+        <allen.town.focus_common.common.prefs.supportv7.ATEColorPreference
+            android:dependency="material_you"
+            android:key="accent_color"
+            android:layout="@layout/list_item_color_view"
+            android:persistent="false"
+            android:summary="@string/accent_color_desc"
+            android:title="@string/accent_color"
+            app:icon="@drawable/ic_colorize" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:dependency="material_you"
+            android:key="desaturated_color"
+            android:layout="@layout/list_item_view_switch"
+            android:summary="@string/pref_summary_desaturated_color"
+            android:title="@string/pref_title_desaturated_color" />
+
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view"
+            android:key="custom_launcher_key"
+            android:summary="@string/pref_custom_launcher_summary"
+            android:title="@string/pref_custom_launcher_title"/>
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/font_options" >
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:defaultValue="0"
+            android:entries="@array/pref_tab_text_mode_titles"
+            android:entryValues="@array/pref_tab_text_mode_values"
+            android:key="tab_text_mode"
+            android:layout="@layout/list_item_view"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_tab_text_mode" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
+            android:key="emoji_style"
+            app:icon="@drawable/ic_round_emoji_emotions_24"
+            android:title="@string/emoji_style"
+            android:defaultValue="android_o"
+            android:entries="@array/emoji_style"
+            android:entryValues="@array/emoji_style_values"/>
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="font_type"
+            app:icon="@drawable/ic_round_font_download_24"
+            android:title="@string/font_type" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEListPreference
+            android:layout="@layout/list_item_view"
+            android:key="text_size"
+            app:icon="@drawable/ic_round_text_fields_24"
+            android:title="@string/timeline_text_size"
+            android:defaultValue="14"
+            android:entries="@array/text_size"
+            android:entryValues="@array/text_size" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="military_time"
+            android:title="@string/timestamp"
+            android:defaultValue="false" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch_no_title"
+            android:key="absolute_date"
+            android:title="@string/absolute_date"
+            android:defaultValue="false" />
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/advanced" >
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            android:key="always_show_tweet_buttons"
+            app:icon="@drawable/ic_round_call_to_action_24"
+            android:title="@string/alway_show_tweet_buttons"
+            android:summary="@string/alway_show_tweet_buttons_summary"
+            android:defaultValue="false" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            android:key="detailed_quotes"
+            app:isPreferenceVisible="false"
+            app:icon="@drawable/ic_round_format_quote_24"
+            android:title="@string/detailed_quotes"
+            android:summary="@string/detailed_quotes_summary"
+            android:defaultValue="false" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            android:key="drag_dismiss"
+            android:title="@string/enable_drag_dismiss"
+            android:summary="@string/enable_drag_dismiss_summary"
+            android:defaultValue="true" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:icon="@drawable/ic_round_insert_link_24"
+            android:key="web_previews_timeline"
+            android:title="@string/preview_web_links"
+            android:summary="@string/preview_web_links_sum"
+            android:defaultValue="false" />
+
+        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
+            android:layout="@layout/list_item_view_no_title"
+            android:key="advanced"
+            android:title="@string/advanced_options"/>
+
+    </allen.town.focus_common.common.prefs.supportv7.ATEPreferenceCategory>
+
+</PreferenceScreen>

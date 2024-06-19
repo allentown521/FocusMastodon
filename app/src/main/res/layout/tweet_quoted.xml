@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_height="@dimen/quoted_tweet_height"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/quoted_tweet_height"
+        android:layoutDirection="ltr"
+        android:gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                    android:id="@+id/name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="?android:textColorPrimary" />
+
+                <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                    android:id="@+id/screenname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <LinearLayout
+                    android:id="@+id/quick_actions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="?rectSelector"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:gravity="right|center_vertical">
+
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                        android:id="@+id/time"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ImageView
+                        android:id="@+id/is_a_conversation"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_round_message_24"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone"
+                        android:layout_marginStart="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <allen.town.focus.twitter.views.widgets.text.MaterialTextView
+                        android:id="@+id/tweet"
+                        android:tag="tweet"
+                        android:layout_height="80dp"
+                        android:layout_width="match_parent"
+                        android:textSize="16dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="4"
+                        android:textColor="?android:textColorPrimary"
+                        android:layoutDirection="locale" />
+
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                        android:id="@+id/reply_to"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_marginTop="3dp"
+                        android:gravity="start"
+                        android:textSize="14dp"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:visibility="gone" />
+
+                    <allen.town.focus.twitter.views.widgets.text.FontPrefTextView
+                        android:id="@+id/retweeter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_marginTop="3dp"
+                        android:gravity="start"
+                        android:textSize="14dp"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:visibility="gone" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/poll_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/picture_holder"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_rect"
+                        android:transitionName="image"
+                        android:id="@+id/image"/>
+
+                    <ImageView
+                        android:id="@+id/play_button"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:padding="12dp"
+                        android:layout_gravity="bottom|start"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/embedded_tweet_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="140dp"
+                android:maxWidth="300dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+                android:elevation="2dp"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardBackgroundColor="?embeddedTweetBackground"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

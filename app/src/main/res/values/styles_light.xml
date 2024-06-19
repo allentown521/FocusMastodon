@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <!-- Launcher -->
+
+
+
+    <style name="Theme.Focus_for_MastodonLight.Profile" parent="@style/Theme.Focus_for_MastodonLight.Main">
+        <!-- For Slidr -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="Theme.Focus_for_MastodonLight.Popup" parent="@style/Theme.Focus_for_MastodonLight.Main">
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">stateUnchanged</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowFrame">@drawable/rect_border_light</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+
+    </style>
+
+    <style name="Theme.Focus_for_MastodonLight.NoActionBar.Popup" parent="@style/Theme.Focus_for_MastodonLight.Main">
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">stateUnchanged</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowFrame">@drawable/rect_border_light</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+
+    </style>
+
+
+    <style name="Theme.Focus_for_MastodonLight.Popup.Notif" parent="@style/Theme.Focus_for_MastodonLight.Popup" >
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="ActionBarPopup" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:popupMenuStyle">@android:style/Widget.Material.Light.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@android:style/Widget.Material.Light.ListView.DropDown</item>
+    </style>
+
+    <style name="CircleOverflow.Light" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_round_more_vert_24</item>
+    </style>
+
+
+    <style name="Theme.Focus_for_MastodonLight.Main" parent="Theme.FocusPodcast.Base.Light">
+        <item name="android:navigationBarColor">@color/transparent_system_bar</item>
+        <!-- For Slidr -->
+        <item name="android:windowIsTranslucent">false</item>
+
+        <item name="drawerDividerColor">@color/text_drawer</item>
+        <item name="embeddedTweetBackground">@color/drawer</item>
+        <item name="textShadowColor">@color/background</item>
+        <item name="emojiDivider">@color/emoji_divider</item>
+        <item name="icon_color">@color/icon</item>
+        <item name="drawer_options_background">@color/drawer_options_background</item>
+        <item name="tweet_background">@color/background</item>
+        <item name="tweet_activity_background">@color/tweet_activity_background</item>
+        <item name="revamped_tweet_timeline_line">@color/revamped_tweet_timeline_line_light</item>
+        <item name="revamped_tweet_background">@color/tweet_activity_background</item>
+        <item name="circleBorder">@drawable/circle_border</item>
+
+        <item name="snackbar">@drawable/snack_bar</item>
+    </style>
+</resources>
