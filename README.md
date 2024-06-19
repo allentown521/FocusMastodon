@@ -9,7 +9,7 @@ height="70">](https://play.google.com/store/apps/details?id=allen.town.focus.mas
 alt="Get it on F-Droid"
 height="70">](https://f-droid.org/app/allen.town.focus.mastodon)
 
-<img src="https://raw.githubusercontent.com/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot 0" height="200"> <img src="https://raw.githubusercontent.com/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" alt="Screenshot 1" height="200"> <img src="https://raw.githubusercontent.com/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" alt="Screenshot 2" height="200"> <img src="https://raw.githubusercontent.com/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" alt="Screenshot 3" height="200"> <img src="https://raw.githubusercontent.com/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" alt="Screenshot 4" height="200">
+<img src="https://raw.githubusercontent.com/allentown521/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot 0" height="200"> <img src="https://raw.githubusercontent.com/allentown521/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" alt="Screenshot 1" height="200"> <img src="https://raw.githubusercontent.com/allentown521/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" alt="Screenshot 2" height="200"> <img src="https://raw.githubusercontent.com/allentown521/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" alt="Screenshot 3" height="200"> <img src="https://raw.githubusercontent.com/allentown521/FocusMastodon/fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" alt="Screenshot 4" height="200">
 
 ★★★★★Main Features★★★★★
 
@@ -46,4 +46,5 @@ height="70">](https://liberapay.com/FocusApps/donate)
 
 ## About us
 [Author - allen town](https://bento.me/allentown)
-[Team - FocusApps](https://focus.hk.cn)
+[FocusApps](https://focus.hk.cn)
+[AIChatOne](https://aichatone.com)
