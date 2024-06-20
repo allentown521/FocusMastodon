@@ -26,7 +26,7 @@ height="70">](https://f-droid.org/app/allen.town.focus.mastodon)
 - Widgets to view the home timeline, mentions, and unread counts
 
 ## Feedback
-Bug reports and feature requests can be submitted [here](https://github.com/FocusMastodon/FocusMastodon/issues) (please read the [instructions](https://github.com/FocusMastodon/FocusMastodon/blob/develop/CONTRIBUTING.md) on how to report a bug and how to submit a feature request first!).
+Bug reports and feature requests can be submitted [here](https://github.com/allentown521/FocusMastodon/issues) (please read the [instructions](https://github.com/allentown521/FocusMastodon/blob/develop/CONTRIBUTING.md) on how to report a bug and how to submit a feature request first!).
 
 ## License
 
@@ -34,7 +34,7 @@ FocusMastodon is licensed under the GNU General Public License (GPL-3.0). You ca
 
 ## Building FocusMastodon
 
-You can build FocusMastodon just like any other Android project. Refer to the [instructions](https://github.com/FocusMastodon/FocusMastodon/blob/develop/CONTRIBUTING.md) for more details.
+You can build FocusMastodon just like any other Android project. Refer to the [instructions](https://github.com/allentown521/FocusMastodon/blob/main/CONTRIBUTING.md) for more details.
 
 ## Donate
 If you like this app, please consider sponsoring me  
