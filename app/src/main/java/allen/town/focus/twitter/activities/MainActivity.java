@@ -76,7 +76,6 @@ import allen.town.focus_common.views.AccentMaterialDialog;
 
 public class MainActivity extends DrawerActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-
     public static boolean isPopup;
     public static Context sContext;
 
