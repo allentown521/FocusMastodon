@@ -16,7 +16,7 @@
 
 include ':app', ':shared_assets', ':searchview', ':mpv-video'
 include ':focus-common'
-include ':focus-themecore'
+include ':focus-theme'
 include ':focus-purchase'
 include ':searchpreference'
 //include ':twidere.component.common'

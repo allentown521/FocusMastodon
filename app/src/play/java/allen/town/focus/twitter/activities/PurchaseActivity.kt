@@ -12,7 +12,6 @@
  * See the GNU General Public License for more details.
  *
  */
-package allen.town.focus.twitter.activities
 
 import allen.town.core.service.AliPayService
 import allen.town.core.service.GooglePayService

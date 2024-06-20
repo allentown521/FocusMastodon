@@ -13,11 +13,11 @@
  */
 package allen.town.focus.twitter.utils
 
+import allen.town.focus.activities.PurchaseActivity
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import allen.town.focus.twitter.R
-import allen.town.focus.twitter.activities.PurchaseActivity
 
 object NavigationUtil {
 

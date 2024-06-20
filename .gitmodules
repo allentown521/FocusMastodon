@@ -10,3 +10,6 @@
 [submodule "focus-common"]
 	path = focus-common
 	url = https://github.com/allentown521/focus-common.git
+[submodule "focus-theme"]
+	path = focus-theme
+	url = https://github.com/allentown521/focus-theme.git
