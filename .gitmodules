@@ -1,9 +1,6 @@
 [submodule "searchpreference"]
 	path = searchpreference
 	url = https://github.com/allentown521/searchpreference.git
-[submodule "mpv-video"]
-	path = mpv-video
-	url = https://github.com/allentown521/mpv-video.git
 [submodule "focus-purchase"]
 	path = focus-purchase
 	url = https://github.com/allentown521/focus-purchase.git

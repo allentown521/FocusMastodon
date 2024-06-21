@@ -4,7 +4,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
@@ -43,13 +42,10 @@ import allen.town.focus.twitter.views.DetailedTweetView;
 
 import java.io.File;
 
-import allen.town.focus_common.util.StatusBarUtils;
 import allen.town.focus_common.util.Timber;
 import allen.town.focus_common.util.TopSnackbarUtil;
-import is.xyz.mpv.MPVActivity;
 import is.xyz.mpv.MPVFragment;
 import xyz.klinker.android.drag_dismiss.DragDismissIntentBuilder;
-import xyz.klinker.android.drag_dismiss.activity.DragDismissActivity;
 
 public class VideoViewerActivity extends WhiteToolbarActivity {
 

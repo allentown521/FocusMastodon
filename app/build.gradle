@@ -141,7 +141,6 @@ dependencies {
     implementation project(':focus-common')
     implementation project(':focus-purchase')
     implementation project(':searchpreference')
-    implementation project(':mpv-video')
 
     implementation "androidx.appcompat:appcompat:$appcompatVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
