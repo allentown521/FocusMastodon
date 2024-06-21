@@ -16,7 +16,6 @@ import android.util.Log
 import androidx.core.os.BuildCompat
 import androidx.multidex.MultiDex
 import com.github.ajalt.reprint.core.Reprint
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.gson.reflect.TypeToken
 import allen.town.focus.twitter.settings.Prefs
 import allen.town.focus.twitter.settings.font.FontCache.cache

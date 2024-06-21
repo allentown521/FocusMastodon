@@ -17,5 +17,4 @@
 
 <resources>
 
-    <integer name="play_services_version">@integer/google_play_services_version</integer>
 </resources>
