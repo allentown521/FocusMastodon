@@ -1,4 +1,5 @@
-package allen.town.focus.activities/*
+package allen.town.focus.activities
+/*
  * Copyright (c) 2020 Hemanth Savarla.
  *
  * Licensed under the GNU General Public License v3

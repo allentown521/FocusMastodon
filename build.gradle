@@ -51,9 +51,9 @@ project.ext {
     targetSdkVersion = 33
     //begin -- google的版本号小一点就不会自动更新了
     versionCode = 1502
-    googleVersionCode = 1610
+    googleVersionCode = 1620
     //end --
-    versionName = "2.10.0.20240613"
+    versionName = "2.11.0.20240621"
 
     // AndroidX
     annotationVersion = "1.2.0"

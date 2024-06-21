@@ -18,7 +18,6 @@ import allen.town.core.service.AliPayService
 import allen.town.core.service.GooglePayService
 import allen.town.core.service.PayService
 import allen.town.focus_purchase.data.db.table.GooglePlayInAppTable
-import allen.town.focus.reader.iap.util.GooglePayUtil.toGoogleSkuDetail
 import allen.town.focus_common.extensions.setEdgeToEdgeOrImmersive
 import allen.town.focus_common.extensions.setLightStatusBar
 import allen.town.focus_common.extensions.setStatusBarColor
@@ -55,6 +54,7 @@ import allen.town.focus.twitter.R
 import allen.town.focus.twitter.activities.WhiteToolbarActivity
 import allen.town.focus.twitter.databinding.ActivityProVersionBinding
 import allen.town.focus.twitter.event.PurchaseEvent
+import allen.town.focus_purchase.iap.util.GooglePayUtil.toGoogleSkuDetail
 import com.wyjson.router.GoRouter
 import org.greenrobot.eventbus.EventBus
 import org.json.JSONException
