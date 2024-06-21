@@ -599,7 +599,7 @@
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
 
 
-        <activity android:name="allen.town.focus.twitter.activities.PurchaseActivity" />
+        <activity android:name="allen.town.focus.twitter.allen.town.focus.activities.PurchaseActivity" />
         <activity
             android:name="allen.town.focus.twitter.activities.tweet_viewer.TweetActivityWidget"
             android:configChanges="orientation|screenSize"

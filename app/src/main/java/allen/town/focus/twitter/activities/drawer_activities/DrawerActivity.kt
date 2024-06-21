@@ -1,8 +1,7 @@
 package allen.town.focus.twitter.activities.drawer_activities
 
 import allen.town.core.service.GooglePayService
-import allen.town.focus.reader.data.db.table.GooglePlayInAppTable
-import allen.town.focus.twitter.BuildConfig
+import allen.town.focus_purchase.data.db.table.GooglePlayInAppTable
 import allen.town.focus.twitter.R
 import allen.town.focus.twitter.activities.MainActivity
 import allen.town.focus.twitter.activities.WhiteToolbarActivity

@@ -1,4 +1,4 @@
-package allen.town.focus.twitter.activities
+package allen.town.focus.activities
 /*
  * Copyright (c) 2020 Hemanth Savarla.
  *
@@ -17,7 +17,7 @@ package allen.town.focus.twitter.activities
 import allen.town.core.service.AliPayService
 import allen.town.core.service.GooglePayService
 import allen.town.core.service.PayService
-import allen.town.focus.reader.data.db.table.GooglePlayInAppTable
+import allen.town.focus_purchase.data.db.table.GooglePlayInAppTable
 import allen.town.focus.reader.iap.util.GooglePayUtil.toGoogleSkuDetail
 import allen.town.focus_common.extensions.setEdgeToEdgeOrImmersive
 import allen.town.focus_common.extensions.setLightStatusBar
@@ -52,6 +52,7 @@ import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.SkuDetails
 import com.google.android.material.snackbar.Snackbar
 import allen.town.focus.twitter.R
+import allen.town.focus.twitter.activities.WhiteToolbarActivity
 import allen.town.focus.twitter.databinding.ActivityProVersionBinding
 import allen.town.focus.twitter.event.PurchaseEvent
 import com.wyjson.router.GoRouter

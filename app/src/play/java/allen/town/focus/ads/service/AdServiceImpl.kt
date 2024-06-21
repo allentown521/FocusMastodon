@@ -1,4 +1,4 @@
-package allen.town.focus.twitter.ads.service
+package allen.town.focus.ads.service
 
 import allen.town.core.service.AdService
 import allen.town.focus.twitter.data.App
