@@ -1,39 +1,35 @@
 package allen.town.focus.twitter.activities.media_viewer;
 
+import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.graphics.Color;
+import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.FileProvider;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
-
 import allen.town.focus.twitter.BuildConfig;
 import allen.town.focus.twitter.R;
-import allen.town.focus.twitter.activities.WhiteToolbarActivity;
+import allen.town.focus.twitter.activities.tweet_viewer.VideoFragment;
 import allen.town.focus.twitter.settings.AppSettings;
 import allen.town.focus.twitter.utils.IOUtils;
 import allen.town.focus.twitter.utils.NotificationChannelUtil;
+import allen.town.focus.twitter.utils.PermissionModelUtils;
 import allen.town.focus.twitter.activities.media_viewer.image.TimeoutThread;
 import allen.town.focus.twitter.utils.Utils;
 import allen.town.focus.twitter.utils.VideoMatcherUtil;
@@ -42,14 +38,23 @@ import allen.town.focus.twitter.views.DetailedTweetView;
 
 import java.io.File;
 
-import allen.town.focus_common.util.Timber;
+import allen.town.focus_common.util.StatusBarUtils;
 import allen.town.focus_common.util.TopSnackbarUtil;
-import is.xyz.mpv.MPVFragment;
 import xyz.klinker.android.drag_dismiss.DragDismissIntentBuilder;
+import xyz.klinker.android.drag_dismiss.activity.DragDismissActivity;
 
-public class VideoViewerActivity extends WhiteToolbarActivity {
+public class VideoViewerActivity extends DragDismissActivity {
 
     public static boolean IS_RUNNING = false;
+
+    @Override
+    public void finish() {
+        SharedPreferences sharedPrefs = AppSettings.getSharedPreferences(context);
+
+        sharedPrefs.edit().putBoolean("from_activity", true).commit();
+
+        super.finish();
+    }
 
     // link string can either be a single link to a gif surfaceView, or it can be all of the links in the tweet
     // and it will find the youtube one.
@@ -90,8 +95,6 @@ public class VideoViewerActivity extends WhiteToolbarActivity {
                 viewVideo = new Intent(context, YouTubeViewerActivity.class);
             } else {
                 viewVideo = new Intent(context, VideoViewerActivity.class);
-//                viewVideo = new Intent(context, MPVActivity.class);
-//                viewVideo = new Intent(context, MPVActivity.class);
             }
 
             viewVideo.putExtra("url", video);
@@ -114,95 +117,58 @@ public class VideoViewerActivity extends WhiteToolbarActivity {
     public String url;
 
     private BottomSheetLayout bottomSheet;
-    private MPVFragment videoFragment;
+    private VideoFragment videoFragment;
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateContent(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         context = this;
 
         url = getIntent().getStringExtra("url");
 
         if (url == null) {
-            TopSnackbarUtil.showSnack(this, "video url not found , please re-open the app", Toast.LENGTH_LONG);
             finish();
-//            return new View(context);
+            return new View(context);
         }
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        getWindow().setNavigationBarColor(Color.BLACK);
+        findViewById(R.id.dragdismiss_status_bar).setVisibility(View.GONE);
 
-
-        setContentView(R.layout.video_view_activity);
-        //如果显示了，控制条会在虚拟导航栏后面显示
-//        findViewById(R.id.dragdismiss_status_bar).setVisibility(View.GONE);
-
-
-        //用户反馈看视频返回时间线列表暗黑模式下会变成白色，我很难测试出来，不知道是不是这里的影响，这种方案不完善，手动暗黑模式弹窗的字体颜色不对但是能看清
         AppSettings settings = new AppSettings(context);
-        Utils.setUpMainDarkTheme(this);
-        prepareToolbar();
+        Utils.setUpTheme(this, settings);
 
+        final View root = inflater.inflate(R.layout.video_view_activity, parent, false);
+        prepareToolbar(root);
+
+        videoFragment = VideoFragment.getInstance(url);
 
         // add a surfaceView fragment
-        if (savedInstanceState == null) {
-            videoFragment = MPVFragment.getInstance(url);
-            getSupportFragmentManager().beginTransaction()
+        if (!IS_RUNNING) {
+            getFragmentManager().beginTransaction()
                     .add(R.id.fragment, videoFragment)
                     .commit();
-            videoFragment.setOnVideoControlShowListener(new MPVFragment.OnVideoControlShowListener() {
-                @Override
-                public void onVideoControlShow() {
-                    toolbar.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onVideoControlHide() {
-                    toolbar.setVisibility(View.GONE);
-                }
-            });
+            IS_RUNNING = true;
         }
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                IS_RUNNING = false;
+            }
+        }, 3000);
 
-        new Handler().postDelayed(() -> IS_RUNNING = false, 3000);
-
-        bottomSheet = (BottomSheetLayout) findViewById(R.id.bottomsheet);
+        bottomSheet = (BottomSheetLayout) root.findViewById(R.id.bottomsheet);
 
         final long tweetId = getIntent().getLongExtra("tweet_id", 0);
         if (tweetId != 0) {
             prepareInfo(tweetId);
         }
 
-//        return root;
+        return root;
     }
 
-    @Override
-    public void onPictureInPictureModeChanged(boolean hasFocus, Configuration newConfig) {
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            super.onPictureInPictureModeChanged(hasFocus, newConfig);
-            videoFragment.onPictureInPictureModeChanged(hasFocus);
-        }
-    }
-
-    @Override
-    public void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        videoFragment.onNewIntent(intent);
-    }
-
-    Toolbar toolbar;
-
-    private void prepareToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+    private void prepareToolbar(View root) {
+        Toolbar toolbar = (Toolbar) root.findViewById(R.id.toolbar);
         toolbar.setTitle("");
-//        StatusBarUtils.setMarginStatusBarTop(this, toolbar);
+        StatusBarUtils.setMarginStatusBarTop(this,toolbar);
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
@@ -248,71 +214,83 @@ public class VideoViewerActivity extends WhiteToolbarActivity {
     private void downloadVideo() {
         final String videoLink = videoFragment.getArguments().getString("url");
         if (videoFragment != null && videoLink != null && videoLink.contains(".m3u8")) {
-            TopSnackbarUtil.showSnack(this, "m3u8 video is not supported", Toast.LENGTH_LONG);
+            TopSnackbarUtil.showSnack(this,"m3u8 video is not supported", Toast.LENGTH_LONG);
             return;
         }
 
-        new TimeoutThread(() -> {
-            try {
-                NotificationCompat.Builder mBuilder =
-                        new NotificationCompat.Builder(context, NotificationChannelUtil.MEDIA_DOWNLOAD_CHANNEL)
-                                .setSmallIcon(R.drawable.ic_stat_icon)
-                                .setTicker(context.getResources().getString(R.string.downloading) + "...")
-                                .setContentTitle(context.getResources().getString(R.string.app_name))
-                                .setContentText(context.getResources().getString(R.string.saving_video) + "...")
-                                .setProgress(100, 100, true)
-                                .setOngoing(true);
+        new TimeoutThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    NotificationCompat.Builder mBuilder =
+                            new NotificationCompat.Builder(context, NotificationChannelUtil.MEDIA_DOWNLOAD_CHANNEL)
+                                    .setSmallIcon(R.drawable.ic_stat_icon)
+                                    .setTicker(context.getResources().getString(R.string.downloading) + "...")
+                                    .setContentTitle(context.getResources().getString(R.string.app_name))
+                                    .setContentText(context.getResources().getString(R.string.saving_video) + "...")
+                                    .setProgress(100, 100, true)
+                                    .setOngoing(true);
 
-                NotificationManager mNotificationManager =
-                        (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-                mNotificationManager.notify(6, mBuilder.build());
+                    NotificationManager mNotificationManager =
+                            (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+                    mNotificationManager.notify(6, mBuilder.build());
 
-                Intent intent = new Intent();
-                if (videoLink != null) {
-                    Uri uri = IOUtils.saveVideo(context, videoLink);
+                    Intent intent = new Intent();
+                    if (videoLink != null) {
+                        Uri uri = IOUtils.saveVideo(context, videoLink);
 
-                    String root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();
-                    File myDir = new File(root + "/FocusTwitter");
-                    File file = new File(myDir, uri.getLastPathSegment());
+                        String root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();
+                        File myDir = new File(root + "/Focus_for_Mastodon");
+                        File file = new File(myDir, uri.getLastPathSegment());
 
-                    try {
-                        uri = FileProvider.getUriForFile(context,
-                                BuildConfig.APPLICATION_ID + ".provider", file);
-                    } catch (Exception e) {
+                        try {
+                            uri = FileProvider.getUriForFile(context,
+                                    BuildConfig.APPLICATION_ID + ".provider", file);
+                        } catch (Exception e) {
 
+                        }
+
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setDataAndType(uri, "surfaceView/*");
                     }
 
-                    intent.setAction(Intent.ACTION_VIEW);
-                    intent.setDataAndType(uri, "surfaceView/*");
+                    PendingIntent pending = PendingIntent.getActivity(context, 91, intent, Utils.withImmutability(PendingIntent.FLAG_UPDATE_CURRENT));
+
+                    mBuilder =
+                            new NotificationCompat.Builder(context, NotificationChannelUtil.MEDIA_DOWNLOAD_CHANNEL)
+                                    .setContentIntent(pending)
+                                    .setSmallIcon(R.drawable.ic_stat_icon)
+                                    .setTicker(context.getResources().getString(R.string.saved_video) + "...")
+                                    .setContentTitle(context.getResources().getString(R.string.app_name))
+                                    .setContentText(context.getResources().getString(R.string.saved_video) + "!");
+
+                    mNotificationManager.notify(6, mBuilder.build());
+                } catch (final Exception e) {
+                    e.printStackTrace();
+
+                    ((Activity)context).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                new PermissionModelUtils(context).showStorageIssue(e);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+
+                    NotificationCompat.Builder mBuilder =
+                            new NotificationCompat.Builder(context, NotificationChannelUtil.MEDIA_DOWNLOAD_CHANNEL)
+                                    .setSmallIcon(R.drawable.ic_stat_icon)
+                                    .setTicker(context.getResources().getString(R.string.error) + "...")
+                                    .setContentTitle(context.getResources().getString(R.string.app_name))
+                                    .setContentText(context.getResources().getString(R.string.error) + "...")
+                                    .setProgress(0, 100, true);
+
+                    NotificationManager mNotificationManager =
+                            (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+                    mNotificationManager.notify(6, mBuilder.build());
                 }
-
-                PendingIntent pending = PendingIntent.getActivity(context, 91, intent, Utils.withImmutability(PendingIntent.FLAG_UPDATE_CURRENT));
-
-                mBuilder =
-                        new NotificationCompat.Builder(context, NotificationChannelUtil.MEDIA_DOWNLOAD_CHANNEL)
-                                .setContentIntent(pending)
-                                .setSmallIcon(R.drawable.ic_stat_icon)
-                                .setTicker(context.getResources().getString(R.string.saved_video) + "...")
-                                .setContentTitle(context.getResources().getString(R.string.app_name))
-                                .setContentText(context.getResources().getString(R.string.saved_video) + "!");
-
-                mNotificationManager.notify(6, mBuilder.build());
-            } catch (final Exception e) {
-                Timber.e(e, "download video error");
-
-                TopSnackbarUtil.showSnack(context, e.getMessage(), Toast.LENGTH_LONG);
-
-                NotificationCompat.Builder mBuilder =
-                        new NotificationCompat.Builder(context, NotificationChannelUtil.MEDIA_DOWNLOAD_CHANNEL)
-                                .setSmallIcon(R.drawable.ic_stat_icon)
-                                .setTicker(context.getResources().getString(R.string.error) + "...")
-                                .setContentTitle(context.getResources().getString(R.string.app_name))
-                                .setContentText(context.getResources().getString(R.string.error) + "...")
-                                .setProgress(0, 100, true);
-
-                NotificationManager mNotificationManager =
-                        (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-                mNotificationManager.notify(6, mBuilder.build());
             }
         }).start();
     }
@@ -322,7 +300,7 @@ public class VideoViewerActivity extends WhiteToolbarActivity {
         share.setType("text/plain");
 
         if (videoFragment != null) {
-            share.putExtra(Intent.EXTRA_TEXT, url);
+            share.putExtra(Intent.EXTRA_TEXT, videoFragment.getLoadedVideoLink());
         } else {
             share.putExtra(Intent.EXTRA_TEXT, url);
         }
@@ -339,7 +317,12 @@ public class VideoViewerActivity extends WhiteToolbarActivity {
 
     public void showInfo() {
         View v = tweetView.getView();
-        v.setBackgroundResource(R.color.dark_background);
+        AppSettings settings = AppSettings.getInstance(this);
+        if (settings.darkTheme || settings.blackTheme) {
+            v.setBackgroundResource(R.color.dark_background);
+        } else {
+            v.setBackgroundResource(R.color.white);
+        }
 
         bottomSheet.showWithSheetView(v);
     }

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.afollestad.sectionedrecyclerview.SectionedRecyclerViewAdapter;
+import com.afollestad.sectionedrecyclerview.SectionedViewHolder;
 import com.bumptech.glide.Glide;
 import com.klinker.android.simple_videoview.SimpleVideoView;
 import allen.town.focus.twitter.R;
@@ -49,9 +50,15 @@ public class GifSearchAdapter extends SectionedRecyclerViewAdapter<GifSearchAdap
     }
 
     @Override
-    public void onBindHeaderViewHolder(ViewHolder holder, int section) {
+    public void onBindHeaderViewHolder(ViewHolder holder, int section, boolean expanded) {
 
     }
+
+    @Override
+    public void onBindFooterViewHolder(ViewHolder holder, int section) {
+
+    }
+
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int section, final int relativePosition, final int absolutePosition) {
@@ -98,7 +105,7 @@ public class GifSearchAdapter extends SectionedRecyclerViewAdapter<GifSearchAdap
         return new ViewHolder(v);
     }
 
-    protected class ViewHolder extends RecyclerView.ViewHolder {
+    protected class ViewHolder extends SectionedViewHolder {
 
         public ImageView previewImage;
         public SimpleVideoView video;
