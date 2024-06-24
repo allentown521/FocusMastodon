@@ -45,12 +45,10 @@ buildscript {
 project.ext {
     //app info
     applicationId = "allen.town.focus.mastodon"
-//    buildToolsVersion = "30.0.3"
     compileSdkVersion = 33 //jdk need 17 and later
     minSdkVersion = 24
     targetSdkVersion = 33
-    googleVersionCode = 1630
-    //end --
+    versionCode = 1630
     versionName = "2.12.0.20240624"
 
     // AndroidX
