@@ -685,15 +685,6 @@ import java.io.File
 
     open fun setUpBackgroundRefreshes() {}
     private fun setUpOtherOptions() {
-        findPreference<Preference>("prefDocumentation")!!.onPreferenceClickListener =
-            Preference.OnPreferenceClickListener {
-                BrowserLauncher.openUrl(
-                    getContext(),
-                    "https://y3ep4q3r4d.k.topthink.com/@focustwitter/1.html"
-                )
-                true
-            }
-
         findPreference<Preference>("prefViewForum")!!.onPreferenceClickListener =
             Preference.OnPreferenceClickListener {
                 BrowserLauncher.openUrl(getContext(), "https://focusformastodon.canny.io")

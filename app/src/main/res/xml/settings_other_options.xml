@@ -83,12 +83,6 @@
         android:layout="@layout/preference_category_title"
         android:title="@string/others">
         <allen.town.focus_common.common.prefs.supportv7.ATEPreference
-            android:key="prefDocumentation"
-            app:isPreferenceVisible="false"
-            android:layout="@layout/list_item_view_no_title"
-            android:title="@string/documentation_support"
-            app:icon="@drawable/ic_questionmark" />
-        <allen.town.focus_common.common.prefs.supportv7.ATEPreference
             android:key="prefViewForum"
             android:layout="@layout/list_item_view_no_title"
             android:title="@string/communication"
