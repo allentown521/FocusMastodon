@@ -124,7 +124,7 @@ import javax.inject.Inject
     }
 
     private fun getAdmobAdInfo() {
-        if (!isAlipay && BasePreferenceUtil.needCheckAdmobInfo()) {
+        if (!isAlipay && !isDroid && BasePreferenceUtil.needCheckAdmobInfo()) {
             Timber.d("getAdmobAdInfo")
             LeanHttpClient.getAdmob("636cfe205fee9f4325d1147e")
                 .subscribeOn(io.reactivex.schedulers.Schedulers.io())
