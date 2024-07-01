@@ -190,7 +190,7 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.github.HamidrezaAmz:MagicalExoPlayer:2.0.7'
     implementation "com.google.android.material:material:$googleMaterialVersion"
-    implementation 'com.github.ChickenHook:RestrictionBypass:2.2'
+//    implementation 'com.github.ChickenHook:RestrictionBypass:2.2'
     implementation "com.airbnb.android:lottie:5.0.3"
     implementation 'com.makeramen:roundedimageview:2.3.0'
     playImplementation 'com.google.firebase:firebase-core:21.0.0'
