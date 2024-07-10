@@ -15,10 +15,13 @@ package allen.town.focus.twitter.settings.configure_pages;
  * limitations under the License.
  */
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.*;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -379,7 +382,11 @@ public class ChooserFragment extends Fragment {
         super.onResume();
 
         IntentFilter filter = new IntentFilter(DEFAULT_CLICKED);
-        context.registerReceiver(defaultClicked, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(defaultClicked, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(defaultClicked, filter);
+        }
     }
 
     @Override

@@ -45,11 +45,11 @@ buildscript {
 project.ext {
     //app info
     applicationId = "allen.town.focus.mastodon"
-    compileSdkVersion = 33 //jdk need 17 and later
+    compileSdkVersion = 34 //jdk need 17 and later
     minSdkVersion = 24
-    targetSdkVersion = 33
-    versionCode = 1630
-    versionName = "2.12.0.20240624"
+    targetSdkVersion = 34
+    versionCode = 1660
+    versionName = "2.12.0.20240710"
 
     // AndroidX
     annotationVersion = "1.2.0"

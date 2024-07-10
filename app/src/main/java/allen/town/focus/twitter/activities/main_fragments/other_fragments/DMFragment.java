@@ -15,12 +15,15 @@ package allen.town.focus.twitter.activities.main_fragments.other_fragments;
  * limitations under the License.
  */
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -165,7 +168,11 @@ public class DMFragment extends MainFragment {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.UPDATE_DM_ACTION);
-        context.registerReceiver(updateDM, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(updateDM, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(updateDM, filter);
+        }
     }
 
     @Override

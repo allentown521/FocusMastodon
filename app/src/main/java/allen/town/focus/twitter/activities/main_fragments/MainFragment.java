@@ -1,5 +1,7 @@
 package allen.town.focus.twitter.activities.main_fragments;
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -134,15 +136,27 @@ public abstract class MainFragment extends Fragment implements Expandable {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.TOP_TIMELINE_ACTION);
-        context.registerReceiver(jumpTopReceiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(jumpTopReceiver, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(jumpTopReceiver, filter);
+        }
 
         filter = new IntentFilter();
         filter.addAction(IntentConstant.SHOW_TOAST_ACTION);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(showToast, filter , RECEIVER_EXPORTED);
+        } else {
         context.registerReceiver(showToast, filter);
+        }
 
         filter = new IntentFilter();
         filter.addAction(IntentConstant.HIDE_TOAST_ACTION);
-        context.registerReceiver(hideToast, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(hideToast, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(hideToast, filter);
+        }
 
         if (cursorAdapter != null) {
             cursorAdapter.activityPaused(false);

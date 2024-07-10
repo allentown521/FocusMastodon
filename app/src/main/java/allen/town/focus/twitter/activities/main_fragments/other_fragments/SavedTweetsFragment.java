@@ -15,11 +15,14 @@ package allen.town.focus.twitter.activities.main_fragments.other_fragments;
  * limitations under the License.
  */
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
+import android.os.Build;
 
 import allen.town.focus.twitter.R;
 import allen.town.focus.twitter.activities.main_fragments.home_fragments.HomeExtensionFragment;
@@ -42,7 +45,11 @@ public class SavedTweetsFragment extends HomeExtensionFragment {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(REFRESH_ACTION);
-        context.registerReceiver(resetLists, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(resetLists, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(resetLists, filter);
+        }
     }
 
     @Override

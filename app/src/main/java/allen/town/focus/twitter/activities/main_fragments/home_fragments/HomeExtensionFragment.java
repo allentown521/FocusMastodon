@@ -16,11 +16,14 @@ package allen.town.focus.twitter.activities.main_fragments.home_fragments;
  */
 
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
+import android.os.Build;
 import android.util.Log;
 import android.view.View;
 
@@ -46,7 +49,11 @@ public abstract class HomeExtensionFragment extends MainFragment {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.RESET_HOME_ACTION);
-        context.registerReceiver(homeClosed, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(homeClosed, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(homeClosed, filter);
+        }
     }
 
     @Override

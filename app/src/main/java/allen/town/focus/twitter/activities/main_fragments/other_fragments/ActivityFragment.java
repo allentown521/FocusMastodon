@@ -1,11 +1,14 @@
 package allen.town.focus.twitter.activities.main_fragments.other_fragments;
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -143,7 +146,11 @@ public class ActivityFragment extends MainFragment {
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.REFRESH_ACTIVITY_ACTION);
         filter.addAction(IntentConstant.NEW_ACTIVITY_ACTION);
-        context.registerReceiver(refreshActivity, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(refreshActivity, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(refreshActivity, filter);
+        }
     }
 
     public void getCursorAdapter(boolean shownoContent) {

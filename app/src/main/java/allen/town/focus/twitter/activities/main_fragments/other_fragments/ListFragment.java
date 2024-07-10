@@ -15,12 +15,15 @@ package allen.town.focus.twitter.activities.main_fragments.other_fragments;
  * limitations under the License.
  */
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -80,7 +83,11 @@ public class ListFragment extends MainFragment {
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.RESET_LISTS_ACTION);
         filter.addAction(IntentConstant.LIST_REFRESHED_ACTION + listId);
-        context.registerReceiver(resetLists, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(resetLists, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(resetLists, filter);
+        }
 
         if (sharedPrefs.getBoolean(AppSettings.REFRESH_ME_LIST_STARTER + listId, false)) { // this will restart the loader to display the new tweets
             getCursorAdapter(true);

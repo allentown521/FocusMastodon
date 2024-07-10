@@ -15,6 +15,8 @@ package allen.town.focus.twitter.activities.search;
  * limitations under the License.
  */
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.BroadcastReceiver;
@@ -23,6 +25,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
@@ -77,7 +80,11 @@ public class TimelineSearchFragment extends Fragment {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.NEW_SEARCH_ACTION);
-        context.registerReceiver(newSearch, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(newSearch, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(newSearch, filter);
+        }
     }
 
     @Override

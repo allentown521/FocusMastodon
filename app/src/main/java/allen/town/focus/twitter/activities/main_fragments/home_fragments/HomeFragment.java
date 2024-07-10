@@ -15,6 +15,8 @@ package allen.town.focus.twitter.activities.main_fragments.home_fragments;
  * limitations under the License.
  */
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -23,6 +25,7 @@ import android.database.Cursor;
 import android.database.StaleDataException;
 import android.database.sqlite.SQLiteDiskIOException;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
@@ -789,15 +792,27 @@ public class HomeFragment extends MainFragment {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.NEW_TWEET_ACTION);
-        context.registerReceiver(pullReceiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(pullReceiver, filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(pullReceiver, filter);
+        }
 
         filter = new IntentFilter();
         filter.addAction(IntentConstant.RESET_HOME_ACTION);
-        context.registerReceiver(homeClosed, filter);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                context.registerReceiver(homeClosed, filter , RECEIVER_EXPORTED);
+            } else {
+                context.registerReceiver(homeClosed, filter);
+            }
 
         filter = new IntentFilter();
         filter.addAction(AppSettings.BROADCAST_MARK_POSITION);
-        context.registerReceiver(markRead, filter);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    context.registerReceiver(markRead, filter , RECEIVER_EXPORTED);
+                } else {
+                    context.registerReceiver(markRead, filter);
+                }
 
         if (isLauncher()) {
             return;
@@ -869,42 +884,40 @@ public class HomeFragment extends MainFragment {
         if (HomeFragment.starting) {
             return;
         } else {
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    HomeFragment.starting = false;
-                }
-            }, 10000);
+            new Handler().postDelayed(() -> HomeFragment.starting = false, 10000);
         }
 
         refreshLayout.setRefreshing(true);
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(IntentConstant.TIMELINE_REFRESHE_ACTION);
-        context.registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                Timber.v("here");
-                numberNew = intent.getIntExtra(AppSettings.NUMBER_NEW, 0);
-                unread = numberNew;
-                onStartRefresh = true;
-                onRefreshStarted();
-                try {
-                    context.unregisterReceiver(this);
-                } catch (Exception e) {
-                    // not registered
-                }
-            }
-        }, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(new InnerBroadcastReceiver(), filter , RECEIVER_EXPORTED);
+        } else {
+            context.registerReceiver(new InnerBroadcastReceiver(), filter);
+        }
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                TimelineRefreshService.refresh(context, true);
-                PreCacheService.cache(context);
-            }
+        new Thread(() -> {
+            TimelineRefreshService.refresh(context, true);
+            PreCacheService.cache(context);
         }).start();
     }
+
+    class InnerBroadcastReceiver extends BroadcastReceiver{
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Timber.v("here");
+            numberNew = intent.getIntExtra(AppSettings.NUMBER_NEW, 0);
+            unread = numberNew;
+            onStartRefresh = true;
+            onRefreshStarted();
+            try {
+                context.unregisterReceiver(this);
+            } catch (Exception e) {
+                // not registered
+            }
+        }
+    };
 
     public boolean trueLive = false;
     public boolean viewPressed = false;

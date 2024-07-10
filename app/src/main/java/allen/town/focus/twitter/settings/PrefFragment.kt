@@ -746,7 +746,7 @@ import java.io.File
             .unregisterOnSharedPreferenceChangeListener(this)
     }
 
-    override fun onSharedPreferenceChanged(sharedPrefs: SharedPreferences, key: String) {
+    override fun onSharedPreferenceChanged(sharedPrefs: SharedPreferences, key: String?) {
         val worldPrefs = AppSettings.getSharedPreferences(activity)
 
         // get the values and write them to our world prefs

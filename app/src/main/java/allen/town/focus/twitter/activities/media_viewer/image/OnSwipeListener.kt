@@ -6,7 +6,7 @@ import android.view.MotionEvent
 
 open class OnSwipeListener : GestureDetector.SimpleOnGestureListener() {
 
-    override fun onScroll(e1: MotionEvent, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
+    override fun onScroll(e1: MotionEvent?, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
 
         // Grab two events located on the plane at e1=(x1, y1) and e2=(x2, y2)
         // Let e1 be the initial event
@@ -27,7 +27,7 @@ open class OnSwipeListener : GestureDetector.SimpleOnGestureListener() {
         //  D => it's a LEFT swipe
         //
 
-        val x1 = e1.x
+        val x1 = e1!!.x
         val y1 = e1.y
 
         val x2 = e2.x
