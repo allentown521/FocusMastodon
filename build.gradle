@@ -48,8 +48,8 @@ project.ext {
     compileSdkVersion = 34 //jdk need 17 and later
     minSdkVersion = 24
     targetSdkVersion = 34
-    versionCode = 1660
-    versionName = "2.12.0.20240710"
+    versionCode = 1662
+    versionName = "2.12.1.20240710"
 
     // AndroidX
     annotationVersion = "1.2.0"

@@ -40,7 +40,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
+<!--    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" tools:node="remove"/>-->
     <!-- http://android-developers.blogspot.com/2016/05/bring-your-android-app-to-chromebooks.html -->
     <!-- http://www.chromium.org/chromium-os/android-apps -->
     <!-- https://commonsware.com/blog/2016/05/25/getting-ready-for-chromeos.html -->
@@ -647,10 +647,11 @@
             </intent-filter>
         </service>
 
-        <!-- Firebase Dispatcher Jobs -->
+        <!-- Firebase Dispatcher Jobs -->````
         <service
             android:name="allen.town.focus.twitter.services.DataCheckService"
-            android:exported="false">
+            android:foregroundServiceType="dataSync"
+            android:exported="false">``
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
             </intent-filter>
@@ -658,6 +659,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.TimelineRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -666,6 +668,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.PreCacheService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -674,6 +677,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.ListRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -682,6 +686,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.MentionsRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -690,6 +695,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.DirectMessageRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -698,6 +704,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.ActivityRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -706,6 +713,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.TrimDataService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -714,6 +722,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.SendQueueService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -722,6 +731,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.SecondDMRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -730,6 +740,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.SecondActivityRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -738,6 +749,7 @@
 
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.SecondMentionsRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
@@ -746,27 +758,35 @@
 
         <service
             android:name="allen.town.focus.twitter.services.FavoriteTweetService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.RetweetService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.ReplyFromWearService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.ReplySecondAccountFromWearService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.MarkReadService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.MarkReadSecondAccService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.ReadInteractionsService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
         <service
             android:name="allen.town.focus.twitter.services.background_refresh.WidgetRefreshService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
 
         <receiver
