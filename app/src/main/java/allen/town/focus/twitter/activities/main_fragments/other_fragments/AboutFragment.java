@@ -20,6 +20,7 @@ import allen.town.focus.twitter.BuildConfig;
 import allen.town.focus.twitter.R;
 import allen.town.focus.twitter.activities.profile_viewer.ProfilePager;
 import allen.town.focus.twitter.api.requests.accounts.GetAccountByAcct;
+import allen.town.focus.twitter.data.App;
 import allen.town.focus.twitter.model.Account;
 import allen.town.focus_common.ui.customtabs.BrowserLauncher;
 import allen.town.focus_common.util.Intents;
@@ -104,11 +105,12 @@ public class AboutFragment extends AppCompatDialogFragment {
     @Override
     // android.support.v7.app.AppCompatDialogFragment, android.support.v4.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_about, (ViewGroup) null);
+        View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_about, null);
         ButterKnife.bind(this, inflate);
 
         this.version.setText(getString(R.string.version) + " " + BuildConfig.VERSION_NAME);
-        butterknife.ViewCollections.run(this.styleButtons, (view, i) -> ((ImageView) view)
+        this.opensourceView.setVisibility(!App.getInstance().isDroid() ? View.GONE : View.VISIBLE);
+        butterknife.ViewCollections.run(this.styleButtons, (view, i) -> view
                 .setColorFilter(ThemeStore.accentColor(getContext()), PorterDuff.Mode.SRC_IN));
         return new AccentMaterialDialog(getContext(), R.style.MaterialAlertDialogTheme).setView(inflate).create();
     }
