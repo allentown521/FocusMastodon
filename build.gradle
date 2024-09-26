@@ -48,8 +48,8 @@ project.ext {
     compileSdkVersion = 34 //jdk need 17 and later
     minSdkVersion = 24
     targetSdkVersion = 34
-    versionCode = 1662
-    versionName = "2.12.1.20240710"
+    versionCode = 1665
+    versionName = "2.12.2.20240925"
 
     // AndroidX
     annotationVersion = "1.2.0"
@@ -102,9 +102,21 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
         maven { url "https://jitpack.io" }
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        //aliyun maven for old library
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://maven.aliyun.com/repository/spring" }
+        maven { url "https://maven.aliyun.com/repository/spring-plugin" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/releases" }
+        maven { url "https://maven.aliyun.com/repository/snapshots" }
+        maven { url "https://maven.aliyun.com/repository/grails-core" }
+        maven { url "https://maven.aliyun.com/repository/mapr-public" }
+        maven { url "https://maven.aliyun.com/repository/apache-snapshots" }
         flatDir { dirs 'lib' }
     }
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.AbstractKotlinCompile).configureEach {
