@@ -20,6 +20,7 @@ public class Tweet {
     private String text;
     private String name;
     private String picUrl;
+    private String userId;
     private String screenName;
     private long time;
     private String retweeter;
@@ -44,12 +45,13 @@ public class Tweet {
         return emoji;
     }
 
-    public Tweet(long id, String text, String name, String picUrl, String screenName, long time,
+    public Tweet(long id, String text, String name, String picUrl, String userId, String screenName, long time,
                  String retweeter, String webpage, String otherWeb, String users, String hashtags, String animatedGif, String statusUrl, String emoji) {
         this.id = id;
         this.text = text;
         this.name = name;
         this.screenName = screenName;
+        this.userId = userId;
         this.picUrl = picUrl;
         this.time = time;
         this.retweeter = retweeter;
@@ -92,6 +94,14 @@ public class Tweet {
 
     public void setPicUrl(String url) {
         this.picUrl = url;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String name) {
+        this.userId = name;
     }
 
     public String getScreenName() {

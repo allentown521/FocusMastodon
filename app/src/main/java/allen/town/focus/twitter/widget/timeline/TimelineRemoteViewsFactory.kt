@@ -24,7 +24,8 @@ import code.name.monkey.appthemehelper.ThemeStore
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 class TimelineRemoteViewsFactory(private val context: Context) :
     RemoteViewsService.RemoteViewsFactory {
@@ -74,6 +75,7 @@ class TimelineRemoteViewsFactory(private val context: Context) :
                             query.getString(query.getColumnIndex(HomeSQLiteHelper.COLUMN_TEXT)),
                             query.getString(query.getColumnIndex(HomeSQLiteHelper.COLUMN_NAME)),
                             query.getString(query.getColumnIndex(HomeSQLiteHelper.COLUMN_PRO_PIC)),
+                            query.getString(query.getColumnIndex(HomeSQLiteHelper.COLUMN_USER_ID)),
                             query.getString(query.getColumnIndex(HomeSQLiteHelper.COLUMN_SCREEN_NAME)),
                             query.getLong(query.getColumnIndex(HomeSQLiteHelper.COLUMN_TIME)),
                             query.getString(query.getColumnIndex(HomeSQLiteHelper.COLUMN_RETWEETER)),
@@ -151,7 +153,7 @@ class TimelineRemoteViewsFactory(private val context: Context) :
         try {
             card.setTextViewText(
                 R.id.contactName,
-                if (settings.displayScreenName) "@" + tweets[position].screenName else tweets[position].name
+                if (settings.displayScreenName) "@" + tweets[position].userId else tweets[position].name
             )
             card.setTextViewText(
                 R.id.contactText,
@@ -265,6 +267,7 @@ class TimelineRemoteViewsFactory(private val context: Context) :
 
             val extras = Bundle()
             extras.putString("name", tweets[position].name)
+            extras.putString(AppSettings.ACCOUNT_ID, tweets[position].userId)
             extras.putString("screenname", tweets[position].screenName)
             extras.putLong("time", tweets[position].time)
             extras.putString("tweet", tweets[position].tweet)

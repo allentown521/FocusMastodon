@@ -8,22 +8,18 @@ import allen.town.focus.twitter.data.sq_lite.HomeSQLiteHelper
 import allen.town.focus.twitter.services.background_refresh.WidgetRefreshService
 import allen.town.focus.twitter.settings.AppSettings
 import allen.town.focus.twitter.utils.Utils
-import allen.town.focus.twitter.utils.glide.CircleBitmapTransform
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 import code.name.monkey.appthemehelper.ThemeStore
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import java.util.*
+import java.util.Random
 
 class TimelineWidgetProvider : AppWidgetProvider() {
 
@@ -38,6 +34,10 @@ class TimelineWidgetProvider : AppWidgetProvider() {
 
             viewTweet.putExtra("name", intent.getStringExtra("name"))
             viewTweet.putExtra("screenname", intent.getStringExtra("screenname"))
+            viewTweet.putExtra(
+                AppSettings.ACCOUNT_ID,
+                intent.getStringExtra(AppSettings.ACCOUNT_ID)
+            )
             viewTweet.putExtra("time", intent.getLongExtra("time", 0))
             viewTweet.putExtra("tweet", intent.getStringExtra("tweet"))
             viewTweet.putExtra("retweeter", intent.getStringExtra("retweeter"))
