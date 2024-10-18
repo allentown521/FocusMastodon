@@ -51,6 +51,7 @@ import allen.town.focus.twitter.activities.setup.material_login.MaterialLogin;
 import allen.town.focus.twitter.adapters.MainDrawerArrayAdapter;
 import allen.town.focus.twitter.adapters.TimelinePagerAdapter;
 import allen.town.focus.twitter.api.session.AccountSessionManager;
+import allen.town.focus.twitter.data.App;
 import allen.town.focus.twitter.data.sq_lite.DMDataSource;
 import allen.town.focus.twitter.data.sq_lite.FavoriteUsersDataSource;
 import allen.town.focus.twitter.data.sq_lite.FollowersDataSource;
@@ -220,7 +221,9 @@ public class MainActivity extends DrawerActivity implements SharedPreferences.On
             Intent login = new Intent(context, MaterialLogin.class);
             startActivity(login);
         } else {
-            //已经登录的用户才会去检查token是否有效
+            if (!App.getInstance().isDroid() && App.getInstance().getNeedOpenPurchaseWhenAppOpen()) {
+                App.getInstance().checkSupporter(context, true);
+            }
         }
 
         mSectionsPagerAdapter = new TimelinePagerAdapter(getSupportFragmentManager(), context, sharedPrefs, getIntent().getBooleanExtra("from_launcher", false));
