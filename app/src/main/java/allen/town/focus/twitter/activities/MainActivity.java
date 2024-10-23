@@ -221,7 +221,7 @@ public class MainActivity extends DrawerActivity implements SharedPreferences.On
             Intent login = new Intent(context, MaterialLogin.class);
             startActivity(login);
         } else {
-            if (!App.getInstance().isDroid() && App.getInstance().getNeedOpenPurchaseWhenAppOpen()) {
+            if (!App.getInstance().isDroid() && App.getInstance().needOpenPurchaseWhenAppOpen()) {
                 App.getInstance().checkSupporter(context, true);
             }
         }
